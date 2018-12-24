@@ -1,0 +1,307 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>uScript Readme</title>
+<base target="_blank">
+</head>
+
+<body>
+
+<hr>
+<b><font size="4" face="Arial">uScript (Universal Script for BG2)</font></b>
+<hr>
+<p><font size="2" face="Arial">Creator Name: Rich Martel<br>
+Creator Email: <a href="mailto:martelr@mediaone.net">martelr@mediaone.net</a><br>
+Web URL: <a href="http://groups.yahoo.com/group/bwscript/files/COMPLETE/">http://groups.yahoo.com/group/bwscript/files/COMPLETE/</a><br>
+Last Modified: 2001-09-27</font></p>
+<p><font size="2" face="Arial">PLEASE: If you modify this script in any useful way, or have any suggestions, please send me an e-mail with the info (<a href="mailto:martelr@mediaone.net">martelr@mediaone.net</a>). I'm always interested in improving it. Thanks.</font></p>
+<hr>
+<p><b><u><font size="3" face="Arial">COMPATIBLE GAMES:</font></u></b>
+<p><font size="2" face="Arial">[x] Baldur's Gate II: Shadows of Amn<br>
+[x] Baldur's Gate II: Throne of Bhaal</font></p>
+<hr>
+<p><b><u><font size="3" face="Arial">DESCRIPTION:</font></u></b></p>
+<p><font size="2" face="Arial">This is a Baldur's Gate II AI script for player characters that can be used with any class. Many useful ideas were borrowed from scripts and discussions in the &quot;Bioware Scripting&quot; group on Yahoo (<a href="http://groups.yahoo.com/group/bwscript/">http://groups.yahoo.com/group/bwscript</a>). Thanks to Tim, Sarkyn, C.Enders, Xyx, Jason &amp; Quitch for help &amp; suggestions.</font>
+<p><font size="2" face="Arial">Features:</font></p>
+<ul>
+  <li><font size="2" face="Arial">Individual AI toggle for each character</font></li>
+  <li><font size="2" face="Arial">Smart Targeting system</font></li>
+  <li><font size="2" face="Arial">Move to Combat routine (no more idle characters)</font></li>
+  <li><font size="2" face="Arial">Detect Traps, Turn Undead, and Battle Song</font></li>
+  <li><font size="2" face="Arial">Assistance to injured</font></li>
+  <li><font size="2" face="Arial">SoA Class Abilities</font></li>
+  <li><font size="2" face="Arial">ToB Spells</font></li>
+  <li><font size="2" face="Arial">ToB Class Abilities</font></li>
+  <li><font size="2" face="Arial">Performance Saver (script cutoff)</font></li>
+  <li><font size="2" face="Arial">TimeStop target switching</font></li>
+  <li><font size="2" face="Arial">&quot;Stay in melee range 1 round then run&quot; routine for Casters, Archers, and Injured</font></li>
+  <li><font size="2" face="Arial">Efficient healing system</font></li>
+  <li><font size="2" face="Arial">Wand &amp; Potion usage</font></li>
+  <li><font size="2" face="Arial">Shapeshift abilities for druids</font></li>
+  <li><font size="2" face="Arial">Summoning Item usage (Efreeti Bottle, Black Spider Figurine, etc.)</font></li>
+  <li><font size="2" face="Arial">Improved Nymph, Djinni, Planetar, Deva, &amp; Moon Dog (Cerebus) scripts</font></li>
+  <li><font size="2" face="Arial">Dynamic Party Protection</font></li>
+  <li><font size="2" face="Arial">Cast & Attack</font></li>
+  <li><font size="2" face="Arial">Intellegent Simulacrums, Projected Images, & Misleads</font></li>
+  <li><font size="2" face="Arial">Healing potion hand offs</font></li>
+</ul>
+<hr>
+<p><b><u><font size="3" face="Arial">HOW TO INSTALL:</font></u></b></p>
+<p><font size="2" face="Arial">Place all .bs files into your \SCRIPTS directory. You may want to replace your /SCRIPTS/default.bs file with uScript.bs (when some NPCs join your party, they sometimes automatically use default.bs). Place all .bcs & .spl files into your \OVERRIDE directory. Then when in the game, click on a character, select it's record, click customize, click scripts, then choose uScript from the bottom of the list. Repeat for each party member.</font></p>
+<hr>
+<p><b><u><font size="3" face="Arial">HOW TO COMPILE:</font></u></b></p>
+<p><font size="2" face="Arial">If you want to compile these files yourself, you need to update the IDS files in your \SCRIPT COMPILER directory with the new versions that gets installed into you \OVERRIDE directory when you install ToB &amp; the latest patches. If you do not do this, all ToB spells &amp; abilities will not be compiled properly, and problems may occur with your script.</font></p>
+<font size="2" face="Arial">Be careful using custom SPELL.IDS files from the internet, I only use Bioware released IDS files. I noticed a non-Bioware version that renamed &quot;DISPEL MAGIC&quot; to &quot;REMOVE MAGIC&quot; (which is really the correct name of the spell, but it's not the name that BioWare uses). I opted to use the spell number for any spells that are missing from the official SPELL.IDS (ToB) file to keep compatability with vanilla installs.</font>
+<p><font size="2" face="Arial">Place the .baf files in your \SCRIPT COMPILER\SOURCE directory. Go to a Command Prompt (DOS), and cd to the \SCRIPT COMPILER directory. Then type &quot;compile uScript&quot;. Check for errors in the \SCRIPT COMPILER/ERRORS (0KB = No errors). Repeat process for uNymph, uDjinni, uPlanet, uMoondog &amp; uMislead. Then go to your \SCRIPT COMPILER\COMPILED directory and make the following changes:</font>
+<ol>
+  <li><font size="2" face="Arial">Rename uNymph.bs to nymph.bcs</font></li>
+  <li><font size="2" face="Arial">Rename uDjinni.bs to djinni01.bcs</font></li>
+  <li><font size="2" face="Arial">Make a copy of uPlanet.bs, rename one to plangood.bcs, and the other to devagood.bcs</font></li>
+  <li><font size="2" face="Arial">Rename uMoondog.bs to moondog.bcs</font></li>
+  <li><font size="2" face="Arial">Make 2 copies of uScript.bs, rename one to simulacr.bcs and the another to projimag.bcs</font></li>
+  <li><font size="2" face="Arial">(optional) Replace your /SCRIPTS/default.bs file with uScript.bs. When some NPCs join your party, they sometimes automatically use default.bs</font></li>
+  <li><font size="2" face="Arial">Move uScript.bs to the /SCRIPTS directory</font></li>
+  <li><font size="2" face="Arial">Move all .bcs files to /OVERRIDE directory</font></li>
+</ol>
+<font size="2" face="Arial">I'd like to recommend using the following programs if you are interested in scripting:</font>
+<ul>
+  <li><a href="http://worgan.tripod.com/main/script.htm"><font size="2" face="Arial">BG2Scripter</font></a></li>
+  <li><a href="http://www.idi.ntnu.no/~joh/ni/"><font size="2" face="Arial">Near Infinity</font></a></li>
+</ul>
+<hr>
+<p><b><u><font size="3" face="Arial">HOW TO USE:</font></u></b></p>
+<ul>
+  <li><font size="2" face="Arial">See the spells-items.htm for the list of spells &amp; items that have been scripted into uScript.</font></li>
+  <li><font size="2" face="Arial">If you want the auto backstab routine to work for your thief/stalker, make sure you have the &quot;T&quot; formation in the 3rd formation slot.</font></li>
+  <li><font size="2" face="Arial">Make sure you have at least 1 Magic Missile memorized for Mages and Bards (to check for spell depletion).</font></li>
+  <li><font size="2" face="Arial">Make sure you have 1 Doom memorized for Clerics &amp; Druids (to check for spell depletion).</font>
+</ul>
+<div align="center">
+  <center>
+  <table width="90%" cellspacing="0" border="1" cellpadding="2" bordercolor="#C0C0C0">
+    <tr>
+      <td bgcolor="#C0C0C0" align="center"><font size="2" face="Arial" color="#FFFFFF"><b>HOTKEY</b></font></td>
+      <td bgcolor="#C0C0C0" align="center"><font size="2" face="Arial" color="#FFFFFF"><b>ASSOCIATION</b></font></td>
+      <td bgcolor="#C0C0C0" align="center"><font size="2" face="Arial" color="#FFFFFF"><b>DEFAULT</b></font></td>
+      <td bgcolor="#C0C0C0"><font size="2" face="Arial" color="#FFFFFF"><b>DESCRIPTION</b></font></td>
+    </tr>
+    <tr>
+      <td align="center"><font size="2" face="Arial">D</font></td>
+      <td align="center"><font size="2" face="Arial">[<font color="#800000">D</font>]isable AI</font></td>
+      <td align="center"><font size="2" face="Arial">On</font></td>
+      <td><font size="2" face="Arial">Toggles AI for the selected characters</font></td>
+    </tr>
+    <tr>
+      <td align="center"><font size="2" face="Arial">S</font></td>
+      <td align="center"><font size="2" face="Arial">[<font color="#800000">S</font>]pellcasting</font></td>
+      <td align="center"><font size="2" face="Arial">On</font></td>
+      <td><font size="2" face="Arial">Toggles spellcasting for the selected characters</font></td>
+    </tr>
+    <tr>
+      <td align="center"><font size="2" face="Arial">N</font></td>
+      <td align="center"><font size="2" face="Arial">[<font color="#800000">N</font>]o movement</font></td>
+      <td align="center"><font size="2" face="Arial">On</font></td>
+      <td><font size="2" face="Arial">Toggles all auto-movement such as MoveToCombat, RunFromAttacker, RunToHealer, etc.</font></td>
+    </tr>
+    <tr>
+      <td align="center"><font size="2" face="Arial">B</font></td>
+      <td align="center"><font size="2" face="Arial">[<font color="#800000">B</font>]uff</font></td>
+      <td align="center"><font size="2" face="Arial">Off</font></td>
+      <td><font size="2" face="Arial">Toggles casting of defensive "buffs" and healing spells that don't require seeing the enemy. If used during combat, it makes buffing a priority.</font></td>
+    </tr>
+    <tr>
+      <td align="center"><font size="2" face="Arial">V</font></td>
+      <td align="center"><font size="2" face="Arial">Reset [<font color="#800000">V</font>]ariables</font></td>
+      <td align="center"><font size="2" face="Arial">N/A</font></td>
+      <td><font size="2" face="Arial">Set's all toggles to their default settings (good to use if you forget what their current status is)</font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<p>ESDFKLVBN</p>
+<hr>
+<p><b><u><font size="3" face="Arial">VERSION HISTORY:</font></u></b></p>
+<b><font size="2" face="Arial">2001-09-27</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added in an Archer detection routine... Archers will not become PartyProtectors unless necessary</font></li>
+  <li><font size="2" face="Arial">Archers will not become PartyProtectors unless necessary</font></li>
+  <li><font size="2" face="Arial">Implemented C.Enders suggestions for changing the Move To Combat routine</font></li>
+  <li><font size="2" face="Arial">Fixed quite a few spells improvements</font></li>
+  <li><font size="2" face="Arial">Added in all bard harps</font></li>
+  <li><font size="2" face="Arial">Added the disable AI feature to all minions and misleads</font></li>
+  <li><font size="2" face="Arial">Misleads should be a little more controllable</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-24</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added in a routine to make all classes run from enemy at 50% health</font></li>
+  <li><font size="2" face="Arial">Made some modifications from suggestions recieved from C.Enders</font></li>
+  <li><font size="2" face="Arial">Fixed a few bugs with last release</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-23</font></b>
+<ul>
+  <li><font size="2" face="Arial">Fixed multiple bugs from the last version (biggest one being the the characters were interrupting their own spell casting)</font></li>
+  <li><font size="2" face="Arial">Improved potion passing</font></li>
+  <li><font size="2" face="Arial">If a character has the Bag of Holding or Potion Case, they will now equip the potion before using it</font></li>
+  <li><font size="2" face="Arial">Improved good berries (they now pass them around)</font></li>
+  <li><font size="2" face="Arial">Improved Mislead script</font></li>
+  <li><font size="2" face="Arial">Implemented switching to a null script if an enemy is using script or mislead</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-22</font></b>
+<ul>
+  <li><font size="2" face="Arial">Restructured performance saver so that healing & skins happen during idle time</font></li>
+  <li><font size="2" face="Arial">Added an AttackReevaluate workaround</font></li>
+  <li><font size="2" face="Arial">Old Help/Assistance system totally removed... Assistance is determined by MostDamagedOf() which should be more efficient</font></li>
+  <li><font size="2" face="Arial">Attempted to fix some inefficiencies with the InMeleeRange movement</font></li>
+  <li><font size="2" face="Arial">Attempted to fix the problem where true sight and invis purge were not being cast</font></li>
+  <li><font size="2" face="Arial">Fixed clone SPL files so that they work on the RACE script level</font></li>
+  <li><font size="2" face="Arial">Added a routine to give potions to most damaged character</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-20</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added protagonist innate abilities (Slow Poison, Cure Light Wounds, Draw Upon Holy Might)</font></li>
+  <li><font size="2" face="Arial">Added Good Berries which will now be used to heal outside of combat</font></li>
+  <li><font size="2" face="Arial">Party protector system will now resets after resting (correcting a problem if you change your party line-up, some numbers go out-of-wack)</font></li>
+  <li><font size="2" face="Arial">Adjusted healing potion usage theshhold from 70% health to 60%</font></li>
+  <li><font size="2" face="Arial">Moondog (Cerebus) is now cast at the rangers feet instead of the enemies feet, allowing it to prepare for battle</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-19</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added Simulacrum, Project Image, and Mislead (including modified spells)</font></li>
+  <li><font size="2" face="Arial">Added Vhailor's Helm as a usable item</font></li>
+  <li><font size="2" face="Arial">Added Shakti Figurine as a usable item</font></li>
+  <li><font size="2" face="Arial">Made some changes to try to fix the "indecision" when interrupted</font></li>
+  <li><font size="2" face="Arial">Made some slight tweaks to the PartyProtector system</font></li>
+  <li><font size="2" face="Arial">Moved Improved Alactrity to happen after TimeStop</font></li>
+  <li><font size="2" face="Arial">Doubled Protection from Magic Weapons to happen before casters go into combat (in addition to when hit)</font></li>
+  <li><font size="2" face="Arial">Improved shapeshifting</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-18</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added a Defensive Spell timer to mix offensive spells in with defensive spells</font></li>
+  <li><font size="2" face="Arial">Added both mage & priest Energy Blades... similar to Melf's Meteors</font></li>
+  <li><font size="2" face="Arial">Fixed & optimized a few small issues here and there</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-16</font></b>
+<ul>
+  <li><font size="2" face="Arial">Finally implemented Xyx's Cast & Attack routine which seems to be working out nicely</font></li>
+  <li><font size="2" face="Arial">Fixed threshhold setting for PartyProtector from [50,100,150,200,250,300] to [35,50,75,100,150,200,300] which should make more sense (Thanks Quitch)</font></li>
+  <li><font size="2" face="Arial">If a character has the Bag of Holding or the Potion Case, the script requires that the potion be equiped to be used (Thanks Quitch & Xyx)</font></li>
+  <li><font size="2" face="Arial">Fixed the EnemyDetect routine so that it picks up on sleeping enemies (thanks C.Enders)</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-15</font></b>
+<ul>
+  <li><font size="2" face="Arial">Fixed Moondog spell casting</font></li>
+  <li><font size="2" face="Arial">Fixed a problem with weapon switching</font></li>
+  <li><font size="2" face="Arial">Made some slight tweaks to the healing section</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-14</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added a &quot;PartyProtector&quot; section to determine if the character should be tanking for the group (sparked from Quitch's appropriate criticism)</font></li>
+  <li><font size="2" face="Arial">Characters should run away from danger more often now</font></li>
+  <li><font size="2" face="Arial">Improved healing section</font></li>
+  <li><font size="2" face="Arial">Added improved Djinni script</font></li>
+  <li><font size="2" face="Arial">Removed some sections that I found out weren't working</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-11</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added usage of Summoning Items; see spells-items.htm for details</font></li>
+  <li><font size="2" face="Arial">Items will now only be used if equiped; but potions do not have to be equiped</font></li>
+  <li><font size="2" face="Arial">Created improved Nymph, Planetar, Deva, &amp; Moon Dog (Cerebus) scripts to be bundled with uScript</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-07</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added 5 new potions; see spells-items.htm for details (Thanks Jason)</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-06</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added Strength &amp; Melf's Meteors to the Buff/Defensive section (Thanks CE)</font></li>
+  <li><font size="2" face="Arial">Lessened the conditions that fire off a class ability, making them occur more often (Thanks Jason)</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-05</font></b>
+<ul>
+  <li><font size="2" face="Arial">Removed ActionListEmpty from Healing &amp; Curing spells</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-09-03</font></b>
+<ul>
+  <li><font size="2" face="Arial">Optimized healing section (again) to only cast healing spells if it will heal at least 10% of the max hitpoints (otherwise it's a waste of time)</font></li>
+  <li><font size="2" face="Arial">Made Greater Restoration only cast if the character has a ToB spell (Greater Restoration heals 100% to all party members if ToB is installed)</font></li>
+  <li><font size="2" face="Arial">Added HotKey(B) to so that prep &amp; heal spells can be cast in between battles</font></li>
+  <li><font size="2" face="Arial">Added HotKey(V) to restore all other hotkey settings to their original state</font></li>
+  <li><font size="2" face="Arial">Corrected Lower Resistance (Thanks CE)</font></li>
+  <li><font size="2" face="Arial">Added in more checks to disabling spells that cause a state change - do not stun if already stunned (Thanks CE)</font></li>
+  <li><font size="2" face="Arial">Added 3 ToB mage spells that I forgot to put in (both Bigby spells &amp; Dragons Breath)</font></li>
+  <li><font size="2" face="Arial">Changed single target disable spells to only fire off when there is more then one enemy</font></li>
+  <li><font size="2" face="Arial">Moved Power Word Blind to the area disable section</font></li>
+  <li><font size="2" face="Arial">Put in Fighter/Paladin/Ranger check for giant strength potions</font></li>
+  <li><font size="2" face="Arial">Added Rogue's Potion of Frost Giant Strength (Thanks Jason)</font></li>
+  <li><font size="2" face="Arial">Fixed some of the GlobalTimers, which were only 1/2 as long as they should have been</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-31</font></b>
+<ul>
+  <li><font size="2" face="Arial">Removed spells that would be a waste to memorize (and take up a slot for) in the first place</font></li>
+  <li><font size="2" face="Arial">Improved many spell conditions to keep sorcerers from wasting spells</font></li>
+  <li><font size="2" face="Arial">Improved the backstab routine</font></li>
+  <li><font size="2" face="Arial">Moved the switching to melee weapon near to top of the script, to prevent getting hit with the penalty if hit while ranged weapon is equipped</font></li>
+  <li><font size="2" face="Arial">Moved Detect Enemy routine to top so that characters with their AI off will still set the flag if they can see an enemy</font></li>
+  <li><font size="2" face="Arial">Changed the order of the heal routines to make self preservation top priority</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-28</font></b>
+<ul>
+  <li><font size="2" face="Arial">Fixed a few offensive actions that were not using the targeting system (most importantly the Combat Attacks!!)</font></li>
+  <li><font size="2" face="Arial">Changed some of the Detect Enemy, and Move to Combat routines with help from C.Enders</font></li>
+  <li><font size="2" face="Arial">Added back the Move to Healer upon heal depletion</font></li>
+  <li><font size="2" face="Arial">Fixed some bugs with some OR(x) not being the correct number</font></li>
+  <li><font size="2" face="Arial">Fixed a problem when the AI was turned off, it would constantly be stopping any movement initiated by the player</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-27</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added shapeshifting abilities for druid, including ToB elemental shapeshift</font></li>
+  <li><font size="2" face="Arial">Fixed in party fighting if someone is charmed</font></li>
+  <li><font size="2" face="Arial">Fixed summoned demon targeting</font></li>
+  <li><font size="2" face="Arial">Added a Turn timer to allow clerics &amp; paladins to cast or attack in between turning undead</font></li>
+  <li><font size="2" face="Arial">Switched to Attack() rather then AttackReevaluate() since I found out that the 'Reevaluate is flawed</font></li>
+  <li><font size="2" face="Arial">Added a few missing spells that should have been there</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-26</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added in a Detect Enemy section that was needed to replace the redundant See/Detect([EVILCUTOFF]) that was happening. Now if Player1 can detect an enemy, a global variable (Player1DetectEnemy) will be set to 1. All CombatCounters were replaced with this also.</font></li>
+  <li><font size="2" face="Arial">Removed Alert system since Detect Enemy essentially replaced it</font></li>
+  <li><font size="2" face="Arial">Fixed a few bugs I missed before</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-25</font></b>
+<ul>
+  <li><font size="2" face="Arial">Changed spell to check for spell depletion to Doom for both Clerics and Druids (more of a useful spell then what I was using before), as a result, I needed to add this spell to the script since it wasn't there before</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-24</font></b>
+<ul>
+  <li><font size="2" face="Arial">Added Spells &amp; Abilities that weren't in the default SPELLS.IDS</font></li>
+  <li><font size="2" face="Arial">Improved Move to Combat again to keep people in combat range more</font></li>
+  <li><font size="2" face="Arial">Added in a PriorityTarget selection based on the level of the Enemy</font></li>
+  <li><font size="2" face="Arial">Optimized healing and curing between all party members</font></li>
+  <li><font size="2" face="Arial">Added more potions (haste and strength)</font></li>
+  <li><font size="2" face="Arial">Added in the ability to use most wands</font></li>
+  <li><font size="2" face="Arial">Tried to minimize spell wastage (mostly in defensive section)</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-23</font></b>
+<ul>
+  <li><font size="2" face="Arial">Fixed the Move to Combat routine</font></li>
+  <li><font size="2" face="Arial">Changed order of preference in Move to combat (start with Player6 vs. Player1) / Removed MostDamagedOf</font></li>
+  <li><font size="2" face="Arial">Re-wrote &quot;run from melee&quot;, so that Casters, Archers, and Injured stay in melee range for 1 rounds, then run</font></li>
+  <li><font size="2" face="Arial">Removed all untested and unnecessary features to keep it simple, rather then the kitchen sink scenario</font></li>
+  <li><font size="2" face="Arial">Added an auto-movement HotKey (&quot;N&quot;) toggle for those who want to have total cotrol over positioning of characters (this disables any auto movement features in the script)</font></li>
+  <li><font size="2" face="Arial">Added healing notification to not waste heal spells (using a GLOBAL timer &quot;u_Healing&quot;)</font></li>
+</ul>
+<b><font size="2" face="Arial">2001-08-20</font></b>
+<ul>
+  <li><font size="2" face="Arial">Merged all previous &quot;SmartScript&quot; functionality into a single unified script now called &quot;uScript&quot;</font></li>
+  <li><font size="2" face="Arial">Added a Targeting system (I believe the idea originated from Sarkyn)</font></li>
+  <li><font size="2" face="Arial">Added an Alert system</font></li>
+  <li><font size="2" face="Arial">Added in all SoA &amp; ToB class abilities that I know of</font></li>
+  <li><font size="2" face="Arial">Added a TimeStop targeting routine</font></li>
+  <li><font size="2" face="Arial">Fixed quite a few other problems, too many to count</font></li>
+</ul>
+
+</body>
+
+</html>

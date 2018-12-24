@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Multi-Install Tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+body  {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	text-align : left;
+	color : #000;
+	background-color: #f2f2fc;
+	margin:50px;
+	padding:0;
+	}
+img {border : 0;}
+h1, h2, h3, h4, h5, h6 {
+	font-size : 17px;
+	font-weight : bold;
+	color : #0000cd;
+	font-variant:small-caps;
+	position:relative;/*
+	top:-45px;*/
+	background-color: #fff;
+	padding:5px;
+	border:1px solid #888;
+margin-right:20px;
+margin-left:20px;
+	border:1px solid #888;
+z-index:10;
+    }
+h2 {font-size : 16px;}
+h3 {font-size : 15px;}
+h4 {font-size : 14px;}
+h5 {font-size : 13px;}
+h6 {font-size : 12px;}
+p, ul, table {clear:left;}
+a, a:link, a:visited, a:hover, a:active {
+	color : #0012ff;
+	margin : 0;
+	padding : 0;
+	border-width : 0;
+	}
+a:visited {color : #0000cd;}
+.section {
+	position:relative;
+	top:-45px;
+	border:1px dotted #bbb;
+	background-color:#fff;
+	margin:30px 0 0 0;
+	padding:20px;
+	}
+.subheader {
+	border:0;
+	border-bottom:1px solid #888;
+	border-left:3px solid #888;
+	margin:auto;
+	font-variant:normal;
+	color:#000;
+	}
+</style>
+<link href="backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>Multi-Install Tool </h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
+    Author: andrewas, Orion's Stardom</strong></p>
+  <p><strong> Version 5.1 </strong><strong> - <a href="http://www.gibberlings3.net/downloads/#mit">Check
+        for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>The multi-install tool is a program which allows side-by-side installs of
+    Baldur's Gate II at a minimal size. This can be useful for example when playing
+    incompatible mods, or when wanting to test a mod on a fresh install. Specifically,
+    it follows the instructions posted by igi in <a href="http://gibberlings3.net/forums/?showtopic=650">Discussion:
+    Multiple BG2 Installations</a>. </p>
+</div>
+<h2>Requirements</h2>
+<div class="section">
+  <p>To use the multi-install tool, you will need: </p>
+  <ul>
+    <li>An installed copy of Baldur's Gate II: Shadows of Amn or Throne of Bhaal.
+      You can use either the Microsoft Windows or Mac OS X version. </li>
+    <li>If using Throne of Bhaal on Microsoft Windows, the official patch. It
+      is recommended that users of other game versions and platforms also apply
+      the official patch, but this is not mandatory. </li>
+    <li>A java runtime environment. </li>
+    <li>The multi-install tool. </li>
+  </ul>
+</div>
+<h2>Usage Instructions</h2>
+<div class="section">
+  <ol>
+    <li>Ensure that you have met the requirements above. </li>
+    <li>Download and run the multi-install tool. </li>
+    <li>Fill in the fields as follows:
+        <ul>
+          <li><i>Source:</i> an existing <acronym title="Baldur's Gate II">BG2</acronym> installation,
+            to be used as a basis for the clone. </li>
+          <li><i>Sink:</i> where you want the new installation to live on your
+            disk. </li>
+        </ul>
+    </li>
+    <li>Optionally, change any available preferences in the lower pane. Depending on the game you have selected to clone, your operating system, and whether you have any save games, not all of the displayed options will be enabled. Each option will increase the size of the clone directory, but may be required for certain functionality or mods.</li>
+    <li>Click 'Go'.</li>
+    <li>Wait until the progress bar fills in and says 'Done'.</li>
+    <li>Run the clone with the main executable (eg, 'bgmain.exe' - <i>not</i> baldur.exe) in the clone folder.</li>
+  </ol>
+  <p>The newly-created install will have the same set of patches and mods to
+    start with as the one it was cloned from. You can apply mods as usual to
+    the cloned game, and they will not affect any other installation you have
+    on your system. </p>
+  </div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p>This tool was created by andrewas and Orion's Stardom. Visit the <a href="http://gibberlings3.net/forums/">Gibberlings
+      Three forums</a> for information on this and any other Gibberlings Three
+      projects on which they may be working.</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p> The multi install tool is released under the <a href="gpl.txt">GNU General Public License</a>, version 2 or any later version. The source code is included in the package. <br />
+    This readme is released under the <a href="fdl.txt">GNU
+  Free Documentation License</a>, Version 1.2 or any later version. </p>
+  <p>The Multi Install Tool includes code developed by <a href="http://swixml.org">the SwiXML project</a>.</p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+ <p><strong>Version 5.1 - Feburary 7, 2007</strong></p>
+  <ul><li>Re-added support for copying extra folders which was not in the 5.0 series.</li>
+      <li>Added support for Icewind Dale 1 (the expansion packs for this game are not supported yet).</li>
+  </ul>
+
+  <p><strong>Version 5.0.1 - January 27, 2007</strong></p>
+  <ul>
+    <li> The status bar should now work properly.</li>
+  </ul>
+  <p><strong>Version 5.0 - September 18, 2006</strong></p>
+  <ul>
+    <li> This version represents a complete rewrite of the Multi-Install Tool.
+      This version is the first to work on Mac OS X, and should also fix bugs
+    which may have occured on Windows 98 and <acronym title="Millenium Edition">ME</acronym>.</li>
+  </ul>
+  <p><strong>Version 4.2 - January 28, 2006</strong></p>
+  <ul>
+    <li> Improved Throne of Bhaal compatibility checks</li>
+  </ul>
+  <p><strong>Version 4.1 - October 30, 2005</strong></p>
+  <ul>
+    <li> Fixed starting <acronym title="Experience Points">XP</acronym> so it
+      isn't always 0</li>
+    <li> Improved sanity checks</li>
+  </ul>
+  <p><strong>Version 4 - June 14, 2005 </strong></p>
+  <ul>
+    <li> Various bugfixes</li>
+    <li> Interface overhaul</li>
+  </ul>
+  <p><strong> Version 3 </strong></p>
+  <ul>
+    <li> Various bugfixes</li>
+    <li> Interface overhaul</li>
+  </ul>
+  <p><strong> Version 2</strong></p>
+  <ul>
+    <li> Various bugfixes</li>
+    <li> Interface overhaul</li>
+  </ul>
+  <p><strong> Version 1</strong></p>
+  <ul>
+    <li> First release</li>
+  </ul>
+</div>
+</body>
+</html>

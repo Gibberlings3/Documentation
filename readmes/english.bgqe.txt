@@ -1,0 +1,345 @@
+			Baldur's Gate Mini Quests and Encounters
+					Modification 
+	for BG1:TotSC, BG1Tutu v4, EasyTutu, BGT, BG:EE, and EET
+					by jastey 
+					Version 15
+
+Baldur's Gate Mini Quests and Encounters Modification (BGQE) is a mod for "vanilla" BG1 (with the add-on Tales of the Sword Coast), BG1Tutu v4, EasyTutu, BGT, BG:EE, and EET, adding several small quests and encounters to the game. Vanilla BG1 without TotSC is no longer officially supported, but it should still work for it.
+
+The duration of the game time added by this mod is approximately 30 to 60 minutes, depending on playing style.
+
+Since Version 9, the Bjornin Extention is moved to the RE BG1 mod (Romantic Encouters for BG1). That is where it belonged all along.
+
+
+
+DESCRIPTION
+
+1. Slime Quest
+
+This quest is located in Beregost. If you pass one of the houses in the northwest, a woman dressed in red should approach you. There are some strange things going on in the house of her neighbor, and she wants your help.
+
+This release revises the quest to meet known compatibility issues and adds a (more) evil quest solution. 
+
+2. Family Treasure Quest
+
+This quest is also located in Beregost. If you go into another house in the northwest, you will meet a strange couple. They obviously have a serious problem, but haven't talked to each other for some time now. Although it seems that they aren't interested in talking to you either, it might just be that you can solve the riddle and ease their worries... or betray them and ruin the family completely.
+
+3. Babysitting in Nashkel, including Carnival Encounter
+
+This quest occurs in Nashkel. Did you meet the desperate mother of two little children? She has something important to do, and is in great need of a trustworthy person who will watch over her children while she is away. So, fearless monster fighter, will you be ready for this challenge?
+
+The babysitting is only available for paladin PCs or for non-evil aligned PC's with reputation higher than 12. Evil PCs can bully the mother away, which will lead to a follow-up.
+
+At the Nashkel carnival, you can find Tina. The young woman is another tragic soul in need of some money... or so she says.
+
+4. Monster in Nashkel
+
+Near the Manor House in Nashkel you can save little Arnim from a monster that's chasing him. He is staying with his parents in the Nashkel Inn. For such a heroic deed, the thankfulness of his parents should be all yours... shouldn't it?
+
+The delivery man who mixed up the egg deliveries will be met later in the game. One of his customers is very, very unhappy about what he got and both will be delighted to see you. 
+
+5. Fallen Paladin in Baldur's Gate
+
+In the northern part of the city, in the temple of Helm, an evil fallen paladin is hiding. He slaughtered a little girl without hesitation... at least that's what the angry people in front of the temple are saying.
+
+6. Undying Love in the Fishing Village
+
+The frightened woman in the left house tells you she is threatened by a monster hiding behind her house. Maybe you should go and take a look?
+
+7. Lovesick Half-Orc
+
+On the road north of Nashkel, you meet Uguth. He is on his way to Baldur's Gate, to his beloved. Due to his appearance, being clearly descended from orcs, he has to overcome a special hindrance before he can take her into his arms.
+
+8. Unexpected Help
+
+In the Candlekeep infirmary, glum Sir Trun seeks healing from his wounds. He was injured badly in a fight, but that doesn't seem to be his actual problem, as Linda, his fiancee who is staying in Candlekeep Inn, can tell you...
+This quest is accessible both during the Prologue or after the return to Candlekeep. Note: Since most players finish this quest in the prologue, there are no NPC reactions for this quest.
+
+Note: The "Extension of Bjornin Encounter" is moved to "bg1re: Romantic Encounters for BG1" where it belongs.
+
+9. Many little paws
+
+Formerly meant as an Easter Egg quest I figured it makes sense to tell players it's actually there. Make sure you have Minsc in your party when talking to the vendor at the Nashkell Carnival. Everything else will develop from there - promise!
+
+Spoiler:
+The pet vendor will reappear after three ingame days at the 3rd level of the Friendly Arm Inn.
+
+10. A Warm Place for Noober
+
+Approximately three days after the first Noober contact in Nashkel, your PC will witness an oxymoron: a Noober who cannot talk! Show mercy and find a kind soul ready to take him in and help him to cure his sickness - and also a place where, finally, Noober can put his talkativeness into good use, as well.
+
+
+INSTALLATION
+
+Note: If you've previously installed the mod, remove it before extracting the new version. To do this, uninstall all previously installed components and delete the mod folder and executables. When installing or uninstalling, do not close the DOS window by clicking on the X button! Instead, press the Enter key when instructed to do so.
+
+
+BGII:EE
+If you use BGII Enhanced Edition from GOG or Steam, you need to prepare your game with modmerge before installing any mods:
+https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use/p1
+
+ 
+General (Windows, Mac OS X, and Linux)
+Make sure you back up your game acordingly, just to be sure. 
+
+Extract the contents of the mod archive to your game's main directory. 
+NOTE: For BG:EE it is important that you istall the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+
+
+Windows
+On successful extraction, there should be an bgqe folder and a setup-bgqe.exe file in your game folder. To install, simply double-click setup-bgqe.exe and follow the instructions on screen.
+Run setup-bgqe.exe in your game folder to reinstall, uninstall or otherwise change components.
+
+Mac OS X
+Make sure you have the Mac OS X version of the mod (named "OSX-BGQE-vx.zip"). If properly extracted, you should have a bgqe folder, setup-bgqe, and setup-bgqe.command in your game's main directory folder. To install, simply double-click setup-bgqe.command and follow the instructions on screen.
+
+Linux
+Make sure you have the Linux version of the mod (named "lin-bgqe-vx.zip").
+Download the latest version of WeiDU for Linux from WeiDU.org and copy WeiDU and WeInstall to /usr/bin. Following that, open a terminal, cd to your BG installation directory, run 'tolower' and answer Y to both queries. You can avoid running the second option (linux.ini) if you have already ran it once in the same directory. To save time, the archive is already tolowered, so there is no need to run the first option (lowercasing file names) either if you have extracted only this mod since the last time you lower cased file name. If you are unsure, running tolower and choosing both options is the safe bet.
+Run WeInstall setup-bgqe in your game folder to install the mod. Then run wine BGMain.exe and start playing.
+
+
+NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
+
+
+If you have installation problems or encounter any bugs, please post your bug report in one of the forum threads given below.
+
+Direkt links: 
+English forum: http://gibberlings3.net/forums/index.php?showforum=148
+
+
+German thread at Kerzenburgforum: http://kerzenburg.baldurs-gate.eu/showthread.php?t=36870
+
+COMPATIBILITY
+
+Baldur's Gate Mini Quests and Encounters Mod is coded using WeiDU and does not overwrite any files. It should be compatible with most other (WeiDU) mods. 
+
+If you play it with the original BG, the mod is compatible with
+-Echon's "Field of the Dead" (Version 1.07)
+
+For original BG, the mod should also be technically compatible with (this does not necessarily imply that the listed mods are all compatible with each other):
+-BG1 Unfinished Business
+-NTotSC (non-WeiDU)
+-Grey Clan Episode 1
+-Herbs and Potions Add-In
+-BG1 Adventure and CoM Forge
+-BG1 Ajantis Expansion Mod
+-Xan Friendship Mod
+
+For Tutu please look into "Tutu Mod Compatibility and Order of Install" at G3:
+http://gibberlings3.net/forums/index.php?showtopic=8122
+
+Compatibility with BG1 Ajantis Expansion Mod is fulfilled.
+
+I want to thank all who have helped me making this mod.
+
+Have fun playing this quest mod!
+
+jastey
+
+
++++++++++++++++Please do not translate below here ++++++++++++++++++++++++
+
+
+CREDITS
+
+Annalena: alpha and beta testing, ideas for quest developpment / NPC-reactions, proof-reading of German translation
+
+Angel: thank you for the hamster BAM (c#q10004.bam)
+
+berelinde: proofreading of English translation
+
+Chev: alpha and beta testing
+
+cujo: alpha and beta testing, ideas for quest developpment / NPC-reactions
+
+Cahir: beta testing
+
+Caillean: alpha and beta testing, ideas for quest developpment / NPC-reactions, proof-reading of German translation 
+
+Drogan Di'Umptu: alpha and beta testing
+
+Erg: beta testing
+
+Gerri: alpha and beta testing
+
+grogerson: alpha and beta testing, proofreading of English translation
+
+Hedian: alpha and beta testing, ideas for quest developpment / NPC-reactions
+
+hook71: proofreading of English translation
+
+Miloch: alpha and beta testing, ideas for quest developpment / NPC-reactions, proofreading of English translation
+
+Pt: proof-reading of German translation
+
+Sir Darian: alpha and beta testing
+
+StoneDog: proofreading of English translation
+
+Twani: alpha and beta testing, ideas for quest developpment / NPC-reactions
+
+White Agnus: alpha and beta testing
+
+Zed Nocear: Coding of spell effect, alpha and beta testing, ideas for quest developpment / NPC-reactions
+
+zenblack: alpha and beta testing, ideas for quest developpment / NPC-reactions
+
+
+-translations-
+
+French translation: Le Marquis (des d'Oghmatiques)
+
+
+-tranlsations v8-
+Italian translation: Stoneangel, with translation of the slimequest by Jakkus & Lord Hagen (GIMT)
+Russian translation: hawkmoon & arcanecoast.ru team
+Polish translation: Zed Nocear
+Spanish translation: Excalibur (slime quest), Immortality (proofreading)
+
+-hosting-
+
+CamDawg, cmorgan and G3 staff: Uploading to G3 site and actualisation of links
+
+CamDawg (G3-Team), Hedian, Fridtjof, Sir Darian: Hosting of the Mod.
+
+
+TOOLS USED
+
+The BG1 Mini-Quests and Encounters Mod was created using the resources provided by the IESDP (https://gibberlings3.github.io/iesdp/) and with the following software:
+
+Infinity Explorer			http://infexp.sourceforge.net
+Near Infinity				http://www.idi.ntnu.no/~joh/ni
+WeiDU					http://www.weidu.org
+BAM Workshop				http://wwww.teambg.eu/?page=tools&cat=32
+CpConverter		http://sourceforge.net/projects/cp-converter/files/cp-converter/CpConverter%20V%200.1.5.0/
+
+Modding communities, tutorials and technical assistance:
+
+Kerzenburgforum				http://kerzenburg.baldurs-gate.eu/
+The Gibberlings Three			http://gibberlings3.net
+Pocket Plane Group			http://pocketplane.net
+Spellhold Studios			http://www.shsforums.net/
+The Black Wyrm's Lair			http://blackwyrmlair.net
+
+
+LEGAL INFORMATION
+
+=============================================================================
+The BG1 Quests and Encounters Mod for Baldur's Gate © 2007 jastey. This mod is not developed, supported, or endorsed by BioWare, Black Isle Studios, Interplay Entertainment Corp., the Wizards of the Coast, Overhaul Games or Beamdog. All other trademarks and copyrights are property of their respective owners.
+=============================================================================
+=============================================================================
+REDISTRIBUTION NOTE: The BG1 Mini-Quests and Encounters Mod was created to be freely enjoyed by all Baldur's Gate players and may not be sold.
+=============================================================================
+
+
+
+HISTORY
+
+Version 15:
+	-("Many Little Paws") Fixed invisible hamster
+	-("Slime Quest", "Many Little Paws") added map notes. French translation: Le Marquis, Italian: jojo678. 
+	-(vanilla BG1+TotSC: "A Warm Place for Noober") now installs without warnings
+	-removed all instances from %BGT_VAR% from Area scripts so the quests can proceed for EET in BGII
+	-added direct EET-version
+
+Version 14:
+	-"quest items get dropped on the floor instead of quest characters taking them back"-bug solved for the Babysitting Quest
+	-BGT, Tutu, BG:EE: "Warm Place for Noober": Asking the shopkeeper about a place for Noober is no longer prevented if the first dialogue happens with a winter wolf pelt in the inventory.
+	-BAMs now compatible with bgee v2.x
+	-update to WeiDU v240
+
+Version 13:
+	-"Warm Place for Noober": Talking to Nalin (priest) about Noober will now add the journal entry about Brage, too
+
+Version 12:
+	-Italian version completed by ilot
+	-"Fallen Paladin": NPCs will not comment on the nanny if the PC did not talk to the fallen paladin yet
+
+Version 11:
+	-M"Family Quest": After solving the quest, Mrs. Dudley no longer has a necklace that can be pickpocketed
+	-The wyvern head of the Nashkel monster now gets actually installed!
+	-Fixed several instances (hopefully all), where party members would perform quest character's actions (like Take Gold, Escape Area etc.)
+	-Family Quest: "Annie drops necklace" bug fixed
+
+Version 10: 
+	-new component: A Warm Place for Noober
+	-"Beregost family quest": fixed bug where party NPCs would leave instead of the family members (evil path)
+	-"Lovesick Half-Orc": Ulguth now comments on the PC being half-orc
+	-"drunk near Beregost temple": Name changed to make the component compatible with Gavin
+	-"Nashkel Monster": The head of the baby wyvern can now be shown to the guards
+	-inserted HANDLE_CHARSETS 
+	-changed names of the components to the actualy names instead of the "installing [component name]..." info from older versions [German & English versions].
+
+Version 9.2: 
+	-French translation completed by Le Marquis (des d'Oghmatiques)
+	-Update to WeiDU v238
+
+Version 9.1: 
+	-Fixed install issues on Tutu because of using another mod's acronym in two file paths
+	-BG: Fixed path of used tra-file for Minsc's aditional dialogue for the component "Many little paws"
+	-OSX: Fixed the mod's archive so it actually contains the working .command file
+	-Update to WeiDU v237
+
+Version 9:
+	-Addition of NPC reactions. 
+	-Addition of one encounter and an easter egg quest
+	-quest extention: Nashkel Monster
+	-All quests are now separate install components
+	-lib tpas corrected
+	-Update to WeiDU v236
+
+Version 8.1: Edit of French translation (Graoumf) and English translation (hook71)
+
+Version 8: Added Polish translation by Zed Nocear.
+	Corrected path name for dialogue (father in "Fallen paladin" quest; BG1 vanilla version was affected only). Updated WeiDU to v231.
+
+Version 7: Added Russian translation by hawkmoon & arcanecoast.ru team
+	   Updated WeiDU to v229.
+
+Version 6: Added Italian translation by Stoneangel, with translation of the slimequest by Jakkus & Lord Hagen (GIMT).
+
+Version 5: Added French translation by Le Marquis (des d'Oghmatiques)
+	   Added missing area check OUTER_SPRINT definition to the tp2.
+	   Corrected wrong item slot of one cre.
+
+Version 4.1: Version 4 with updated readme.
+
+Version 4: widow in the fishing vilage now really hands over her nacklase as a reward if agreed on beforehand; Bjornin text bug (Tutu and BGT versions) corrected.
+
+Version 3: Quest items of slime quest no longer be pick-pockable from the vendor.
+Added Linux version.
+
+Version 2: Spanish version added. (only Windows version)
+
+Version 1: English / German release of the mod. (Windows and Mac OS X)
+
+Version 0.x: English / German public releases.
+
+=============================================================================
+Slime Quest:
+
+CREDITS (only Slime Quest)
+
+Rabain - proofreading of English version, coding of visual effect, general helpfulness!
+Zed Nocear - Polish translation (http://zed_nocear.webpark.pl/)
+weigo - BGT-compatibility!
+Iogan (A.E.R.I.E.ru) - Russian translation and a lot of improvements, corrected items and scripts!
+cujo - a lot of help with WeiDU-offsets!
+Volly - correction of more spelling mistakes!
+Jakkus & Lord Hagen of GIMT - Italian translation!
+Excalibur - Spanish Translation!
+weigo and Miloch - Thank you for the correction of the ambient error!
+
+
+HISTORY (only Slime Quest)
+version 1.7 - correction of the ambient error that was introduced by my crappy tp2 coding or Tutu
+Version 1.6 - Spanish translation
+Version 1.5 - Italian translation
+Version 1.4 - Russian translation and many improvements and bugfixing
+Version 1.3 - BGT compatibility
+Version 1.2 - Polish translation
+Version 1.1 - proofreading of English version, some small additions and bugfixing
+Version 1.0 - original contest entry for September 2004, Black Wyrm Forums
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>BG2 Creature Inventory Checker</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript" src='/includes/g3jscript.js'></script>
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1><acronym title="Baldur's Gate II">BG2</acronym> Creature Inventory Checker</h1>
+<div class="section">
+  <script type="text/javascript">
+<!--
+  document.write('<p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod<\/a><br \/>Author: ');
+  g3mail("webmaster###gibberlings3.net###\"Cam\" Camagna (aka CamDawg)");
+  document.write('<\/strong><\/p>');
+// -->
+</script>
+  <noscript>
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings
+    Three Mod</a><br />
+    Author: &quot;Cam&quot; Camagna (aka CamDawg) </strong></p>
+  </noscript>
+  <p><strong> Version 1 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=57">Check
+    for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p> This utility was something I developed while working on
+    the <acronym title="Baldur's Gate II">BG2</acronym> Fixpack. Near Infinity has some excellent debugging
+    tools which were used as a first pass
+    in corrections to creature files. However, after running
+    (and correcting) the couple hundred errors that turned up,
+    I found there was no tool for finding, say, creatures with
+    a weapon in their weapon slot but not equipped, or a creature
+    with armor in a shield slot, and a number of other miscellaneous
+    errors I wanted to correct. </p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    The <acronym title="Baldur's Gate II">BG2 </acronym>Creature
+    Inventory Checker is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install,
+    simply double-click the archive and follow the instructions
+    on screen. </p>
+  <p> Alternatively the files can be extracted from the archive
+    using <a href="http://www.rarlab.com/">WinRAR</a>. If properly
+    extracted, you should have a BG2_Creature_Inventory_Checker
+    folder and Setup-BG2_Creature_Inventory_Checker.exe in your <acronym title="Baldur's Gate II">BG2 </acronym>folder. </p>
+  <p>To use this utility,  run Setup-BG2_Creature_Inventory_Checker.exe
+    in your  <acronym title="Baldur's Gate II">BG2 </acronym> folder. The utility will search through all creature
+    files present in the game and report errors to the DEBUG
+    file. </p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before
+    extracting the new version. </em>The <acronym title="Baldur's Gate II">BG2 </acronym>Creature
+    Inventory Checker is packaged
+    and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2 </acronym>folder.&nbsp; If
+    properly extracted, you should have a BG2_Creature_Inventory_Checker
+    folder, Setup-BG2_Creature_Inventory_Checker, and Setup-BG2_Creature_Inventory_Checker.command
+    in your <acronym title="Baldur's Gate II">BG2</acronym> folder.</p>
+  <p>To use this utility, run Setup-BG2_Creature_Inventory_Checker.exe
+    in your  <acronym title="Baldur's Gate II">BG2 </acronym> folder. The utility will search through all creature
+    files present in the game and report errors to the DEBUG
+  file. </p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p>The <acronym title="Baldur's Gate II">BG2 </acronym>Creature
+  Inventory Checker is a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod, in a sense. The uility uses
+    <acronym title="Weimer Dialogue Utility">WeiDU</acronym> to search and run checks against creature files, but
+    does not leave a weidu.log entry so it can be run multiple
+    times without interfering with mods. The utility uses a series
+    of PATCH_PRINT commands to report errors. These reports will
+    appear in the installation window, but will be too fast to
+    be caught by the eye. Fortunately, they're logged in the
+    DEBUG file. </p>
+  <p><strong>Note:</strong> The utility works by searching through the resources in a creature's inventory by loading up the referenced items and performing automated checks on the item files. As a result, if the item reference is incorrect and the item does not exist, the utility will fail and exit with an error message. It is recommended that you run Near Infinity's &quot;Find Illegal ResourceRefs...&quot; (under Tools) on creature files and correct any mistakes there before proceeding with this tool. Random treasure items (rndtre01, rndtre02, etc.) are ignored by this utility and will not cause the program to halt. </p>
+  <p>The error messages are all prefixed with ItemErr: to allow
+    for easy searching within the DEBUG file.</p>
+  <p><strong>ItemErr: Bow with no arrows; ItemErr: Sling
+    with no bullets; ItemErr: Crossbow with no bolts </strong></p>
+  <p>These errors are all caused by a similar issue: the creature
+    has a launcher in its weapon slot, but lacks the requisite
+    ammunition in the quiver slots. </p>
+  <p><strong>ItemErr: Arrows with no bow; ItemErr: Bullets with
+  no sling; ItemErr: Bolts with no crossbow </strong></p>
+  <p>Similar to the previous errors, but in this case the creature
+    has ammunition in its quiver slots but no weapon with which
+    to use it. </p>
+  <p><strong>ItemErr: Invalid Helm; ItemErr: Invalid Armor; ItemErr:
+    Invalid Amulet; ItemErr: Invalid Ring; ItemErr: Invalid Cloak</strong>;
+    <strong>ItemErr: Invalid Gloves </strong></p>
+  <p>All of these errors are caused by having an invalid item
+    equipped. For example, if a creature has an item not of the
+    type armor (2) in its armor, this error will be
+    reported. Many of the rings and amulet errors will be spurious,
+    as BioWare tended to use these slots for special items that
+    give creature immunities and other special abilities for
+    their creature type. As many of these items are not flagged
+    with proper item types you will see a number of errors.</p>
+  <p><strong>ItemErr: Invalid Weapon </strong></p>
+  <p>You will see this error if the creature has an item in its
+    weapon slot that does not have a melee (1), ranged (2), or
+    launcher (4) ability. Originally, this was only a check against
+    item type, but there were a number of spurious errors resported
+    as many of the creature paws (such as b1-8.itm) are of the
+    type Miscellaneous (0).</p>
+  <p><strong>ItemErr: Invalid offhand</strong></p>
+  <p>This error is caused by having an item in the offhand/shield
+    slot that is not a one-handed weapon or a shield. The offhand
+    weapon must be melee-only (ranged weapons are not allowed
+    offhand) and not  flagged as two-handed. </p>
+  <p><strong>ItemErr: Invalid quiver    </strong></p>
+  <p>This error is generated by an item in the quiver slot that
+    is not arrows, bullets, or bolts.</p>
+  <p><strong>ItemErr: Invalid weapon equipped  </strong></p>
+  <p>The utility will perform a compare against the equipped
+    weapon value and the weapon slots. This error is reported
+    if there is 1) a valid weapon available and 2) either no
+    weapon selected or the selected slot has no valid weapon.
+    So if a creature has weapon slot 1 set as equipped but has
+    no weapons at all, this error will <em>not</em> be generated
+    as condition #1 is not satisfied. </p>
+  <p><strong>ItemErr: Two-handed weapon and offhand item </strong></p>
+  <p>This error is triggered by one of the weapons in the weapon
+    slots being flagged as two-handed while the offhand/shield
+    slot is filled. This would cause a hard crash in BG2 if such
+    a creature were encountered.</p>
+  <p><strong>ItemErr: Possible equippable item in inventory </strong></p>
+  <p>The utility is also looking for items that were possibly
+    meant to be assigned. As such, it performs a check in a creature
+    inventory for armor, shields, helms, etc. to see if an item
+    could be equipped rather than left in inventory. </p>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <script type="text/javascript">
+<!--
+  document.write('<p>');
+  g3mail("webmaster###gibberlings3.net###&quot;Cam&quot; Camagna (aka CamDawg)");
+  document.write('  wrote this utility. ');
+  document.write('You can visit <a href="http://gibberlings3.net/forums/index.php">The ');
+  document.write('Gibberlings Three<\/a> for information on this and any other ');
+  document.write('mods on which we may be working.<\/p>');
+// -->
+</script>
+  <noscript>
+  <p>&quot;Cam&quot; Camagna (aka CamDawg) wrote this utility.  You can visit <a href="http://gibberlings3.net/forums/index.php">The
+    Gibberlings Three</a> for information on this and any other
+    mods on which we may be working.</p>
+  </noscript>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>This utility would not be possible without the research effort that is the IESDP and tools such as Near Infinity. Thanks to the still active and vibrant Infinity Engine modding community. </p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by
+    Jon Olav Hauglid <br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>This utility may not be sold, published, compiled or redistributed in any form
+    without the consent of its author. <acronym title="Baldur's Gate II">BG2 </acronym>Creature
+    Inventory Checker is &copy;2006 &quot;Cam&quot; Camagna.</p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 1 - January 22, 2006 </strong></p>
+  <ul>
+    <li>Initial release </li>
+  </ul>
+</div>
+</body>
+</html>

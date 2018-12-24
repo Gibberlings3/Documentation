@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sword Coast Stratagems Component: Better Calls For Help</title>
+<meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1" />
+<link href="../backup/g3readme.css" type="text/css" rel="stylesheet" />
+<link href="../backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>Sword Coast Stratagems Component: Better Calls For Help</h1>
+<div class="section">
+  <p> Roughly speaking, the help script works like this. Suppose some hostile
+    creature - say, an Orc - runs into Player 3. He then Shouts something that
+    could be translated as "I'm an Orc and I can see player 3!", and sets an
+    internal variable that means "I'm running towards player 3!".</p>
+  <p> Any orc who hears that shout also sets that same internal variable. If
+    orcs are counted as "intelligent" (like kobolds and gnolls, for instance,
+    but unlike wolves and spiders), the new orc gives a different shout, which
+    could be translated as "I'm an orc and I've just heard another orc shout
+    for player 3!".</p>
+  <p> Any orc who hears the <em>new</em> shout sets the internal variable to
+    say "I'm running towards player 3", but doesn't in turn shout - in playtesting
+    it turned out that too many repeated Shouts just cause everything in the
+    map to run towards the player, which leads to one exciting fight followed
+    by a very long tedious exploration of an empty dungeon. There are a couple
+    of exceptions though: the Bandit camp, for instance.</p>
+  <p> Finally, everyone who has an internal variable set to "run towards player
+    3" does so - <strong>if</strong> they can't see any hostiles.</p>
+  <p> There are fairly obvious ways to abuse this, but they don't tend to come
+    up unless you actively try to set them up.</p>
+  <p> The full list of monsters affected, grouped into those groups which respond
+    to each others' cries for help, is:</p>
+  <p> Stupid creatures:</p>
+  <ul>
+    <li>Basilisks</li>
+    <li>Dogs</li>
+    <li>Spiders and ettercaps (arguably these creatures aren't "stupid", just
+      not organised beyond small groups)</li>
+    <li>Wolves (also hear werewolf cries)</li>
+    <li>Wyverns</li>
+  </ul>
+  <p> Intelligent creatures: </p>
+  <ul>
+    <li>Bandits</li>
+    <li>The demon cultists in Ulgoth's Beard</li>
+    <li>Gibberlings</li>
+    <li>Gnolls</li>
+    <li>Hobgoblins</li>
+    <li>Kobolds</li>
+    <li>Ogres</li>
+    <li>Tasloi</li>
+    <li>Undead</li>
+    <li>Werewolves (also hear wolf cries)</li>
+    <li>Xvarts (and Ursa!)</li>
+    <li>&amp; the mixed bag of (mostly human) creatures who use the Shout script</li>
+  </ul>
+  <p> There is also a specific script for Slythe and Krystin, to make sure that
+    they seek out the player once the fight starts (otherwise they have a tendency
+    to get lost.) </p>
+</div>
+</body>
+</html>

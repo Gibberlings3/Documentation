@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>gMinion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>gMinion</h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings
+    Three Mod</a><br />
+    Author: <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#099;&#105;&#114;&#101;&#114;&#114;&#101;&#107;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+Eric Kerr (aka Cirerrek)
+</a></strong></p>
+  <p><strong> Version 2 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=25">Check
+    for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p> These scripts are designed to enhance and increase the
+    enjoyment of the Baldurs Gate II series of games produced
+    by Bioware. They increase the ingame intelligence of the
+    creatures that are summoned by Spells and Items, so that
+    they behave more in line with the original intentions of
+    both Bioware and more Purist D&amp;D Roleplayers.</p>
+  <p>The gMinion Series consists of:</p>
+  <ul>
+    <li> BCS (Baldurs Character Script) files that replace ingame
+      BCS files</li>
+    <li> BCS scripts that act as substitutes for Allied Summons</li>
+    <li> Auxillary files that fix things wrong with Creatures
+      and Spells (CRE &amp; SPL files) </li>
+  </ul>
+  <p><strong>Notes:</strong></p>
+  <ul>
+    <li> The AI applies only to PARTY monsters and does not
+      increase the intelligence of &quot;wild&quot; or enemy
+      creatures. </li>
+  </ul>
+  <p>gMinion was created by Greg Hodgson (aka Sarkyn). I've have
+    updated the gMinion series here and there to account for
+    the additional summons available in the expansion pack TOB,
+    but the majority of original content is intact and as potent
+    as ever.</p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+  <p>This mod is designed to work with <acronym title="Baldur's Gate II">BG2</acronym>:
+    Shadows of Amn with or without the expansion pack Throne
+    of Bhaal. <acronym title="Baldur's Gate II">At present there
+    are no known incompatibilities. </acronym></p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    The gMinion Series is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install,
+    simply double-click the archive and follow the instructions
+    on screen. </p>
+  <p> Alternatively the files can be extracted from the archive
+    using <a href="http://www.rarlab.com/">WinRAR</a>. If properly
+    extracted, you should have a gMinion folder, Setup-gMinion.tp2, and Setup-gMinion.exe
+    in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To install, simply double-click Setup-gMinion.exe and follow
+    the instructions on screen. </p>
+  <p> Please run Setup-gMinion.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder
+    to reinstall, uninstall or otherwise change components. </p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before
+    extracting the new version. </em>The gMinion Series is packaged
+    and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2</acronym> folder.&nbsp; If
+    properly extracted, you should have a gminion folder, Setup-gMinion,
+    Setup-gMinion.tp2, and Setup-gMinion.command in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To install, simply double-click <strong>Setup-gMinion.command</strong> and
+    follow the instructions on screen.</p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p>The following scripts are included: </p>
+  <p><strong>gMinionM</strong> <br />
+    Melee-Summons that rely on melee attacks</p>
+  <p> <strong>gMinionR</strong> <br />
+    Range-Summons that primarily rely on ranged attacks</p>
+  <p> <strong>gMinionS</strong><br />
+    Spellcaster-Summons with spellcasting abilities</p>
+  <p> <strong>gMinionC - Temporarily Deprecated </strong><br />
+    Clone-Summons that are clones of the caster, but this has been dropped temporarily from the install for the moment. A better way to do the script switching and keep it compatible with  SimDing0's Improved Clones Tweak is being developed.</p>
+  <p><strong> Features </strong></p>
+  <ul>
+    <li> No Turning Hostile, Minions do NOT have free-will
+      according to purist D&amp;D rules</li>
+    <li> Players choices will ALWAYS override the script</li>
+    <li> Minions will return unfailingly to the caster if ever
+      they find themselves more than a few feet away in a non-combat
+      situation</li>
+    <li> Minions will form up behind the caster, and follow
+      them without needing to be ordered to until a higher priority
+      action takes over
+      <ul>
+        <li> Being given an order</li>
+        <li> Seeing an enemy</li>
+        <li> etc. </li>
+      </ul>
+    </li>
+    <li> Minions will no longer carelessly use their spells
+      (the Efreet comes to mind) so that the party is caught
+      in the splash radius</li>
+    <li> Cast-n-Attack - minions will make the best use of
+      every second of every round by attacking in the 5 second
+      downtime. This makes spell casting minions much more effective.</li>
+    <li> Better Targeting - Minions will now selectively chose
+      their foes according to the same algorithm that gSeries
+      uses.</li>
+    <li> Improved Combat Effectiveness - Even the humble Kobold
+      Archer, and Ogre didn't go untouched, they now have better
+      targeting, quicker responses and better consistency with
+      the attacks per round they should have had. </li>
+  </ul>
+  <p><strong>Hotkeys</strong></p>
+  <table class="leftalign">
+    <tr>
+      <th><strong>Hotkey</strong></th>
+      <th><strong>Association</strong></th>
+      <th><strong>Default</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>[D]isable AI</td>
+      <td>Off</td>
+      <td>Turns AI OFF for individual Summons</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>[E]nable AI</td>
+      <td>On</td>
+      <td>Turns AI ON for individual Summons</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>[S]ummon</td>
+      <td>Off</td>
+      <td>Only works for &quot;clones&quot; created by Simulacrum, Project Image &amp; Mislead</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>[B]uff</td>
+      <td>Off</td>
+      <td>Causes spell casting minions to cast defensive spells</td>
+    </tr>
+  </table>
+  <p><strong>Supported Summons: Divine</strong></p>
+  <table class="leftalign">
+    <tr>
+      <th>Spell</th>
+      <th>.CRE File</th>
+      <th>Add. Info</th>
+    </tr>
+    <tr>
+      <td>Animal Summoning I</td>
+      <td><ul>
+          <li>WOLFDISU </li>
+          <li>DOGWASU </li>
+        </ul></td>
+      <td><ul>
+          <li>Dire Wolf </li>
+          <li>War Dog </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Animal Summoning II</td>
+      <td><ul>
+          <li>BEARBLSU </li>
+          <li>BEARBRSU </li>
+          <li>BEARCASU </li>
+          <li>CATJAGSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Black Bear </li>
+          <li>Brown Bear </li>
+          <li>Cave Bear </li>
+          <li>Panther </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Animal Summoning III</td>
+      <td><ul>
+          <li>CATLIOSU </li>
+          <li>WOLFWWSU </li>
+          <li>BEARCASU </li>
+          <li>BEARPOSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Lion </li>
+          <li>Winter Wolf </li>
+          <li>Cave Bear </li>
+          <li>Polar Bear </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Animate Dead</td>
+      <td><ul>
+          <li>GHASTSU </li>
+          <li>SKELWASU </li>
+        </ul></td>
+      <td><ul>
+          <li>Skeleton </li>
+          <li>Skeleton Warrior </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Aerial Servant</td>
+      <td><ul>
+          <li>SERVSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Aerial Servant </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Call Woodland Beings</td>
+      <td><ul>
+          <li>NYMPHSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Nymph
+            <ul>
+              <li>Barkskin </li>
+              <li>Call Lightning </li>
+              <li>Domination </li>
+              <li>Miscast Magic </li>
+              <li>Confusion </li>
+              <li>Hold Monster </li>
+              <li>Cause Serious Wounds </li>
+              <li>Dimension Door </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Animals</td>
+      <td><ul>
+          <li>BEARPOSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Polar Bear </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Fire Elemental</td>
+      <td><ul>
+          <li>ELFIRSU2 </li>
+          <li>ELFIRSU3 </li>
+          <li>ELFIRSU4 </li>
+        </ul></td>
+      <td><ul>
+          <li>Fire Elemental: 12HD </li>
+          <li>Fire Elemental: 16HD </li>
+          <li>Fire Elemental: 24HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Elemental Summoning</td>
+      <td><ul>
+          <li>SWAFIR01 </li>
+          <li>SWAEAR01 </li>
+          <li>SWAAIR01 </li>
+          <li>ELEMZAAM </li>
+          <li>ELEMSUN </li>
+          <li>ELEMCHAN </li>
+        </ul></td>
+      <td><ul>
+          <li>Fire Elemental: 16HD </li>
+          <li>Earth Elemental: 16HD </li>
+          <li>Air Elemental: 16HD </li>
+          <li>Zaaman Rul - Fire Elemental Prince
+            <ul>
+              <li>Flamestrike </li>
+            </ul>
+          </li>
+          <li>Sunnis - Earth Elemental Prince
+            <ul>
+              <li>Earthquake </li>
+            </ul>
+          </li>
+          <li>Chan - Air Elemental Prince </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Greater Elemental Summoning</td>
+      <td><ul>
+          <li>ELEMZAAM </li>
+          <li>ELEMSUN </li>
+          <li>ELEMCHAN </li>
+        </ul></td>
+      <td><ul>
+          <li>Zaaman Rul - Fire Elemental Prince
+            <ul>
+              <li>Flamestrike </li>
+            </ul>
+          </li>
+          <li>Sunnis - Earth Elemental Prince
+            <ul>
+              <li>Earthquake </li>
+            </ul>
+          </li>
+          <li>Chan - Air Elemental Prince </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Deva</td>
+      <td><ul>
+          <li>DEVAGOOD </li>
+        </ul></td>
+      <td><ul>
+          <li>Deva
+            <ul>
+              <li>Remove Fear </li>
+              <li>Cure Disease </li>
+              <li>Dispel Magic </li>
+              <li>Neutralize Poison </li>
+              <li>Cure Critical Wounds </li>
+              <li>Globe of Blades </li>
+              <li>Chaos </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Fallen Deva</td>
+      <td><ul>
+          <li>DEVAEVIL </li>
+        </ul></td>
+      <td><ul>
+          <li>Fallen Deva
+            <ul>
+              <li>Remove Fear </li>
+              <li>Cure Disease </li>
+              <li>Dispel Magic </li>
+              <li>Neutralize Poison </li>
+              <li>Cure Critical Wounds </li>
+              <li>Globe of Blades </li>
+              <li>Chaos </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Totemic Druid Summon Animal Spirit</td>
+      <td><ul>
+          <li>SPIRBEAR </li>
+          <li>SPIRWOLF </li>
+          <li>SPIRSNAK </li>
+          <li>SPIRLION </li>
+        </ul></td>
+      <td><ul>
+          <li>Spirit Bear </li>
+          <li>Spirit Wolf </li>
+          <li>Spirit Snake </li>
+          <li>Spirit Lion </li>
+        </ul></td>
+    </tr>
+  </table>
+  <p><strong>Supported Summons: Arcane</strong></p>
+  <table class="leftalign">
+    <tr>
+      <th>Spell</th>
+      <th>.CRE File</th>
+      <th>Add. Info</th>
+    </tr>
+    <tr>
+      <td>Monster Summoning I</td>
+      <td><ul>
+          <li>KOBOLDSU </li>
+          <li>OGRELESU </li>
+          <li>WORGSU </li>
+          <li>DOGWISU </li>
+        </ul></td>
+      <td><ul>
+          <li>Kobold Commando </li>
+          <li>Ogrillon </li>
+          <li>Worg </li>
+          <li>Rabid Dog </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Monster Summoning II</td>
+      <td><ul>
+          <li>GNOLLSU </li>
+          <li>WOLFDISU </li>
+          <li>HOBOGOBSU </li>
+          <li>OGRESU </li>
+        </ul></td>
+      <td><ul>
+          <li>Gnoll Elite </li>
+          <li>Dire Wolf </li>
+          <li>Hobgoblin Elite </li>
+          <li>Ogre </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Monster Summoning III</td>
+      <td><ul>
+          <li>ETTERCSU </li>
+          <li>OGREGRSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Ettercap </li>
+          <li>Ogre Berserker </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Spider Spawn</td>
+      <td><ul>
+          <li>SPIDGISU </li>
+          <li>SPIDPHSU </li>
+          <li>SPIDSWSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Giant Spider </li>
+          <li>Phase Spider </li>
+          <li>Sword Spider </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Animate Dead</td>
+      <td><ul>
+          <li>GHASTSU </li>
+          <li>SKELWASU </li>
+        </ul></td>
+      <td><ul>
+          <li>Skeleton </li>
+          <li>Skeleton Warrior </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Lesser Air Elemental</td>
+      <td><ul>
+          <li>ELAIRSU1 </li>
+        </ul></td>
+      <td><ul>
+          <li>Air Elemental: 8HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Lesser Earth Elemental</td>
+      <td><ul>
+          <li>ELEARSU1 </li>
+        </ul></td>
+      <td><ul>
+          <li>Earth Elemental: 8HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Lesser Fire Elemental</td>
+      <td><ul>
+          <li>ELFIRSU1 </li>
+        </ul></td>
+      <td><ul>
+          <li>Fire Elemental: 8HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Carrion Summons</td>
+      <td><ul>
+          <li>CARRIOSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Mutated Crawler </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Air Elemental</td>
+      <td><ul>
+          <li>ELAIRSUW </li>
+          <li>ELAIRSU2 </li>
+          <li>ELAIRSU3 </li>
+        </ul></td>
+      <td><ul>
+          <li>Air Elemental:  8HD </li>
+          <li>Air Elemental: 16HD </li>
+          <li>Air Elemental: 20HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Earth Elemental</td>
+      <td><ul>
+          <li>ELEARSU2 </li>
+          <li>ELEARSU3 </li>
+          <li>ELEARSU4 </li>
+        </ul></td>
+      <td><ul>
+          <li>Earth Elemental: 12HD </li>
+          <li>Earth Elemental: 16HD </li>
+          <li>Earth Elemental: 24HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Conjure Fire Elemental</td>
+      <td><ul>
+          <li>ELFIRSU2 </li>
+          <li>ELFIRSU3 </li>
+          <li>ELFIRSU4 </li>
+        </ul></td>
+      <td><ul>
+          <li>Fire Elemental: 12HD </li>
+          <li>Fire Elemental: 16HD </li>
+          <li>Fire Elemental: 24HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Invisible Stalker</td>
+      <td><ul>
+          <li>STALKE </li>
+        </ul></td>
+      <td><ul>
+          <li>Invisible Stalker </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Nishruu</td>
+      <td><ul>
+          <li>NISHRUSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Nishruu
+            <ul>
+              <li>Magic Missile </li>
+              <li>Melf's Acid Arrow </li>
+              <li>Agannazar's Scorcher </li>
+              <li>Lightning Bolt </li>
+              <li>Ghost Armor </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Wyvern Call</td>
+      <td><ul>
+          <li>WYVERNSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Wyvern </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Limited Wish</td>
+      <td><ul>
+          <li>RABBITSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Rabbit </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Mordekainen's Sword</td>
+      <td><ul>
+          <li>SWORD01 </li>
+        </ul></td>
+      <td><ul>
+          <li>Magical Sword </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Djinni</td>
+      <td><ul>
+          <li>DJINNISU </li>
+        </ul></td>
+      <td><ul>
+          <li>Djinni
+            <ul>
+              <li>Magic Missile </li>
+              <li>Melf's Acid Arrow </li>
+              <li>Agannazar's Scorcher </li>
+              <li>Lightning Bolt </li>
+              <li>Ghost Armor </li>
+              <li>Globe of Invulnerability </li>
+              <li>Protection From Magical Weapons </li>
+              <li>Shadow Door </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Efreeti</td>
+      <td><ul>
+          <li>EFREETSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Efreeti
+            <ul>
+              <li>Magic Missile </li>
+              <li>Melf's Acid Arrow </li>
+              <li>Agannazar's Scorcher </li>
+              <li>Lightning Bolt </li>
+              <li>Ghost Armor </li>
+              <li>FireBall </li>
+              <li>Flame Arrow </li>
+              <li>Fire Shield (Red) </li>
+              <li>Invisibility </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Hakeashar</td>
+      <td><ul>
+          <li>HAKSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Hakeashar
+            <ul>
+              <li>Magic Missile </li>
+              <li>Melf's Acid Arrow </li>
+              <li>Agannazar's Scorcher </li>
+              <li>Lightning Bolt </li>
+              <li>Ghost Armor </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Mislead</td>
+      <td><ul>
+          <li> Temporarily not supported </li>
+        </ul></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Projected Image</td>
+      <td><ul>
+          <li>Temporarily not supported </li>
+        </ul></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Simulacrum</td>
+      <td><ul>
+          <li>Temporarily not supported </li>
+        </ul></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Summon Planetar</td>
+      <td><ul>
+          <li>PLANGOOD </li>
+        </ul></td>
+      <td><ul>
+          <li>Planetar
+            <ul>
+              <li>Remove Fear </li>
+              <li>Neutralize Poison </li>
+              <li>Cure Disease </li>
+              <li>Disple Magic </li>
+              <li>Lesser Restoration </li>
+              <li>True Sight </li>
+              <li>Flamestrike </li>
+              <li>Insect Plague </li>
+              <li>Heal </li>
+              <li>Globe of Blades </li>
+              <li>Earthquake </li>
+              <li>Fire Storm </li>
+              <li>Symbol: Fear </li>
+              <li>Symbol: Death </li>
+              <li>Magic Missle </li>
+              <li>Detect Invisibility </li>
+              <li>Flame Arrow </li>
+              <li>Improved Invisibility </li>
+              <li>Chaos </li>
+              <li>Holy Word </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Fallen Planetar</td>
+      <td><ul>
+          <li>PLANEVIL </li>
+        </ul></td>
+      <td><ul>
+          <li>Fallen Planetar
+            <ul>
+              <li>Remove Fear </li>
+              <li>Neutralize Poison </li>
+              <li>Cure Disease </li>
+              <li>Disple Magic </li>
+              <li>Lesser Restoration </li>
+              <li>True Sight </li>
+              <li>Flamestrike </li>
+              <li>Insect Plague </li>
+              <li>Heal </li>
+              <li>Globe of Blades </li>
+              <li>Earthquake </li>
+              <li>Fire Storm </li>
+              <li>Symbol: Fear </li>
+              <li>Symbol: Death </li>
+              <li>Magic Missle </li>
+              <li>Detect Invisibility </li>
+              <li>Flame Arrow </li>
+              <li>Improved Invisibility </li>
+              <li>Chaos </li>
+              <li>Unholy Word </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+  </table>
+  <p><strong>Supported Summons: Items</strong></p>
+  <table class="leftalign">
+    <tr>
+      <th>Item</th>
+      <th>.CRE File</th>
+      <th>Add. Info</th>
+    </tr>
+    <tr>
+      <td>Silver Horn of Valhalla [MISC3I]</td>
+      <td><ul>
+          <li>BERSERSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Berserker Warrior: 5th Level </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Bronze Horn of Valhalla [MISC3J]</td>
+      <td><ul>
+          <li>BERSER02 </li>
+        </ul></td>
+      <td><ul>
+          <li>Berserker Warrior: 7th Level </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Iron Horn of Valhalla [MISC3K]</td>
+      <td><ul>
+          <li>BERSER03 </li>
+        </ul></td>
+      <td><ul>
+          <li>Berserker Warrior: 9th Level </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Ras +2 [SW1H33]</td>
+      <td><ul>
+          <li>SWORD02 </li>
+        </ul></td>
+      <td><ul>
+          <li>Ras </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Staff of the Woodlands [STAF14]</td>
+      <td><ul>
+          <li>SMOUNDSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Shambling Mound </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Staff of Air [STAF15]</td>
+      <td><ul>
+          <li>SUMELAIR </li>
+        </ul></td>
+      <td><ul>
+          <li>Lesser Air Elemental: 8HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Staff of Earth [STAF16]</td>
+      <td><ul>
+          <li>SUMELEAR </li>
+        </ul></td>
+      <td><ul>
+          <li>Lesser Earth Elemental: 8HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Staff of Fire [STAF17]</td>
+      <td><ul>
+          <li>SUMELFIRE </li>
+        </ul></td>
+      <td><ul>
+          <li>Lesser Fire Elemental: 8HD </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Efreeti Bottle [MISC3C]</td>
+      <td><ul>
+          <li>SUMEFREE </li>
+        </ul></td>
+      <td><ul>
+          <li>Efreeti
+            <ul>
+              <li>Magic Missile </li>
+              <li>Melf's Acid Arrow </li>
+              <li>Agannazar's Scorcher </li>
+              <li>Lightning Bolt </li>
+              <li>Ghost Armor </li>
+              <li>FireBall </li>
+              <li>Flame Arrow </li>
+              <li>Fire Shield (Red) </li>
+              <li>Invisibility </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Ring of Djinni Summoning [RING26]</td>
+      <td><ul>
+          <li>SUMDJINN </li>
+        </ul></td>
+      <td><ul>
+          <li>Djinni
+            <ul>
+              <li>Magic Missile </li>
+              <li>Melf's Acid Arrow </li>
+              <li>Agannazar's Scorcher </li>
+              <li>Lightning Bolt </li>
+              <li>Ghost Armor </li>
+              <li>Globe of Invulnerability </li>
+              <li>Protection From Magical Weapons </li>
+              <li>Shadow Door </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Golden Lion Figurine [MISC3D]</td>
+      <td><ul>
+          <li>CATLIOWP </li>
+        </ul></td>
+      <td><ul>
+          <li>Joolon
+            <ul>
+              <li>Cloak of Fear </li>
+              <li>Blur </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Black Spider Figurine [MISC3E]</td>
+      <td><ul>
+          <li>SPIDFGSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Kitthix
+            <ul>
+              <li>Web Tangle </li>
+              <li>Phase Teleport </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Moon Dog Figurine [MISC7T]</td>
+      <td><ul>
+          <li>MOONDOG </li>
+        </ul></td>
+      <td><ul>
+          <li>Cerebus
+            <ul>
+              <li>Mood Dog Sight </li>
+              <li>Mirror Image </li>
+              <li>Improved Invisibility </li>
+              <li>Healing Lick </li>
+              <li>Moon Dog Howl </li>
+            </ul>
+          </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Jade Hound [MISC3F]</td>
+      <td><ul>
+          <li>DOGWAWP </li>
+        </ul></td>
+      <td><ul>
+          <li>Astral Hound </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Spectral Brand [SW1H68/69]</td>
+      <td><ul>
+          <li>SWORD68 </li>
+        </ul></td>
+      <td><ul>
+          <li>Spectral Brand </li>
+        </ul></td>
+    </tr>
+  </table>
+  <p><strong>Unsupported Summons</strong></p>
+  <table class="leftalign">
+    <tr>
+      <th>Spell</th>
+      <th>.CRE File</th>
+      <th>Add. Info</th>
+    </tr>
+    <tr>
+      <td>Wizard Eye</td>
+      <td><ul>
+          <li>WIZEYE </li>
+        </ul></td>
+      <td><ul>
+          <li>Wizard Eye </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Cacofiend</td>
+      <td><ul>
+          <li>DEMNABSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Nabassu </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <td>Summon Fiend</td>
+      <td><ul>
+          <li>DEMGLASU </li>
+        </ul></td>
+      <td><ul>
+          <li>Glabrezu </li>
+        </ul></td
+>
+    </tr>
+    <tr>
+      <td>Gate</td>
+      <td><ul>
+          <li>DEMPITSU </li>
+        </ul></td>
+      <td><ul>
+          <li>Pit Fiend </li>
+        </ul></td>
+    </tr>
+  </table>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p>gMinion was originally created by Greg Hodgson (aka Sarkyn).
+    <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#099;&#105;&#114;&#101;&#114;&#114;&#101;&#107;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+Eric Kerr (aka Cirerrek)
+</a> is now the project author and updates
+    the gMinion series here and there to account for the additional
+    summons available in the expansion pack <acronym title="Throne of Bhaal">ToB</acronym>, but the majority
+    of original content is intact and as potent as ever. You
+    can visit <a href="http://gibberlings3.net/forums/index.php">The
+    Gibberlings Three</a> for information on this and any other
+    mods on which we may be working.</p>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>Black Isle Studios - For producing such an excellent <acronym title="Role-Playing Game">RPG</acronym><br />
+    Bioware - For the Infinity Engine and making such an outstanding <acronym title="Role-Playing Game">RPG</acronym><br />
+    Sarkyn (Greg Hodgson) - gSeries and gMinion<br />
+    G&ouml;ran Rim&eacute;n - scripting tutorials, script segments,
+    etc.,.<br />
+    Xyx (Jochem van't Hull) - General Insight and Helpfulness<br />
+    GBlucher (Gebhard Blucher) - GB-Scripts<br />
+    Rich Martel - uScript<br />
+    TeamBG - Editors, Tutorials, Forums<br />
+    BWScripts - Defunct but not forgotten<br />
+    BGScripts - Where player <acronym title="Artificial Intelligence">AI</acronym> scripting really came to life<br />
+    Jon Hauglid - Near Infinity and eSeries Debugging<br />
+    SimDing0 - A little of this, a little of that, and all very
+    helpful<br />
+    Max (aka Potencius) - a font of information about everything
+    Infinity Engine<br />
+    Macready - researching how to make gMinion TuTu compatible<br />
+    CamDawg - hosting, installation package, TuTu compatability coding, <acronym title="The Gibberlings Three">G3</acronym>'ifying documentation</p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by
+    Jon Olav Hauglid <br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi<br />
+    <a href="http://www.dragonlancetc.com/forums/?board=9"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by
+    Avenger</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>Permission is granted to use and modify the contents of this mod, as long as credit is given to Cirerrek and the original authors and support is handled by the modifying party. </p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 2</strong></p>
+  <ul>
+    <li>Removed setup.bat</li>
+    <li>Updated to WeiDU v213</li>
+  </ul>
+  <p><strong>Version 1.8</strong></p>
+  <ul>
+    <li>Moved HaveSpell(), HaveSpellRES() triggers to top of snippets</li>
+    <li>Made compatible with TuTu</li>
+    <li>WeiDU v191</li>
+  </ul>
+  <p><strong>Version 1.7</strong></p>
+  <ul>
+    <li>Added OS X installer</li>
+    <li>Moved to The Gibberlings Three </li>
+    <li>Scripts  compiled on-the-fly</li>
+    <li>Creature files are  patched instead of overwritten </li>
+  </ul>
+  <p><strong>Version 1.6.7</strong></p>
+  <ul>
+    <li>Fixed Minion Retirement Behavior so it works as intended</li>
+    <li>Pulled gMinionC from the installation for the interim
+      while I work on a new method for assigning scripts to clones</li>
+    <li>Added SpIn683 WEB_TANGLE to the Scriptable Spells segment.
+      This should prevent CTDs that some users were experiencing.</li>
+  </ul>
+  <p><strong>Version 1.6.6</strong></p>
+  <ul>
+    <li>Added Minon Retirement Behavior - Nymph casts MassCure
+      before expiring, if they still have the spell - Suggestion
+      by Bursk</li>
+    <li>Changed installation so that the files SWORD02.CRE (Ras)
+      and SWORD68.CRE (Spectral Brand) are no longer overwritten </li>
+    <li>WeiDU v185</li>
+  </ul>
+  <p><strong>Version 1.6.5</strong></p>
+  <ul>
+    <li>WeiDU v137</li>
+  </ul>
+  <p><strong>Version 1.6.4</strong></p>
+  <ul>
+    <li>NI's nifty updated compiler caught a couple of missing
+      parenthesis in gMinionS and gMinionC series - Fixed!
+      Thanks Jon </li>
+    <li>A while back I changed all my Specifics.IDS values to
+      be under a byte (&lt;255) and apparently forgot to update
+      gs_Acknowledge_Clone, which was preventing the clones from
+      acknowledging properly. Fixed! </li>
+    <li>WeiDU v125 </li>
+  </ul>
+  <p><strong>Version 1.6.3</strong></p>
+  <ul>
+    <li>Major re-vamp of gMinionC so that I am no longer handicapped
+      with two sets of scripts segments gs_ and gmc_ for now
+      on this script will be created from gs_ segments only,
+      thereby reducing my workload by copying any changes I
+      make to the gs_ segements onto gMinionC </li>
+    <li>A number of minor tweaks and adjustments to gMinionS (probably
+      a few more to come), gMinionR and gMinionM remain largely
+      the same </li>
+    <li>WeiDU v119 </li>
+  </ul>
+  <p><strong>Version 1.6.2</strong></p>
+  <ul>
+    <li>Changed usage of MOONDOG_SIGHT (spin696) and MOONDOG_HOWL
+      (spin891) to HaveSpellRES after fixing their spell files
+      which had their levels set incorrectly----MOONDOG_MIRROR_IMAGE
+      and MOONDOG_IMPROVED_INVISIBILITY have their levels set
+      to something other than 1, so they might benefit from
+      having their levels changed </li>
+    <li>The spell files didn't actually get fixed properly so
+      I had to do it again. Should to be good to go. </li>
+    <li>Also fixed MOONDOG_MIRROR_IMAGE (spin697) and MOONDOG_IMPROVED_INVISIBILITY
+      (spin698) this time around and changed their spell usage
+      to HaveSpellRES </li>
+    <li>Tweaked Nymphs use of Miscast Magic a bit </li>
+  </ul>
+  <p><strong>Version 1.6.1</strong> </p>
+  <ul>
+    <li>Removed Vhailor's Helm from gmc_Summons_TL4_Items because clones really shouldn't be able to create other clones, if the player wants to do it manually, that is their affair </li>
+    <li>Fixed Double !Range(blah,4) in the usage of the Thieves' Hood </li>
+    <li>Removed magic resistance check from WIZARD_DRAGONS_BREATH because the spell bypasses it </li>
+    <li>Removed RESISTMAGICFIRE check from WIZARD_COMET and WIZARD_DRAGONS_BREATH </li>
+    <li>Changed resistance check to 50% for Comet and 25% for Dragon's Breath </li>
+    <li>Added Save vs. Death check to Comet to increase the chance of a proper wing buffet/unconciousness results </li>
+    <li>Added check !Class(LastSeenBy(Myself),FIRE_ELEMENTAL) to gs_TurnUndead because some of them are defined as General - UNDEAD </li>
+  </ul>
+</div>
+</body>
+</html>

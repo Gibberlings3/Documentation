@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>IWD to BG2 Opcode Utility</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript" src='/includes/g3jscript.js'></script>
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<style type="text/css">
+tr.deleted td {color:#f00;}
+</style>
+<link href="backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1><acronym title="Icewind Dale">IWD</acronym> to <acronym title="Baldur's Gate II">BG2</acronym> Opcode Utility </h1>
+<div class="section">
+  <script type="text/javascript">
+<!--
+  document.write('<p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod<\/a><br \/>Author: ');
+  g3mail("webmaster###gibberlings3.net###\"Cam\" Camagna (aka CamDawg)");
+  document.write('<\/strong><\/p>');
+// -->
+</script>
+  <noscript>
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings
+    Three Mod</a><br />
+    Author: &quot;Cam&quot; Camagna (aka CamDawg) </strong></p>
+  </noscript>
+  <p><strong> Version 1 - <a href="http://www.gibberlings3.net/downloads/#IWDBG2convert">Check
+    for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p> This utility was something I wrote to assist in converting Icewind Dale spells to Baldur's Gate II for the Divine Remix mod. It is not intended to convert spells, but rather to make a first pass in spell conversion to eliminate a lot of manual work when importing spells from <acronym title="Icewind Dale">IWD</acronym>. The utility focuses on opcodes and their parameters, leaving other tasks (such as projectiles, graphics, etc.) to the modder. </p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    The <acronym title="Icewind Dale">IWD</acronym> to <acronym title="Baldur's Gate II">BG2</acronym> Opcode Utility is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install,
+    simply double-click the archive and follow the instructions
+    on screen. </p>
+  <p> Alternatively the files can be extracted from the archive
+    using <a href="http://www.rarlab.com/">WinRAR</a>. If properly
+    extracted, you should have a IWD_to_BG2_Opcode_Converter folder and Setup-IWD_to_BG2_Opcode_Converter.exe
+    in your <acronym title="Baldur's Gate II">BG2</acronym> folder. </p>
+  <p>To use this utility, place spell files you wish converted in the<acronym> input folder inside </acronym>IWD_to_BG2_Opcode_Converter and run Setup-IWD_to_BG2_Opcode_Converter.exe in your BG2 folder. Converted files will get moved to the output folder inside IWD_to_BG2_Opcode_Converter.</p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before
+    extracting the new version. </em>The eSeries is packaged
+    and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2</acronym> folder.&nbsp; If
+    properly extracted, you should have a IWD_to_BG2_Opcode_Converter folder, Setup-IWD_to_BG2_Opcode_Converter,
+    and Setup-IWD_to_BG2_Opcode_Converter.command in your <acronym title="Baldur's Gate II">BG2</acronym> folder.</p>
+  <p>To use this utility, place spell files you wish converted in the<acronym> input folder inside </acronym>IWD_to_BG2_Opcode_Converter and run Setup-IWD_to_BG2_Opcode_Converter.command in your BG2 folder. Converted files will get moved to the output folder inside IWD_to_BG2_Opcode_Converter.</p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p>Inside the IWD_to_BG2_Opcode_Converter folder are two more folders, input and output. Simply place the spell files you wish to have converted into the input folder, and the utility will drop the converted files into the output folder. The utility will make three main changes to spells:</p>
+  <ul>
+    <li>Opcodes are mapped from <acronym title="Icewind Dale">IWD</acronym> to <acronym title="Baldur's Gate II">BG2</acronym> (see chart below) </li>
+    <li>Portrait icons referenced by the opcodes are mapped from <acronym title="Icewind Dale">IWD</acronym> to <acronym title="Baldur's Gate II">BG2</acronym> (see chart below) </li>
+    <li>Durations are changed from the <acronym title="Icewind Dale">IWD</acronym> standard of 7-second rounds to the <acronym title="Baldur's Gate II">BG2</acronym> standard of 6-second rounds</li>
+  </ul>
+  <p>While written as a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer, the utility runs without a backup option so that it won't get added to weidu.log and you can run it multiple times without interfering with mods on your <acronym title="Baldur's Gate II">BG2</acronym> install.</p>
+  <p>Opcodes are changed as follows (only opcodes which get modified are listed). For opcodes that are not mapped automatically, if anyone can offer specific suggestions on mapping I'll be happy to add conversions for them in future releases. </p>
+  <table class="leftalign">
+    <tr>
+      <th><acronym title="Icewind Dale">IWD</acronym> Opcode </th>
+      <th><acronym title="Baldur's Gate II">BG2</acronym> Opcode </th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td>0 <acronym title="Armor Class">AC</acronym> vs. Damage Type Modifier</td>
+      <td> 0 <acronym title="Armor Class">AC</acronym> vs. Damage Type Modifier </td>
+      <td><acronym title="Icewind Dale">IWD</acronym> Opcode 253 also gets mapped to 0 </td>
+    </tr>
+    <tr>
+      <td>7 Set character colours by Palette</td>
+      <td>7 Set character colours by Palette</td>
+      <td>Opcodes are the same across engines, but <acronym title="Icewind Dale">IWD</acronym> has one opcode to target entire body. <acronym title="Baldur's Gate II">BG2</acronym> needs several opcodes to target the body, so these are created </td>
+    </tr>
+    <tr>
+      <td> 8 Change by <acronym title="Red-Green-Blue">RGB</acronym></td>
+      <td> 8 Change by <acronym title="Red-Green-Blue">RGB</acronym></td>
+      <td>Opcodes are the same across engines, but <acronym title="Icewind Dale">IWD</acronym> has one opcode to target entire body. <acronym title="Baldur's Gate II">BG2</acronym> needs several opcodes to target the body, so these are created </td>
+    </tr>
+    <tr>
+      <td>9 Glow Pulse</td>
+      <td> 9 Glow Pulse</td>
+      <td>Opcodes are the same across engines, but <acronym title="Icewind Dale">IWD</acronym> has one opcode to target entire body. <acronym title="Baldur's Gate II">BG2</acronym> needs several opcodes to target the body, so these are created </td>
+    </tr>
+    <tr>
+      <td>142 Graphics: Display Special Effect Icon</td>
+      <td>142 Graphics: Display Special Effect Icon</td>
+      <td>Same opcode, but portrait icons are mapped (see table below); special exception is petrify (71). Petrify is handled in <acronym title="Baldur's Gate II">BG2</acronym> by graying out the portrait so icons are not needed; as such opcodes 142 and 169 with petrify icons are deleted </td>
+    </tr>
+    <tr>
+      <td>164 Remove Intoxication</td>
+      <td>94 Stat: Drunkenness Modifier</td>
+      <td>Sets the stat to a value of 0 </td>
+    </tr>
+    <tr>
+      <td>169 Graphics: Prevent Special Effect Icon</td>
+      <td>169 Graphics: Prevent Special Effect Icon</td>
+      <td>Same opcode, but portrait icons are mapped (see table below); special exception is petrify (71). Petrify is handled in <acronym title="Baldur's Gate II">BG2</acronym> by graying out the portrait so icons are not needed; as such opcodes 142 and 169 with petrify icons are deleted </td>
+    </tr>
+    <tr class="deleted">
+      <td>233 Graphics: Icewind Visual Spell Hit (plays sound)</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>234 <acronym title="Hit Points">HP</acronym>: Cold Damage</td>
+      <td>12 <acronym title="Hit Points">HP</acronym>: Damage </td>
+      <td>Changed to more generic <acronym title="Baldur's Gate II">BG2</acronym> damage opcode with a damage type of cold (2) </td>
+    </tr>
+    <tr class="deleted">
+      <td>235 Graphics: Icewind Casting Glow</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>236 <acronym title="Hit Points">HP</acronym>: Cold Damage</td>
+      <td>12 <acronym title="Hit Points">HP</acronym>: Damage </td>
+      <td>Changed to more generic <acronym title="Baldur's Gate II">BG2</acronym> damage opcode with a damage type of cold (2) </td>
+    </tr>
+    <tr>
+      <td>237 <acronym title="Hit Points">HP</acronym>: Crushing Damage</td>
+      <td>12 <acronym title="Hit Points">HP</acronym>: Damage </td>
+      <td>Changed to more generic <acronym title="Baldur's Gate II">BG2</acronym> damage opcode with a damage type of crushing (0) </td>
+    </tr>
+    <tr>
+      <td>238 Stat: Save vs. all</td>
+      <td>33 Stat: Save vs. Death Modifier<br />
+        34 Stat: Save vs. Wands Modifier<br />
+        35 Stat: Save vs. Petrification/Polymorph Modifier<br />
+        36 Stat: Save vs. Breath Weapons Modifier<br />
+        37 Stat: Save vs. Spells Modifier</td>
+      <td>Creates the five opcodes needed to handle this effect </td>
+    </tr>
+    <tr>
+      <td>239 Cure: Slow Poison</td>
+      <td>164 Cure: Slow Poison</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>240 Summon: Icewind Summoning Spell</td>
+      <td>67 Summon: Creature Summoning</td>
+      <td>The parameters can not be mapped; you'll need to manually adjust resources for this opcode </td>
+    </tr>
+    <tr>
+      <td>241 <acronym title="Hit Points">HP</acronym>: Vampiric Touch</td>
+      <td>12 <acronym title="Hit Points">HP</acronym>: Damage<br />
+        18 <acronym title="Hit Points">HP</acronym>: Maximum <acronym title="Hit Points">HP</acronym> Modifier</td>
+      <td>Converts to the same opcodes as <acronym title="Baldur's Gate II">BG2</acronym> Vampiric Touch spell; also accounts for caster to target/target to caster <acronym title="Hit Points">HP</acronym> transfers </td>
+    </tr>
+    <tr class="deleted">
+      <td>242 Graphics: Display Creature Overlay</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>243 Summon: Icewind Animate Dead</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>244 State: Positive Prayer</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>245 State: Negative Prayer</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>246 Summon: Icewind Summoning Spell (Mixed)</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>247 Beltyn's Burning Blood</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>248 Summon: Summon Shadow Monsters</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>249 State: Positive Recitation (state)</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>250 State: Negative Recitation</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>251 State: Hold (Lich Touch)</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>252 State: Blinded (Sol's Searing Orb)</td>
+      <td>12 <acronym title="Hit Points">HP</acronym>: Damage <br />
+        74 State: Blindness</td>
+      <td>Damage is of type magic (64) </td>
+    </tr>
+    <tr>
+      <td>253 <acronym title="Armor Class">AC</acronym> vs. Damage Type Modifier (II)</td>
+      <td>0 <acronym title="Armor Class">AC</acronym> vs. Damage Type Modifier</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> Opcode 0 also gets mapped to 0 </td>
+    </tr>
+    <tr class="deleted">
+      <td>254 Removal: Effects specified by Resource</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>255 State: Salamander Aura</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>256 Spell Effect: Umber Hulk Gaze</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>257 Zombie Lord Aura</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>258 Protection: Immunity Resource</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>259 Summon: Summon Creature</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>260 Graphics: Animation Removal</td>
+      <td>271 Graphics: Avatar Removal</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>261 Protection: Immunity Effect and Resource</td>
+      <td>101 Protection: from Opcode</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="deleted">
+      <td>262 Summon: Summon Pomabs</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>263 Spell Effect: Turn Undead (Evil)</td>
+      <td>5 Charm: Charm Specific Creature</td>
+      <td>Changed to more generic charm effect targeting undead (4); parameters are the same in both engines and opcodes </td>
+    </tr>
+    <tr class="deleted">
+      <td>264 Spell Effect: Static Charge</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>265 State: Cloak of Fear</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>266 Stat: Movement Modifier (forced)</td>
+      <td>126 Stat: Movement Modifier</td>
+      <td>Removes save opportunity </td>
+    </tr>
+    <tr>
+      <td>267 Cure: Remove Confusion</td>
+      <td>242 Cure: Confusion</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>268 Spell Effect: Eye of the Mind</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin268.spl&quot; </td>
+    </tr>
+    <tr>
+      <td>269 Spell Effect: Eye of the Sword</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin269.spl&quot; </td>
+    </tr>
+    <tr>
+      <td>270 Spell Effect: Eye of the Mage</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin270.spl&quot; </td>
+    </tr>
+    <tr>
+      <td>271 Spell Effect: Eye of the Venom</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin271.spl&quot; </td>
+    </tr>
+    <tr>
+      <td>272 Spell Effect: Eye of the Spirit</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin272.spl&quot; </td>
+    </tr>
+    <tr>
+      <td>273 Spell Effect: Eye of the Fortitude</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin273.spl&quot; </td>
+    </tr>
+    <tr>
+      <td>274 Spell Effect: Eye of the Stone</td>
+      <td>171 Spell: Give Innate Ability </td>
+      <td>Since this spell is unavailable in <acronym title="Baldur's Gate II">BG2</acronym>, simply maps to give an innate ability with the resource &quot;spin274.spl&quot; </td>
+    </tr>
+    <tr class="deleted">
+      <td>275 Spell Effect: Remove Seven Eyes</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>276 Spell Effect: Remove Effects of Type</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>277 <acronym title="Hit Points">HP</acronym>: Magic Damage (Soul Eater)</td>
+      <td>12 <acronym title="Hit Points">HP</acronym>: Damage </td>
+      <td>Changed to more generic <acronym title="Baldur's Gate II">BG2</acronym> damage opcode with a damage type of magic (64) </td>
+    </tr>
+    <tr class="deleted">
+      <td>278 Spell Effect: Shroud of Flame</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>279 Spell Effect: Animal Rage</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>280 Spell Effect: Turn Undead</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>281 Spell Effect: Vitriolic Sphere</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>282 <acronym title="Hit Points">HP</acronym>: Suppress <acronym title="Hit Points">HP</acronym> Info</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>283 Text: Float Text</td>
+      <td>139 Text: Display String </td>
+      <td>Preserves strref</td>
+    </tr>
+    <tr class="deleted">
+      <td>284 Spell Effect: Mace of Disruption</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td height="31">285 State: Sleep (forced)</td>
+      <td>39 State: Unconsciousness</td>
+      <td>Removes save opportunity </td>
+    </tr>
+    <tr>
+      <td>286 Spell Effect: Ranger Tracking</td>
+      <td>307 Ranger Tracking Ability</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>287 Protection: Backstab</td>
+      <td>292 Protection: Backstab</td>
+      <td>Sets parameter to 1, as indicated by <acronym title="Infinity Engine Structures Description Project">IESDP</acronym> </td>
+    </tr>
+    <tr class="deleted">
+      <td>293 Spell Effect: Beholder Dispel Magic</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>294 Spell Effect: Harpy Wail</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr class="deleted">
+      <td>295 Spell Effect: Jackalwere Gaze</td>
+      <td>266 Unknown</td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+    <tr>
+      <td>296 Script: Set Global Variable</td>
+      <td>309 Script: Set/Modify Variable</td>
+      <td>Had troubles with BG2 opcode 265 Script: Modify Global Variable, so this gets mapped to the more reliable 309 opcode even though 309 is <acronym title="Throne of Bhaal">ToB</acronym>-only </td>
+    </tr>
+    <tr>
+      <td>297 Stat: Hide In Shadows</td>
+      <td>275 Stat: Hide in Shadows Modifier</td>
+      <td>Preserves strref</td>
+    </tr>
+    <tr class="deleted">
+      <td>298 Stat: Use Magic Device</td>
+      <td>266 Unknown </td>
+      <td>Unable to map automatically; changed to unknown opcode as placeholder</td>
+    </tr>
+  </table>
+  <p>Portrait icons  are changed as follows (only icon values which get modified are listed): </p>
+  <table class="leftalign">
+    <tr>
+      <th><acronym title="Icewind Dale">IWD</acronym> Portrait Icon </th>
+      <th><acronym title="Baldur's Gate II">BG2</acronym> Portrait Icon </th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td height="33">39&nbsp;&nbsp;Hasted</td>
+      <td>38&nbsp;&nbsp;&nbsp;Haste</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>40&nbsp;&nbsp;Resist&nbsp;Fear</td>
+      <td>37&nbsp;&nbsp;&nbsp;Resist&nbsp;Fear</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icon 48 (Courage) also gets mapped to 37 </td>
+    </tr>
+    <tr>
+      <td>48 Courage </td>
+      <td>37&nbsp;&nbsp;&nbsp;Resist&nbsp;Fear</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icon 40 (Resist Fear) also gets mapped to 37 </td>
+    </tr>
+    <tr>
+      <td>42&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  77 (Ballad&nbsp;of&nbsp;Three&nbsp;Heroes), 78 (Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart), 79 (Tymora's&nbsp;Melody), 80 (Song&nbsp;of&nbsp;Kaudies), 81 (Siren's&nbsp;Yearning), and 82 (War&nbsp;Chant&nbsp;of&nbsp;Sith) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>43&nbsp;&nbsp;Nauseous</td>
+      <td>7&nbsp;&nbsp;&nbsp;Nauseated</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>44&nbsp;&nbsp;Fatigued</td>
+      <td>39&nbsp;&nbsp;&nbsp;Fatigue</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>45&nbsp;&nbsp;Held</td>
+      <td>13&nbsp;&nbsp;&nbsp;Held</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>47&nbsp;&nbsp;Hopelessness</td>
+      <td>44&nbsp;&nbsp;&nbsp;Hopelessness</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>49&nbsp;&nbsp;Friends</td>
+      <td>115&nbsp;&nbsp;Friends</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>50&nbsp;&nbsp;Hope</td>
+      <td>22&nbsp;&nbsp;&nbsp;Heroism</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>51&nbsp;&nbsp;Greater&nbsp;Malison</td>
+      <td>45&nbsp;&nbsp;&nbsp;Greater&nbsp;Malison</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>52&nbsp;&nbsp;Spirit&nbsp;Armor</td>
+      <td>46&nbsp;&nbsp;&nbsp;Spirit&nbsp;Armour </td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icon 84 (Armor of Faith) also gets mapped to 46 </td>
+    </tr>
+    <tr>
+      <td>53&nbsp;&nbsp;Dominated</td>
+      <td>43&nbsp;&nbsp;&nbsp;Domination</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>54&nbsp;&nbsp;Feebleminded</td>
+      <td>48&nbsp;&nbsp;&nbsp;Feebleminded</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>55&nbsp;&nbsp;Tenser's&nbsp;Transformation</td>
+      <td>72&nbsp;&nbsp;&nbsp;Tenser&rsquo;s&nbsp;Transformation</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>56&nbsp;&nbsp;Mind&nbsp;Blank</td>
+      <td>134&nbsp;&nbsp;Chaotic&nbsp;Commands</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 66 (Chaotic&nbsp;Commands) and 70 (Impervious&nbsp;Sanctity&nbsp;of&nbsp;Mind) also get mapped to 134 </td>
+    </tr>
+    <tr>
+      <td>57&nbsp;&nbsp;Aid</td>
+      <td>17&nbsp;&nbsp;&nbsp;Blessed</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 61 (Strength&nbsp;of&nbsp;One), 64 (Recitation), and 74 (Exaltation) also get mapped to 17 </td>
+    </tr>
+    <tr>
+      <td>59&nbsp;&nbsp;Draw&nbsp;Upon&nbsp;Holy&nbsp;Might</td>
+      <td>135&nbsp;&nbsp;Draw&nbsp;Upon&nbsp;Holy&nbsp;Might</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>60&nbsp;&nbsp;Miscast&nbsp;Magic</td>
+      <td>105&nbsp;&nbsp;Miscast&nbsp;Magic</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>61&nbsp;&nbsp;Strength&nbsp;of&nbsp;One</td>
+      <td>17&nbsp;&nbsp;&nbsp;Blessed</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 57 (Aid), 64 (Recitation), and 74 (Exaltation) also get mapped to 17 </td>
+    </tr>
+    <tr>
+      <td>63&nbsp;&nbsp;Defensive&nbsp;Harmony</td>
+      <td>49&nbsp;&nbsp;&nbsp;Defensive&nbsp;Harmony</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>64&nbsp;&nbsp;Recitation</td>
+      <td>17&nbsp;&nbsp;&nbsp;Blessed</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 57 (Aid), 61 (Strength&nbsp;of&nbsp;One),  and 74 (Exaltation) also get mapped to 17 </td>
+    </tr>
+    <tr>
+      <td>65&nbsp;&nbsp;Champion's&nbsp;Strength</td>
+      <td>50&nbsp;&nbsp;&nbsp;Champion's&nbsp;Strength</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>66 Chaotic&nbsp;Commands</td>
+      <td>134&nbsp;&nbsp;Chaotic&nbsp;Commands</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 56 (Mind&nbsp;Blank) and 70 (Impervious&nbsp;Sanctity&nbsp;of&nbsp;Mind) also gets mapped to 134 </td>
+    </tr>
+    <tr>
+      <td>67&nbsp;&nbsp;Righteous&nbsp;Wrath&nbsp;of&nbsp;the&nbsp;Faithful</td>
+      <td>64&nbsp;&nbsp;&nbsp;Righteous&nbsp;Magic</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>68&nbsp;&nbsp;Phased</td>
+      <td>15&nbsp;&nbsp;&nbsp;Shielded</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>69&nbsp;&nbsp;Pain</td>
+      <td>101&nbsp;&nbsp;Decaying</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>70 Impervious&nbsp;Sanctity&nbsp;of&nbsp;Mind</td>
+      <td>134&nbsp;&nbsp;Chaotic&nbsp;Commands</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons  56 (Mind&nbsp;Blank) and 66 (Chaotic&nbsp;Commands) also gets mapped to 134 </td>
+    </tr>
+    <tr class="deleted">
+      <td>71 Petrify </td>
+      <td>None</td>
+      <td>Petrify is handled in <acronym title="Baldur's Gate II">BG2</acronym> by graying out the portrait so icons are not needed; as such opcodes 142 and 169 with petrify icons are deleted </td>
+    </tr>
+    <tr>
+      <td>72&nbsp;&nbsp;Iron&nbsp;Body</td>
+      <td>62&nbsp;&nbsp;&nbsp;Iron&nbsp;Skins</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>73&nbsp;&nbsp;Animal&nbsp;Rage</td>
+      <td>141&nbsp;&nbsp;Enraged</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>74&nbsp;&nbsp;Exaltation</td>
+      <td>17&nbsp;&nbsp;&nbsp;Blessed</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 57 (Aid), 61 (Strength&nbsp;of&nbsp;One), and 64 (Recitation) also get mapped to 17 </td>
+    </tr>
+    <tr>
+      <td>75&nbsp;&nbsp;Cat's&nbsp;Grace</td>
+      <td>155&nbsp;&nbsp;Avoid&nbsp;Death</td>
+      <td>ToB icon </td>
+    </tr>
+    <tr>
+      <td>77&nbsp;&nbsp;Ballad&nbsp;of&nbsp;Three&nbsp;Heroes</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  78 (Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart), 79 (Tymora's&nbsp;Melody), 80 (Song&nbsp;of&nbsp;Kaudies), 81 (Siren's&nbsp;Yearning), and 82 (War&nbsp;Chant&nbsp;of&nbsp;Sith) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>78 Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  77 (Ballad&nbsp;of&nbsp;Three&nbsp;Heroes), 79 (Tymora's&nbsp;Melody), 80 (Song&nbsp;of&nbsp;Kaudies), 81 (Siren's&nbsp;Yearning), and 82 (War&nbsp;Chant&nbsp;of&nbsp;Sith) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>79 Tymora's&nbsp;Melody</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  77 (Ballad&nbsp;of&nbsp;Three&nbsp;Heroes), 78 (Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart), 80 (Song&nbsp;of&nbsp;Kaudies), 81 (Siren's&nbsp;Yearning), and 82 (War&nbsp;Chant&nbsp;of&nbsp;Sith) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>80 Song&nbsp;of&nbsp;Kaudies</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  77 (Ballad&nbsp;of&nbsp;Three&nbsp;Heroes), 78 (Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart), 79 (Tymora's&nbsp;Melody),  81 (Siren's&nbsp;Yearning), and 82 (War&nbsp;Chant&nbsp;of&nbsp;Sith) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>81 Siren's&nbsp;Yearning</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  77 (Ballad&nbsp;of&nbsp;Three&nbsp;Heroes), 78 (Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart), 79 (Tymora's&nbsp;Melody), 80 (Song&nbsp;of&nbsp;Kaudies), and 82 (War&nbsp;Chant&nbsp;of&nbsp;Sith) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>82 War&nbsp;Chant&nbsp;of&nbsp;Sith</td>
+      <td>40&nbsp;&nbsp;&nbsp;Bard&nbsp;Song</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icons 42 (Bard&nbsp;Song),  77 (Ballad&nbsp;of&nbsp;Three&nbsp;Heroes), 78 (Tale&nbsp;of&nbsp;Curran&nbsp;Strongheart), 79 (Tymora's&nbsp;Melody), 80 (Song&nbsp;of&nbsp;Kaudies), and 81 (Siren's&nbsp;Yearning) also get mapped to 40 </td>
+    </tr>
+    <tr>
+      <td>83&nbsp;&nbsp;Deaf</td>
+      <td>112&nbsp;&nbsp;Deaf</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>84&nbsp;&nbsp;Armor&nbsp;of&nbsp;Faith</td>
+      <td>46&nbsp;&nbsp;&nbsp;Spirit&nbsp;Armour</td>
+      <td><acronym title="Icewind Dale">IWD</acronym> icon 52 (Spirit Armor) also gets mapped to 46 </td>
+    </tr>
+  </table>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <script type="text/javascript">
+<!--
+  document.write('<p>');
+  g3mail("webmaster###gibberlings3.net###&quot;Cam&quot; Camagna (aka CamDawg)");
+  document.write('  wrote this utility. ');
+  document.write('You can visit <a href="http://gibberlings3.net/forums/index.php">The ');
+  document.write('Gibberlings Three<\/a> for information on this and any other ');
+  document.write('mods on which we may be working.<\/p>');
+// -->
+</script>
+  <noscript>
+  <p>&quot;Cam&quot; Camagna (aka CamDawg) wrote this utility.  You can visit <a href="http://gibberlings3.net/forums/index.php">The
+    Gibberlings Three</a> for information on this and any other
+    mods on which we may be working.</p>
+  </noscript>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>This utility would not be possible without the research effort that is the IESDP and tools such as Near Infinity. Thanks to the still active and vibrant Infinity Engine modding community. </p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by
+    Jon Olav Hauglid <br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>This utility may not be sold, published, compiled or redistributed in any form
+    without the consent of its author. IWD to BG2 Opcode Utility is &copy;2006 &quot;Cam&quot; Camagna.</p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 1 - January 16, 2006 </strong></p>
+  <ul>
+    <li>Initial release </li>
+  </ul>
+</div>
+</body>
+</html>

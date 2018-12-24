@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Scriptable Spells</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>Scriptable Spells</h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings
+    Three Mod</a><br />
+    Author: Eric Kerr (aka Cirerrek)</strong></p>
+  <p><strong> Version 1.5 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=25">Check
+    for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>Scriptable Spells fixes several SPCLxxx and SPINxxx spells
+    that had their spell level incorrectly defined. The incorrect
+    level definition would cause the game to crash when the spells
+    were cast using the trigger HaveSpell(). The spells modified
+    by this package are able to be scripted without causing the
+    game to crash.</p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+  <p>This mod is designed to work with <acronym title="Baldur's Gate II">BG2</acronym>:
+    Shadows of Amn with or without the expansion pack Throne
+    of Bhaal. <acronym title="Baldur's Gate II">At present there
+    are no known incompatibilities. </acronym></p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    Scriptable Spells is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install,
+    simply double-click the archive and follow the instructions
+    on screen. </p>
+  <p> Alternatively the files can be extracted from the archive
+    using <a href="http://www.rarlab.com/">WinRAR</a>. If properly
+    extracted, you should have a scriptablespells folder, Setup-Scriptable_Spells.tp2, and
+    Setup-Scriptable_Spells.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To install, simply double-click Setup-Scriptable_Spells.exe
+    and follow the instructions on screen. </p>
+  <p> Please run Setup-scriptable_spells.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder
+    to reinstall, uninstall or otherwise change components. </p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before
+    extracting the new version. </em>Scriptable Spells is packaged
+    and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2</acronym> folder.&nbsp; If
+    properly extracted, you should have a scriptablespells folder,
+    Setup-Scriptable_Spells.tp2, Setup-Scriptable_Spells, and Setup-Scriptable_Spells.command
+    in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To install, simply double-click <strong>Setup-Scriptable_Spells.command</strong> and
+    follow the instructions on screen.</p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p>Somewhere along the way it was discovered that many of the
+    kit class spells, such as Boon of Lathander and Helm Seeking
+    Sword, would cause Baldur's Gate II to crash when scripted
+    with the trigger 0x4031 HaveSpell(I:Spell Spell). This latter
+    also proved true with several of the spells added by the
+    expansion Throne of Bhaal. A work around for casting the
+    spells was developed by one or more of the talented scripters,
+    so scripting life continued unabated.</p>
+  <p>I am not 100% certain, but I believe it was Dave Gaider
+    and Mark ?, employees of Bioware, who discovered how to fix
+    this problem. The problem was that the level of the spells
+    was incorrectly defined in their .spl files. Instead of
+    being set to 1, they were set to the equivalent values of
+    their mage or cleric counterpart spells. In short, probably
+    a copy/paste error.</p>
+  <p>At some point it was, I believe, Vulgar Zildrah who compiled
+    the fixed .spl files into a single package, Repaired_Innate_BG2_Spell_Files.
+    Then sometime later, I came along and fixed some of the TOB
+    spells and compiled them into another package, More_Modified_Innate_ToB_Spell_Files.</p>
+  <p>Scriptable Spells combines the two packs into one and uses <acronym title="Weimer Dialogue Utility">WeiDU</acronym> to
+    install and modify the level of the spells.</p>
+  <table class="leftalign">
+    <tr>
+      <th>Spell Code</th>
+      <th>Spell Name</th>
+      <th>Spell.IDS Reference</th>
+    </tr>
+    <tr>
+      <td>SPCL232</td>
+      <td>Inquisitor True Sight</td>
+      <td>INQUIS_TRUE_SIGHT</td>
+    </tr>
+    <tr>
+      <td>SPCL412</td>
+      <td>Set Trap (Thief)</td>
+      <td>SET_SNARE_TRAP</td>
+    </tr>
+    <tr>
+      <td>SPCL414</td>
+      <td>Set Trap (Bounty Hunter)</td>
+      <td>SET_SPECIAL_SNARE_TRAP</td>
+    </tr>
+    <tr>
+      <td>SPCL621</td>
+      <td>Summon Animal Spirit</td>
+      <td>TOTEMICDRUID_SUMMON_ANIMAL_SPIRIT</td>
+    </tr>
+    <tr>
+      <td>SPCL721</td>
+      <td>Talos Storm Shield</td>
+      <td>TALOS_STORM_SHIELD</td>
+    </tr>
+    <tr>
+      <td>SPCL722</td>
+      <td>Talos Lightning Bolt</td>
+      <td>TALOS_LIGHTNING_BOLT</td>
+    </tr>
+    <tr>
+      <td>SPCL731</td>
+      <td>Helm Seeking Sword</td>
+      <td>HELM_SEEING_SWORD</td>
+    </tr>
+    <tr>
+      <td>SPCL732</td>
+      <td>Helm True Sight</td>
+      <td>HELM_TRUE_SIGHT</td>
+    </tr>
+    <tr>
+      <td>SPCL741</td>
+      <td>Boon of Lathander</td>
+      <td>LATHANDER_BOON</td>
+    </tr>
+    <tr>
+      <td>SPCL742</td>
+      <td>Lathander Hold Undead</td>
+      <td>LATHANDER_HOLDUNDEAD</td>
+    </tr>
+    <tr>
+      <td>SPCL910</td>
+      <td>Set Spike Trap</td>
+      <td>ROGUE_SET_SPIKE_TRAP *TOB</td>
+    </tr>
+    <tr>
+      <td>SPCL911</td>
+      <td>Set Exploding Trap</td>
+      <td>ROGUE_SET_EXPLODING TRAP *TOB</td>
+    </tr>
+    <tr>
+      <td>SPCL912</td>
+      <td>Set Time Trap</td>
+      <td>ROGUE_SET_TIME_TRAP *TOB</td>
+    </tr>
+    <tr>
+      <td>SPCL923</td>
+      <td>Paladin Summon Deva</td>
+      <td>PALADIN_SUMMON_DEVA *TOB</td>
+    </tr>
+    <tr>
+      <td>SPIN683</td>
+      <td>Web Tangle </td>
+      <td>FIGURINE_SPIDER_WEB</td>
+    </tr>
+    <tr>
+      <td>SPIN696</td>
+      <td>Moon Dog Sight</td>
+      <td>MOONDOG_SIGHT</td>
+    </tr>
+    <tr>
+      <td>SPIN697</td>
+      <td>Moon Dog Mirror Image</td>
+      <td>MOONDOG_MIRROR_IMAGE</td>
+    </tr>
+    <tr>
+      <td>SPIN698</td>
+      <td>Moon Dog Improved Invisibility</td>
+      <td>MOONDOG_IMPROVED_INVISIBILITY</td>
+    </tr>
+    <tr>
+      <td>SPIN891</td>
+      <td>Moon Dog Howl</td>
+      <td>MOONDOG_HOWL</td>
+    </tr>
+  </table>
+  <p>Please note that the Spell Codes are correct for the individual
+    spells, but the Spell Names may or not be correct and should
+    be considered my interpretation of what the name of the spell
+    should be. Many of the Spell.IDS References listed in the
+    table above are CUSTOM, meaning I or others have manually
+    altered the Spell.IDS file to change the name of existing
+    spells or to add names of spells that did not have Spell.IDS
+    references as shipped with the game. When attempting to script
+    the spells, you should reference you own Spell.IDS file to
+    determine the correct method to script the spells.</p>
+  <p>These spells will now work properly with the triggers, 0x4031
+    HaveSpell(I:Spell Spell) and 0x4031 HaveSpellRES(S:Spell*).</p>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p>Eric Kerr (aka Cirerrek) maintains Scriptable Spells. You
+    can visit <a href="http://gibberlings3.net/forums/index.php">The
+    Gibberlings Three</a> for information on this and any other
+    mods on which we may be working.</p>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>Black Isle Studios - For producing such an excellent <acronym title="Role-Playing Game">RPG</acronym><br />
+    Bioware - For the Infinity Engine and making such an outstanding <acronym title="Role-Playing Game">RPG</acronym><br />
+    Sarkyn (Greg Hodgson) - gSeries and gMinion<br />
+    Xyx (Jochem van't Hull) - General Insight and Helpfulness<br />
+    GBlucher (Gebhard Blucher) - GB-Scripts<br />
+    Rich Martel - uScript<br />
+    TeamBG - Editors, Tutorials, Forums<br />
+    BWScripts - Defunct but not forgotten<br />
+    BGScripts - Where player <acronym title="Artificial Intelligence">AI</acronym> scripting
+    really came to life<br />
+    Jon Hauglid - Near Infinity and eSeries Debugging<br />
+    SimDing0 - A little of this, a little of that, and all very
+    helpful<br />
+    Max (aka Potencius) - a font of information about everything
+    Infinity Engine<br />
+    Ivann Alvarado - XpertAi (<acronym title="Icewind Dale">IWD</acronym>)<br />
+    Grog - Smart Scripts<br />
+    Jessica Kerr - seriously reducing my risk of developing carpal
+    tunnel syndrome<br />
+    Sir Alexander - French translation<br />
+    King Diamond - <acronym title="Big Picture">BP</acronym> Detectable
+    Spells<br />
+CamDawg - hosting, installation package, <acronym title="The Gibberlings Three">G3</acronym>'ifying documentation</p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by
+    Jon Olav Hauglid <br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi<br />
+    <a href="http://www.dragonlancetc.com/forums/?board=9"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by
+    Avenger<br />
+    <a href="http://www.bridgesuk.com/andy/">BAM Workshop II</a> by
+    Andrew Bridges </p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>This mod may not be sold, published, compiled or redistributed
+    in any form without the consent of its author. </p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p> <strong> Version 1.5</strong></p>
+  <ul>
+    <li>Removed setup.bat</li>
+    <li>Updated to WeiDU v213 </li>
+  </ul>
+  <p> <strong> Version 1.4</strong></p>
+  <ul>
+    <li>Added OS X installer</li>
+    <li>Moved to The Gibberlings Three </li>
+  </ul>
+  <p><strong>Version 1.3</strong> </p>
+  <ul>
+    <li>Some minor WeiDU coding changes </li>
+    <li>WeiDU v185 </li>
+  </ul>
+  <p><strong>Version 1.2</strong> </p>
+  <ul>
+    <li>Instead of copying the spell files over, it now uses
+      WeiDU to modify the existing spells - Thanks to Idobek </li>
+    <li>WeiDU v140 </li>
+  </ul>
+  <p><strong>Version 1.1</strong> </p>
+  <ul>
+    <li>Added Cerebus specific innates, MOONDOG_HOWL, MOONDOG_IMPROVED_INVISIBILITY,
+      MOONDOG_SIGHT, and MOONDOG_MIRROR_IMAGE - Thanks Horred
+      the Plague </li>
+    <li>WeiDU v115 </li>
+  </ul>
+  <p><strong>Version 1.0</strong> </p>
+  <ul>
+    <li>Combination of the two spell packs, Repaired_Innate_BG2_Spell_Files
+      and More_Modified_Innate_ToB_Spell_Files into one pack
+      to be distrubted as a WeiDU installation package. </li>
+  </ul>
+</div>
+</body>
+</html>

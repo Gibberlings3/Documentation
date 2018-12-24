@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Detectable Spells</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+</head>
+<body>
+<h1>Detectable Spells </h1>
+<div class="section">
+  <p><strong>  Authors: Vulgar Zildrah, Kensai Ryu, Eric Kerr (aka Cirerrek). Repackaged by CamDawg. </strong></p>
+  
+<p><strong> Version 1.9 (Beta) </strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+<p> Detectable Spells was originally created by Vulgar Zildrah and Kensai Ryu. </p>
+<p> It allows you to use a CheckStat, CheckstatGT or LT trigger to look for certain spells in effect on an object. The names used for checkstat match the Spell.ids names of the spells to SOME extent. </p>
+<p> So to check if the last object seen has a protection from evil spell active and display the text 'Protected from evil' above the object running the script's head, use the following script: </p>
+<p> IF CheckStatGT(LastSeenBy(Myself),0,PROTECTION_FROM_EVIL) THEN RESPONSE #100 DisplayStringHead(Myself,14769) //'Protected from evil' END </p>
+<p> Obviously this gives us a lot more ability to script for spell defenses that are active on objects. </p>
+</div>
+<h2>Known Issues </h2>
+<div class="section">
+<p> Occasionally it has been found that certain spells will trigger an incorrect state. For example: </p>
+<p> If two spells are cast that are Stats in the same entry, only the lasts spell cast will be detectable, I site SCRIPTINGSTATE5 as a prime example. </p>
+<p> To offset this potential conflict, an attempt was made to assign the more 'powerful' spells a higher value in its respective Stat entry. </p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+<p>Detectabl Spells  is designed to work with Baldur's Gate II: Shadows of Amn with or without the Throne of Bhaal expansion pack. </p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+<p><strong>Windows</strong><br />
+ Detectable Spells is packaged and installed with 
+<acronym title="Weimer Dialogue Utility">WeiDU</acronym> and is distributed as a self-extracting archive. To install, simply double-click 
+the archive and follow the instructions on screen.</p>
+<p>Alternatively the files can be extracted from the archive using <a href="http://www.rarlab.com/">WinRAR</a>. If properly extracted, 
+you should have a detectable_spells  folder and setup-detectable_spells.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder. To install, simply 
+double-click setup-detectable_spells.exe and follow the instructions on screen.</p>
+<p><strong>Mac OS X</strong><br />
+<em>If the mod was previously installed, uninstall it before extracting the new 
+version. </em>Detectable Spells is packaged and installed with 
+<acronym title="Weimer Dialogue Utility">WeiDU</acronym>. To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+If properly extracted, you should have a detectable_spells folder, setup-detectable_spells, and setup-detectable_spells.command 
+in your <acronym title="Baldur's Gate II">BG2</acronym> folder. To install, simply double-click <strong>setup-detectable_spells.command</strong> 
+and follow the instructions on screen.</p>
+</div>
+<h2>Contents</h2><div class="section">
+<p>This mod contains a single component. Modders may include this code freely in their mods, as long as credit is given to the original authors.</p>
+<table>
+
+  <tbody>
+    <tr>
+      <th>File</th>
+      <th>Spell Name</th>
+      <th>Scripting State</th>
+      <th>SS#</th>
+      <th>Value</th>
+      <th>Opcode</th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>balshld</td>
+      <td>Fire Shield (Red)</td>
+      <td>WIZARD_FIRE_SHIELD</td>
+      <td>125</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>bhaal1b</td>
+      <td>Regeneration</td>
+      <td>CLERIC_REGENERATION</td>
+      <td>124</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>bhaal2a</td>
+      <td>Draw Upon Holy Might</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>dgarchon</td>
+      <td>Shield of the Archons</td>
+      <td>CLERIC_SHIELD_OF_THE_ARCHONS</td>
+      <td>123</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>dgfaith</td>
+      <td>Armor of Faith</td>
+      <td>CLERIC_ARMOR_OF_FAITH</td>
+      <td>110</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>dgright</td>
+      <td>Righteous Magic</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>6</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>marw401</td>
+      <td>Daer'Ragh's Aura Cleansing</td>
+      <td>WIZARD_IMPROVED_ALACRITY</td>
+      <td>165</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>melis02</td>
+      <td>Blade Barrier</td>
+      <td>CLERIC_BLADE_BARRIER</td>
+      <td>121</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl144</td>
+      <td>Kai</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">spcl152</td>
+      <td align="left" valign="middle">Barbarian Rage</td>
+      <td>SCRIPTINGSTATE3</td>
+      <td>158</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">spcl152</td>
+      <td align="left" valign="middle">Barbarian Rage</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl213</td>
+      <td>Protection from Evil</td>
+      <td>PROTECTION_FROM_EVIL</td>
+      <td>117</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl222</td>
+      <td>Remove Fear</td>
+      <td>WIZARD_RESIST_FEAR</td>
+      <td>178</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl232</td>
+      <td>True Sight</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl233</td>
+      <td>Protection from Evil 10' Radius</td>
+      <td>PROTECTION_FROM_EVIL</td>
+      <td>117</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl321</td>
+      <td>Enrage</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl423</td>
+      <td>Poison Weapon</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl521</td>
+      <td>Offensive Spin</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl522</td>
+      <td>Defensive Spin</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl732</td>
+      <td>True Sight</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">spcl741</td>
+      <td align="left" valign="middle">Boon of Lathander</td>
+      <td>SCRIPTINGSTATE3</td>
+      <td>158</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">spcl741</td>
+      <td align="left" valign="middle">Boon of Lathander</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl811</td>
+      <td>Stunning Blow</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl820</td>
+      <td>Quivering Palm</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>5</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl900</td>
+      <td>Whirlwind Attack</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl901</td>
+      <td>Greater Whirlwind Attack</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>5</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl902</td>
+      <td>Deathblow</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl903</td>
+      <td>Greater Deathblow</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl905</td>
+      <td>Critical Strike</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl906</td>
+      <td>Power Attack</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl909</td>
+      <td>Smite</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>5</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spcl916</td>
+      <td>Assassination</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin103</td>
+      <td>Draw Upon Holy Might</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin117</td>
+      <td>Berserk</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin121</td>
+      <td>Protection from Evil</td>
+      <td>PROTECTION_FROM_EVIL</td>
+      <td>117</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin571</td>
+      <td>Energy Drain</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin666</td>
+      <td>Level Drain</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin676</td>
+      <td>Invoke Courage</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin684</td>
+      <td>True Sight</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin686</td>
+      <td>Protection from Magical Weapons</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td>
+      <td>128</td>
+      <td>4</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin696</td>
+      <td>Moon Dog Sight</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin710</td>
+      <td>Spell Deflection</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin878</td>
+      <td>Level Drain</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spin920</td>
+      <td>Minor Spell Turning</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr107</td>
+      <td>Protection from Evil</td>
+      <td>PROTECTION_FROM_EVIL</td>
+      <td>117</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr108</td>
+      <td>Remove Fear</td>
+      <td>WIZARD_RESIST_FEAR</td>
+      <td>178</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr111</td>
+      <td>Armor of Faith</td>
+      <td>CLERIC_ARMOR_OF_FAITH</td>
+      <td>110</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr202</td>
+      <td>Barkskin</td>
+      <td>SCRIPTINGSTATE5</td>
+      <td>160</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr214</td>
+      <td>Draw Upon Holy Might</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr312</td>
+      <td>Strength of One</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr319</td>
+      <td>Summon Insects</td>
+      <td>CLERIC_INSECT_PLAGUE</td>
+      <td>120</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr403</td>
+      <td>Free Action</td>
+      <td>CLERIC_FREE_ACTION</td>
+      <td>131</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr406</td>
+      <td>Defensive Harmony</td>
+      <td>CLERIC_DEFENSIVE_HARMONY</td>
+      <td>133</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr408</td>
+      <td>Protection from Evil 10' Radius</td>
+      <td>PROTECTION_FROM_EVIL</td>
+      <td>117</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr409</td>
+      <td>Deathward</td>
+      <td>SCRIPTINGSTATE2</td>
+      <td>157</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr412</td>
+      <td>Holy Power</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr413</td>
+      <td>Negative Plane Protection</td>
+      <td>SCRIPTINGSTATE3</td>
+      <td>158</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr417</td>
+      <td>Lesser Restoration</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr504</td>
+      <td>Raise Dead</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr505</td>
+      <td>True Seeing</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr507</td>
+      <td>Champion's Strength</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr507</td>
+      <td>Champion's Strength</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr508</td>
+      <td>Chaotic Commands</td>
+      <td>CLERIC_CHAOTIC_COMMANDS</td>
+      <td>119</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr513</td>
+      <td>Righteous Magic</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>6</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr517</td>
+      <td>Insect Plague</td>
+      <td>CLERIC_INSECT_PLAGUE</td>
+      <td>120</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr603</td>
+      <td>Blade Barrier</td>
+      <td>CLERIC_BLADE_BARRIER</td>
+      <td>121</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr613</td>
+      <td>Physical Mirror</td>
+      <td>CLERIC_PHYSICAL_MIRROR</td>
+      <td>122</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr698</td>
+      <td>Blade Barrier</td>
+      <td>CLERIC_BLADE_BARRIER</td>
+      <td>121</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr701</td>
+      <td>Shield of the Archons</td>
+      <td>CLERIC_SHIELD_OF_THE_ARCHONS</td>
+      <td>123</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr711</td>
+      <td>Regeneration</td>
+      <td>CLERIC_REGENERATION</td>
+      <td>124</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr712</td>
+      <td>Resurrection</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr713</td>
+      <td>Greator Restoration</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr717</td>
+      <td>Creeping Doom</td>
+      <td>CLERIC_INSECT_PLAGUE</td>
+      <td>120</td>
+      <td>3</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr725</td>
+      <td>Globe of Blades</td>
+      <td>CLERIC_BLADE_BARRIER</td>
+      <td>121</td>
+      <td>3</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr730</td>
+      <td>Aura of Flaming Death</td>
+      <td>WIZARD_FIRE_SHIELD</td>
+      <td>125</td>
+      <td>3</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sppr950</td>
+      <td>True Sight</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spra302</td>
+      <td>Minor Spell Deflection</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spra303</td>
+      <td>Protection from Normal Missiles</td>
+      <td>WIZARD_PROTECTION_FROM_NORMAL_MISSILES</td>
+      <td>179</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi102</td>
+      <td>Armor</td>
+      <td>SCRIPTINGSTATE5</td>
+      <td>160</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi108</td>
+      <td>Protection from Petrification</td>
+      <td>WIZARD_PROTECTION_FROM_PETRIFICATION</td>
+      <td>176</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi113</td>
+      <td>Protection from Evil</td>
+      <td>PROTECTION_FROM_EVIL</td>
+      <td>117</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi114</td>
+      <td>Shield</td>
+      <td>SCRIPTINGSTATE5</td>
+      <td>160</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi210</td>
+      <td>Resist Fear</td>
+      <td>WIZARD_RESIST_FEAR</td>
+      <td>178</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi214</td>
+      <td>Strength</td>
+      <td>SCRIPTINGSTATE6</td>
+      <td>161</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi311</td>
+      <td>Protection from Normal Missiles</td>
+      <td>WIZARD_PROTECTION_FROM_NORMAL_MISSILES</td>
+      <td>179</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi317</td>
+      <td>Ghost Armor</td>
+      <td>SCRIPTINGSTATE5</td>
+      <td>160</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi318</td>
+      <td>Minor Spell Deflection</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi321</td>
+      <td>Spell Thrust</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi321</td>
+      <td>Spell Thrust</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi403</td>
+      <td>Fire Shield (Blue)</td>
+      <td>WIZARD_FIRE_SHIELD</td>
+      <td>125</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi412</td>
+      <td>Greater Malison</td>
+      <td>WIZARD_GREATER_MALISON</td>
+      <td>180</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi414</td>
+      <td>Spirit Armor</td>
+      <td>SCRIPTINGSTATE5</td>
+      <td>160</td>
+      <td>5</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi418</td>
+      <td>Fire Shield (Red)</td>
+      <td>WIZARD_FIRE_SHIELD</td>
+      <td>125</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi419</td>
+      <td>Secret Word</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi419</td>
+      <td>Secret Word</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi419</td>
+      <td>Secret Word</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi419</td>
+      <td>Secret Word</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi419</td>
+      <td>Secret Word</td>
+      <td>WIZARD_PROTECTION_FROM_ENERGY</td>
+      <td>163</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi511</td>
+      <td>Protection from Normal Weapons</td>
+      <td>WIZARD_PROTECTION_FROM_NORMAL_WEAPONS</td>
+      <td>181</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td>
+      <td>128</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_PROTECTION_FROM_NORMAL_MISSILES</td>
+      <td>179</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_PROTECTION_FROM_THE_ELEMENTS</td>
+      <td>130</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_PROTECTION_FROM_NORMAL_WEAPONS</td>
+      <td>181</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>SCRIPTINGSTATE5</td>
+      <td>160</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_FIRE_SHIELD</td>
+      <td>125</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_PROTECTION_FROM_ENERGY</td>
+      <td>163</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi513</td>
+      <td>Breach</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_ENERGY</td>
+      <td>126</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi519</td>
+      <td>Spell Shield</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi522</td>
+      <td>Minor Spell Turning</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi590</td>
+      <td>Immunity: Abjuration</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi591</td>
+      <td>Immunity: Conjuration</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>2</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi592</td>
+      <td>Immunity: Divination</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>3</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi593</td>
+      <td>Immunity: Enchantment</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>4</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi594</td>
+      <td>Immunity: Illusion</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>5</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi595</td>
+      <td>Immunity: Evocation</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>6</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi596</td>
+      <td>Immunity: Necromancy</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>7</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi597</td>
+      <td>Immunity: Alteration</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>8</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi603</td>
+      <td>Tenser's Transformation</td>
+      <td>SCRIPTINGSTATE4</td>
+      <td>159</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi603</td>
+      <td>Tenser's Transformation</td>
+      <td>WIZARD_TENSERS_TRANSFORMATION</td>
+      <td>182</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi606</td>
+      <td>Protection from Magic Energy</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_ENERGY</td>
+      <td>126</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi607</td>
+      <td>Mislead</td>
+      <td>WIZARD_MISLEAD</td>
+      <td>127</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi608</td>
+      <td>Pierce Magic</td>
+      <td>WIZARD_KHELBENS_WARDING_WHIP</td>
+      <td>132</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi608</td>
+      <td>Pierce Magic</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi608</td>
+      <td>Pierce Magic</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi608</td>
+      <td>Pierce Magic</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi609</td>
+      <td>True Sight</td>
+      <td>TRUE_SIGHT</td>
+      <td>118</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi611</td>
+      <td>Protection from Magical Weapons</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td>
+      <td>128</td>
+      <td>4</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi618</td>
+      <td>Spell Deflection</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi701</td>
+      <td>Spell Turning</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi702</td>
+      <td>Protection from the Elements</td>
+      <td>WIZARD_PROTECTION_FROM_THE_ELEMENTS</td>
+      <td>130</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi703</td>
+      <td>Project Image</td>
+      <td>WIZARD_MISLEAD</td>
+      <td>127</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi704</td>
+      <td>Ruby Ray of Reversal</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi704</td>
+      <td>Ruby Ray of Reversal</td>
+      <td>WIZARD_KHELBENS_WARDING_WHIP</td>
+      <td>132</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi704</td>
+      <td>Ruby Ray of Reversal</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi704</td>
+      <td>Ruby Ray of Reversal</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi704</td>
+      <td>Ruby Ray of Reversal</td>
+      <td>WIZARD_SPELL_TRAP</td>
+      <td>164</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi704</td>
+      <td>Ruby Ray of Reversal</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi705</td>
+      <td>Khelben's Warding Whip</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi705</td>
+      <td>Khelben's Warding Whip</td>
+      <td>WIZARD_KHELBENS_WARDING_WHIP</td>
+      <td>132</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi705</td>
+      <td>Khelben's Warding Whip</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi705</td>
+      <td>Khelben's Warding Whip</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi705</td>
+      <td>Khelben's Warding Whip</td>
+      <td>WIZARD_PROTECTION_FROM_ENERGY</td>
+      <td>163</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi708</td>
+      <td>Mantle</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td>
+      <td>128</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi802</td>
+      <td>Spell Deflection</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi803</td>
+      <td>Protection from Energy</td>
+      <td>WIZARD_PROTECTION_FROM_ENERGY</td>
+      <td>163</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi804</td>
+      <td>Simulacrum</td>
+      <td>WIZARD_MISLEAD</td>
+      <td>127</td>
+      <td>3</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi805</td>
+      <td>Pierce Shield</td>
+      <td>WIZARD_SPELL_TRAP</td>
+      <td>164</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi805</td>
+      <td>Pierce Shield</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi805</td>
+      <td>Pierce Shield</td>
+      <td>WIZARD_KHELBENS_WARDING_WHIP</td>
+      <td>132</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi805</td>
+      <td>Pierce Shield</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi805</td>
+      <td>Pierce Shield</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi805</td>
+      <td>Pierce Shield</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi808</td>
+      <td>Improved Mantle</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td>
+      <td>128</td>
+      <td>2</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi902</td>
+      <td>Spell Trap</td>
+      <td>WIZARD_SPELL_TRAP</td>
+      <td>164</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi903</td>
+      <td>Spell Strike</td>
+      <td>WIZARD_SPELL_IMMUNITY</td>
+      <td>162</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi903</td>
+      <td>Spell Strike</td>
+      <td>WIZARD_SPELL_SHIELD</td>
+      <td>177</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi903</td>
+      <td>Spell Strike</td>
+      <td>WIZARD_SPELL_TRAP</td>
+      <td>164</td>
+      <td>0</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi903</td>
+      <td>Spell Strike</td>
+      <td>WIZARD_SPELL_TURNING</td>
+      <td>129</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi903</td>
+      <td>Spell Strike</td>
+      <td>WIZARD_KHELBENS_WARDING_WHIP</td>
+      <td>132</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi903</td>
+      <td>Spell Strike</td>
+      <td>WIZARD_SPELL_DEFLECTION</td>
+      <td>116</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi907</td>
+      <td>Absolute Immunity</td>
+      <td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td>
+      <td>128</td>
+      <td>3</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi914</td>
+      <td>Energy Drain</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>1</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwi921</td>
+      <td>Improved Alacrity</td>
+      <td>WIZARD_IMPROVED_ALACRITY</td>
+      <td>165</td>
+      <td>1</td>
+      <td>182</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>spwish07</td>
+      <td>Greater Restoration</td>
+      <td>LEVELDRAIN</td>
+      <td>134</td>
+      <td>0</td>
+      <td>233</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+
+<p>Vulgar Zildrah and Kensai Ryu created Detectavble Spells, and 
+Eric Kerr (aka Cirerrek)
+has been maintaining it. This release was made by CamDawg, and completely recodes the package to not overwrite any files.</p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+<p><strong>Version 1.9 (Beta) - September 12, 2005 </strong></p>
+<ul>
+  <li>Corrected bug with Summon Insects</li>
+  <li>Added code to also have items properly set effects for Level Draining  
+    </li>
+</ul>
+<p><strong>Version 1.8 (Beta) - September 4, 2005 </strong>
+</p>
+<ul>
+		<li>Completely recoded to not overwrite any files 
+  </ul>
+<p>
+	<strong>
+		Version 1.2.4
+	</strong>
+
+</p>
+	<ul>
+		<li>Removed SPIN684 Kuo-Toan True Sight - Instant effect, with a permanent duration, no lingering effect, makes having a detectable state unecessary
+		<li>Removed SPIN696 Moon Dog Sight - Instant effect, with a permanent duration, no lingering effect, makes having a detectable state unecessary
+		<li>Removed SPPR950 True Sight2 Instant effect, with a permanent duration, no lingering effect, makes having a detectable state unecessary
+		<li>Removed SPWI613 Improved Haste - Doesn't require its own state as it came with one 155 IMPROVEDHASTE
+		<li>I want to give a special thanks to Idobek for his work in updating/fixing up the Detectable Spells Pack, stay tuned as he has some more magic up his sleeve :)
+		<li>Thanks to Fred Richardson for reporting the True Sight issue which is part of the impetus for the removal of the three True Sight spells listed above
+		<li>WeiDU v140
+	</ul>
+<p>
+	<strong>
+
+		Version 1.2.3
+	</strong>
+</p>
+	<ul>
+		<li>Added SPIN696
+		<li>WeiDU v115
+	</ul>
+</div>
+</body>
+</html>

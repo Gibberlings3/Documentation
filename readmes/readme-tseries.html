@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>tSeries</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>tSeries</h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings
+    Three Mod</a><br />
+    Author: Eric Kerr (aka Cirerrek)</strong></p>
+  <p><strong> Version 1.2 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=25">Check
+    for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>Like the <a href="http://www.gibberlings3.net/cirerrek/eseries.php">eSeries</a> for <acronym title="Baldur's Gate II">BG2</acronym>,
+    tSeries is a set of Player <acronym title="Artificial Intelligence">AI</acronym> scripts
+    for Planescape: Torment. The basis for these scripts comes
+    from Gebhard Blucher's Planescape: Torment Player <acronym title="Artificial Intelligence">AI</acronym> Scripts.
+    I borrowed the scripts that he created and expanded upon
+    them so that they are a bit more comprehensive in terms of
+    spell usage and item usage.</p>
+  <p>I have used the scripts to complete the game. They were
+    tested with all of the <acronym title="Non-Player Characters">NPCs</acronym> except
+    Ignus. The scripts appear to function well, given the limits
+    of this version of the scripting language. While I thoroughly
+    enjoyed playing Planescape: Torment, I probably don't plan
+    on another run through. That being the case, unless there
+    are any major bugs in the scripts, this will probably be
+    the final version that I assemble. If you like the scripts
+    and want to improve or expand upon them, the source code
+    is included in the download, so feel free to modify them
+    however you would like. I would just ask that you please
+    credit Gebhard Blucher and I if you place the scripts up
+    for public download. </p>
+  <p>The scripting language in Planescape: Torment is definitely
+    limited in comparison to the scripting commands available
+    in some of the more recent <acronym title="Infinity Engine">IE</acronym> games,
+    but the language still allows for the automation of some
+    tasks, like spell casting, item usage, attacking, and hiding
+    in shadows. The scripts will target the nearest enemy and
+    attack them by whatever means they have available and deem
+    appropriate based on experience point checks of their nearest
+    foe.</p>
+  <p>The scripts make liberal use of ActionListEmpty(), which
+    means that if you tell them to do something, they will do
+    it rather than following their scripted commands. There is
+    one exception to this rule and that is in the case where
+    a character(s) is low in hitpoints and still under attack.
+    In this case, they will run away from their attacker for
+    a set period of time. If you want the character to stay in
+    combat despite their injuries, you will need to get them
+    healed or turn off the party <acronym title="Artificial Intelligence">AI</acronym>.
+    One other item of note is for Annah or <acronym title="The Nameless One">TNO</acronym> to
+    automatically hide in shadows, they must have a Stealth skill
+    of at least 75%; otherwise, this function will not be activated.</p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+  <p>This mod is designed to work with <acronym title="Baldur's Gate II">Planescape:
+    Torment. At present there are no known incompatibilities. </acronym></p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    The tSeries is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install,
+    simply double-click the archive and follow the instructions
+    on screen. </p>
+  <p> Alternatively the files can be extracted from the archive
+    using <a href="http://www.rarlab.com/">WinRAR</a>. If properly
+    extracted, you should have a tseries folder and Setup-tseries.exe
+    in your <acronym title="Planescape: Torment">Ps:T</acronym> folder.
+    To install, simply double-click Setup-tseries.exe and follow
+    the instructions on screen. </p>
+  <p> Please run Setup-tseries.exe in your<acronym title="Planescape: Torment"> Ps:T</acronym> folder
+    to reinstall, uninstall or otherwise change components. </p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before
+    extracting the new version. </em>The tSeries is packaged
+    and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your<acronym title="Planescape: Torment"> Ps:T</acronym> folder.&nbsp; If
+    properly extracted, you should have a tseries folder, Setup-tseries,
+    and Setup-tseries.command in your<acronym title="Planescape: Torment"> Ps:T</acronym> folder.
+    To install, simply double-click <strong>Setup-tseries.command</strong> and
+    follow the instructions on screen.</p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p>The basis for these scripts comes from Gebhard Blucher's
+    Planescape: Torment Player <acronym title="Artificial Intelligence">AI</acronym> Scripts.
+    I borrowed the scripts that he created and expanded upon
+    them so that they are a bit more comprehensive in terms of
+    spell usage and item usage.</p>
+  <p>The pack contains both the .baf and the .bcs files for the
+    scripts, as follows:</p>
+  <ul>
+    <li>PCANNAH</li>
+    <li> PCDAKKON</li>
+    <li> PCGRACE</li>
+    <li> PCIGNUS</li>
+    <li> PCMORTE</li>
+    <li> PCNAME</li>
+    <li> PCNORDOM</li>
+    <li> PCVHAIL</li>
+    <li> 0110CUT1 - this is a fix file created by Gebhard Blucher
+      which properly assigns Annah's script upon her joining
+      the party</li>
+  </ul>
+  <p>I have used the scripts to complete the game. They were
+    tested with all of the <acronym title="Non-Player Characters">NPCs</acronym> except
+    Ignus. The scripts appear to function well, given the limits
+    of this version of the scripting language. While I thoroughly
+    enjoyed playing Planescape: Torment, I probably don't plan
+    on another run through. That being the case, unless there
+    are any major bugs in the scripts, this will probably be
+    the final version that I assemble. If you like the scripts
+    and want to improve or expand upon them, the source code
+    is included in the download, so feel free to modify them
+    however you would like. I would just ask that you please
+    credit Gebhard Blucher and me if you place the scripts up
+    for public download.</p>
+  <p><strong>Known Issues:</strong></p>
+  <ol>
+    <li> For some reason, The Nameless One (<acronym title="The Nameless One">TNO</acronym>)
+      appears to 'space out' from time to time and I have not
+      been able to determine why. The 'spacing out' does not
+      affect any of the other <acronym title="Non-Player Characters">NPCs</acronym>,
+      which is part of the reason the problem has me baffled,
+      as his script isn't really all that much more complicated
+      than the scripts for the other <acronym title="Non-Player Characters">NPCs</acronym>.</li>
+    <li> <acronym title="The Nameless One">TNO</acronym> is a
+      rather unique character in that he can change classes during
+      the course of the game. This causes a problem with the
+      scripts in that <acronym title="The Nameless One">TNO</acronym> can
+      still cast spells that he has memorized as a mage, even
+      when he is currently not a mage. Some may find this a rather
+      nifty loophole and others might be adverse to allowing <acronym title="The Nameless One">TNO</acronym> to
+      continue to cast spells even while not a mage. Currently
+      I have left it so that he can cast spells no matter his
+      class. If there are enough calls for the feature, I believe
+      I can use Class(Myself, MAGE) checks to prevent <acronym title="The Nameless One">TNO</acronym> from
+      spell casting while not a Mage. </li>
+  </ol>
+  <p><strong>Script Features</strong></p>
+  <p>The scripting language in Planescape: Torment is definitely
+    limited in comparison to the scripting commands available
+    in some of the more recent <acronym title="Infinity Engine">IE</acronym> games,
+    but the language still allows for the automation of some
+    tasks, like spell casting, item usage, attacking, and hiding
+    in shadows. The scripts will target the nearest enemy and
+    attack them by whatever means they have available and deem
+    appropriate based on experience point checks of their nearest
+    foe. The experience scale the scripts use for spell targeting
+    breaks down in the following manner:</p>
+  <ul>
+    <li>9th: &gt;1800 <acronym title="Experience Points">XP</acronym> </li>
+    <li>8th: &gt;1600 <acronym title="Experience Points">XP</acronym> </li>
+    <li>7th: &gt;1400 <acronym title="Experience Points">XP</acronym> </li>
+    <li>6th: &gt;1200 <acronym title="Experience Points">XP</acronym> </li>
+    <li>5th: &gt;1000 <acronym title="Experience Points">XP</acronym> </li>
+    <li>4th: &gt;800 <acronym title="Experience Points">XP</acronym> </li>
+    <li>3rd: &gt;600 <acronym title="Experience Points">XP</acronym> </li>
+    <li>2nd: &gt;400 <acronym title="Experience Points">XP</acronym> </li>
+    <li>1st: &gt;200 <acronym title="Experience Points">XP</acronym></li>
+  </ul>
+  <p>Melee and Missile attacks are handled on a nearest enemy
+    basis and do not rely on the experience scale.</p>
+  <p>Finally, the scripts make liberal use of ActionListEmpty(),
+    which means that if you tell them to do something, they will
+    do it rather than following their scripted commands. There
+    is one exception to this rule and that is in the case where
+    a character(s) is low in hitpoints and still under attack.
+    In this case, they will run away from their attacker for
+    a set period of time. If you want the character to stay in
+    combat despite their injuries, you will need to get them
+    healed or turn off the party AI. One other item of note is
+    for Annah or <acronym title="The Nameless One">TNO</acronym> to
+    automatically hide in shadows, they must have a Stealth skill
+    of at least 75%; otherwise, this function will not be activated. </p>
+  <table class="leftalign">
+    <tr>
+      <th> Wizard Spells: Offensive </th>
+      <th> Wizard Spells: Defensive </th>
+      <th> Wizard Spells: Healing </th>
+    </tr>
+    <tr>
+      <td><ul>
+          <li>Chromatic Orb </li>
+          <li>Magic Missile </li>
+          <li>Missile of Patience </li>
+          <li>Blindness </li>
+          <li>Tongues of Flame </li>
+          <li>Seeking Flames </li>
+          <li>Vilquar's Eye </li>
+          <li>Reign of Anger </li>
+          <li>Pacify </li>
+          <li>Adder's Kiss </li>
+          <li>Black-Barbed Curse </li>
+          <li>Swarm Curse </li>
+          <li>Horror </li>
+          <li>Ignus' Terror </li>
+          <li>Infernal Orb </li>
+          <li>Ball Lightning </li>
+          <li>Elysium's Tears </li>
+          <li>Hold Undead </li>
+          <li>Tasha's Unbearable Derisive Laughter </li>
+          <li>Vampiric Touch </li>
+          <li>Ax of Torment </li>
+          <li>Elysium's Fires </li>
+          <li>Blacksphere </li>
+          <li>Force Missiles </li>
+          <li>Cloudkill </li>
+          <li>Cone of Cold </li>
+          <li>Desert Hell </li>
+          <li>Fire and Ice </li>
+          <li>Howl of Pandemonium </li>
+          <li>Chain Lightning Storm </li>
+          <li>Acid Storm </li>
+          <li>Blade Storm </li>
+          <li>Stygian Ice Storm </li>
+          <li>Meteor Storm Bombardment </li>
+          <li>Death Bolt </li>
+          <li>Ignus' Fury </li>
+          <li>Power Word, Blind </li>
+          <li>Mechanus' Cannon </li>
+          <li>Celestial Host </li>
+          <li>Conflagration </li>
+          <li>Power Word, Kill </li>
+          <li>Abyssal Fury </li>
+        </ul></td>
+      <td><ul>
+          <li>Shield </li>
+          <li>Scripture of Steel </li>
+          <li>Submerge the Will </li>
+          <li>Black Barbed Shield </li>
+          <li>Pain Mirror </li>
+          <li>Blur </li>
+          <li>Power of One </li>
+          <li>Strength </li>
+          <li>Zerthimon's Focus </li>
+          <li>Balance in All Things </li>
+          <li>Infernal Shield </li>
+          <li>Improved Strength </li>
+          <li>Enoll Eva's Duplication </li>
+          <li>Greater Embalming </li>
+          <li>Minor Embalming </li>
+        </ul></td>
+      <td><ul>
+          <li>Blood Bridge: Not Scripted! </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <th> Priest Spells: Offensive </th>
+      <th> Priest Spell: Defensive </th>
+      <th> Priest Spells: Healing </th>
+    </tr>
+    <tr>
+      <td><ul>
+          <li>Call Lightning </li>
+          <li>Spiritual Hammer </li>
+          <li>Curse </li>
+          <li>Halo of Lesser Revelation </li>
+        </ul></td>
+      <td><ul>
+          <li>Prayer </li>
+          <li>Flamewalk </li>
+          <li>Aid </li>
+          <li>Blessing </li>
+          <li>Protection from Evil </li>
+        </ul></td>
+      <td><ul>
+          <li>Heal </li>
+          <li>Cure Critical Wounds </li>
+          <li>Cure Serious Wounds </li>
+          <li>Cure Moderate Wounds </li>
+          <li>Cure Light Wounds </li>
+        </ul></td>
+    </tr>
+    <tr>
+      <th> Innate: Offensive </th>
+      <th> Innate: Defensive </th>
+      <th> Innate: Healing </th>
+    </tr>
+    <tr>
+      <td><ul>
+          <li>Litany of Curses: Morte </li>
+          <li>Skull Mob: Morte </li>
+          <li>Kiss: Fall-from-Grace </li>
+        </ul></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th> Items: Offensive </th>
+      <th> Items: Defensive </th>
+      <th> Items: Healing </th>
+    </tr>
+    <tr>
+      <td><ul>
+          <li>Fanged Mirror of Yehcir-Eya </li>
+          <li>Ring of Fallen Stars </li>
+          <li>Scent of the Storm </li>
+          <li>Shackles of Light </li>
+          <li>Abyssal Pipe </li>
+          <li>Black-Barbed Branch Wand </li>
+          <li>Adder's Tear </li>
+          <li>Corpse Fly Charm </li>
+          <li>Shamanic Rod </li>
+          <li>Thrice-Blind Charm </li>
+          <li>Scroll of Call Lightning </li>
+        </ul></td>
+      <td><ul>
+          <li>Sadistic Frame </li>
+          <li>Knot Charm </li>
+          <li>Bone Charm </li>
+          <li>Charcoal Charm </li>
+          <li>Whispering Flask: Dak'kon </li>
+          <li>Dustman Embalming Charm, Greater: <acronym title="The Nameless One">TNO</acronym>,
+            Morte </li>
+          <li>Dustman Embalming Charm, Lesser: <acronym title="The Nameless One">TNO</acronym>,
+            Morte </li>
+          <li>Jar of Embalming Fluid: <acronym title="The Nameless One">TNO</acronym>,
+            Morte </li>
+          <li>Rod of Modron Might: <acronym title="The Nameless One">TNO</acronym> </li>
+          <li>Cockroach Charm </li>
+        </ul></td>
+      <td><ul>
+          <li>Heart Charm </li>
+          <li>Blood Charm </li>
+          <li>Blood Fly Charm </li>
+          <li>Clot Charm </li>
+          <li>Needle and Thread </li>
+          <li>Bandages </li>
+        </ul></td>
+    </tr>
+  </table>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p>The basis for these scripts comes from Gebhard Blucher's
+    Planescape: Torment Player <acronym title="Artificial Intelligence">AI</acronym> Scripts.
+    Eric Kerr (aka Cirerrek) borrowed the scripts that Gebhard Blucher created
+    and expanded upon them so that they are a bit more comprehensive
+    in terms of spell usage and item usage. You can visit <a href="http://gibberlings3.net/forums/">The
+    Gibberlings Three</a> for information on this and any other
+    mods on which we may be working.</p>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>Black Isle Studios - For producing such an excellent <acronym title="Role-Playing Game">RPG</acronym><br />
+    Bioware - For the Infinity Engine and making such an outstanding <acronym title="Role-Playing Game">RPG</acronym><br />
+    Sarkyn (Greg Hodgson) - gSeries and gMinion<br />
+    Xyx (Jochem van't Hull) - General Insight and Helpfulness<br />
+    GBlucher (Gebhard Blucher) - GB-Scripts, Torment <acronym title="Artificial Intelligence">AI</acronym> Scripts,
+    Torment fixes<br />
+    Rich Martel - uScript<br />
+    TeamBG - Editors, Tutorials, Forums<br />
+    BWScripts - Defunct but not forgotten<br />
+    BGScripts - Where player <acronym title="Artificial Intelligence">AI</acronym> scripting
+    really came to life<br />
+    Jon Hauglid - Near Infinity and eSeries Debugging<br />
+    SimDing0 - A little of this, a little of that, and all very
+    helpful<br />
+    Max (aka Potencius) - a font of information about everything
+    Infinity Engine<br />
+    Ivann Alvarado - XpertAi (<acronym title="Icewind Dale">IWD</acronym>)<br />
+    Grog - Smart Scripts<br />
+    Jessica Kerr - seriously reducing my risk of developing carpal
+    tunnel syndrome<br />
+    Platter - Torment Fixes<br />
+    Cilantro - Torment Restoration Project<br />
+    G&ouml;ran Rim&eacute;n - scripting tutorials, script segments, etc.<br />
+    CamDawg - hosting, installation package, <acronym title="The Gibberlings Three">G3</acronym>'ifying documentation</p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by
+    Jon Olav Hauglid <br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi<br />
+    <a href="http://www.dragonlancetc.com/forums/?board=9"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by
+    Avenger </p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>Permission is granted to use and modify the contents of this mod, as long as credit is given to Cirerrek and the original authors and support is handled by the modifying party. </p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 1.2</strong></p>
+  <ul>
+    <li>Removed setup.bat </li>
+    <li>Updated to WeiDU v213</li>
+  </ul>
+  <p><strong>Version 1.1</strong></p>
+  <ul>
+    <li>Added <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer </li>
+    <li>Added OS X installer</li>
+    <li>Moved to The Gibberlings Three </li>
+    <li>Annah's script assignment bug is now fixed via patch rather than overwrite </li>
+  </ul>
+  <p> <strong>Version 1.0</strong> </p>
+  <ul>
+    <li>Auto Trap detection doesn't appear to be working properly
+      so I commented out the uncooperative code. Thieves will
+      still hide in shadows if their skill is high enough (Stealth &gt;74)
+      and they aren't overly injured (90% of Max Health)</li>
+  </ul>
+  <p> <strong>Version Beta_v0.6</strong></p>
+  <ul>
+    <li>Added Black-Barbed Branch Wand [BBWAND] to t_Items_Offensive </li>
+    <li>Added Scent of the Storm [ACID] to t_Items_Offensive </li>
+    <li>Added Ring of the Fallen Starts [METEOR] to t_Items Offensive </li>
+    <li>Added Scroll of Call Lightning to t_ClericScrolls_Offensive </li>
+    <li>Modified <acronym title="Experience Point">XP</acronym> check to be Lvl x 100 + Lvl x 100 for all
+      spells </li>
+    <li>Modified <acronym title="Experience Point">XP</acronym> check to be (Lvl x 100 + Lvl x 100) + 200
+      for all items </li>
+    <li>Added Greater Dustman Embalming Charm [EMBCHRM2] to t_Items_Specific </li>
+    <li>Added Greater Embalming to t_Mage_Defensive </li>
+    <li>Added Lesser Embalming to t_Mage_Defensive </li>
+    <li>Dropped Range to Enemy and Range to Party check for CLERIC_CALL_LIGHTNING
+      as it was never being cast</li>
+  </ul>
+  <p> <strong>Version Beta_v0.5</strong></p>
+  <ul>
+    <li>Added NumCreature checks to the majority of Priest Offensive &amp; Defensive
+      Spells </li>
+    <li>Added Range to Target and Range to Party Members check
+      to Cleric Call Lightning as Fall-from-Grace kept toasting
+      my party in the Modron Maze - need to monitor to see if
+      the spell is still getting used occassionally... and the
+      spell description says the spell can only be used outdoors! </li>
+    <li>Commented out Timers for Vilquar's Eye and Blindness
+      and started using !StateCheck(LastSeenBy(Myself),CGAMESPRITE_STATE_BLIND)
+      instead </li>
+    <li>Added Thrice-Blind Charm [TBCHRM] to t_Items_Offensive </li>
+    <li>Added Adder's Tear [ADDRTEAR] to t_Items_Offensive </li>
+    <li>Added Shackles of Light [MANACLE] to t_Items_Offensive </li>
+    <li>Added Fanged Mirror of Yehcir-Eya to t_Items_Offensive </li>
+    <li>Added Rod of Modron Might to t_Items_Defensive </li>
+    <li>Added Cockroach Charm to t_Items_Defensive </li>
+    <li>In CLERIC_CALL_LIGHTNING Changed !Range(LastSeenBy(Myself),10)
+      to !Range(LastSeenBy(Myself),8) because it was never being
+      cast at !Range(LastSeenBy(Myself),10). I'll try this but
+      might just have to bite the bullet and let the other <acronym title="Non-Player Characters">NPCs</acronym> get zapped by the spell if I want it cast at all. May be
+      the same way for all the AOE spells. WIZARD_FIRE_AND_ICE
+      also does some collateral damage, but not a whole lot. </li>
+    <li>Added CheckStatLT(Myself,76,SPELLFAILUREPRIEST) to t_Heal_MostDamagedOf,
+      t_Cleric_Offensive, t_Cleric_Defensive </li>
+    <li>Added CheckStatLT(Myself,76,SPELLFAILUREMAGE) to t_Mage_Offensive,
+      t_Mage_Defensive</li>
+  </ul>
+  <p> <strong>Version Beta_v0.4</strong></p>
+</div>
+</body>
+</html>

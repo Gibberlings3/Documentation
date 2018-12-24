@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sequencer Memory</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>Sequencer Memory </h1>
+<div class="section">
+
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings
+        Three Mod</a><br />
+    Author: Eric Kerr (aka Cirerrek)</strong></p>
+
+  <p><strong> Version 1.3 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=25">Check
+        for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>seqmem.bs is a little script written by cirerrek to enable
+    a player to remember what they have stored in their minor
+    spell sequencers, spell sequencers, and spell triggers, after
+  a couple of days away from the game.</p>
+  <p>The basic mechanics for this script were originally developed
+    by Bruce Harding.</p>
+  <p>Sequencer Memory  is really intended to be a plugin for existing Player <acronym title="Artificial Intelligence">AI</acronym> scripts
+    and you are welcome to add it to your own. The downloadable
+    version of this script includes the commented .baf for your
+    convenience.</p>
+
+
+  <p>The variables set by this script can easily be used to allow
+    Player <acronym title="Artificial Intelligence">AI</acronym> scripts
+    to cast sequencers automatically. I don't plan on going into
+    any details about this here, but if you are interested in
+    this feature and are having trouble figuring out how to implement
+    it, please contact me at cirerrek@hotmail.com</p>
+
+  <p>The script will NOT report the exact spells you have stored
+    in your sequencers but it will give you a general idea of
+    how you originally chose to target the sequencer(s). The
+    three targeting strategies available are: Offensive, Disabling,
+    and Defensive.</p>
+  <p>You select a targeting strategy through the use of hotkeys.
+    The choice of keys may seem a bit odd, but they are some
+    of the few hotkeys that were not used by the <a href="http://www.gibberlings3.net/cirerrek/eseries.php">eSeries</a> player <acronym title="Artificial Intelligence">AI</acronym> scripts
+    developed by Sarkyn and modified/continued/updated by me
+    (cirerrek). </p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+  <p>This mod is designed to work with <acronym title="Baldur's Gate II">BG2</acronym>:
+    Shadows of Amn with or without the expansion pack Throne
+    of Bhaal. <acronym title="Baldur's Gate II">At present there
+    are no known incompatibilities. </acronym></p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    Sequencer Memory is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install,
+    simply double-click the archive and follow the instructions
+    on screen. </p>
+  <p> Alternatively the files can be extracted from the archive
+    using <a href="http://www.rarlab.com/">WinRAR</a>. If properly
+    extracted, you should have a sequencer_memory folder and
+    Setup-sequencer_memory.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To install, simply double-click Setup-sequencer_memory.exe
+    and follow the instructions on screen. </p>
+  <p> Please run Setup-sequencer_memory.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder
+    to reinstall, uninstall or otherwise change components. </p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before
+    extracting the new version. </em>Sequencer Memory  is packaged
+    and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2</acronym> folder.&nbsp; If
+    properly extracted, you should have a sequencer_memory folder,
+    Setup-sequencer_memory, and Setup-sequencer_memory.command
+    in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To install, simply double-click <strong>sequencer_memory-gminion.command</strong> and
+    follow the instructions on screen.</p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p><strong>How to select the script:</strong></p>
+  <ol>
+    <li>  Select a spellcaster in your party by left clicking
+      on them</li>
+    <li> Press R on the keyboard, which will take you to the
+      selected characters record sheet</li>
+    <li> Left Click on Customize (located towards the bottom
+      of the record sheet)</li>
+    <li> Left Click on Script</li>
+    <li> Scroll through the avaible Party <acronym title="Artificial Intelligence">AI</acronym> Scripts until
+      you come to SEQUENCER-MEMORY</li>
+    <li> Left click on it to select this script</li>
+    <li> Click Done</li>
+    <li> Click Done Again</li>
+    <li> You should now be back to the record sheet. Press
+      G on the keyboard to return to the game world. </li>
+  </ol>
+  <p><strong>How to utilize the script:</strong></p>
+  <p> Press V on the keyboard This will display the current status
+    of your sequencers (Locked or Inactive)</p>
+  <ul>
+    <li>  Locked - Into a particular strategy (Offensive, Disabling,
+      or Defensive)</li>
+    <li> Inactive - You do not have a sequencer active</li>
+  </ul>
+  <p>Inactive will be returned for one of two reasons:</p>
+  <ul>
+    <li> You do not have a sequencer active, meaning you have
+      not memorized and cast any of the three types of sequencers.</li>
+    <li> You started a save game in which you already have
+      a sequencer active and did not use SEQUENCER-MEMORY to
+      'record' a targeting strategy when you originally activated
+      the sequencer. </li>
+  </ul>
+  <p>Locked+Targeting Strategy will be returned if you have used
+    SEQUENCER-MEMORY to 'record' a targeting strategy for one
+    or more of the three types of sequencers.</p>
+  <p><strong>How to lock a targeting strategy (Example):</strong></p>
+  <ol>
+    <li>  Have one of your wizards of the appropriate level
+      memorize the spell Minor Spell Sequencer</li>
+    <li> Make sure your wizard also has two first level offensive
+      spells such as Magic Missile or Chromatic Orb memorized.</li>
+    <li> Rest </li>
+    <li> Cast Minor Spell Sequencer</li>
+    <li> Select two first level offensive spells to place
+      in the Minor Spell Sequencer</li>
+    <li> Left Click Done</li>
+    <li> A few seconds later, the message text &quot;Toggle the
+      N key to select a targeting strategy followed by the F key
+      to confirm the strategy.&quot; will float over the character's
+      head and also be displayed in the text box at the bottom
+      of the game screen.</li>
+    <li> Press the N key 1, 2, or 3 times depending on the
+      targeting strategy you would like to select.
+      <ul>
+    <li> N Key Once - Offensive</li>
+    <li> N Key Twice - Disabling</li>
+    <li> N Key Thrice - Defensive </li>
+      </ul>
+     A message will float over your head each time you press
+      the N Key. The contents of the message will change depending
+      on what type of sequencer you have cast and are trying
+      to target. This message will also be displayed in the text
+      box, along with the text &quot;To change, toggle N; to
+      confirm, press F&quot;</li>
+    <li> Since for this example we have chosen to memorize
+      two first level offensive spells we will want to press
+      F to lock in the targeting strategy after pressing N only
+      once.</li>
+    <li> Once F has been pressed, a message will be displayed
+      over the character's head and in the text box. The contents
+      of the message will change depending on what type of sequencer
+      you have cast and are trying to lock, but whichever sequencer
+      it is, you will see &quot;-Locked&quot; at the end of the
+      message.</li>
+    <li> Congratulations, you have successfully locked in
+      the targeting strategy for the sequencer!</li>
+    <li> Press V and the following messages will be displayed
+      in the text box: Minor Spell Sequencer Locked - Offensive
+      Spell Sequencer - Inactive Spell Trigger - Inactive</li>
+    <li>  Three days later when you come back to your saved
+      game and you don't remember what you have stored in Minor
+      Spell Sequencer, press V. You will be reminded that offensive
+      spells are stored, and you will know not to use your sequencer
+      on yourself or another party member ;) </li>
+  </ol>
+  <p>This method works the same way for all three types of sequencers:
+    Minor Spell Sequencer, Spell Sequencer, and Spell Trigger.
+    Only the floating and text box messages will change to reflect
+    which type of sequencer you are trying to target.</p>
+  <p><strong>Known Issues:</strong></p>
+  <p>The game mechanics do not allow for two sequencers of the
+    same type to be active on any one character at at time. This
+    means that if you already have a Spell Trigger active and
+    try to cast another, you will be greeted by a message &quot;You
+    can not cast multiple instances of the same contigency spell
+    on yourself&quot;. This message is not caused by this script.</p>
+  <p>This feature is important to this script because if you
+    do cast any of the three types of sequencers while you already
+    have one of that type active, the script will be activated
+    and you will prompted to re-target that sequencer. If you
+    do not target the sequencer exactly the same way you initially
+    targeted the sequencer using SEQUENCER-MEMORY, the sequencer
+    in question will then have an incorrect targeting definition
+    assigned to it. </p>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+
+  <p>The basic mechanics for Sequencer Memory were originally
+    developed by Bruce Harding. Eric Kerr (aka Cirerrek) is
+    now the project author and maintains Sequencer Memory. You
+    can visit <a href="http://gibberlings3.net/forums/index.php">The
+      Gibberlings Three</a> for information on this and any other
+    mods on which we may be working.</p>
+
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>Black Isle Studios - For producing such an excellent <acronym title="Role-Playing Game">RPG</acronym><br />
+    Bioware - For the Infinity Engine and making such an outstanding
+      <acronym title="Role-Playing Game">RPG</acronym><br />
+    Sarkyn (Greg Hodgson) - gSeries and gMinion<br />
+G&ouml;ran Rim&eacute;n - scripting tutorials, script segments,
+etc.,.<br />
+    Xyx (Jochem van't Hull) - General Insight and Helpfulness<br />
+    GBlucher (Gebhard Blucher) - GB-Scripts<br />
+    Rich Martel - uScript<br />
+    TeamBG - Editors, Tutorials, Forums<br />
+    BWScripts - Defunct but not forgotten<br />
+    BGScripts - Where player <acronym title="Artificial Intelligence">AI</acronym> scripting really came to life<br />
+    Jon Hauglid - Near Infinity and eSeries Debugging<br />
+    SimDing0 - A little of this, a little of that, and all very
+    helpful<br />
+    Max (aka Potencius) - a font of information about everything
+    Infinity Engine</p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by
+    Jon Olav Hauglid <br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi<br />
+    <a href="http://www.dragonlancetc.com/forums/?board=9"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by
+    Avenger </p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>Permission is granted to use and modify the contents of this mod, as long as credit is given to Cirerrek and the original authors and support is handled by the modifying party. </p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 1.3</strong></p>
+  <ul>
+    <li>Removed setup.bat</li>
+    <li>Updated to WeiDU v213  </li>
+  </ul>
+  <p><strong>Version 1.2</strong></p>
+  <ul>
+    <li>Added OS X installer</li>
+    <li>Moved to The Gibberlings Three  </li>
+    <li><acronym title="Weimer Dialogue Utility">WeiDU</acronym> v185</li>
+    <li>Scripts compiled on-the-fly </li>
+  </ul>
+  <p><strong>Version 1.1</strong></p>
+  <ul>
+      <li><acronym title="Weimer Dialogue Utility">WeiDU</acronym> v137</li>
+  </ul>
+	<p><strong>Version 1.0</strong></p>
+	<ul>
+      <li>Initial assembly and distribution of mod</li>
+  </ul>
+</div>
+</body>
+</html>

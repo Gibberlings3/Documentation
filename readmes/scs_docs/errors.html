@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sword Coast Stratagems Component: Correct Various Errors on Race, Class et
+  al</title>
+<meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1" />
+<link href="../backup/g3readme.css" type="text/css" rel="stylesheet" />
+<link href="../backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>Sword Coast Stratagems Component: Correct Various Errors on Race, Class et
+  al</h1>
+<div class="section">
+  <p> The full list of corrections is:</p>
+  <ol>
+    <li>Some small errors are fixed in the join-party and leave-party dialogue.</li>
+    <li>Davaeorn, Krystin, Daitel, Andris and Tellan have their classes and races
+      corrected.</li>
+    <li>Skeleton warriors are made monsters rather than human (they can't be
+      made "undead" as they're non-turnable).</li>
+    <li>For the same reason, Daitel is flagged as "monster" not "undead".</li>
+    <li>Various jellies are marked as "slimes".</li>
+    <li>Lots of random creatures marked as "mage" are corrected to "no class".</li>
+    <li>Lycanthropes, doppelgangers and vampiric wolves are changed from "humanoid" to "monster".</li>
+    <li>Vampiric wolves are redesignated as "wolf" and are no longer mages.</li>
+    <li>A large number of incorrect <acronym title="To-Hit Armor Class 0">THAC0</acronym>s are corrected (usually to the benefit
+      of the creature concerned; I wasn't particularly worried about inaccurately
+      powerful <acronym title="Non-Player Characters">NPCs</acronym>).</li>
+    <li>A large number of wizards (including ogre magi) with levels that don't
+      match their spells are corrected (the mage scripts use level as an indicator).</li>
+    <li>A large number of creatures with inaccurate saving throws are corrected.</li>
+    <li>Some non-clerics recorded as clerics are corrected.</li>
+    <li>Naaman's dexterity is modified from 11 (rather low for a mage-thief)
+      to 17</li>
+    <li>Daitel, currently immune only to <em>magic</em> cold and fire, gets immunity
+      to the nonmagical variety.</li>
+    <li>The druids with Seniyad get proficient in their flame blades.</li>
+    <li>Genthore isn't actually able to use his weapons. He gets proficiencies
+      in the axe, and swaps his melee dagger (!) for a battleaxe.</li>
+    <li>Niemain is wearing a Ring of Clumsiness. I've no idea whether this is
+      deliberate, but it seems bizarre that he would engage the party in melee
+      when at such a disadvantage, so I've taken it off his finger.</li>
+    <li>Kobolds get one proficiency with the shortsword. (Currently they have
+      none).</li>
+    <li>Yago and Resar, supposedly powerful mages, don't actually get any spells
+      at all. They're given some.</li>
+    <li>Encounters with Gretek and Cyrdremac are rescripted to make them more
+      reliably go hostile (currently they sometimes randomly don't bother).</li>
+    <li>Conversely, the dialogues with the mad mages of the Ice Island seem to
+      require that they start non-hostile.</li>
+    <li>Some skeletons need to have their damage-resistance added.</li>
+    <li>The casting levels for wands are made more consistent: wands of fire
+      cast fireball at <acronym title="Level Three">L3</acronym> (and continue to cast their high-powered Scorcher variant
+      at <acronym title="Level Five">L5</acronym>); wands of lightning cast at <acronym title="Level Three">L3</acronym>; 
+	  most other wands cast at <acronym title="Level One">L1</acronym>. (This
+      is relevant for penetrating <acronym title="Minor Globe of Invulnerability">MGI</acronym>).</li>
+    <li>The amnesia of the Nashkel merchant is corrected: he doesn't now comment
+      on a winter wolf having been seen more than once. (If you can't stand this
+      subcomponent, use the console and enter CLUAConsole:SetGlobal("DMWWNashkelPelt","GLOBAL",2)
+      )</li>
+    <li>Various spells and effects are made detectable.</li>
+    <li>Monster Summoning spells can now be targetted on creatures protected
+      by globes of invulnerability and the like.</li>
+  </ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+	***						  ***
+	*** This whole mod is a spoiler to the BGII story ***	
+	***						  ***
+
+
+
+			"Imoen gets turned to stone in Promenade fight"
+				for BGII, BGT, BGII:EE, and EET
+					by jastey 
+					Version 1.0
+
+I feel under a lot of time pressure every time after the incident with Irenicus, Imoen, and the Cowled Wizards at the Promenade. This mod lets Imoen be turned to stone in that fight. The idea is to give the PC more ease of mind to do all the quests in Chapter 2, knowing that Imoen doesn't suffer - and can be turned back to live like Branwen was in BG1 once the PC reaches Spellhold.
+
+(I am ESL and I was tempted to call the mod "Stoned Imoen", but I didn't.)
+
+
+
+DESCRIPTION
+The mod lets Imoen be turned to stone in the fight with Irenicus at the Promenade. She will still be taken by the Cowled Wizards, and Irenicus will have depetrified her and do his soul-experiments until the PC reaches Spellhold so the overall game flow is not altered. But overall it all happens a bit later than in the original, and (at least for me) it's a bit less disturbing.
+
+This mod is meant to be a very small mod, which is also one of the reasons why the overall game story is not altered.
+
+The mod tries to use as many originally voiced lines as possible, but some had to be taken out because they didn't make any sense without Imoen reacting. Also, some lines were added to stress the reasons why Imoen will be taken to Spellhold although she is turned to stone. 
+
+
+
+INSTALLATION
+
+ 
+Extract the contents of the mod archive to your game's main directory. 
+NOTE: For BG:EE it is important that you istall the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+
+
+Windows
+On successful extraction, there should be an ImoenIsStone folder and a setup-ImoenIsStone.exe file in your game folder. To install, simply double-click setup-bgqe.exe and follow the instructions on screen.
+Run setup-ImoenIsStone.exe in your game folder to reinstall or uninstall the mod.
+
+There is no Mac OS X or Linux versions yet but if you know what you are doing you can use the mod folder and set it up.
+
+
+NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
+
+
+If you have installation problems or encounter any bugs, please post your bug report in one of the forum threads you found this mod in.
+
+
+
+COMPATIBILITY
+
+I really tried to make this mod compatible. If I missed something, let me know.
+
+The mod is:
+-compatible with Alamateria's Restauration Project "Extended Waukeen's Promenade Cutscene" (independent of installation order)
+
+-compatible with Tweaks Anthology "Faster Chapter 1&2 Cut-Scenes & Dreams" (component "Convenience Tweaks and/or Cheats") if Tweaks Anthology is installed *before* ImoenHandling. (If Tweaks Anthology component is installed after, the shortened cutscenes will not show.)
+
+-compatible with TweakPack v16 "Faster Chapter 1&2 Cut-Scenes & Dreams" (which is deprecated). Do not use TweakPack, use Tweaks Anthology instead. Nevertheless: If TweakPack is installed before ImoenHandling, both mods add their changes. If TweakPack is installed after ImoenHandling, the changes from ImoenHandling are *lost*.
+
+-compatible with Alternatives (independent of installation order)
+
+-compatible with Saerileth's route to Spellhold if installed *after* Saerileth mod.
+
+jastey
+
+
+
+CREDITS
+
+Danacm: for sparking the idea of Imoen remaining a statue in chapter 2
+subtledoctor: for the overal idea of a "take the time pressure out" mod
+
+
+
+
+TOOLS USED
+IESDP (https://gibberlings3.github.io/iesdp/)
+
+Infinity Explorer			http://infexp.sourceforge.net
+Near Infinity				http://www.idi.ntnu.no/~joh/ni
+WeiDU					http://www.weidu.org
+
+Modding communities, tutorials and technical assistance:
+
+Kerzenburgforum				http://kerzenburg.baldurs-gate.eu/
+The Gibberlings Three			http://gibberlings3.net
+Pocket Plane Group			http://pocketplane.net
+Spellhold Studios			http://www.shsforums.net/
+
+
+LEGAL INFORMATION
+
+=============================================================================
+Imoen gets turned to stone Mod for Baldur's Gate II © jastey. This mod is not developed, supported, or endorsed by BioWare, Black Isle Studios, Interplay Entertainment Corp., the Wizards of the Coast, Overhaul Games or Beamdog. All other trademarks and copyrights are property of their respective owners.
+=============================================================================
+=============================================================================
+REDISTRIBUTION NOTE: Imoen gets turned to stone Mod was created to be freely enjoyed by all Baldur's Gate players and may not be sold.
+=============================================================================
+
+
+
+HISTORY
+
+Version 1.0: initial release
+

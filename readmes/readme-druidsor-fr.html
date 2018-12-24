@@ -1,0 +1,2072 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+  <title>Geomantic Sorcerer Kit</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+
+  <link rel="stylesheet" href="style/g3readme.css" type="text/css" />
+
+  <link href="style/g3.ico" rel="icon" type="image/bmp" />
+
+</head>
+
+
+<body>
+
+<h1>Geomantic Sorcerer Kit</h1>
+
+<div class="section">
+<p><strong><a href="http://www.gibberlings3.net/">Un
+mod de la communaut&eacute; Gibberlings Three</a> <br />
+
+Auteur : <a href="http://gibberlings3.net/forums/?showuser=32">Caedwyr</a><br />
+
+Sur la toile : <a href="http://www.gibberlings3.net/geomantic/">Page
+d'accueil</a></strong>
+and <strong><a href="http://gibberlings3.net/forums/index.php?showforum=28">Forum
+de discussion</a></strong></p>
+
+<p><strong> Version 4 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=67">V&eacute;rifier
+les mises &agrave; jour</a></strong><br />
+
+<strong> Langues :</strong> Anglais, Fran&ccedil;ais<br />
+
+<strong>Plate-formes : </strong>Windows, Mac OS X et Linux</p>
+
+</div>
+
+<h2>Vue d'ensemble</h2>
+
+<div class="section">
+<p>Le mod Geomantic Sorcerer Kit s'appuie fortement sur le mod
+Druidic
+Sorcerer Kit cr&eacute;&eacute; par Constant Gaw et
+ressuscit&eacute;
+par hlidskialf. Il s'inspire de la classe de prestige
+G&eacute;omancien
+d'<acronym title="Advanced Dungeons and Dragons">
+AD&amp;D</acronym>
+3&egrave;me &Eacute;dition, d&eacute;crite dans le manuel
+"Les
+Ma&icirc;tres de la Nature". Le kit combine les techniques
+d'incantation du sorcier avec des capacit&eacute;s et sorts de
+druides.
+De plus, il apporte sa propre &eacute;volution &agrave; travers
+la
+progression des <acronym title="HLA">Capacit&eacute;s
+de haut niveau</acronym>
+et des sorts suppl&eacute;mentaires. &Eacute;tant
+donn&eacute; des
+limites de l'interface de s&eacute;lection de kit, il ne peut
+&ecirc;tre choisi d&egrave;s la cr&eacute;ation du
+personnage, mais si
+ce dernier poss&egrave;de les attributs requis, le g&eacute;nie
+Aataqah, pr&eacute;sent au d&eacute;but du ch&acirc;teau
+d'Irenicus,
+pourrait souhaiter aider le joueur &agrave; se souvenir de ses
+capacit&eacute;s de sorcier g&eacute;omancien. Voir la
+description du
+kit ci-dessous pour plus de d&eacute;tails.</p>
+
+<p>L'archive du mod propose aussi l'installation d'un contenu qui
+permet au joueur de choisir un portrait pour son sorcier
+g&eacute;omancien, ainsi que d'autres portraits pour chacune de ses
+formes de m&eacute;tamorphose animale : ours, chat, chien,
+l&eacute;opard, &eacute;lan, panth&egrave;re rat, serpent
+et loup.</p>
+
+</div>
+
+<h2>Compatibilit&eacute;</h2>
+
+<div class="section">
+<p>Il est recommand&eacute; de d&eacute;sinstaller toutes
+les versions
+ant&eacute;rieures de Geomantic Sorcerer avant l'installation. Le <acronym title="Baldur's Gate II">BG2</acronym>
+Fixpack est fortement recommand&eacute;, bien qu'il ne soit pas
+absolument n&eacute;cessaire. Ce kit peut &ecirc;tre
+install&eacute;
+&agrave; n'importe quel moment de l'installation du mod sans
+g&eacute;n&eacute;rer de conflit.</p>
+
+<p>Ce mod est con&ccedil;u pour le jeu <acronym title="Baldur's Gate II">Baldur's Gate II</acronym>
+: Shadows of Amn avec le pack d'expansion Throne of Bhaal.
+Actuellement, le joueur est oblig&eacute; de commencer une nouvelle
+partie dans Shadows of Amn. Cependant, les prochaines versions
+permettront au joueur de commencer dans Throne of Bhaal, ou
+Ch&acirc;teau-Suif pour les mods <acronym title="Baldur's Gate Trilogy">Baldur's Gate Trilogy</acronym>
+et Tutu. Ce mod devrait &ecirc;tre compatible avec tout autre mod
+li&eacute; &agrave; <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.</p>
+
+<p>Le kit peut &ecirc;tre activ&eacute; &agrave; tout
+moment dans des parties Tutu, <acronym title="Baldur's Gate Trilogy">Baldur's
+Gate Trilogy</acronym> et Throne of Bhaal en utilisant la
+CLUAConsole pour cr&eacute;er l'objet CA#AGEO.itm et en utilisant
+l'objet depuis l'inventaire du personnage. Cette m&eacute;thode
+fonctionnera pour attribuer le kit au personnage, mais pas pour le
+donner &agrave; un <acronym title="Non-Player Character">personnage
+non-joueur</acronym>.
+Il s'agit ici d'une fonctionnalit&eacute; temporaire disponible en
+attendant que je puisse coder un dialogue permettant d'appliquer le kit
+&agrave; d'autres moments du jeu.</p>
+
+<p>Lors de la s&eacute;lection d'un kit &agrave; la
+cr&eacute;ation de
+personnage, l'Infinity Engine est con&ccedil;u pour n'afficher que
+neuf
+choix. Vous pouvez installer plus de neuf kits, mais seuls les neufs
+premiers install&eacute;s seront disponibles &agrave; la
+s&eacute;lection. Si des kits li&eacute;s &agrave; d'autres
+mods sont
+install&eacute;s, gardez cette limitation &agrave; l'esprit.
+Les kits
+suppl&eacute;mentaires seront disponibles s'ils sont
+assign&eacute;s
+&agrave; des ennemis, mais pas &agrave; la cr&eacute;ation
+de
+personnage.</p>
+
+<p>Les joueurs souhaitant assigner le kit &agrave; un <acronym title="Non-Player Character">personnage non-joueur</acronym>
+devraient utiliser le mod <a href="http://www.gibberlings3.net/level1npcs/">Level 1 NPCs</a>.
+Notez aussi que les joueurs souhaitant assigner le kit &agrave; un <acronym title="Non-Player Character">personnage non-joueur</acronym>
+ne doivent pas installer le composant <b>Portraits pour la
+m&eacute;tamorphose druidique</b>.</p>
+
+</div>
+
+<h2>Installation</h2>
+
+<div class="section">
+<p><strong>Windows</strong><br />
+
+Le Geomantic Sorcerer Kit est archiv&eacute; et install&eacute;
+avec <acronym title="Weimer Dialogue Utility">WeiDU</acronym>
+et distribu&eacute; sous forme d'une archive auto-extractible. Pour
+l'installer, double-cliquez sur l'archive et suivez les instructions
+&agrave; l'&eacute;cran. </p>
+
+<p> Les fichiers peuvent aussi &ecirc;tre extraits en
+utilisant <a href="http://www.rarlab.com/">WinRAR</a>.
+Si l'extraction est r&eacute;ussie, vous devriez obtenir un dossier
+Druidsor et un fichier Setup-Druidsor.exe dans votre dossier <acronym title="Baldur's Gate II">Baldur's Gate Trilogy</acronym>.
+Pour l'installer, double-cliquez sur Setup-DruidSor.exe et suivez les
+instructions &agrave; l'&eacute;cran. </p>
+
+<p> Si vous souhaitez r&eacute;installer,
+d&eacute;sinstaller ou changer des composants, lancez
+Setup-DruidSor.exe dans votre dossier d'installation. </p>
+
+<p><strong>Mac OS X</strong><br />
+
+<em>Si le mod avait &eacute;t&eacute; install&eacute;
+pr&eacute;c&eacute;demment, d&eacute;sinstallez-le avant
+d'extraire la nouvelle version. </em>Le Geomantic Sorcerer Kit
+est archiv&eacute; et install&eacute; avec <acronym title="Weimer Dialogue Utility">WeiDU</acronym>. Pour
+l'installer, d&eacute;compressez le contenu du mod dans votre
+dossier <acronym title="Baldur's Gate II">BG2</acronym>
+.&nbsp; Si l'extraction s'est bien d&eacute;roul&eacute;e,
+vous devriez
+trouver un dossier DruidSor, Setup-DruidSor, et Setup-DruidSor.command
+dans le dossier d'installation du jeu. Pour installer, double cliquez <strong>Setup-DruidSor.command</strong>
+et suivez les instructions &agrave; l'&eacute;cran.</p>
+
+</div>
+
+<h2>Contenus</h2>
+
+<div class="section">
+<h4>Sorcier G&eacute;omancien</h4>
+
+<div class="kit_description">
+<p> SORCIER G&Eacute;OMANCIEN : Le clerc tient ses pouvoirs
+d'une puissance sup&eacute;rieure. Le magicien ne fait confiance
+qu'aux livres contenant un savoir mystique. Le druide puise ses sorts
+dans la nature. Mais pour le sorcier g&eacute;omancien, toutes ces
+formes de magie ne font qu'une. La g&eacute;omancie est l'art de
+canaliser l'&eacute;nergie magique de nombreuses sources
+&agrave; travers la terre elle-m&ecirc;me. Les sorts qu'il
+lance gr&acirc;ce &agrave; ses connexions avec la terre sont le
+reflet de sa propre volont&eacute;.</p>
+
+<p>Avantages :<br />
+
+- Peut apprendre des sorts de druide en plus de ceux du sorcier, et les
+lance depuis le livre de sorts du sorcier.<br />
+
+- Au niveau 8, il peut se m&eacute;tamorphoser sous
+diff&eacute;rentes formes animales du druide. Il gagne une
+utilisation suppl&eacute;mentaire tous les 3 niveaux.<br />
+
+- Il peut apprendre la magie de Quintessence de haut niveau. <br />
+
+La Quintessence tire son &eacute;nergie directement de la magie
+dans sa forme la plus pure, sans s'encombrer
+d'interm&eacute;diaires comme les d&eacute;it&eacute;s, la
+Toile ou des incantations contraignantes. Il s'agit plut&ocirc;t
+d'un m&eacute;lange intuitif entre les forces arcaniques et
+naturelles du monde qui ne peut &ecirc;tre ni enseign&eacute;
+ni accord&eacute;.</p>
+
+<p>Inconv&eacute;nients :<br />
+
+- Malus de 15% en gain d&rsquo;exp&eacute;rience.<br />
+
+- La force, la constitution et la dext&eacute;rit&eacute;
+&eacute;copent d'une p&eacute;nalit&eacute; de -2.<br />
+
+- Souffre d'une p&eacute;nalit&eacute; de 1 en vitesse
+d'incantation.<br />
+
+</p>
+
+<p>Pr&eacute;requis :<br />
+
+- 13 en Sagesse, 9 en Charisme.<br />
+
+- Doit &ecirc;tre d'alignement partiellement neutre.<br />
+
+</p>
+
+<p>Restrictions:<br />
+
+- N'utilise que les objets de sorcier.<br />
+
+- Est consid&eacute;r&eacute; comme un sorcier par les PNJ.</p>
+
+</div>
+
+<h4>Portraits pour la m&eacute;tamorphose druidique</h4>
+
+<div class="section">
+<p>Ce composant am&eacute;liore le sort de
+m&eacute;tamorphose du sorcier g&eacute;omancien afin qu'il
+change automatiquement le portrait du joueur lorsque qu'il se
+transforme en un animal donn&eacute;. Les portraits peuvent
+&ecirc;tre vus ci-dessous ou en cliquant sur <a href="#portrait">ce
+lien</a>. N'installez pas ce composant si vous
+pr&eacute;voyez de donner le kit &agrave; un <acronym title="NPC">personnage non-joueur</acronym>. </p>
+
+</div>
+
+<h2>D&eacute;tails des m&eacute;canismes du kit</h2>
+
+<div class="section">
+<h4>Nouveaux sorts de sorcier g&eacute;omancien : </h4>
+
+<p>Les sorts suivants sont des sorts de pr&ecirc;tre et
+druides ajout&eacute;s au livre de sorts du sorcier
+g&eacute;omancien. Les descriptions de ces nouveaux sorts et <acronym title="HLA">Capacit&eacute;s de haut niveau</acronym>
+peuvent &ecirc;tre trouv&eacute;es ci-dessous. </p>
+
+<p><strong>Niveau 1</strong><br />
+
+<em>Soins des blessures l&eacute;g&egrave;res,
+D&eacute;tection du mal, Enchev&ecirc;trement, Gourdin magique,
+Projection d'eau</em></p>
+
+<p><strong>Niveau 2</strong><br />
+
+<em>Peau d'&eacute;corce, Charme personne ou
+mammif&egrave;re, Lame enflamm&eacute;e, Baies,
+R&eacute;sistance au Feu/Froid, Ralentissement du poison</em>
+</p>
+
+<p><strong>Niveau 3</strong><br />
+
+<em>Appel de la foudre, Immobilisation des animaux, Protection
+contre le feu, Soins des blessures moyennes, Gu&eacute;rison des
+maladies, Zone d'air pur, Convocation d'insectes</em> </p>
+
+<p><strong>Niveau 4</strong><br />
+
+<em>Convocation d'Animaux I, Action libre, Neutralisation du
+poison, Protection contre la foudre, Appel des cr&eacute;atures des
+bois, Poison</em> </p>
+
+<p><strong>Niveau 5</strong><br />
+
+<em>Soins des blessures graves, Convocation d'Animaux II, Peau de
+fer, Poussi&egrave;re de f&eacute;e, Fl&eacute;au d'insectes</em>
+</p>
+
+<p><strong>Niveau 6</strong><br />
+
+<em>Soins des blessures critiques, Convocation d'Animaux III,
+Conjuration d'Animaux, Conjuration d'un
+&eacute;l&eacute;mentaire de Feu, Semences de feu,
+D&eacute;g&eacute;n&eacute;rescence</em> </p>
+
+<p><strong>Niveau 7</strong><br />
+
+<em>Soin, Conjuration d'un &eacute;l&eacute;mentaire de
+terre, Rayon de soleil, Fatalit&eacute; rampante, Tremblement de
+terre</em> </p>
+
+<p><strong>Niveau 8</strong><br />
+
+<em>Beaut&eacute; de la Nature, Temp&ecirc;te de feu,
+R&eacute;g&eacute;n&eacute;ration</em> </p>
+
+<p><strong>Niveau 9</strong><br />
+
+<em>Tornade, Invoquer tertre errant</em> </p>
+
+<h4>M&eacute;tamorphose druidique</h4>
+
+<p>Le sorcier g&eacute;omancien dispose aussi d'un large
+choix de formes animales : </p>
+
+<p><strong>Ours</strong><br />
+
+Un ours brun, lent mais puissant. (<acronym title="Classe d'armure">CA
+</acronym>6, <acronym title="To-Hit Armor Class Zero">TAC0</acronym>
+13, 3 attaques par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 6 faces"> 1d6</acronym>)</p>
+
+<p><strong>Chat</strong><br />
+
+M&ecirc;me une si petite cr&eacute;ature peut se
+r&eacute;v&eacute;ler utile. S'il doit faire preuve de
+mobilit&eacute;, le druide peut se m&eacute;tamorphoser en chat
+et ainsi traverser les obstacles comme s'il disposait des sorts
+h&acirc;te et action libre. (<acronym title="Classe d'armure">CA
+</acronym>4, <acronym title="To-Hit Armor Class Zero">TAC0</acronym>
+17, 1 attaque par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 2 faces"> 1d2</acronym>)</p>
+
+<p><strong>Chien</strong><br />
+
+Le chien n'est pas d'une grande efficacit&eacute; en combat mais
+dispose d'une formidable capacit&eacute; de pistage. Ses sens
+ac&eacute;r&eacute;s lui permettent de d&eacute;tecter
+facilement les pi&egrave;ges et ennemis. (<acronym title="Classe d'armure">CA </acronym>6, <acronym title="To-Hit Armor Class Zero">TAC0</acronym> 16, 1
+attaque par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 4 faces"> 1d4</acronym>)</p>
+
+<p><strong>L&eacute;opard</strong><br />
+
+Bien qu'il soit assez similaire &agrave; la panth&egrave;re, le
+l&eacute;opard est un combattant plus fiable. Il est mieux
+&eacute;quip&eacute; pour combattre dans des lieux bien
+&eacute;clair&eacute;s. (<acronym title="Classe d'armure">CA
+</acronym>4, <acronym title="To-Hit Armor Class Zero">TAC0</acronym>
+12, 2 attaques par round &agrave; <acronym title="1 jet d'un d&eacute; &agrave; 8 faces">1d8</acronym>)</p>
+
+<p><strong>Elan</strong><br />
+
+Un &eacute;lan peut se r&eacute;v&eacute;ler un adversaire
+tr&egrave;s dangereux lorsqu'il se sent menac&eacute;. Bien
+qu'il ne soit pas le plus efficace en mati&egrave;re de
+d&eacute;g&acirc;ts directs, il est capable d'assommer ses
+adversaires et de les repousser en arri&egrave;re gr&acirc;ce
+&agrave; sa charge. (<acronym title="Classe d'armure">CA
+</acronym>7, <acronym title="To-Hit Armor Class Zero">TAC0</acronym>
+13, 1 attaque par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 6 faces"> 1d6</acronym>)</p>
+
+<p><strong>Panth&egrave;re</strong><br />
+
+Une combinaison de furtivit&eacute; et de puissance. La
+panth&egrave;re peut utiliser une attaque sp&eacute;ciale
+li&eacute;e &agrave; sa furtivit&eacute; une fois par round
+(50% de chances de succ&egrave;s, uniquement en
+ext&eacute;rieur). En cas de succ&egrave;s, la
+panth&egrave;re devient invisible pendant un court instant, inflige
+des d&eacute;g&acirc;ts massifs et
+b&eacute;n&eacute;ficie d'un bonus d'attaque de +4 au <acronym title="To-Hit Armor Class Zero">TAC0</acronym> pendant
+un round. (<acronym title="Classe d'armure">CA </acronym>3,
+<acronym title="To-Hit Armor Class Zero">TAC0</acronym>
+14, 2 attaques par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 8 faces"> 1d8</acronym>)</p>
+
+<p><strong>Rat</strong><br />
+
+Les rats se font rarement remarquer et son extr&ecirc;mement
+difficiles &agrave; atteindre. Si le druide a besoin de se
+d&eacute;placer furtivement, il peut se m&eacute;tamorphoser en
+rat pour &eacute;viter d'&ecirc;tre
+rep&eacute;r&eacute;. (<acronym title="Classe d'armure">CA
+</acronym>16, <acronym title="To-Hit Armor Class Zero">TAC0</acronym>
+20, 2 attaques par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 2 faces"> 1d2</acronym>, 90% de
+r&eacute;sistance physique, invisibilit&eacute;,
+ind&eacute;tectable)</p>
+
+<p><strong>Serpent</strong><br />
+
+Cet &eacute;norme serpent ne mord pas particuli&egrave;rement
+fort,
+mais il peut injecter un venin empoisonn&eacute; &agrave; sa
+cible
+&agrave; chaque frappe. Les cr&eacute;atures &agrave;
+proximit&eacute;
+doivent r&eacute;ussir un jet de sauvegarde contre les sorts avec
+une
+bonus de +4 ou elles seront prises de panique. (<acronym title="Classe d'armure">CA </acronym>4, <acronym title="To-Hit Armor Class Zero">TAC0</acronym> 15, 1
+attaque par round &agrave; <acronym title="1 jet d'un d&eacute; &agrave; 4 faces">1d4</acronym>)</p>
+
+<p><strong>Loup</strong><br />
+
+Le loup n'est pas un combattant particuli&egrave;rement puissant,
+mais il compense cela gr&acirc;ce &agrave; sa
+capacit&eacute; &agrave; appeler une meute de loups
+&agrave; ses cot&eacute;s (1-5 loups, une fois par jour) pour
+30 minutes, uniquement en ext&eacute;rieur. (<acronym title="Classe d'armure">CA </acronym>3, <acronym title="To-Hit Armor Class Zero">TAC0</acronym> 15, 1
+attaque par round &agrave;<acronym title="1 jet d'un d&eacute; &agrave; 8 faces"> 1d8</acronym>)</p>
+
+<h4>Capacit&eacute;s de haut niveau </h4>
+
+<p> Le sorcier g&eacute;omancien dispose d'un arbre de <acronym title="Capacit&eacute;s de haut niveau">Capacit&eacute;s de
+haut niveau</acronym> constitu&eacute; de quatre branches au
+sommet desquelles se trouvent les sorts de magie de quintessence.</p>
+
+<p><strong>Voie de la ma&icirc;trise du lancement des
+sorts</strong></p>
+
+<p><strong>Clart&eacute; (CAPACITE DE RANG 1)</strong><br />
+
+Gr&acirc;ce &agrave; cette capacit&eacute;, le sorcier
+g&eacute;omancien est immunis&eacute; contre la
+surdit&eacute;, le silence, le fourvoiement magique, la
+d&eacute;bilit&eacute; mentale et le charme.</p>
+
+<p><strong>Lucidit&eacute; vocale (CAPACITE DE RANG 2)</strong><br />
+
+<em>Requiert : Clart&eacute;</em><br />
+
+Ayant appris &agrave; formuler les composantes vocales des sorts de
+mani&egrave;re plus efficace, le sorcier g&eacute;omancien est
+capable de r&eacute;duire le temps d'incantation de ses sorts de 2.
+</p>
+
+<p><strong>Ma&icirc;trise de l'incantation (CAPACITE DE
+RANG 3)</strong><br />
+
+<em>Requiert : Lucidit&eacute; vocale</em><br />
+
+Gr&acirc;ce &agrave; cette capacit&eacute;, tous les sorts
+lanc&eacute;s par le sorcier g&eacute;omancien voient leur
+dur&eacute;e
+doubl&eacute;e. Par ailleurs, une fois par round, il peut
+d&eacute;tecter les formes de magie dissipables dans son
+environnement
+imm&eacute;diat. </p>
+
+<p><strong>Union de la magie (CAPACITE DE RANG 4)</strong><br />
+
+<em>Requiert : Ma&icirc;trise de l'incantation</em><br />
+
+(Magie de Quintessence)<br />
+
+Ecole : toutes<br />
+
+Dur&eacute;e : instantan&eacute;e<br />
+
+Temps d'incantation : 6<br />
+
+Zone d'effet : rayon de 18 m&egrave;tres<br />
+
+Jets de sauvegarde : aucun</p>
+
+<p>Ce sort provoque une puissante onde de choc sur 360
+degr&eacute;s
+qui rend toutes les cr&eacute;atures &agrave; port&eacute;e
+vuln&eacute;rables &agrave; toutes les formes de magie,
+qu'elles soient
+issues de sorts ou d'armes magiques. Tous les sorts de
+d&eacute;fense
+magique sont &eacute;radiqu&eacute;s, les
+r&eacute;sistances aux
+d&eacute;g&acirc;ts magiques sont an&eacute;anties et la
+r&eacute;sistance magique est abaiss&eacute;e &agrave;
+z&eacute;ro
+pendant 20 rounds. Tous les sorts dissipables sont &eacute;galement
+dissip&eacute;s. </p>
+
+<p><strong>Voie de la connaissance arcanique</strong></p>
+
+<p><strong>M&eacute;morisation de sort
+suppl&eacute;mentaire (CAPACITE DE RANG 1)</strong><br />
+
+En choisissant cette capacit&eacute;, le magicien peut lancer un
+sort suppl&eacute;mentaire par niveau.</p>
+
+<p><strong>Connaissance des sorts
+am&eacute;lior&eacute;e (CAPACITE DE RANG 2)</strong><br />
+
+<em>Requiert : M&eacute;morisation de sort
+suppl&eacute;mentaire</em><br />
+
+Gr&acirc;ce &agrave; votre compr&eacute;hension approfondie
+de la magie, vous &ecirc;tes maintenant capable d'apprendre de
+nouveaux sorts de pr&ecirc;tre qui n'&eacute;taient jusqu'alors
+pas disponibles pour les druides. Les nouveaux sorts sont :</p>
+
+<ul>
+
+  <li>Niveau 1 : Sanctuaire</li>
+
+  <li> Niveau 2 : Silence sur 5 m&egrave;tres</li>
+
+  <li> Niveau 3 : D&eacute;livrance de la paralysie</li>
+
+  <li> Niveau 4 : Harmonie d&eacute;fensive</li>
+
+  <li> Niveau 5 : Ordres Chaotiques</li>
+
+  <li> Niveau 6 : Ordre Majeur</li>
+
+  <li> Niveau 7 : Miroir physique</li>
+
+  <li> Niveau 8 : Bouclier des Archontes</li>
+
+  <li> Niveau 9 : Rappel &agrave; la vie </li>
+
+</ul>
+
+<p><strong>Am&eacute;lioration de sort (CAPACITE DE
+RANG 3)</strong><br />
+
+<em>Requiert : M&eacute;morisation de sort
+suppl&eacute;mentaire</em><br />
+
+Une plus grande compr&eacute;hension de toutes les forces magiques
+vous permet de lancer des versions am&eacute;lior&eacute;es de
+plusieurs sorts de magicien. En s&eacute;lectionnant cette
+capacit&eacute;, vous pouvez lancer les sorts suivants : </p>
+
+<ol>
+
+  <li> Projectiles magiques multiples de Mordenkainen </li>
+
+  <li> Toile contr&ocirc;l&eacute;e</li>
+
+  <li> Armure fantomatique am&eacute;lior&eacute;e</li>
+
+  <li> Sph&egrave;re constamment r&eacute;sistante
+d'Otiluke</li>
+
+  <li> C&ocirc;ne de froid givrant</li>
+
+  <li> Globe d'invuln&eacute;rabilit&eacute; majeur</li>
+
+  <li> Explosion &agrave; retardement</li>
+
+  <li> Immunit&eacute; &agrave;
+l&rsquo;&eacute;nergie</li>
+
+</ol>
+
+<p><strong>Essence des Plans (CAPACITE DE RANG 4)</strong><br />
+
+<em>Requiert : Am&eacute;lioration de sort</em><br />
+
+(Magie de Quintessence)<br />
+
+Ecole : toutes<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : 20 rounds<br />
+
+Temps d'incantation : 9<br />
+
+Zone d'effet : sp&eacute;ciale<br />
+
+Jets de sauvegarde : aucun</p>
+
+<p>Ce sort mat&eacute;rialise un orbe d'&eacute;nergie
+pure pendant 20
+rounds. Cet orbe dispose de nombreuses capacit&eacute;s, offensives
+comme d&eacute;fensives, et ses effets d&eacute;pendent de la
+proximit&eacute; d'alli&eacute;s ou d'ennemis. Le lanceur peut
+profiter
+de son &eacute;nergie de diverses fa&ccedil;ons, mais doit
+toujours
+maintenir un contact visuel avec l'orbe pour en garder le
+contr&ocirc;le.</p>
+
+<p>Une grande proximit&eacute; avec l'orbe causera les effets
+suivants une fois par round :</p>
+
+<p>Ennemis :<br />
+
+Horreur, Aveuglement, Rayon d'affaiblissement, D&eacute;livrance de
+la magie, Mot secret, Immobilisation des Monstres, Fourvoiement magique.</p>
+
+<p>Tous ces sorts sont lanc&eacute;s comme s'ils l'avaient
+&eacute;t&eacute; par un magicien de niveau 25. De plus, toutes
+les cr&eacute;atures de 8 d&eacute;s de vie ou moins sont
+tu&eacute;es instantan&eacute;ment, comme si elles avaient
+&eacute;t&eacute; victimes du sort de niveau 6 : Sort de mort.</p>
+
+<p>Alli&eacute;s :<br />
+
+Toutes les cr&eacute;atures amicales se
+r&eacute;g&eacute;n&egrave;rent lentement lorsqu'elles sont
+proches de l'orbe. De plus, elles b&eacute;n&eacute;ficient
+d'un bonus de 1 &agrave; la vitesse d'incantation, aux jets de
+sauvegarde et au facteur de vitesse, et d'un bonus de +1 pour toutes
+leurs caract&eacute;ristiques.</p>
+
+<p>L'orbe peut lancer les sorts suivants :</p>
+
+<p>Phase &eacute;l&eacute;mentaire (4 fois par jour)<br />
+
+L'orbe choisit une cible que viendront frapper 10 orbes magiques.
+Lorsque la cible est touch&eacute;e, elle se retrouve
+d&eacute;phas&eacute;e dans un des quatre plans
+&eacute;l&eacute;mentaires pendant une fraction de seconde par
+chacun
+des orbes puis elle est ramen&eacute;e. De ces brefs allers et
+retours
+ne r&eacute;sulte qu'un l&eacute;ger d&eacute;g&acirc;t
+&eacute;l&eacute;mentaire (1d2), mais &agrave; la fin du
+processus la
+cible a 20% de chance de souffrir d'un drain de niveaux (5 niveaux), de
+d&eacute;bilit&eacute; mentale (4 rounds), ou d'&ecirc;tre
+assomm&eacute;e (4 rounds) par le choc des changements de phase. Il
+est
+aussi possible (5% de chance) que la victime ne r&eacute;siste pas
+au
+choc et meure instantan&eacute;ment.</p>
+
+<p>Onde de choc de pure &eacute;nergie (4 fois par jour)<br />
+
+Ce sort projette en arri&egrave;re tous les ennemis proches de
+l'orbe et leur inflige 1d20 points de d&eacute;g&acirc;ts ainsi
+qu'une r&eacute;duction de 75% de leur vitesse de
+d&eacute;placement pendant 1 round.</p>
+
+<p>Echange d'&eacute;nergie (4 fois par jour)<br />
+
+Tous les ennemis dans la zone cibl&eacute;e sont frapp&eacute;s
+par des &eacute;clairs qui infligent <acronym title="5 jets d'un d&eacute; &agrave; 5 faces">5d5</acronym> points
+de d&eacute;g&acirc;ts.</p>
+
+<p>Balle &eacute;lectrique (20 fois par jour)<br />
+
+C'est l'attaque de base de l'orbe, elle inflige <acronym title="3 jets d'un d&eacute; &agrave; 6 faces">3d6</acronym> points
+de d&eacute;g&acirc;ts &eacute;lectriques et <acronym title="3 jets d'un d&eacute; &agrave; 6 faces">3d6</acronym> points
+de d&eacute;g&acirc;ts contondants &agrave; une cible
+unique. </p>
+
+<p><strong>Voie de la d&eacute;fense magique :</strong></p>
+
+<p><strong>Immunit&eacute; aux sorts de niveau 1
+(CAPACITE DE RANG 1)</strong><br />
+
+Cette capacit&eacute; conf&egrave;re au sorcier
+g&eacute;omancien une
+invuln&eacute;rabilit&eacute; totale aux sorts de niveau 1.</p>
+
+<p><strong>R&eacute;sistance &agrave; la magie
+(CAPACITE DE RANG 2)</strong><br />
+
+<em>Requiert : Immunit&eacute; aux sorts de niveau 1</em><br />
+
+Gr&acirc;ce &agrave; cette capacit&eacute;, le sorcier
+g&eacute;omancien voit sa r&eacute;sistance &agrave; la
+magie augmenter
+de 33%.</p>
+
+<p><strong>B&eacute;n&eacute;diction de la Nature
+(CAPACITE DE RANG 3)</strong><br />
+
+<em>Requiert : R&eacute;sistance &agrave; la magie</em><br />
+
+Les sorciers g&eacute;omanciens de haut niveau communient avec la
+Nature. Ils y gagnent une meilleure connexion avec les forces de l'Eau,
+du Feu et de l'Air, ce qui apporte au sorcier g&eacute;omancien un
+bonus permanent de +1 en sagesse et une r&eacute;sistance accrue de
+10% au feu, au froid et &agrave;
+l'&eacute;lectricit&eacute;. </p>
+
+<p><strong>Futilit&eacute; arcanique (CAPACITE DE RANG
+4)</strong><br />
+
+<em>Requiert : B&eacute;n&eacute;diction de la Nature</em><br />
+
+(Magie de Quintessence)<br />
+
+Ecole : toutes<br />
+
+Dur&eacute;e : 5 rounds<br />
+
+Temps d'incantation : 1<br />
+
+Zone d'effet : le lanceur de sorts<br />
+
+Jets de sauvegarde : aucun</p>
+
+<p>Gr&acirc;ce &agrave; ce sort, le mage s'entoure d'une
+carapace qui
+l'isole de toutes les formes de magie pendant une courte
+p&eacute;riode. Pendant 5 rounds, il
+b&eacute;n&eacute;ficie d'une
+immunit&eacute; totale aux d&eacute;g&acirc;ts, effets et
+armes
+magiques. De plus, elle conf&egrave;re au joueur 100% de
+r&eacute;sistance &agrave; la magie et l'immunit&eacute;
+&agrave;
+l&rsquo;Arr&ecirc;t du temps. De part sa nature, ce sort
+dissipe tous
+les effets magiques affectant le lanceur mais ne
+l&rsquo;emp&ecirc;che
+pas de lancer de nouveaux sorts affectant
+l&rsquo;int&eacute;rieur
+comme l&rsquo;ext&eacute;rieur de la carapace. </p>
+
+<p><strong>Voie des pouvoirs Druidiques</strong></p>
+
+<p><strong>Immunit&eacute;s druidiques (CAPACITE DE
+RANG 1)</strong><br />
+
+En tant que druide de haut niveau, vous &ecirc;tes
+immunis&eacute; contre toutes les formes de poisons, maladies et
+drains de niveau. Les armes non-magiques n'ont aucun effet sur vous et
+vous ne pouvez pas &ecirc;tre victime de sommeil. De plus, vous
+gagnez 25% de r&eacute;sistance au feu, &agrave;
+l'&eacute;lectricit&eacute;, au froid et &agrave; l'acide.</p>
+
+<p><strong>Transformation &eacute;l&eacute;mentaire
+(CAPACITE DE RANG 2)</strong><br />
+
+<em>Requiert: Immunit&eacute;s druidiques</em><br />
+
+Gr&acirc;ce &agrave; cette capacit&eacute;, le sorcier
+g&eacute;omancien est capable de se m&eacute;tamorphoser en un
+&eacute;l&eacute;mentaire de feu, d'air, de terre ou d'eau (24
+d&eacute;s de vie). Ces formes &eacute;l&eacute;mentaires
+ont
+diff&eacute;rentes forces et faiblesses selon leur nature. Le
+druide
+est &eacute;galement soign&eacute; de 3d10 points de vie
+lorsqu'il
+revient &agrave; sa forme humaine. Cette capacit&eacute; dure 5
+tours,
+ou jusqu'&agrave; ce que le druide y mette fin. </p>
+
+<p><strong>Marche planaire (Terre) (CAPACITE DE RANG 3)</strong><br />
+
+<em>Requiert : Transformation &eacute;l&eacute;mentaire</em><br />
+
+Gr&acirc;ce &agrave; sa connaissance des
+&eacute;l&eacute;ments, le
+sorcier g&eacute;omancien est capable fusionner avec n'importe quel
+type de terrain, et peut ainsi se d&eacute;placer &agrave;
+volont&eacute; &agrave; travers le sol et l'air. Il
+r&eacute;appara&icirc;t n'importe o&ugrave; sur
+l'&eacute;cran sous sa
+forme humano&iuml;de.</p>
+
+<p><strong>D&eacute;ferlante cacophonique (CAPACITE DE
+RANG 4)</strong><br />
+
+<em>Requiert : Marche planaire (Terre)</em><br />
+
+(Magie de Quintessence)<br />
+
+Ecole : toutes<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : 3 rounds<br />
+
+Temps d'incantation : 9<br />
+
+Zone d'effet : rayon de 13,5 m&egrave;tres<br />
+
+Jets de sauvegarde : sp&eacute;cial</p>
+
+<p>En d&eacute;cha&icirc;nant les forces
+&eacute;l&eacute;mentaires de
+l'Air et de l'Eau, le sorcier g&eacute;omancien peut provoquer un
+d&eacute;ferlement grandiose de puissance magique : une
+temp&ecirc;te
+de glace et d'&eacute;lectricit&eacute; combin&eacute;e
+&agrave; des
+vents violents affectant toutes les cr&eacute;atures dans un rayon
+de
+13,5 m&egrave;tres. Ce sort n'a presque rien &agrave; envier en
+mati&egrave;re de potentiel de destruction &agrave; son proche
+cousin,
+Cataclysme ardent. Bien que le mage doive maintenir sa concentration et
+ne puisse pas se d&eacute;placer pendant la canalisation du sort,
+il
+conserve suffisamment de contr&ocirc;le pour &eacute;viter de
+se
+blesser ou de blesser les membres de son groupe.</p>
+
+<p>Au lancement du sort, un &eacute;norme &eacute;clair
+tombe et frappe le sorcier, l'enveloppant dans un champ
+d'&eacute;nergie &eacute;lectrique. A l'instant
+pr&eacute;cis de l'impact, des &eacute;clairs fusent et
+frappent toutes les cr&eacute;atures &agrave;
+port&eacute;e, causant <acronym title="1 jet d'un d&eacute; &agrave; 10 faces">1d10</acronym>
+points de d&eacute;g&acirc;ts. De plus, une temp&ecirc;te
+de glace se
+d&eacute;cha&icirc;ne pendant 3 rounds. Toutes les 4 secondes
+(pour un
+total de 5 fois), elle cause <acronym title="1 jet d'un d&eacute; &agrave; 8 faces">1d8</acronym>
+points de d&eacute;g&acirc;ts de froid. Toutes les
+cr&eacute;atures
+prises dans la temp&ecirc;te sont affect&eacute;es toutes les 4
+secondes (5 fois au maximum) soit par une frappe de foudre massive,
+soit par un lourd bloc de glace, ou alors seront balay&eacute;es
+par
+une petite tornade.</p>
+
+<p>La foudre inflige <acronym title="jet d'un d&eacute; &agrave; 15 faces">1d15</acronym>
+points de d&eacute;g&acirc;ts &eacute;lectriques et a 75%
+de chance de projeter les cibles environnantes en arri&egrave;re.</p>
+
+<p>Le bloc de glace inflige <acronym title="2 jets d'un d&eacute; &agrave; dix faces">2d10</acronym>
+points de d&eacute;g&acirc;ts contondants, a 50% de chance
+d'emp&ecirc;cher la cible de prononcer des incantations pendant 2
+rounds, et 25% de chance d'assommer la cible pendant 2 rounds.</p>
+
+<p>La tornade inflige <acronym title="1 jet d'un d&eacute; &agrave; 15 faces">1d15</acronym> points
+de d&eacute;g&acirc;ts tranchants &agrave; la cible tout en
+la projetant en arri&egrave;re. Cette derni&egrave;re a aussi
+25% de chance de l&acirc;cher ses armes.</p>
+
+<p>Pendant cette temp&ecirc;te, le mage devient une sorte de
+conducteur pour l'&eacute;nergie de l'eau et de
+l'&eacute;lectricit&eacute;. A chaque round, tous les ennemis
+pris dans la temp&ecirc;te sont frapp&eacute;s soit par un
+&eacute;clair, une vague fracassante ou un c&ocirc;ne de froid.</p>
+
+<p>L'&eacute;clair fonctionne comme un &eacute;clair
+normal et inflige <acronym title="1 jet d'un d&eacute; &agrave; 10 faces">1d10</acronym>
+points de d&eacute;g&acirc;ts &eacute;lectriques. De plus,
+il a 50% de
+chance de g&eacute;n&eacute;rer un arc &eacute;lectrique
+qui a 50% de
+chance de toucher toutes les cibles environnantes. L'arc
+&eacute;lectrique inflige <acronym title="jet d'un d&eacute; &agrave; 5 faces">1d5</acronym>
+points de d&eacute;g&acirc;ts &eacute;lectriques
+&agrave; tout ceux qu'il touche.</p>
+
+<p>La vague fracassante frappe une seule cible pour <acronym title="1 jet d'un d&eacute; &agrave; 20 faces">1d20</acronym> points
+de d&eacute;g&acirc;ts de froid magique. Cette vague repousse
+aussi la cible &agrave; bonne distance et la ralentit pendant 2
+rounds.</p>
+
+<p>Le c&ocirc;ne de froid affecte tous les ennemis sur sa
+trajectoire, causant <acronym title="1 jet d'un d&eacute; &agrave; 10 faces">1d10</acronym>
+points de d&eacute;g&acirc;ts de froid &agrave; chacun. Les
+cibles ont aussi 25% de chance d'&ecirc;tre gel&eacute;es pour
+1 round.</p>
+
+<p>Il n'y a aucune &eacute;chappatoire (pas de jet de
+sauvegarde).</p>
+
+<p><strong>Cataclysme ardent (CAPACITE DE RANG 4)</strong><br />
+
+<em>Requiert : Marche planaire (Terre)</em><br />
+
+(Magie de Quintessence)<br />
+
+Ecole : toutes<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : 3 rounds<br />
+
+Temps d'incantation : 9<br />
+
+Zone d'effet : rayon de 13,5 m&egrave;tres<br />
+
+Jets de sauvegarde : sp&eacute;cial </p>
+
+<p>Le ciel et la terre se fondent en un enfer tourbillonnant de
+feu et de pierres qui ravage tout sur son passage. Ce sort, qui est le
+plus destructeur qui soit &agrave; votre disposition, blesse tout
+ce qui se trouve sur son passage except&eacute; le lanceur. La
+puissance du Cataclysme ardent rivalise avec les pouvoirs des dieux
+eux-m&ecirc;mes, et pourrait potentiellement raser de petits
+villages, sans parler des occupants. Les effets du sort sont
+automatiquement centr&eacute;s sur le lanceur pendant 6 rounds,
+mais, contrairement &agrave; d'autres sorts &agrave; zone
+d'effet tels que D&eacute;ferlante cacophonique, le Cataclysme
+ardent suit son lanceur de round en round.</p>
+
+<p>Lorsque l'incantation initiale est achev&eacute;e, une
+&eacute;norme colonne de flammes s'abat sur le lanceur, l'entourant
+d'un globe de feu tout en g&eacute;n&eacute;rant une explosion
+massive qui inflige <acronym title="2 jets d'un d&eacute; &agrave; 10 faces">2d10</acronym>
+points de d&eacute;g&acirc;ts dans un rayon de 13,5
+m&egrave;tres.
+Toutes les cr&eacute;atures prises dans l'explosion sont
+projet&eacute;es en arri&egrave;re et affect&eacute;es par
+une boule de
+feu mineure ( <acronym title="3 jets d'un d&eacute; &agrave; 5 faces">3d5</acronym>
+de d&eacute;g&acirc;ts) ou un rayon de flammes( <acronym title="2 jets d'un d&eacute; &agrave; 10 faces">2d10</acronym>
+x2 points de d&eacute;g&acirc;ts et la cible est
+repouss&eacute;e par
+les flammes pendant un round). Quatre secondes apr&egrave;s la
+premi&egrave;re &eacute;ruption, une autre colonne de flammes
+s'abat et
+cause une explosion identique suivie par une explosion
+suppl&eacute;mentaire trois secondes plus tard. Pour finir, une
+derni&egrave;re explosion d&eacute;tonne 5 secondes plus tard,
+et
+toutes les cr&eacute;atures &agrave; port&eacute;e sont
+affect&eacute;es par une boule de feu mineure.</p>
+
+<p>Au d&eacute;but du troisi&egrave;me round, le sort
+d&eacute;clenche une pluie de m&eacute;t&eacute;ores qui
+inflige <acronym title="2 jets d'un d&eacute; &agrave; 5 faces">2d5</acronym>
+points de d&eacute;g&acirc;ts &agrave; chaque round
+&agrave; toutes les
+cr&eacute;atures qui restent dans la zone. A chaque round, toutes
+les
+cibles sont frapp&eacute;es par deux m&eacute;t&eacute;ores
+(<acronym title="3 jets d'un d&eacute; &agrave; 5 faces">3d5</acronym>
+points de d&eacute;g&acirc;ts sur un rayon de 9
+m&egrave;tres)
+&eacute;ject&eacute;es en arri&egrave;re et
+&eacute;ventuellement
+assomm&eacute;es pendant un round (25% de chance, jet de sauvegarde
+contre les sorts avec un bonus de +4).</p>
+
+<p>Lors du cinqui&egrave;me round, apr&egrave;s que le
+dernier
+m&eacute;t&eacute;ore soit tomb&eacute;, le sol se met
+&agrave;
+trembler violemment pendant deux rounds. Toutes les
+cr&eacute;atures
+sont ainsi projet&eacute;es en tout sens pour <acronym title="1 jet d'un d&eacute; &agrave; 10 faces">1d10</acronym>
+points de d&eacute;g&acirc;ts par round. Le s&eacute;isme
+provoque
+&eacute;galement l'apparition de crevasses enflamm&eacute;es
+deux fois
+par round, qui blessent leurs victimes pour <acronym title="2 jets d'un d&eacute; &agrave; 8 faces">2d8</acronym>
+points de d&eacute;g&acirc;ts. De plus, &agrave; chaque
+round, la
+v&eacute;g&eacute;tation du sol cherche &agrave; agripper
+les
+cr&eacute;atures &agrave; port&eacute;e pour les
+immobiliser pendant 1
+round (50% de chances).</p>
+
+<p>A la fin du sixi&egrave;me round, une derni&egrave;re
+colonne de flammes s'abat sur le lanceur et
+g&eacute;n&egrave;re trois puissantes ondes de choc
+enflamm&eacute;es qui carbonisent les victimes pour <acronym title="2 jets d'un d&eacute; &agrave; 10 faces">2d10</acronym>
+points de d&eacute;g&acirc;ts chacune.</p>
+
+<h4>Descriptions des nouveaux Sorts et Sorts de base
+ajout&eacute;s par <acronym title="Capacit&eacute;s de haut niveau">Capacit&eacute;s
+de haut niveau</acronym></h4>
+
+<p><strong>C&ocirc;ne de froid givrant (Evocation)</strong>
+<br />
+
+Niveau : 5<br />
+
+Port&eacute;e : 0 <br />
+
+Dur&eacute;e : instantan&eacute;e <br />
+
+Temps d'incantation : 5 <br />
+
+Zone d'effet : Sp&eacute;ciale <br />
+
+Jets de sauvegarde : moiti&eacute;</p>
+
+<p> Ce sort cr&eacute;e une zone de froid extr&ecirc;me
+en forme de c&ocirc;ne, qui part des mains du magicien et qui
+mesure 1,5 m&egrave;tres de long et 30 cm de diam&egrave;tre
+par niveau du jeteur de sorts. Il absorbe la chaleur et inflige <acronym title="20 jets d'un d&eacute; &agrave; 4 faces">20d4</acronym>
++10 points de d&eacute;g&acirc;ts qui peuvent &ecirc;tre
+r&eacute;duits
+de moiti&eacute; gr&acirc;ce &agrave; un jet de sauvegarde.
+Chaque
+cible se trouvant &agrave; l'int&eacute;rieur du c&ocirc;ne
+de froid
+am&eacute;lior&eacute; doit r&eacute;ussir un jet de
+sauvegarde
+suppl&eacute;mentaire ou elle sera gel&eacute;e pendant <acronym title="1 jet d'un d&eacute; &agrave; 4 faces">1d4</acronym> rounds.</p>
+
+<p> <strong>Toile contr&ocirc;l&eacute;e
+(Evocation)</strong><br />
+
+Niveau : 2<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : 1 tour<br />
+
+Temps d'incantation : 2 <br />
+
+Zone d'effet : sp&eacute;ciale <br />
+
+Jets de sauvegarde : sp&eacute;cial</p>
+
+<p> Ce sort est identique &agrave; la version originale
+&agrave; l'exception d'un point important : il n'affecte pas les
+membres du groupe. Un sort de toile cr&eacute;e une surface
+couverte d'un tissage dense et r&eacute;sistant de filaments
+collants, similaires &agrave; ceux d'une toile
+d'araign&eacute;e en bien plus grands et solides. Le sort de toile
+couvre au maximum une zone de 10 m&egrave;tres de rayon
+(&agrave; peu pr&egrave;s de la m&ecirc;me taille qu'une
+boule de feu). Les cr&eacute;atures qui sont prises dans la toile
+ou la touchent simplement se retrouvent bloqu&eacute;es par les
+fibres gluantes. Quiconque se trouve dans la zone d'effet lorsque le
+sort est lanc&eacute; doit r&eacute;ussir un jet de sauvegarde
+contre les sorts avec une p&eacute;nalit&eacute; de -2. Si le
+jet de sauvegarde est r&eacute;ussi, la cr&eacute;ature est
+libre de quitter la zone. Un jet de sauvegarde rat&eacute; signifie
+que la cr&eacute;ature est englu&eacute;e dans la toile,
+incapable de bouger. A chaque round pass&eacute; dans la toile, la
+cr&eacute;ature doit r&eacute;ussir un jet de sauvegarde. Dans
+le cas contraire elle restera immobilis&eacute;e.</p>
+
+<p> <strong>Explosion &agrave; retardement
+(Invocation/Evocation)</strong> <br />
+
+Niveau : 7<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : sp&eacute;ciale<br />
+
+Temps d'incantation : 7<br />
+
+Zone d'effet : rayon de 18 m&egrave;tres <br />
+
+Jets de sauvegarde : 3/4</p>
+
+<p> Ce sort cr&eacute;e une &eacute;norme boule de feu
+qui l&eacute;vite &agrave; un point
+d&eacute;termin&eacute; par le magicien. Elle reste
+&agrave; cet endroit jusqu'&agrave; ce que quelqu'un s'en
+approche. A ce moment pr&eacute;cis, elle explose en infligeant <acronym title="15 jets d'un d&eacute; &agrave; 6 faces">15d6</acronym>
+points de d&eacute;g&acirc;ts, et permet un jet de sauvegarde
+pour ne subir que trois-quarts des d&eacute;g&acirc;ts.
+L'explosion qui en r&eacute;sulte g&eacute;n&egrave;re une
+puissante onde de choc sur un rayon de 18 m&egrave;tres. Cependant
+son expansion est relativement lente ce qui permet au lanceur de sort
+et &agrave; son groupe de fuir la zone affect&eacute;e.</p>
+
+<p> <strong>Immunit&eacute; &agrave;
+l'&eacute;nergie (Abjuration)</strong> <br />
+
+Niveau : 8<br />
+
+Port&eacute;e : contact <br />
+
+Dur&eacute;e : 1 round/niveau<br />
+
+Temps d'incantation : 8<br />
+
+Zone d'effet : cr&eacute;ature touch&eacute;e <br />
+
+Jets de sauvegarde : aucun</p>
+
+<p> Lorsque ce sort est lanc&eacute;, il conf&egrave;re
+100% d'immunit&eacute; contre toutes les attaques &agrave; base
+d'&eacute;nergie comme le feu, l'acide, la magie et
+l'&eacute;lectricit&eacute;, qu'elles proviennent d'une source
+naturelle ou non. Sont exclues de cette immunit&eacute; les
+attaques physiques comme, par exemple, les armes magiques ou le Marteau
+Spirituel. Toutes les attaques contondantes, de taille ou d'estoc ne
+seront donc pas affect&eacute;es par ce sort. Ses effets se
+prolongent jusqu'&agrave; son expiration naturelle ou sa
+dissipation par une source ext&eacute;rieure.</p>
+
+<p> <strong>Armure fantomatique
+am&eacute;lior&eacute;e (Conjuration/Convocation)</strong><br />
+
+Niveau : 3<br />
+
+Port&eacute;e : 0<br />
+
+Dur&eacute;e : 5 tours<br />
+
+Temps d'incantation : 1 <br />
+
+Zone d'effet : le lanceur de sorts<br />
+
+Jets de sauvegarde : aucun </p>
+
+<p> Gr&acirc;ce &agrave; ce sort, le magicien
+cr&eacute;e un champ de force magique qui prot&egrave;ge la
+cible comme une armure de plates (<acronym title="Classe d'armure">CA
+</acronym> 2). Ce sort peut &ecirc;tre cumul&eacute; avec
+la Dext&eacute;rit&eacute; et, dans le cas des guerriers/mages,
+avec le bonus de bouclier. L'armure fantomatique n'emp&ecirc;che
+pas de bouger, ne p&egrave;se rien et n'encombre pas le
+b&eacute;n&eacute;ficiaire. Elle n'emp&ecirc;che pas de
+lancer des sorts. Elle dure jusqu'&agrave; ce que quelqu'un dissipe
+le sort ou jusqu'&agrave; expiration de sa dur&eacute;e
+normale. </p>
+
+<p> <strong>Globe d'invuln&eacute;rabilit&eacute;
+majeur (Abjuration)</strong> <br />
+
+Niveau : 6<br />
+
+Port&eacute;e : 0 <br />
+
+Dur&eacute;e : 1 round/niveau <br />
+
+Temps d'incantation : 6<br />
+
+Zone d'effet : sph&egrave;re de 1,5 m&egrave;tres de rayon <br />
+
+Jets de sauvegarde : aucun </p>
+
+<p> Il s'agit ici d'une version am&eacute;lior&eacute;e
+du sort Globe d'invuln&eacute;rabilit&eacute;. Il
+cr&eacute;e une sph&egrave;re magique immobile autour du
+lanceur qui le rend invuln&eacute;rable &agrave; tous les sorts
+de premier, second, troisi&egrave;me, quatri&egrave;me et
+cinqui&egrave;me niveau (exemple : les sorts &agrave; zone
+d'effet ne p&eacute;n&egrave;trent pas le globe
+d'invuln&eacute;rabilit&eacute;). N'importe quel sort peut
+cependant &ecirc;tre jet&eacute; depuis l'int&eacute;rieur
+de la sph&egrave;re sans pour autant affecter le Globe
+d'invuln&eacute;rabilit&eacute;. Les sorts de
+sixi&egrave;me niveau et au-del&agrave; ne sont pas
+affect&eacute;s par le globe. Il est possible de se
+d&eacute;barrasser d'un tel globe gr&acirc;ce &agrave; une
+dissipation magique, un Sort d'assaut ou un sort de Perce-magie. </p>
+
+<p><strong>Projectiles magiques multiples de Mordenkainen
+(Evocation)</strong><br />
+
+Niveau : 1<br />
+
+Port&eacute;e : champ visuel du lanceur <br />
+
+Dur&eacute;e : variable <br />
+
+Temps d'incantation : variable <br />
+
+Zone d'effet : une cr&eacute;ature<br />
+
+Jets de sauvegarde : aucun </p>
+
+<p> A l'image du sort de magicien populaire, projectile magique,
+ce sort lance des projectiles pr&eacute;cis qui infligent <acronym title="1 jet d'un d&eacute; &agrave; 4 faces">1d4</acronym>+1 points
+de d&eacute;g&acirc;ts chacun. Cependant, la variante de
+Mordenkainen offre des possibilit&eacute;s consid&eacute;rables
+d'augmenter ou de diminuer massivement les d&eacute;g&acirc;ts.
+</p>
+
+<p> Une incantation r&eacute;ussie de ce sort ne garantit la
+cr&eacute;ation que d'un seul projectile magique, mais chaque
+&eacute;tape du sort offre une chance de lancer un projectile
+suppl&eacute;mentaire vers votre ennemi.</p>
+
+<p> 1 projectile : 100%<br />
+
+&nbsp;&nbsp;+ 2 projectiles : 75%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;+ 3 projectiles : 75%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 4
+projectiles : 66%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+5 projectiles : 66%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+6 projectiles : 50%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+7 projectiles :
+50%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+8 projectiles : 33%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+9 projectiles : 33%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+10 projectiles : 25%<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+R&eacute;initialisation du sort : 25%</p>
+
+<p> Il est th&eacute;oriquement possible, bien qu'improbable,
+que le sort se r&eacute;p&egrave;te &agrave; l'infini. Dans
+tous les cas, le mage doit maintenir sa concentration pendant le
+processus d'incantation et peut donc &ecirc;tre interrompu par une
+perturbation. </p>
+
+<p> <strong>Sph&egrave;re constamment
+r&eacute;sistante d'Otiluke (Alt&eacute;ration)</strong><br />
+
+Niveau : 4<br />
+
+Port&eacute;e : 0<br />
+
+Dur&eacute;e : 1 tour<br />
+
+Temps d'incantation : 4<br />
+
+Zone d'effet : cr&eacute;ature cibl&eacute;e<br />
+
+Jets de sauvegarde : aucun </p>
+
+<p> Ce sort cr&eacute;e un globe de force miroitante qui
+emprisonne la victime. La sph&egrave;re englobe la cible pour la
+dur&eacute;e du sort. Elle est compl&egrave;tement
+invuln&eacute;rable, sauf &agrave; la Dissipation de la magie.
+Ainsi, la cr&eacute;ature emprisonn&eacute;e est totalement
+&agrave; l'abri, mais ne peut rien faire qui affecte le monde
+ext&eacute;rieur. Contrairement &agrave; la version originale
+du sort, aucun jet de sauvegarde n'est possible pour la
+cr&eacute;ature cibl&eacute;e.</p>
+
+<p><strong>Invocation de tertre errant
+(Conjuration/Convocation) </strong><br />
+
+Niveau : 9<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : 5 heures<br />
+
+Temps d'incantation : 7 <br />
+
+Zone d'effet : sp&eacute;ciale <br />
+
+Jet de sauvegarde : aucun </p>
+
+<p>Au lancement du sort, un puissant monticule de terre, arbres
+et rochers s'&eacute;l&egrave;ve du sol. Cette masse
+ex&eacute;cutera les ordres du magicien jusqu'&agrave; ce
+qu'elle soit tu&eacute;e ou que le sort expire. Ces ordres sont
+donn&eacute;s &agrave; l'&eacute;l&eacute;mentaire par
+t&eacute;l&eacute;pathie, il n'y a donc pas de perte de temps
+due &agrave; l'apprentissage de sa langue ou &agrave;
+d'&eacute;ventuelles incompr&eacute;hensions. </p>
+
+<p><strong>Tornade (Invocation)</strong><br />
+
+Niveau : 9<br />
+
+Port&eacute;e : champ visuel du lanceur <br />
+
+Dur&eacute;e : 5 rounds<br />
+
+Temps d'incantation : 7 <br />
+
+Zone d'effet : rayon de 9 m&egrave;tres<br />
+
+Jet de sauvegarde : sp&eacute;cial </p>
+
+<p>Lorsque le sort est lanc&eacute;, un tourbillon
+appara&icirc;t &agrave; l'endroit cibl&eacute; pour 5
+rounds. Deux fois par round, tous les ennemis dans un rayon de 9
+m&egrave;tres doivent r&eacute;ussir un jet de sauvegarde
+contre chacun des effets suivants :</p>
+
+<p>Soufflet : La cible doit r&eacute;ussir un jet de
+sauvegarde contre
+les souffles, sous peine d'&ecirc;tre &eacute;ject&eacute;e
+sur une
+grande distance.<br />
+
+Armes l&acirc;ch&eacute;es : La cible doit r&eacute;ussir
+un jet de
+sauvegarde contre les souffles, sous peine de se retrouver
+d&eacute;sarm&eacute;e.<br />
+
+D&eacute;bris volants : La cible doit r&eacute;ussir un jet de
+sauvegarde contre les sorts avec un bonus de +2, sous peine
+d'&ecirc;tre assomm&eacute;e par des d&eacute;bris pendant
+3 rounds.<br />
+
+Vents puissants : La cible doit r&eacute;ussir un jet de sauvegarde
+contre les souffles avec une p&eacute;nalit&eacute; de -4 ou
+voir sa
+vitesse de mouvement r&eacute;duite de 25% pendant 1 round.</p>
+
+<p>Deux fois par round, toutes les cibles subissent <acronym title="2 jets d'un d&eacute; &agrave; 10 faces">2d10</acronym>
+de d&eacute;g&acirc;ts caus&eacute;s par les objets volants
+et le fait
+d'&ecirc;tre projet&eacute;s contre le sol. Un jet de
+sauvegarde contre
+les souffles r&eacute;ussi r&eacute;duira les
+d&eacute;g&acirc;ts subis
+de moiti&eacute;. </p>
+
+<p><strong>Projection d'eau (Invocation/Evocation)</strong><br />
+
+Niveau : 1<br />
+
+Port&eacute;e : champ visuel du lanceur<br />
+
+Dur&eacute;e : instantan&eacute;e <br />
+
+Temps d'incantation : 2 <br />
+
+Zone d'effet : cr&eacute;ature cibl&eacute;e<br />
+
+Jet de sauvegarde : sp&eacute;cial</p>
+
+<p>Quand le sorcier g&eacute;omancien lance ce sort, une
+petite vague d'eau est projet&eacute;e et frappe la cible pour <acronym title="1 jet d'un d&eacute; &agrave; 8 faces">1d8</acronym>
+de d&eacute;g&acirc;ts. L'impact de la vague affecte les
+cr&eacute;atures environnantes dans un rayon de 6
+m&egrave;tres,
+causant 1 point de d&eacute;g&acirc;ts &agrave; chacune,
+&agrave; moins
+qu'un jet de sauvegarde contre les sorts avec un bonus de +3 soit
+r&eacute;ussi. </p>
+
+</div>
+
+<h2><a name="portrait" id="portrait">Portraits</a></h2>
+
+<div class="section">
+<p>Cette section doit en grande partie son existence au superbe
+travail
+d'Amaurea qui a eu l'obligeance de transformer 30 portraits d'animaux
+diff&eacute;rents en versions "Balduris&eacute;es". En plus de
+cet
+excellent travail, Amaurea a aussi eu la gentillesse de m'autoriser
+&agrave; utiliser un grand nombre des portraits humano&iuml;des
+plus
+traditionnels qu'elle avait publi&eacute;s auparavant. Vous pouvez
+d&eacute;couvrir ses &oelig;uvres sur son site web : <a href="http://www.freewebs.com/amaurea62/">http://www.freewebs.com/amaurea62/</a>.</p>
+
+<p>De plus, Amedyr a r&eacute;pondu &agrave; une
+requ&ecirc;te publique aupr&egrave;s des utilisateurs des
+forums de <a href="http://www.gibberlings3.net/readmes/gibberlings3.net/forums">The
+Gibberlings Three</a> en fournissant une
+interpr&eacute;tation originale de l'arch&eacute;type du
+Sorcier Geomancien. Merci Amedyr.</p>
+
+<p>Les autres portraits ont &eacute;t&eacute;
+r&eacute;cup&eacute;r&eacute;s lors de mes recherches sur
+les nombreux
+sites et forums r&eacute;f&eacute;ren&ccedil;ant des
+portraits pour
+"Baldur's Gate", et, n'ayant pas not&eacute; le nom des artistes
+&agrave; l'&eacute;poque je ne suis pas en mesure de les
+remercier
+directement. Je souhaite tout de m&ecirc;me leur adresser tous mes
+remerciements.</p>
+
+<h4>Utilisateurs de pouvoirs</h4>
+
+<p>Les utilisateurs avanc&eacute;s peuvent facilement
+int&eacute;grer
+leurs propres portraits pour le sorcier g&eacute;omancien en
+rempla&ccedil;ant les fichiers de portraits suivants dans leurs
+dossiers override et portraits.</p>
+
+<p>BGII - SoA/portraits</p>
+
+<ul>
+
+  <li> <b>geosorl.bmp</b> - Forme
+humano&iuml;de, grand format pour fen&ecirc;tre de personnage,
+110x170 pixels</li>
+
+  <li> <b>geosors.bmp</b> - Forme
+humano&iuml;de, petit format pour barre lat&eacute;rale, 38x60
+pixels</li>
+
+</ul>
+
+<p>BGII - SOA/override</p>
+
+<ul>
+
+  <li> <b>geosorl.bmp</b> - Forme
+humano&iuml;de, grand format pour fen&ecirc;tre de personnage,
+110x170 pixels</li>
+
+  <li> <b>geosors.bmp</b> - Forme
+humano&iuml;de, petit format pour barre lat&eacute;rale, 38x60
+pixels</li>
+
+  <li> <b>bearm.bmp</b> - Forme d'ours, grand format
+pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>bears.bmp</b> - Forme d'ours, petit format
+pour barre lat&eacute;rale, 38x60 pixels</li>
+
+  <li> <b>catm.bmp</b> - Forme de chat, grand format
+pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>cats.bmp</b> - Forme de chat, petit format
+pour barre lat&eacute;rale, 38x60 pixels</li>
+
+  <li> <b>dogm.bmp</b> - Forme de chien, grand
+format pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>dogs.bmp</b> - Forme de chien, petit
+format pour barre lat&eacute;rale, 38x60 pixels</li>
+
+  <li> <b>leopardm.bmp</b> - Forme de
+l&eacute;opard, grand format pour fen&ecirc;tre de personnage,
+110x170 pixels</li>
+
+  <li> <b>leopards.bmp</b> - Forme de
+l&eacute;opard, petit format pour barre lat&eacute;rale, 38x60
+pixels</li>
+
+  <li> <b>moosem.bmp</b> - Forme d'&eacute;lan,
+grand format pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>mooses.bmp</b> - Forme d'&eacute;lan,
+petit format pour barre lat&eacute;rale, 38x60 pixels</li>
+
+  <li> <b>pantherm.bmp</b> - Forme de
+panth&egrave;re, grand format pour fen&ecirc;tre de personnage,
+110x170 pixels</li>
+
+  <li> <b>panthers.bmp</b> - Forme de
+panth&egrave;re, petit format pour barre lat&eacute;rale, 38x60
+pixels</li>
+
+  <li> <b>ratm.bmp</b> - Forme de rat, grand format
+pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>rats.bmp</b> - Forme de rat, petit format
+pour barre lat&eacute;rale, 38x60 pixels</li>
+
+  <li> <b>snakem.bmp</b> - Forme de serpent, grand
+format pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>snakes.bmp</b> - Forme de serpent, petit
+format pour barre lat&eacute;rale, 38x60 pixels</li>
+
+  <li> <b>wolfm.bmp</b> - Forme de loup, grand
+format pour fen&ecirc;tre de personnage, 110x170 pixels</li>
+
+  <li> <b>wolfs.bmp</b> - Forme de loup, petit
+format pour barre lat&eacute;rale, 38x60 pixels</li>
+
+</ul>
+
+<h4>Humano&iuml;des M&acirc;les</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/mcast2m.jpg" /><br />
+
+mCast2 (Lightning Caster)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/mcast5m.jpg" /><br />
+
+mCast5 (Blond Hooded Caster)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/mdruid2m.jpg" /><br />
+
+mDruid2 (Druid with face paint)<br />
+
+- par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/mdruidm.jpg" /><br />
+
+mDruid (Druid in Vegetation)</td>
+
+    </tr>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/melf1m.jpg" /><br />
+
+mElf1 (Slightly dark skinned elf)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/melf2m.jpg" /><br />
+
+mElf2 (Elf caster type, open collar)<br />
+
+- par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/melf3m.jpg" /><br />
+
+mElf3 (Elf caster type, closeup)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/mgeo01m.jpg" /><br />
+
+mGeo01 (Caster with sigils and runes)<br />
+
+-&nbsp;par Amedyr</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<h4>Humano&iuml;des Femelles</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fcast02m.jpg" /><br />
+
+fCast02<br />
+
+(Green Hooded, possibly elven/half-elven)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fcast15m.jpg" /><br />
+
+fCast15 (Tatooed caster)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fcast16m.jpg" /><br />
+
+fCast16 (With metal ornamentation)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fcast18m.jpg" /><br />
+
+fCast18 (Brown Hair human/half-elf)</td>
+
+    </tr>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fdruid7m.jpg" /><br />
+
+fDruid7 (Druid with headdress)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fdruid9m.jpg" /><br />
+
+fDruid9 (Red headed druid type in brown robe)</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fhael1m.jpg" /><br />
+
+fHaEl1 (Elf/Half-Elf caster type)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/fhael2m.jpg" /><br />
+
+fHaEl2 (White robed half-elf/elf)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Ours</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/obear1m.jpg" /><br />
+
+oBear1 (Dark Brown looking over shoulder)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/obear2m.jpg" /><br />
+
+oBear2 (Lighter Brown with partially open smiling mouth)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/obear3m.jpg" /><br />
+
+oBear3 (Serious looking bear)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Chats</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ocat1m.jpg" /><br />
+
+oCat1 (Yellow and orange mottled with white bib)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ocat2m.jpg" /><br />
+
+oCat2 (Grey with black bands around neck)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ocat3m.jpg" /><br />
+
+oCat3 (Grey)<br />
+
+- par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Chiens</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/odog1m.jpg" /><br />
+
+oDog1 (Grey Hound)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/odog2m.jpg" /><br />
+
+oDog2 (Beige shaggy haired dog)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/odog3m.jpg" /><br />
+
+oDog3 (Border Collie)<br />
+
+-&nbsp;par Amaurea, image de Skye&nbsp;par Caedwyr</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>L&eacute;opards</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/oleop1m.jpg" /><br />
+
+oLeop1 (Leopard)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/oleop2m.jpg" /><br />
+
+oLeop2 (Leopard with snow)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/oleop3m.jpg" /><br />
+
+oLeop3 (Leopard with tongue)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Elan m&acirc;le</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ommoo1m.jpg" /><br />
+
+omMoo1 (Moose with head down)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ommoo2m.jpg" /><br />
+
+omMoo2 (Moose with head in profile)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ommoo3m.jpg" /><br />
+
+omMoo3 (Chestnut coloured moose)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Elan femelle</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ofmoo1m.jpg" /><br />
+
+ofMoo1 (Semi-profile perspective)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ofmoo2m.jpg" /><br />
+
+ofMoo2 (Chestnut coloured moose with head down)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/ofmoo3m.jpg" /><br />
+
+ofMoo3 (Chestnut coloured moose with head up)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Panth&egrave;res</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/opan1m.jpg" /><br />
+
+oPan1 (Shiny black panther)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/opan2m.jpg" /><br />
+
+oPan2 (Panther with head cocked to one side)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/opan3m.jpg" /><br />
+
+oPan3 (Panther with mouth partially open)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Rats</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/orat1m.jpg" /><br />
+
+oRat1 (Beige Rat)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/orat2m.jpg" /><br />
+
+oRat2 (Rat sticking head out of hole)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/orat3m.jpg" /><br />
+
+oRat3 (Light rat with food)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Serpents</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/osnak1m.jpg" /><br />
+
+oSnak1 (Snake raising head off grass)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/osnak2m.jpg" /><br />
+
+oSnak2 (Cobra smelling its surroundings)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/osnak3m.jpg" /><br />
+
+oSnak3 (Cobra with hood partially extended)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h4>Loups</h4>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/owolf1m.jpg" /><br />
+
+oWolf1 (White wolf)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/owolf2m.jpg" /><br />
+
+oWolf2 (Grey and white wolf)<br />
+
+-&nbsp;par Amaurea</td>
+
+      <td align="center" valign="bottom"><img src="readme-druidsor_files/owolf3m.jpg" /><br />
+
+oWolf3 (Black Wolf)<br />
+
+-&nbsp;par Amaurea</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<h2>Contact :</h2>
+
+<div class="section">
+<p>Ce mod a &eacute;t&eacute; cr&eacute;&eacute;
+par <a href="http://gibberlings3.net/forums/?showuser=32">Caedwyr</a>.
+Vous pouvez visiter <a href="http://gibberlings3.net/forums/index.php">The
+Gibberlings Three</a> pour plus d'informations sur ce mod ou
+d'autres mods sur lesquels il pourrait travailler.</p>
+
+</div>
+
+<h2>Remerciements</h2>
+
+<div class="section">
+<ul>
+
+  <li>Constant Gaw - Le mod original Druidic Sorcerer kit qui a
+inspir&eacute; ce mod et a fourni quelques fichiers de base
+&agrave; modifier. </li>
+
+  <li> hlidskialf - pour son travail sur le Druidic Sorcerer kit</li>
+
+  <li> aVENGER - pour le sort de tertre errant et son aide au
+niveau du script de ce sort</li>
+
+  <li> the_bigg - pour son aide en encodage et son autorisation
+d'utiliser les <acronym title="High Level Abilities">Capacit&eacute;s
+de haut niveau</acronym> Transformation
+&eacute;l&eacute;mentaire et B&eacute;n&eacute;diction
+de la nature de "Refinements"</li>
+
+  <li> Littiz - Pour les <acronym title="High Level Abilities">Capacit&eacute;s
+de haut niveau</acronym> Transformation &eacute;lementaire et
+B&eacute;n&eacute;diction de la nature de "Refinements"</li>
+
+  <li> TGMaestro - Pour les <acronym title="High Level Abilities">Capacit&eacute;s de haut
+niveau</acronym> Transformation &eacute;lementaire et
+B&eacute;n&eacute;diction de la nature de "Refinements"</li>
+
+  <li> CamDawg - Pour le code et l'aide &agrave; l'encodage</li>
+
+  <li> Avenger - Pour son aide &agrave; l'encodage et ses
+explications &agrave; propos de sorts et effets</li>
+
+  <li> BigRob - Pour son aide &agrave; propos des
+ic&ocirc;nes des sorts</li>
+
+  <li> devSin - Pour son aide &agrave; l'encodage</li>
+
+  <li> erik - Pour son aide &agrave; l'encodage</li>
+
+  <li> Gort - Pour son aide &agrave; l'encodage</li>
+
+  <li> igi - Pour son aide &agrave; l'encodage et ses
+suggestions</li>
+
+  <li> jastey - Pour son aide sur les dialogues</li>
+
+  <li> Kulyok - Pour son aide sur les dialogues</li>
+
+  <li> Mike1072 - Pour sa relecture et ses suggestions sur la
+fa&ccedil;on d'impl&eacute;menter un kit de sorcier</li>
+
+  <li> Nythun - Pour son aide &agrave; l'encodage, ses
+suggestions
+sur la fa&ccedil;on d'impl&eacute;menter un kit de sorcier, et
+pour
+m'avoir convaincu de ne pas employer d'horribles hacks pour le mod</li>
+
+  <li> Rabain - Pour son aide &agrave; l'encodage</li>
+
+  <li> Miloch - Pour son aide &agrave; l'encodage et les bons
+moments pass&eacute;s sur les "sous-composants"</li>
+
+  <li> plainab - Pour son aide &agrave; l'encodage et les
+bons moments pass&eacute;s sur les "sous-composants"</li>
+
+  <li> vilkacis - Pour les silhouettes d'inventaire du chat et du
+serpent</li>
+
+  <li> Tassadar88 - Pour les silhouettes d'inventaire du
+l&eacute;opard, de l'&eacute;lan et de la panth&egrave;re</li>
+
+  <li> Amaurea - Pour son formidable travail de "Baldurisation"
+des
+portraits d'animaux et sa permission d'utiliser certains de ses
+portraits d'hommes et femmes humano&iuml;des</li>
+
+  <li> Amedyr - Pour sa talentueuse interpr&eacute;tation du
+portrait du sorcier g&eacute;omancien m&acirc;le</li>
+
+  <li> Zooloo de l'atelier des d'Oghmatiques pour la traduction
+en langue fran&ccedil;aise</li>
+
+</ul>
+
+<p> Et &agrave; tout ceux qui ont aid&eacute; et
+&agrave; qui j'aurais oubli&eacute; de dire merci.</p>
+
+<p><strong>Outils utilis&eacute;s lors de la
+cr&eacute;ation</strong><br />
+
+<a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a>
+de Wes Weimer et the bigg <br />
+
+<a href="http://forums.pocketplane.net/index.php?board=85.0">Near
+Infinity</a> by Jon Olav Hauglid <br />
+
+<a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a>
+maintenu par igi<br />
+
+<a href="http://gibberlings3.net/forums/index.php?showforum=137"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a>
+d'Avenger<br />
+
+<a href="http://www.bridgesuk.com/andy/">BAM Workshop II</a>
+d'Andrew Bridges<br />
+
+<a href="http://infexp.sourceforge.net/">Infinity Explorer</a>
+de Dmitry Jemerov<br />
+
+<a href="http://www.context.cx/">ConTEXT</a> d'Eden
+Kirin <br />
+
+<a href="http://www.gibberlings3.net/tools/weidu.php"><acronym title="Weimer Dialogue Utility">WeiDU</acronym>
+ConTEXT Highlighters </a> d'Idobek, mis &agrave; jour par
+cmorgan</p>
+
+</div>
+
+<h2>Credits and Copyright Information</h2>
+
+<div class="section">
+<p>This mod may not be sold, published, compiled or redistributed
+in any form without the consent of its author. The Geomantic Sorcerer
+Kit mod is &copy;2007 Caedwyr.</p>
+
+<p>I have no objections to the material contained within this mod
+being used in other mods or modified for personal use. All I ask is
+that I be asked for permission to use the material prior to the release
+of a mod using the material and for the appropriate credit to be given
+for my work.</p>
+
+</div>
+
+<h2>Version History</h2>
+
+<div class="section">
+<p><strong>Version 4 - July 8, 2013</strong></p>
+
+<ul>
+
+  <li> Added paperdolls for cat, leopard, moose, panther, snake
+courtesy of vilkacis and Tassadar88</li>
+
+  <li> Added French translation by Zooloo of the D'Oghmatiques</li>
+
+</ul>
+
+<p><strong>Version 3 - May 21, 2008</strong></p>
+
+<ul>
+
+  <li> Added paperdolls for cat, leopard, moose, panther, snake
+courtesy of vilkacis and Tassadar88</li>
+
+  <li> Added <b>Portraits for Druidic Shapeshifting</b>
+component with original and reused artwork by Amaurea and Amedyr</li>
+
+</ul>
+
+<p><strong>Version 2 - December 1, 2007</strong></p>
+
+<ul>
+
+  <li> Typo corrections</li>
+
+  <li> Added an item to allow the kit to be applied in Tutu, <acronym title="Baldur's Gate Trilogy">BGT</acronym>, or Throne
+of Bhaal</li>
+
+</ul>
+
+<p><strong>Version 1 - November 4, 2007</strong></p>
+
+<ul>
+
+  <li> Initial release</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>

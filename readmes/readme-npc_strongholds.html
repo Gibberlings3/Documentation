@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>NPC Strongholds</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="style/g3readme.css" type="text/css" />
+<link href="style/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1><acronym title="Non-Player Character">NPC</acronym> Strongholds</h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a></strong><br />
+  <strong>Author: <a href="http://gibberlings3.net/forums/index.php?showuser=62">Kish</a></strong></p>
+  <p><strong>On the web: </strong><a href="http://www.gibberlings3.net/npcstrongholds/"><strong>Home page</strong></a> and <a href="http://gibberlings3.net/forums/index.php?showforum=77"><strong>discussion forum</strong></a></p>
+  <p><strong>Version 2 </strong><br />
+  <strong>Languages:</strong> English<br />
+  <strong>Platforms:</strong> Windows, Mac OS X, Linux</p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>In Baldur's Gate II, the <acronym title="Player Character">PC</acronym> can, after doing one of the quests, acquire a stronghold, depending on her/his class. However, none of the <acronym title="Non-Player Characters">NPCs</acronym> who join you get strongholds. This mod changes that, making it so that the <acronym title="Non-Player Characters">NPCs</acronym> in your party can also acquire strongholds.</p>
+  </p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+  <p>This mod is designed to work with <acronym title="Baldur's Gate II">BG2</acronym>: Shadows of Amn, with or without the expansion pack Throne of Bhaal. It will not work with the Multiple Strongholds component of the Ease-of-Use or <acronym title="Baldur's Gate II">BG2</acronym> Tweak Pack mods, or with any mod that directly changes the same parts of the game. So, anything that hinges on Oisig greeting the party in the Temple District, for example. I could code around that, but, I'd also need to <em>write</em> around it and it would be, in my opinion, significantly worse writing for Arval to appear to Aerie and ask her to come to the Temple of Lathander and then Oisig to appear and tell the main character, "I wish you were a &lt;MAN/WOMAN&gt; of faith." I don't know which mods do directly affect stronghold <acronym title="Non-Player Character">NPC</acronym> dialogue, but I'm guessing it will <em>not</em> be compatible with Big Picture, Big World or any related projects. It will also not be strictly compatible with any mod that requires the <acronym title="Player Character">PC</acronym> to have a specific stronghold. Any mod that changes Anomen's alignment to something other than Lawful Good, Lawful Neutral, or Chaotic Neutral will lead to NO VALID REPLIES OR LINKS if Anomen is in the party.</p>
+  <p> <strong>This mod does require </strong>the Guildhall Fix from Baldurdash (the fix which corrects some levels of the Guildhall stronghold being mistakenly flagged as outdoor areas). If you have the full Baldurdash fixpack or the Gibberlings Three fixpack installed, don't worry about it. If, and only if, when you go to install this mod, you get the message, "You do not appear to have the Guildhall Fix installed," you need to either install the fixpack from either Baldurdash or Gibberlings Three (note that a fixpack should be installed before any mods), or copy everything from your npc_strongholds/guildhall_fix folder into your override folder.</p>
+  <p> The Soundset Changes component requires Throne of Bhaal.</p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    NPC Strongholds is packaged and installed with WeiDU and is distributed as a self-extracting archive. To install, simply double-click the archive and follow the instructions on screen.</p>
+  <p>Alternatively, the files can be extracted from the archive using <a href="http://www.rarlab.com/">WinRAR</a> or <a href="http://www.7-zip.org/">7zip</a> and moved to your game folder. Your game folder should then contain an npc_strongholds folder and setup-npc_strongholds.exe. To install, double-click setup-npc_strongholds.exe and follow the instructions on screen.</p>
+  <p>Please run setup-npc_strongholds.exe in your game folder to reinstall, uninstall, or otherwise change components.</p>
+  <p><strong>Mac OS X</strong><br />
+    NPC Strongholds is packaged and installed with WeiDU and is distributed as a compressed archive. If the mod was previously installed, uninstall it before extracting the new version. Extract the contents of the archive and move them to your game folder. Your game folder should then contain an npc_strongholds folder, setup-npc_strongholds, and setup-npc_strongholds.command. To install, double-click <strong>setup-npc_strongholds.command</strong> and follow the instructions on screen.</p>
+  <p><strong>Linux</strong><br />
+    Extract the contents of the mod archive to your game installation directory.</p>
+  <p>Download the latest version of WeiDU for Linux from <a href="http://www.weidu.org/%7Ethebigg/" title="External link" rel="nofollow external">weidu.org</a> and extract (at least) the WeiDU, weinstall and tolower executables to a $PATH directory (e.g. /usr/bin).</p>
+  <p>Following that, open a terminal, cd to your game installation directory, run 'tolower' and answer Y to both queries. You can avoid running the second option (linux.ini) if you've ran it previously in this directory. To save time, the contents of this mod archive are already tolowered, so you can avoid running the first option as well (lowercasing file names) if this is the only mod you've extracted since the last time you lowercased file names. If you're unsure, running tolower and choosing both options is the safe bet.</p>
+  <p>After that, run <strong>weinstall npc_strongholds</strong> from your game installation directory to install or uninstall the mod.</p>
+</div>
+<h2>Components</h2>
+<div class="section">
+  <p><strong><acronym title="Non-Player Character">NPC</acronym> Strongholds</strong></p>
+  <p>This is the primary component of the mod. Note that, in order to gain a stronghold for an <acronym title="Non-Player Character">NPC</acronym>, you need to have that <acronym title="Non-Player Character">NPC</acronym> in your party when you do the quest that leads to the strongholds.</p>
+  <p>Yes, that does mean you can only get a stronghold for Imoen if you side with the Shadow Thieves and do the quest Renal Bloodscalp gives you in Chapter Six.</p>
+  <p>You should also have the cleric to whom you wish to give the cleric stronghold (Anomen or Aerie) in your party when you first go to the Temple District and hear Gaal's speech.</p>
+  <p><strong>Soundset Changes</strong></p>
+  <p>In the unmodded game, with Throne of Bhaal, Aerie's soundset undergoes some changes at a certain point in Chapter Eight, and Anomen's soundset undergoes substantially more extensive changes as soon as Chapter Eight begins if he is Chaotic Neutral. With the Soundset Changes optional component of this mod, their soundsets change as a result of events associated with their strongholds instead. (This will <em>not</em> change Anomen's soundset if he is not Chaotic Neutral, nor will it interfere in any way with their soundsets changing as they do in the unmodded game, should you bring the characters along but not give them strongholds.)</p>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p>Kish created this mod. Visit <a href="http://www.gibberlings3.net/forums/">The Gibberlings Three Forums</a> for information on this and any other Gibberlings Three mods on which I may be working.</p>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>CamDawg was extremely helpful, as always.</p>
+  <p>I would also like to thank my wife, neriana, for being a support and an inspiration throughout this project.</p>
+</div>
+<h2>Frequently Asked Questions </h2>
+<div class="section">
+  <p>Q: What's this mod about?</p>
+  <p> A: In the unmodded game, the <acronym title="Player Character">PC</acronym> can gain one stronghold determined by the <acronym title="Player Character">PC</acronym>'s class. This mod will permit most <acronym title="Non-Player Character">NPC</acronym> party members to claim the strongholds appropriate for their classes.</p>
+  <p> Q: What about characters with more than one class, like Jaheira or Jan? Will they be able to claim both strongholds?</p>
+  <p> A: No. Like the <acronym title="Player Character">PC</acronym>, such characters will only be able to claim one stronghold--either of the two they qualify for.</p>
+  <p> Q: Will every <acronym title="Non-Player Character">NPC</acronym> be able to claim a stronghold?</p>
+  <p> A: No. A few <acronym title="Non-Player Characters">NPCs</acronym> don't make sense for the strongholds their classes otherwise qualify them for, either because the stronghold-granter would not give the stronghold to that <acronym title="Non-Player Character">NPC</acronym> or because the <acronym title="Non-Player Character">NPC</acronym> wouldn't accept the stronghold. Logic is given priority over giving a stronghold to all <acronym title="Non-Player Characters">NPCs</acronym> in these cases.</p>
+  <p> Q: How will we know if an <acronym title="Non-Player Character">NPC</acronym> doesn't qualify for a stronghold?</p>
+  <p> A: Either the stronghold-granter or the <acronym title="Non-Player Character">NPC</acronym> will make it plain. The <acronym title="Non-Player Character">NPC</acronym> will not be ignored.</p>
+  <p> Q: What if both the <acronym title="Player Character">PC</acronym> and one or more <acronym title="Non-Player Characters">NPCs</acronym> qualify for a stronghold?</p>
+  <p> A: The stronghold will be initially offered to the <acronym title="Player Character">PC</acronym>. The <acronym title="Player Character">PC</acronym> will be able to claim the stronghold, or to have an <acronym title="Non-Player Character">NPC</acronym> who qualifies for it take it instead.</p>
+  <p> Q: Can your <acronym title="Player Character">PC</acronym> prevent the <acronym title="Non-Player Character">NPC</acronym> from claiming the stronghold? (If you want to 'save' him/her for the second class stronghold.)</p>
+  <p> A: Yes.</p>
+  <p> Q: Will the <acronym title="Non-Player Character">NPC</acronym> truly run the stronghold, or will the <acronym title="Player Character">PC</acronym> make all the decisions?</p>
+  <p> A: The <acronym title="Non-Player Character">NPC</acronym> will run the stronghold. Some <acronym title="Non-Player Characters">NPCs</acronym> will be more eager to take or ask for advice from the <acronym title="Player Character">PC</acronym> than others. In many cases, the <acronym title="Player Character">PC</acronym> will be able to have some effect on how the <acronym title="Non-Player Character">NPC</acronym> resolves the stronghold quests--however, the ultimate decisions lie with the <acronym title="Non-Player Character">NPC</acronym>.</p>
+  <p> Q: What happens if more than one <acronym title="Non-Player Character">NPC</acronym> qualifies for the stronghold?</p>
+  <p> A: The stronghold will be offered to one of them initially. The <acronym title="Player Character">PC</acronym> will be able to determine which of them actually gets it.</p>
+  <p> Q: Will the pc be able to offer their input on every decision in the stronghold, or is it just the major ones?</p>
+  <p> A: That depends on the particular <acronym title="Non-Player Character">NPC</acronym>'s personality. It's also possible the <acronym title="Player Character">PC</acronym> won't be consulted at all.</p>
+  <p> Q: Will what the npc thinks of the pc (romances, alignment, charisma etc.) affect how much they listen to the pc's input?</p>
+  <p> A: In some cases.</p>
+  <p> Q: Will LG Anomen be able to gain access to the paladin stronghold? Although not a paladin, he is a member of the order.</p>
+  <p> A: No, not being a paladin (and lacking both innate Detect Evil and a personal interest in Carsomyr), Anomen will not be offered the paladin stronghold.</p>
+  <p> Q: Keldorn is already a member of the order--how can he join it?</p>
+  <p> A: He won't join the Order the same way the <acronym title="Player Character">PC</acronym> does, but the Prelate will send him on the stronghold quests after visiting the Windspear Hills.</p>
+  <p> Q: How will siding with Bodhi affect the Thieves' Guild stronghold?</p>
+  <p> A: I'm uncertain of the current patch status of the "if you have the Thieves' Guild, you can mysteriously keep it after the Shadow Thieves have been destroyed" bug...but not uncertain that it <em>is</em> a bug. Accordingly, if you get the Thieves' Guild for Nalia or Jan and then side with Bodhi, they will lose the stronghold. (To get the stronghold for Imoen, you will need to side with the Shadow Thieves and do the stronghold quest in Chapter Six with her in the party.)</p>
+  <p> I do consider it a problem that this will result in this mod taking "you probably don't want to side with Bodhi if the <acronym title="Player Character">PC</acronym> is a thief" to "you probably don't want to side with Bodhi," but, it's a matter of which alternative I dislike the least.</p>
+  <p> Q: Will <acronym title="Non-Player Characters">NPCs</acronym> fight duels with each other/with the <acronym title="Player Character">PC</acronym> over strongholds?</p>
+  <p> A: No.</p>
+  <p> Q: What about mod <acronym title="Non-Player Characters">NPCs</acronym>?</p>
+  <p> A: Material granting a stronghold to at least one mod <acronym title="Non-Player Character">NPC</acronym> will be forthcoming, perhaps more.</p>
+  <p> Q: Will <acronym title="Non-Player Characters">NPCs</acronym> push me to go to their strongholds for their quests?</p>
+  <p> A: Yes. This mod is not recommended for someone who sees the <acronym title="Player Character">PC</acronym> as a dictator or military commander. The spotlight is on the <acronym title="Non-Player Characters">NPCs</acronym>, and the <acronym title="Player Character">PC</acronym>'s role here is secondary.</p>
+  <p> Q: Will the <acronym title="Non-Player Characters">NPCs</acronym> do remarkable things with their strongholds that the <acronym title="Player Character">PC</acronym> couldn't do? Will any <acronym title="Non-Player Characters">NPCs</acronym> get strongholds that aren't available to a <acronym title="Player Character">PC</acronym> of any class?</p>
+  <p> A: Mostly, the quests and decisions to make will be the same for an <acronym title="Non-Player Character">NPC</acronym> that they are for the <acronym title="Player Character">PC</acronym>. The big exception to this is the Thieves' Guild stronghold, which largely presumes that the <acronym title="Player Character">PC</acronym> is a particular type of character (selfish, ruthless, and profit-motivated); while I can see Jan focusing on making his guild profitable and not rocking the boat, that really doesn't work for Imoen or Nalia. For all the strongholds, there are likely to be small changes in a number of places where the <acronym title="Player Character">PC</acronym>'s limitations, in my opinion, make little or no sense. There will be no completely new strongholds.</p>
+  <p> Q: Will this mod give me a chance to kill an <acronym title="Non-Player Character">NPC</acronym> who I couldn't kill previously with no consequences, such as Raelis Shai, Delcia Caan, Prelate Wesselan, or the Mayor of Imnesvale?</p>
+  <p> A: I wouldn't count on it.</p>
+  <p> Q: Will this mod be compatible with all other mods? With Big Picture?</p>
+  <p> A: See "Compatibility" section above.</p>
+  <p> Q: How will this mod interact with the de'Arnise Romance mod?</p>
+  <p> A: If you have both installed, whether you even see the option to offer the de'Arnise Keep to anyone but your character will depend on your character's class; you should still be able to take the Keep for your main character regardless. Note that if you do give the Keep to Mazzy or Jaheira or Anomen (or, indeed, do anything but take the Keep for your character, by design of the de'Arnise Romance mod), that will shut off the romance with Nalia.</p>
+  <p> Q: Will the new Enhanced Edition <acronym title="Non-Player Characters">NPCs</acronym> get strongholds?</p>
+  <p> A: Signs point to "no."</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>This mod may not be sold, published, compiled or redistributed in any form without the consent of its author. <acronym title="Non-Player Character">NPC</acronym> Strongholds is &copy;2014 Kish. </p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 2 - March 7, 2015</strong></p>
+  <ul>
+    <li>
+      Fixes Keldorn and Imoen-related bugs
+    </li>
+  </ul>
+
+  <p><strong>Version 1 - September 26, 2014</strong></p>
+  <ul>
+    <li>
+      Initial release
+    </li>
+  </ul>
+</div>
+</body>
+</html>

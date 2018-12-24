@@ -1,0 +1,685 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Arial-BoldMT;\f1\fswiss\fcharset77 ArialMT;\f2\fswiss\fcharset77 Arial-ItalicMT;
+\f3\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue204;\red0\green0\blue255;\red51\green51\blue153;
+}
+\paperw11904\paperh16838\margl1440\margr1440\vieww9000\viewh9000\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs32 \cf2 eSeries
+\fs24  \cf0 \
+\
+\cf2 A Gibberlings Three Mod \cf0 \
+Author: \cf3 Eric Kerr (aka Cirerrek) \cf0 \
+\
+Version 1.5 - \cf3 \'86berpr\'9ffen Sie auf die neueste Version \cf0 \
+\
+\
+
+\fs32 \cf2 \'86berblick
+\fs24  \cf0 \
+\
+
+\f1\b0 Die eSeries ist eine Sammlung von Gruppe- KI-Skripten f\'9fr Baldurs GateII: Schatten von Amn und die Erweiterung, Thron von Bhaal. Zur Zeit beinhaltet die Serie sieben Skripte: eArcher, eFighter, eMage, eMulti, ePriest, ePureF und eThief. Wie Ihr aus den Namen der Skripte erkennen k\'9annt, wurden sie f\'9fr spezifischen Charakterklassen hergestellt. Es gibt \'86berschneidungen in den F\'8ahigkeiten, aber allgemeinen gesagt, sind die Skripte am wirksamsten, wenn sie einem Charakter der entsprechenden Klasse zugewiesen werden. \
+\
+Die eSeries entspringen den ausgezeichneten Spieler- KI-
+\f2\i  
+\f1\i0 Skripten, die
+\f2\i  
+\f1\i0 als die gSeries bekannt sind, die von Greg Hodgson (aka Sarkyn) entwickelt wurden. Die gSeries waren vollst\'8andig f\'9fr das Ausf\'9fhren von von Schlachten in Baldurs Tor II: Schatten von Amn gestaltet, aber zum Leidwesen f\'9fr die unter uns, die die M\'9aglichkeiten der Reihe liebten,  zog es Greg vor, die Gemeinschaft der Manuskriptschreiber von Baldurs Tor zu verlassen, bevor  die Skripte mit den Auswahlskripten aktualisiert wurden, die im abschlie\'a7enden Kapitel der Baldurs Tor Trilogie, dem Thron von Bhaal, vorhanden sind,. In Anbetracht der Eindringens des realen Lebens und aller anderen wundervollen  Videospiele, die f\'9fr die Gefangennahme unserer Phantasien verf\'9fgbar  sind, tadele ich Greg nicht im geringf\'9fgigsten deshalb, andere Sachen zu finden, um seine Zeit auszuf\'9fllen. Wo er auch ist, hoffe ich, da\'a7 das Leben ihn gut behandelt. Mach's gut, Greg! \
+\
+Deshalb entschied ich mich eines Tages beim Spielen des Thrones von Bhaal, da\'a7 ich nicht den Mangel der gSeries' an Unterst\'9ftzung von 
+\f2\i ToB 
+\f1\i0 nicht l\'8anger hinnehmen k\'9annte, und obgleich es einige anderer 
+\f2\i KI
+\f1\i0  Skripte von hohe Qualit\'8at gab, Rich Martel's [uScript_2001-09-27] and Gebhard   Blucher's [GB-Scripts], zum Beispiel, trat meine Treue zu den Skripten, die so gut in Schatten von Amn funktioniert hatten, an die Stelle meines Interesses an Bequemlichkeit, und trotz meines relativ \cf4 unentwickelten\cf0  Versst\'8andnisses von Infinity Engine KI Skripten, sprang ich mit Greg Zustimmung ein und begann, den gSeries zu \'9fberarbeiten um sie bis zu ToB zu aktualisieren.\
+\
+\
+
+\f0\b\fs32 \cf2 Kompatibilit\'8at
+\fs24  \
+\cf0 \
+
+\f1\b0 Dieser Umbau wurde f\'9fr 
+\f2\i BG2
+\f1\i0 : Schatten von Amn entworfen, mit  oder ohne der Erweiterung Thron von Bhaal. \
+eSeries erfordert die Installation von \cf3 Detectable Spells \cf0 .\
+eSeries hat eine kleine Unvertr\'8aglichkeit mit Refinement's Gestaltwandlern Fix: Druiden werden nicht automatisch die Gestalt \'8andern, wenn dieser Bestandteil angebracht ist. \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f3 \cf0 eSeries enth\'8alt spezifische Ruf-Antwort-Systeme, die den individuellen Skripten erlauben, effektiv zu koordinieren, deshalb ist es nicht empfohlen, eseries mit anderen Spieler 
+\f2\i KI
+\f3\i0  Skripten zu mischen.
+\f1 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs32 \cf2 Installation
+\fs24  \cf0 \
+\
+Windows \
+
+\f1\b0 Die eSeries sind komprimiert und werden mit 
+\f2\i WeiDU
+\f1\i0  installiert. und wird als sich selbst entpackendes Archiv verteilt. Zur Installation einfach das Archiv doppeltklicken und den Anweisungen auf Bildschirm folgen. \
+\
+Alternativ k\'9annen die Dateien vom Archiv mit \cf3 WinRAR \cf0 extrahiert werden. Wenn es richtig extrahiert wird, sollten Sie ein eseries Ordner, ein Setup-eSeries.tp2 und ein Setup-eSeries.exe in Ihrem 
+\f2\i BG2
+\f1\i0  Ordner haben. Zum Installieren einfach Setup-eSeries.exe doppeltklicken und den Anweisungen auf Bildschirm folgen . \
+\
+Bitte starten Sie Setup-eSeries.exe in Ihrem 
+\f2\i BG2
+\f1\i0  Ordner, um es erneut zu installieren , zu deinstallieren oder die Komponentenm zu \'8an derungen. \
+\
+
+\f0\b Mac OS X \
+
+\f2\i\b0 Wenn der Mod. vorher installiert war wurde, deinstallieren Sie ihn bevor die neue Version extrahiert wird.
+\f1\i0  sind komprimiert und werden mit 
+\f2\i WeiDU
+\f1\i0  installiert. Zum Installieren einfach den Inhalt des Mods in Ihrem 
+\f2\i BG2
+\f1\i0  Ordner entpacken.\'ca Wenn es richtig extrahiert wird, sollten Sie ein eseries Ordner, ein Setup-eSeries.tp2 und ein Setup-eSeries.exe in Ihrem 
+\f2\i BG2
+\f1\i0  Ordner haben. Zum Installieren einfach 
+\f0\b Setup-eSeries.command
+\f1\b0  doppeltklicken und den Anweisungen auf Bildschirm folgen. \
+\
+\
+
+\f0\b\fs32 \cf2 Inhalt
+\fs24  \cf0 \
+\
+Wie man die Skripte zuweist: \
+
+\f1\b0 W\'8ahlen Sie einen Charakter aus Ihrer Gruppe durch das links klicken aus \
+Bet\'8atigen Sie R auf der Tastatur, was Sie zum ausgew\'8ahlten Charakterbogen bringt\
+Links klicken auf Anpassen (unten am Charakterbogen) 
+\f2\i \
+
+\f1\i0 Links klicken auf das Skript \
+Rollt durch die vorhandenen Gruppen 
+\f2\i KI Skripte, 
+\f1\i0 bis zu: \
+eArcher \
+eFighter \
+eMage \
+eMulti \
+ePriest \
+ePureF \
+eThief \
+Darauf Links klicken, um das Skript zuw\'8ahlen, das f\'9fr die Klasse des ausgew\'8ahlten Charakters am passendsten ist.\
+\
+Klicken auf Fertig\
+Nochmal auf Fertig klicken 
+\f2\i \
+
+\f1\i0 Sie sollten wieder beim Charakterbogen
+\f2\i  
+\f1\i0 sein. Bet\'8atigen Sie G auf der Tastatur, um zur Spielwelt zur\'9fckzugehen. \
+\
+
+\f0\b Allgemeine Eigenschaften \
+
+\f1\b0 individuelle 
+\f2\i KI 
+\f1\i0  - AN/AUS umschalten\
+Erweitertes Zielen \
+Dynamische Einsch\'8atzung der Beohungsstufe \
+Hotkey - Erm\'9aglicht Herbeirufenrufen \
+Hotkey - Erm\'9aglicht Polieren \
+\
+Verbessertes Bereitwilligkeit-Bewu\'a7tsein\
+ \
+Heilung-Gift (Selbst) - Antidot \
+Antidot-\'86berschreiten Des Heilung-Gift-(Andere) - \
+Heilen Sie (Selbst) - Tr\'8anke \
+Bhaalspross Angeborene F\'8ahigkeiten \
+Wegrennen - Eigenes Feuern\
+Angriff der Form-n ' \
+Heilen Sie - Antrag \
+Zum Kampf wechseln \
+Rettunswurf ausf\'9fhren (Index-Abk\'9frzung) \
+Waffen Wechseln - Handgemenge zu Fernkampf oder Fernkampf zu Handgemenge \
+Nutzer definiertes Waffen Wechseln - Hotkey erlaubt Ihnen, zu bestimmen, wer Waffen wechseln kann \
+\
+
+\f0\b \cf1 Index \cf0 \
+\cf1 Verbrauch \cf0 \
+\cf1 Spezifische Eigenschaften \cf0 \
+\
+eFighter \
+
+\f1\b0 K\'8ampfer \
+K\'8ampfercharaktere: Berserker, Magierkiller,  Kensai\
+Waldl\'8aufer\
+Waldl\'8aufercharaktere: Bogensch\'9ftze, Pirscher, Tiermeister \
+Paladin \
+Paladincharaktere: Chevalier, Inquisitor, Geisterj\'8ager\
+M\'9anch \
+Barbar \
+Kleriker (kleiner Als 9. Stufe) \
+Klerikercharaktere: (Kleiner Als 9. Stufe) \
+Druide (Kleiner Als 9. Stufe) \
+Druidecharaktere: (Kleiner Als 9. Stufe) \
+Priesterzauber: 1.-4. Stufe \
+Untote vertreiben \
+Krieger-F\'8ahigkeiten Hoher Stufe\
+(Selbst) Heilen - Zauber \
+Reagieren auf Hilfeersuchen \
+(Andere) Heilen  - Zauber\
+N\'8ahestes Ziel zuerst \
+\
+
+\f0\b eMage \
+
+\f1\b0 Zauberkundiger\
+Magierspezialist\
+Hexenmeister \
+Barde \
+Barde Klassencharaktere: Skalde, Harlekin, Waffenk\'9fnstler \
+Wilder Magier (mit Beschr\'8ankungen) \
+Chaos-Schild Kein Skript\
+Verbessertes Chaos-Schild Kein Skript\
+Nahals sorglos Dweomer Kein Skript\
+Zaubererspr\'9fche: 1.-9. Stufe \
+Bardenlied \
+Zauberspr\'9fche: 10. Stufe \
+Diebes-F\'8ahigkeiten Hoher Stufe\
+Weitestes Ziele zuerst \
+Engagiert sich im Handgemengen als letzte Wahl \
+\
+
+\f0\b ePriest \
+
+\f1\b0 Kleriker \
+Klerikercharaktere: Priester des Lathander, Priester des Helm, Priester des Talos \
+K\'8ampfer \
+K\'8ampfercharaktere: Kensai, Berserker, Magierkiller \
+Waldl\'8aufer\
+Waldl\'8aufercharaktere: Bogensch\'9ftze, Pirscher, Tiermeister \
+Paladin \
+Paladin Klassencharaktere: Chevalier, Inquisitor, Geisterj\'8ager \
+M\'9anch \
+Barbar \
+Druide \
+Druidecharaktere: 
+\f3 Gestaltwandler
+\f1 , Totemdruide, R\'8acher \
+Priesterspr\'9fche: 1.-7. Stufe \
+Untote vertreiben \
+(Selbst) Heilen - Zauber \
+Reagieren auf Hilfeersuchen \
+(Andere) Heilen  - Zauber\
+Krieger-F\'8ahigkeiten Hoher Stufe\
+Priesterspr\'9fche: Stufe der Aufgabe\
+N\'8ahestes Ziel zuerst  \
+\
+
+\f0\b eMulti \
+
+\f1\b0 Alle Klassen (siehe eMage f\'9fr Wilder Magier (mit Beschr\'8ankungen)) \
+Alle Klassencharaktere \
+Alle Mehrklassigen Kombinationen \
+Weitestes Ziele zuerst \
+Greift ins Handgemengen als letzte Wahl ein\
+Schlie\'a7t alle spezifischen Eigenschaften ein von: \
+eFighter \
+ePriest \
+eMage \
+eThief \
+\
+
+\f0\b eThief \
+
+\f1\b0 Dieb \
+Diebescharaktere: Meuchelm\'9arder, S\'8abelrassler, Kopfgeldj\'8ager\
+Im Schatten verstecken und Fallen finden \
+Leise bewegen\
+Fallen stellen\
+\
+
+\f0\b ePureF \
+
+\f1\b0 K\'8ampfer \
+K\'8ampfercharaktere: Kensai, Berserker, Magierkiller \
+Barbar \
+M\'9anch \
+Inquisitor \
+
+\f0\b Unterschiede zu eFighter: \
+
+\f1\b0 Schlie\'a7t den Gebrauch der meisten Zauberspr\'9fche f\'9fr eFighter aus, um als viel kleineres Skript zu arbeiten. \
+Angeborene F\'8ahigkeiten f\'9fr Klassen und Klassencharaktere\
+Krieger-F\'8ahigkeiten Hoher Stufe\
+\
+
+\f0\b eArcher \
+
+\f1\b0 siehe eFighter \
+
+\f0\b Unterschiede zu eFighter \
+
+\f1\b0 Weiteste Ziele zuerst \
+Skripte, um sich sich im Handgemengen als letzte Wahl zubet\'8atigen\
+siehe eFighter \
+\
+
+\f0\b Hotkeys \
+\
+\cf1 Hotkey \cf0 \
+\cf1 Verbindung \cf0 \
+\cf1 R\'9fckstellung \cf0 \
+\cf1 Beschreibung \cf0 \
+\
+
+\f1\b0 D\
+[D]eaktivieren der
+\f2\i KI \
+
+\f1\i0 Aus\
+Schaltet die 
+\f2\i KI 
+\f1\i0 f\'9fr ausgew\'8ahlte(n) Character(e) aus\
+\
+E\
+[E]rm\'9aglichen der 
+\f2\i KI \
+
+\f1\i0 Ein\
+Schaltet die 
+\f2\i KI 
+\f1\i0 f\'9fr ausgew\'8ahlte(n) Character(e) ein \
+\
+L\
+[L]egen von Fallen \
+Aus\
+Erm\'9aglicht einem ausgew\'8ahltem Charakter, der in der Lage ist, Fallen zu legen, eine von jeder f\'9fr ihn benutzbaren Art an seinem gegenw\'8artigen Ort aufzustellen.\
+\
+S\
+[S] Herbeirufen \
+Aus\
+Dieses veranla\'a7t vorgew\'8ahlte Zauberwirker in Eurer Gruppe, ihre eingepr\'8agten Zauberspr\'9fche aufzurufen, um die Zahl der herbeigerufenen Gesch\'9apfe in der Gruppe bis zu der vom  Spiel auferlegten Begrenzung von F\'86NF zu erh\'9ahen. \
+\
+Offensichtlich wirken Eure Zauberwirker keine Spr\'9fche, die sie sich nicht gemerkt haben, also, wenn Ihr S bet\'8atigt und nichts geschieht, kann es sein, da\'a7 entweder Eure Zauberwirker sich keine passenden Spr\'9fche eingepr\'8agt haben, oder Eure Gruppe bereits 5 Aufforderungen  kontrolliert. \
+\
+B\
+[B]uff \
+Aus\
+Dieses veranla\'a7t vorgew\'8ahlte Zauberwirker in Eurer Gruppe, ihre eingepr\'8agten Verbesserungszauber aufzurufen um  sich selbst, oder die Gruppe zu erh\'9ahen, und vielleicht jemanden herbeizurufen, wenn sie innerhalb des Bereiches sind. Ein Zauberwirker wirkt keine Spr\'9fche, die er sich  nicht vorher eingepr\'8agt hat. Wenn Ihr also B bet\'8atigt und nichts geschieht, dann haben sich  Eure Zauberwirker vermutlich keinen vom passenden Spruch eingepr\'8agt. Die zauberwirker fahren fort, Verbesserungszauber zu wirken, bis Ihnen die passenden Spr\'9fche ausgegangen sind oder 3 Runden \'9fberschritten sind. \
+\
+F\
+[F]estlegen der Waffeneinstellungen\
+Aus\
+Dr\'9fckt F einmal, um eines der Gruppenmitglieder zum Handgemenge auszuw\'8ahlen oder zweimal um eines der Gruppenmitglieder zum Fernkapf auszuw\'8ahlen. Auswahl zum Handgemenge wechselt nicht automatisch die Waffen .\
+\
+
+\f0\b\fs32 \cf2 Kontakt-Informationen
+\fs24  \cf0 \
+\
+
+\f1\b0 Die eSeries entsprangen den ausgezeichneten  KI-Skripten, die als die gSeries bekannt sind und von Greg Hodgson (aka Sarkyn) entwickelt wurden. Mit Gregs Zustimmung hat Eric Kerr (aka Cirerrek) jetzt das Projekt \'9fbernommen und hat es erweitert, um Thron von Bhaal mit einzuschlie\'a7en. Ihr k\'9annt Gibberlings 3 f\'9fr Information \'9fber diesen und alle m\'9aglichen anderen Mods besuchen, an denen wir arbeiten. \
+\
+
+\f0\b\fs32 \cf2 Dank und Anerkennung \cf0 \
+
+\fs24 \
+\
+
+\f1\b0 Black Isle Studios - For producing such an excellent 
+\f2\i RPG \
+
+\f1\i0 Bioware - For the Infinity Engine and making such an outstanding 
+\f2\i RPG \
+
+\f1\i0 Sarkyn (Greg Hodgson) - gSeries and gMinion \
+Xyx (Jochem van't Hull) - General Insight and Helpfulness \
+GBlucher (Gebhard Blucher) - GB-Scripts \
+Rich Martel - uScript \
+TeamBG - Editors, Tutorials, Forums \
+BWScripts - Defunct but not forgotten \
+BGScripts - Where player 
+\f2\i AI 
+\f1\i0 scripting     really came to life \
+Jon Hauglid - Near Infinity and eSeries Debugging \
+SimDing0 - A little of this, a little of that, and all very     helpful \
+Max (aka Potencius) - a font of information about everything     Infinity Engine \
+Ivann Alvarado - XpertAi ( 
+\f2\i IWD 
+\f1\i0 )\
+Grog - Smart Scripts \
+Jessica Kerr - seriously reducing my risk of developing carpal     tunnel syndrome \
+Sir Alexander - French translation \
+King Diamond - 
+\f2\i BP 
+\f1\i0 Detectable     Spells \
+G\'9aran Rim\'8en - scripting tutorials, script segments, etc. \
+CamDawg - hosting, installation package, 
+\f2\i G3 
+\f1\i0 'ifying documentation \
+\
+
+\f0\b Tools Used in Creation \
+
+\f2\i\b0 \cf3 WeiDU 
+\f1\i0 \cf0 by     Wes Weimer \
+\cf3 Near Infinity \cf0 by     Jon Olav Hauglid \
+
+\f2\i \cf3 IESDP 
+\f1\i0 \cf0 maintained     by igi \
+
+\f2\i \cf3 DLTCEP 
+\f1\i0 \cf0 by     Avenger \
+\
+\
+
+\f0\b\fs32 \cf2 Nachspann und Urheberrechts-Informationen
+\fs24  \cf0 \
+\
+
+\f1\b0 Die Erlaubnis ist erteilt, den Inhalt dieses Mods zu nutzen und zu \'8andern, solange er Cirerrek und den urspr\'9fnglichen Autoren zugeschrieben wird und die Unterst\'9ftzung von der \'8andernden Gruppe gew\'8ahrt wird. \
+\
+
+\f0\b\fs32 \cf2 Version Geschichte
+\fs24  \cf0 \
+\
+Version 1.5 \
+
+\f1\b0 Added OS X installer \
+Moved to The Gibberlings Three \
+Scripts now compiled on-the-fly \
+\
+
+\f0\b Version 1.4 \
+
+\f1\b0 Removed Simulacrum 
+\f2\i AI 
+\f1\i0 Change while I work on a better method for assigning scripts to clones \
+Removed Breach Shield Check because it used Change Specifics which could potentially break some areas of the game - Suggestion by SimDing0 \
+Comment out ChangeSpecifics actions in gs_AntiMage_TL4 \
+Switched to using PUPPETTYPE and PUPPETMASTERTYPE to determine allowance/preventation of casting clone spells \
+Noted incompatability between 
+\f2\i PnP 
+\f1\i0 Celestials and the eSeries, if 
+\f2\i PnP 
+\f1\i0 Celestials is installed after the eSeries. Caedwyr has been notified and indicated that the incompatability will be removed in a future version of 
+\f2\i PnP 
+\f1\i0 Celestials \
+Added SetWeapon Preference - HotKey F, once Melee, twice Missile, Melee designates will not switch weapons - Suggested by Hlidskialf \
+Added SpIn683 WEB_TANGLE to the Scriptable Spells segment. This should prevent 
+\f2\i CTDs 
+\f1\i0 that some users were experiencing in conjuction with using gMinion \
+Added 
+\f2\i G3 
+\f1\i0 's Divine Remix: Nightcloak of Shar - Confusion, Feeblemind, Invisible Stalker, Power Word Stun, Shar's Curse, Chakram - "Discs of Night" \
+
+\f2\i WeiDU 
+\f1\i0 v185 \
+\
+
+\f0\b Version 1.3 \
+
+\f1\b0 Added 
+\f2\i AC 
+\f1\i0 checks to druid shapes werewolf, fire salamander, wyvern, greater werewolf, earth elemental, and fire elemental, yes they do have enchanted attacks, which is nice until you get a decent weapon, then I would much rather have my druid in a form that can cast. Algorithim chosen was 3 
+\f2\i AC 
+\f1\i0 points less that the effective 
+\f2\i AC 
+\f1\i0 of the creature that the druid polymorphs into. Moved firesalamander and werewolf to be above wyvern \
+Noted incompatibilty between eSeries and Refinements Shapeshift Fix component (may investigate switching to their version as it seems to be well regarded as a bugfix within the community) \
+Switched to using 
+\f2\i BP 
+\f1\i0 Dectectable Spells \
+Stripped out Sequencer Memory as it acted a bit buggy and no one seemed to be using it \
+Aganazzar's Scorcher wasn't being cast - Fixed - Thanks Alan George \
+Other changes too numerous to mention \
+Added 
+\f2\i G3 
+\f1\i0 's Divine Remix Spells: Beast Claw, Cause Light Wounds, Cause Medium Wounds, Curse, Divine Shell, Faerie Fire, Moonblade, Sunscorch \
+
+\f2\i WeiDU 
+\f1\i0 v185 \
+\
+
+\f0\b Version 1.2.09 \
+
+\f1\b0 Imoen keeps trying to backstab my party's summoned minions when she has free time on her hands. Fortunately, you can't backstab with a quarterstaff ;) Modified gs_Backstab to include !Allegiance(LastSeenBy(), GOODCUTOFF) to try and prevent such naughty behavior. \
+Still don't know why the Sling of Everaard isn't being equipped properly by the scripts. It seems to be the only unlimited ammo item that they have trouble with. If someone asked me about it, I'd swear it used to work. At least, I think I would have noticed considering how early in the game that you can purchase it. I can't tell a difference between it and any of the other unlimited ammo items using 
+\f2\i NI 
+\f1\i0 . Ideas, anyone? \
+Commented out the test displaystringhead "You played Elminster?" in gs_RunAwayFriendlyFire.baf - Thanks Caedwyr \
+
+\f2\i WeiDU 
+\f1\i0 v155 \
+\
+
+\f0\b Version 1.2.08 \
+
+\f1\b0 User Request - Caedwyr \
+Caster of 
+\f2\i PI 
+\f1\i0 is getting zapped by Dispel Magic from Party Members \
+Added Specific 206 GEPPETO to Specific.IDS \
+Modified gs_CounterSpells (Mage, Inquisitor, and Priest), gs_HealOther_1st_4th, gs_DefencesSpecific_TL3_Priest to check that targets !Specifics(Target,GEPPETO) before casting the spells on a target \
+Modified gs_HotKeyB_Mage and gs_Defences_TL4_Mage to alter the characters scripting state when casting Project Image \
+Need to add scripting for casting 
+\f2\i PI 
+\f1\i0 from scroll? \
+Feedback on the 'fixes' is welcome \
+
+\f2\i WeiDU 
+\f1\i0 v153 \
+\
+
+\f0\b Version 1.2.07 \
+
+\f2\i\b0 WeiDU 
+\f1\i0 v148 \
+Changed TROLALL to TROLLALL in gs_Shapechange.baf - Caught by 
+\f2\i NI 
+\f1\i0 . Thanks to Jon Hauglid \
+\
+
+\f0\b Version 1.2.06 \
+
+\f2\i\b0 WeiDU 
+\f1\i0 v137 \
+\
+
+\f0\b Version 1.2.05 \
+
+\f1\b0 Potion of Fire Giant Strength (gs_Buffs_TL4_Items) checking for STR 23 instead of STR 22, Fixed! Thanks Jenny \
+
+\f2\i WeiDU 
+\f1\i0 v130 \
+\
+
+\f0\b Version 1.2.04 \
+
+\f2\i\b0 NI 
+\f1\i0 's nifty updated compiler caught a couple of missing parenthesis here and there throughout the series - Fixed! Thanks Jon \
+
+\f2\i WeiDU 
+\f1\i0 v124 \
+\
+
+\f0\b Version 1.2.03 \
+
+\f1\b0 Fixed Resist Dmg Type on Wand of the Heavens also added check for Save vs. Wands \
+Recoded Ring of the Ram as it was jacked, should be used more often now \
+Recoded Harp of Pandemonium so it should now be used more often \
+Moved the Harp of Pand and the Helm of the Rock over Ring of Energy in gs_Attacks_TL3_Items \
+Added check for Save vs. Wands to Wand of Electricity code \
+Recoded Ring of Energy, corrected Resist Dmg Type check \
+Fixed Resist Dmg Type on Wand of Fire also added check for Save vs. Wands \
+Fixed Resist Dmg Type on CLERIC_FLAME_STRIKE, added check for Save vs. Spells \
+Commented out all the stuff that requires a STATE_DISEASED Check because the state doesn't function \
+Put the ! Back in front of CombatCounter(0) in gs_Backstab for now \
+
+\f2\i WeiDU 
+\f1\i0 v118 \
+\
+
+\f0\b Version 1.2.02 \
+
+\f1\b0 Reduced Magic Missiles Magic Resistance check from 91% to 75% to reduce the chance of it being resisted \
+Added check for resistance to magical damage in Magic Missile to increase the odds of finding an appropriate target \
+Used !LOS(PlayerX) to script Burning Hands and Agannazer's Scorcher - Probably needs Testing - Thanks Grog \
+Trying to use SetInterrupt(FALSE/TRUE) to tweak Run - From Friendly Fire \
+Added ek_SequencerMemory.baf to eMulti and eMage \
+Added Offensive, Defensive, and Disabling Sequencer usage to the appropriate segments \
+Updated gs_Antimage_TL4_Mage to check for a lot more spells that are acceptable to try and remove \
+Removed gs_HealSelf_Lay_Hands, gs_HealOther_Lay_Hands, gs_GoodBerries from eMulti to keep the size of the script down \
+\
+
+\f0\b Version 1.2.01 \
+
+\f1\b0 Moved WIZARD_BIGBYS_CLENCHED_FIST up in gs_AttacksSpecific_TL3_Mage \
+Added Ring of Spell Turning [RING34] to item usage \
+Added WIZARD_OTILUKES_RESILIENT_SPHERE to gs_Disablers_TL3_Mage \
+Added WIZARD_SKULL_TRAP to gs_AttacksSpecific_TL3_Mage - Need to Load up on Skull Traps to see if this works okay or not \
+Fixed a bunch of incorrect resistance to damage type checks in gs_AttacksSpecific_TL3_Mage \
+Added !Race - Dragon check to RANGER_CHARM_ANIMAL, as Dragons are defined as General ANIMAL - Thanks Mageofthesands \
+Dropped save vs. spells on WIZARD_CHARM_PERSON from 10 to 8 \
+Upgraded to a 
+\f2\i WeiDU 
+\f1\i0 v116 installer \
+\
+
+\f0\b Version 1.2.00 \
+
+\f1\b0 Added Amulet of Cheetah Speed and Bracers of Blinding Strike to item usage \
+Change Vocalize to HaveSpellRES usage - eventually, I'd like to change all spell usage to HaveSpellRES \
+Added WA2HARP to item usage \
+Removed ! From CombatCounter(0) in gs_Backstab to more closely resemble Len's example. I might change this back as I believe the way I had it was working well, but I thought it might have something to do with the weapon switching problem. \
+Added some DisplayStringHeads to gs_Backstab to see more closely what is going on \
+Also uncommented out a couple of DSH's in SelectWeapon segment to try and figure out why Imoen isn't switching weapons, I thought it was having something to do with the backstab routine, but Yoshimo didn't exhibit the problem with eThief, but Imoen does with eMulti and eMage. Testing to be done \
+Removed a Rakshasa race check from the Helm of the Rock since I am also checking for the Rakring lower in the script \
+Realized I had forgotten to update the OR() when I added the Item Upgrade ranged weapons to gs_SelectRangedThenMelee_ItemList - Fixed \
+Noted that the druid shapes brown bear and black bear were checking for the wrong item - Fixed \
+Added 
+\f2\i AC 
+\f1\i0 checks to druid shapes brown bear, black bear, and sword spider, yes they do have enchanted attacks, which is nice until you get a decent weapon, then I would much rather have my druid in a form that can cast. Need to revist the gs_DruidShapeshift again in the future to complete the update for all shapes \
+Re-commented the lines out in gs_SelectRangedThenMelee_ItemList when I figured out that the problem was OR() \
+\
+
+\f0\b Version 1.1.09 \
+
+\f1\b0 Added an InParty() check to CLERIC_NEUTRALIZE_POISON, CLERIC_REMOVE_PARALYSIS, CLERIC_REMOVE_FEAR, and CLERIC_CURE_DISEASE, after my cleric cured a downed troll that was poisoned. \
+Increased the chance of clerics casting Miscast Magic and Insect Plague, hopefully ;) \
+\
+
+\f0\b Version 1.1.08 \
+
+\f1\b0 Changed scripting of 
+\f2\i DUHM 
+\f1\i0 so it will not be cast when someone is right in your face because of the long casting time, changes were to gs_PreAttack_TL1_Priest and gs_Attacks_Innate \
+Removed RESISTMAGICFIRE check from WIZARD_COMET and WIZARD_DRAGONS_BREATH \
+Changed FIRE resistance check to 50% for Comet and 25% for Dragon's Breath \
+Added Save vs. Death check to Comet to increase the chance of finding a target that will result in a proper wing buffet/unconciousness result \
+Uncommented out the trigger in gs_Turn Undead trigger that I commented out in v1.1.06, commenting out made the problem worse as I should have realized if I had taken a second to think about it. \
+Added the ranged weapons from Westley Weimer's Item Upgrade Pack to the gs_SelectRangeThenMelee_ItemList - Thanks Caedwyr \
+\
+
+\f0\b Version 1.1.07 \
+
+\f1\b0 Added check !Class(LastSeenBy(Myself),FIRE_ELEMENTAL) to gs_TurnUndead because some of salamanders are defined as General - UNDEAD \
+\
+
+\f0\b Version 1.1.06 \
+
+\f1\b0 Added !General(LastSeenBy(Myself), UNDEAD) to gs_BackStab, also commented out the Barbarian and Gargoyle Boots clauses, see the .baf for the reasons why \
+Added Improved Kiithix (sp?) to gs_GlobalResets_Items, gs_HotKeyS_Items, gs_Summons_TL4_Items (Westley Weimer's Item Upgrade Pack) \
+Removed magic resistance check from WIZARD_DRAGONS_BREATH because the spell bypasses it \
+Switched to using Dyara's KIT.IDS file which is supposedly fixed more than the previously fixed KIT.IDS ;) Thanks to Dyara and any others responsible for figuring this one out. \
+Added the Harp of Discord to gs_Attacks_TL2_Items, appended gs_GlobalResets_Items to reflect the addition \
+Added a !Range(LastSeenBy(Myself),6) trigger to the Harp of Discord as we would prefer an enemy that we confused to have a chance of targetting someone other than the party members. \
+The display string that I used for the Harp of Discord was actually for the whole item description rather than just the identified name of the item. Fixed! \
+Commented out the trigger in gs_TurnUndead that would allow a cleric to start turning again if an undead creature was close enough and the timer hadn't expired yet, because this was causing my cleric to stand there and take a beating from Undead that were not destroyed or not turned - Maybe I should just increase the TurnUndead Level check? \
+\
+
+\f0\b Version 1.1.05 \
+
+\f1\b0 Changed Custom Specific.IDS #'s to correspond with the possible values of a byte 0-255 (Don't Use 0) \
+Fixed the error Specifics HAS_SHIELD to HAS_SHIELD in gs_AntiMage_TL4_Mage to correspond with gs_BreachShieldCheck \
+gs_CounterSpells_Mage - Modified True Sight to Use Custom State STATE_ILLUSIONS, Modified Dispel/Remove Magic to use Custom State STATE_ENCHANTED, in Dispel Magic Player Segments, changed Trigger See(PlayerX) to LOS(PlayerX,8)\'c9just to see if it works \
+gs_CounterSpells_Inquisitor = Mod Inquis True Sight to Use Custom State STATE_ILLUSIONS, Mod Dispel Magic to use Custom State STATE_ENCHANTED \
+gs_CounterSpells_Priest = Mod Cleric True Sight and Helm True Sight to Use Custom State STATE_ILLUSIONS, Mod Dispel Magic to use Custom State STATE_ENCHANTED \
+gs_CounterSpells added anti-illusionary creature use of Remove Magic\'c9works well the one time in the game when you need it \
+Changed the layout of WIZARD_DETECT_INVISIBILITY and WIZARD_GLITTERDUST to match that of WIZARD_TRUESIGHT (just for consistency) \
+Fixed Double !Range(blah,4) in the usage of the Thieves' Hood \
+Added the Jansen Spectroscope (Detect Invisibility 1x/day) to gs_CounterSpells_Items and appended gs_GlobalResets_Items to reflect this \
+Created new segment ek_DailyCreation_Items which should in theory cause Jan to create his Flash Master Bruiser Mates daily, if he has an open inventory slot, also works with the Cloak of the Stars, there is a nice 
+\f2\i ToB 
+\f1\i0 sling that has this effect, but I am not sure it will work with a weapon... any others? I think only eMage and eMulti will get this segment, 
+\f2\i GB 
+\f1\i0 has this set up on a hotkey, I might be advised to do the same \
+\
+
+\f0\b Version 1.1.04 \
+
+\f1\b0 Added BLADE_DEFENSIVE_SPIN to gs_DefencesGeneric_TL3_Rogue \
+Added BLADE_OFFENSIVE_SPIN to gs_PreAttack_TL3_Rogue \
+Added Rogue routines gs_DefencesGeneric_TL4_Rogue, gs_DefencesSpecific_TL4_Rogue, gs_DefencesGeneric_TL3_Rogue, gs_PreAttack_TL3_Rogue to eMage to account for Bard High Level Abilities and also the Blade Kit special abilities \
+Trying to use a timer to keep track of whether I am shapechanged or not, updates gs_Shapechange if this works, I'll try and see if I can apply it to gs_PolymorphSelf \
+MISC3F - Jade Hound Added to gs_Summons_TL3_Items and gs_HotKeyS_Items, appended gs_GlobalResets_Items to reflect the addition \
+\
+
+\f0\b Version 1.1.03 \
+
+\f1\b0 Replaced the AttackeBy([ANYONE],DEFAULT) that I had removed in an earlier version to try and make WIZARD_MISLEAD be cast at more appropriate times. \
+Replaced GLOBALS with GLOBAL in the CounterSpell Segments and the MoveToCombat Segment - thanks to Jon Hauglid for finding that error \
+Fixed a coding screw up in gs_Shapechange - the revert to NATFORMx code needed to be split into two parts (Segment still will not transform back into natural form, need to test more) \
+Removed EquipMostDamagingMelee() from several of the warrior and rogue attack bonus high level abilities, because they actually apply no matter what weapon you are using, ranged or melee \
+Moved the SetGlobal up in the Response section of the SelectRangeThenMelee (Item List) routine, rumor has it that it is good practice always to set your Globals before things like Spell() actions \
+Added SimulacrumAIChange segment to all eSeries scripts for the purpose of identifying and changing the specifics of any party summoned Simulacrum, Projected Image, or Mislead and also to apply the script gMinionC to the S/PI/Mn - Removed from Public eSeries who may or may not want to use gMinion \
+Fixed a bunch of Object Type errors throughout the scripts - Thanks to Jon Hauglid again :) \
+Added Vhailor's Helm [WA2HELM] to the scripts in gs_Summons_TL4_Items and gs_HotKeyS_Items, appended gs_GlobalResets_Items to reflect the addition \
+\
+
+\f0\b Version 1.1.02 \
+
+\f1\b0 Fixed a bunch of cummulative copy paste errors - missing quotes from "LOCALS", mostly \
+Fixed some missing parenthesis \
+Fixed a couple of incorrect CheckStats() - INTELLIGENCE to INT, RESISTLIGHTNING to RESISTELECTRICITY \
+Fixed a couple General(LastSeenBy(),[EVILCUTOFF.0.UNDEAD.0.0]), NI didn't like this so I changed to just UNDEAD and made sure the appropriate InParty(), Allegiance() checks were there to compensate \
+Fixed spelling error RANAGER_ALL to RANGER_ALL \
+Fixed spelling error WIZARD_SUMMON_FIENDS to WIZARD_SUMMON_FIEND \
+\
+
+\f0\b Version 1.1.01 \
+
+\f1\b0 Minor tweak to Protection from Normal Missles usage (Mage, Stalker) \
+Fixed eC_Heal in eMulti and ePriest - had gs_HealOther_Innate in place of gs_HealSelf_Innate \
+\
+
+\f0\b Version 1.1 \
+
+\f1\b0 Modified spell usage to Account for Improved Alacrity \
+Switched to using Detectable Spells Pack v1.21 \
+\
+
+\f0\b Version 1.0 \
+
+\f1\b0 Began conversion of the gSeries to the eSeries \
+Added 9th level spell usage \
+Added the majority of the class innates \
+Added Shapechange routine \
+Modified backstab routine \
+Added high level ability usage where easily scriptable \
+Added Summoning Items usage \
+Tweaked/Fixed a few of the spell scriplets.duration, targeting, etc., \
+Added Bag of Holding/Potion Bag check to most potion usage (Run Away Hide - Drink Potion Behavior an exception) \
+Tweaked Dispel Magic usage so the scripts would react more often to party members with debilitating effects \
+Included some 
+\f2\i SoA 
+\f1\i0 /
+\f2\i ToB 
+\f1\i0 Items to be used by the scripts (Shield Amulet - Thieves' Hood, among others) \
+Included usage of the fixed spell files so that several spells/abilities/items could be scripted \
+Included a few of the 
+\f2\i NPC 
+\f1\i0 -only abilities (MINSC_BERSERK, Delryn Family Shield, among others) \
+Included routine for bard song usage in eMage and eMulti }

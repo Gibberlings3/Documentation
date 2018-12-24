@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Multi-Install Tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+body  {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	text-align : left;
+	color : #000;
+	background-color: #f2f2fc;
+	margin:50px;
+	padding:0;
+	}
+img {border : 0;}
+h1, h2, h3, h4, h5, h6 {
+	font-size : 17px;
+	font-weight : bold;
+	color : #0000cd;
+	font-variant:small-caps;
+	position:relative;/*
+	top:-45px;*/
+	background-color: #fff;
+	padding:5px;
+	border:1px solid #888;
+margin-right:20px;
+margin-left:20px;
+	border:1px solid #888;
+z-index:10;
+    }
+h2 {font-size : 16px;}
+h3 {font-size : 15px;}
+h4 {font-size : 14px;}
+h5 {font-size : 13px;}
+h6 {font-size : 12px;}
+p, ul, table {clear:left;}
+a, a:link, a:visited, a:hover, a:active {
+	color : #0012ff;
+	margin : 0;
+	padding : 0;
+	border-width : 0;
+	}
+a:visited {color : #0000cd;}
+.section {
+	position:relative;
+	top:-45px;
+	border:1px dotted #bbb;
+	background-color:#fff;
+	margin:30px 0 0 0;
+	padding:20px;
+	}
+.subheader {
+	border:0;
+	border-bottom:1px solid #888;
+	border-left:3px solid #888;
+	margin:auto;
+	font-variant:normal;
+	color:#000;
+	}
+</style>
+<link href="backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>Multi-Install Tool </h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
+    Author: andrewas, Orion's Stardom</strong></p>
+  <p><strong> Version 5.1.12</strong><strong> - <a href="http://gibberlings3.net/forums/index.php?showtopic=9452">Check
+        for the most recent version</a></strong></p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>The multi-install tool is a program which allows side-by-side installs of
+    Baldur's Gate II at a minimal size. This can be useful for example when playing
+    incompatible mods, or when wanting to test a mod on a fresh install. Specifically,
+    it follows the instructions posted by igi in <a href="http://gibberlings3.net/forums/?showtopic=650">Discussion:
+    Multiple BG2 Installations</a>. </p>
+</div>
+<h2>Requirements</h2>
+<div class="section">
+  <p>To use the multi-install tool, you will need: </p>
+  <ul>
+    <li>An installed copy of a supported Infinity Engine game. </li>
+    <li>A recent java runtime environment - if you get an error saying 'Unsupported
+      class version', your Java version is not new enough. </li>
+    <li>The multi-install tool. </li>
+  </ul>
+</div>
+<h2>Supported Infinity Engine Games</h2>
+<div class="section">
+  <p>The Multi Install Tool will work on any of the following Infinity Engine
+    games:</p>
+  <ul>
+    <li>Baldur's Gate for Mac OS X</li>
+    <li>Baldur's Gate II: Shadows of Amn for Windows, with or without the official
+      patch</li>
+    <li>Baldurs Gate II: Shadows of Amn for Mac OS X</li>
+    <li>Baldur's Gate II: Thrown of Bhaal, with the official patch.</li>
+    <li>Baldur's Gate II: Throne of Bhaal for Mac OS X</li>
+    <li>Baldur's Gate II: The Collection</li>
+    <li>Icewind Dale for Mac OS X or Windows, with or without the official patch,
+      but without any expansion packs.</li>
+  </ul>
+  <p><strong>Note:</strong> Mac OS 9 games are not supported.</p>
+  <p>In general, any patches or mods after the official patches for each game
+    will have no impact on support by the Multi Install Tool. </p>
+</div>
+<h2>Usage Instructions</h2>
+<div class="section">
+  <ol>
+    <li>Ensure that you have met the requirements above. </li>
+    <li>Download and run the multi-install tool. </li>
+    <li>Fill in the fields as follows:
+      <ul>
+        <li><i>Source:</i> an existing installation, to be used as a basis for
+          the clone. </li>
+        <li><i>Sink:</i> where you want the new installation to live on your
+          disk. </li>
+      </ul>
+    </li>
+    <li>Optionally, change any available preferences in the lower pane. Depending
+      on the game you have selected to clone, your operating system, and whether
+      you have any save games, not all of the displayed options will be enabled.
+      Each option will increase the size of the clone directory, but may be required
+      for certain functionality or mods. <br />
+      <strong>Note:</strong> if 'data' is selected, 'music' will always be copied,
+      regardless of whether that checkbox is selected.</li>
+    <li>Click 'Go'.</li>
+    <li>Wait until the progress bar fills in and says 'Done'.</li>
+    <li>Run the clone with the main executable (eg, 'bgmain.exe' - <em>not</em> baldur.exe)
+      in the clone folder.</li>
+  </ol>
+  <p>The newly-created install will have the same set of patches and mods to
+    start with as the one it was cloned from. You can apply mods as usual to
+    the cloned game, and they will not affect any other installation you have
+    on your system. </p>
+</div>
+<h3>Command-Line Options</h3>
+<div class="section">
+  <p>The Multi-Install Tool supports the following command-line options, useful
+    for batch-mode operations and for launching the Multi Install Tool from another
+    application with pre-filled default values.</p>
+  <dl>
+    <dt>--source=[path]</dt>
+    <dd>Select a folder to use as a source game.</dd>
+    <dt>--sink=[path]</dt>
+    <dd>Select a destination folder for the clone.</dd>
+    <dt>--batch</dt>
+    <dd>If provided, do not launch the GUI, and operate in batch mode. Otherwise
+      operate interactively.</dd>
+    <dt>--copy-data</dt>
+    <dd>If given, duplicate the entire contents of the 'data' folder, the 'music'
+      folder, and the 'movies' folder, if they exist. Also change the value of
+      hd0: in the ini file to point to the sink, rather than patching the main
+      executable. <br />
+      Otherwise, create a data folder in the sink directory filled with nonsense
+      data (so that mods checking for the existance of an expansion pack will
+      work properly).</dd>
+    <dt>--copy-music=</dt>
+    <dd>If given, duplicate the entire contents of the 'music' folder, if it
+      exists. Otherwise, create a cloned game which reads this information from
+      the original game. <br />
+      <strong>Note:</strong> This preference is implicitly given by giving '--copy-data'.</dd>
+    <dt>--copy-characters</dt>
+    <dd>If given, duplicate the entire contents of the 'characters' folder, if
+      it exists. Otherwise, create a cloned game without this data.</dd>
+    <dt>--copy-save</dt>
+    <dd>If true, duplicated any save games that exist. Otherwise, create a clone
+      game with no saved games.</dd>
+    <dt>--copy-portraits</dt>
+    <dd>If true, duplicate the entire contents of the 'portraits' folder, if
+      it exists. Otherwise, create a clone without this information.</dd>
+    <dt>-v, --verbose</dt>
+    <dd>If given, print everything that's happening to STDOUT. Otherwise, be
+      quiet unless something goes wrong.</dd>
+  </dl>
+  <p>Not all --copy-* options are meaningful on all configurations. In particular,
+    if the Multi-Install tool detects that it can use symbolic links, then only
+    --copy-save has any effect.</p>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p>This tool was created by andrewas and Orion's Stardom. Visit the <a href="http://gibberlings3.net/forums/">Gibberlings
+      Three forums</a> for information on this and any other Gibberlings Three
+      projects on which they may be working.</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>The Multi Install Tool, and this readme, are copyright 2006-2007, Multi-Install
+    Tool contributors. All rights reserved.</p>
+  <p>The Multi Install Tool is Free Software released under the <a href="gpl.txt">GNU
+      General Public License</a>, version 2 or any later version. The source
+      code is included in the package. <br />
+    This readme is released under the <a href="fdl.txt">GNU Free Documentation
+    License</a>, Version 1.2 or any later version, with no front-cover texts,
+    no back-cover texts, and no invariant sections.</p>
+  <p>The Multi Install Tool uses and includes <a href="http://www.ewanmellor.org.uk/jargs.html">jargs</a>.
+    Copyright and licensing information for jargs can be found in the 'jargs'
+    folder in the jar.</p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 5.1.12 - September 20, 2007 </strong></p>
+  <ul>
+    <li>Added support for Baldur's Gate II: The Collection</li>
+  </ul>
+  <p><strong>Version 5.1.11 - July 12, 2007 </strong></p>
+  <ul>
+    <li>(CloningData.java) Added support for Icewind Dale, Baldur's Gate (and
+      Tales of the Sword Coast) support, as well as (hopefully) full support
+      for the same games on OS X.</li>
+    <li>Possibly other changes in the intervening months.</li>
+  </ul>
+  <p><strong>Version 5.1.10 - Feburary 15, 2007</strong></p>
+  <ul>
+    <li>Removed SwiXML GUI because it was causing incredibly slow load times.</li>
+    <li>Now featuring Java 1.5 support</li>
+  </ul>
+  <p><strong>Version 5.1.9 - February 14, 2007</strong></p>
+  <ul>
+    <li>(CloningData.java, CloneWorker.java, CaseInsensitiveFileFilter.java)
+      - Added Mac OS X game support.</li>
+    <li>(CloneWorker.java) Code cleanup</li>
+  </ul>
+  <p><strong>Version 5.1.8 - February 14, 2007</strong></p>
+  <ul>
+    <li>(Filesystem.java) Fixed copy_textually routine so it works</li>
+    <li>(CloningData.java) Fixed exe patch so that it has the correct number
+      of nulls.</li>
+    <li>(CloningData.java) Added missing file chitin.key to common files.</li>
+  </ul>
+  <p><strong>Version 5.1.7 - February 14, 2007</strong></p>
+  <ul>
+    <li>Added the 'jargs' package to the .jar so that the Multi Install Tool
+      will actually start</li>
+    <li>(FileSystem.java) cleaned up the copy_binary method.</li>
+    <li>(MultiInstall.java) added '--verbose' command-line option.</li>
+    <li>(MultiInstall.java) reversed '--interactive' command-line option to '--batch'.</li>
+    <li>(MulitInstall.java) turned all boolean options off by default.</li>
+  </ul>
+  <p><strong>Version 5.1.6 - February 13, 2007</strong></p>
+  <ul>
+    <li>Clarified copyright notices in the readme.</li>
+    <li>Introduced command-line API.</li>
+    <li>Minor code clean ups.</li>
+  </ul>
+  <p><strong>Version 5.1.5 - Feburary 13, 2007</strong></p>
+  <ul>
+    <li>(Filesystem.java) improved copy() so that it doesn't need files in the
+      system temp folder. This requirement was preventing files from being copied
+      in indeterminable circumstances.</li>
+    <li>(Filesystem.java) fixed a bug where copy() would fail silently when large
+      files were copied verbatim.</li>
+    <li>(CloneData.java) fixed wrongly-transcribed values for BG2, which was
+      causing a <a href="http://gibberlings3.net/forums/index.php?showtopic=9467">PatchFailedException</a></li>
+    <li>(MultiInstall.java) exception stacktraces are now written to a file called
+      'MultiInstall.err' in the current directory as well as to standard error.</li>
+    <li>(FileSystem.java) Fixed a bug where PatchFailedExceptions were reported
+      incorrectly.</li>
+    <li>(MultiInstall.java) reenableGUI() is now properly reentrant - it previously
+      threw a NullPointerException.</li>
+  </ul>
+  <p><strong>Version 5.1.4 - February 13, 2007</strong></p>
+  <ul>
+    <li>Rolled back the progress bar granulation from 5.1.3, because it stopped
+      the clone from being performed.</li>
+  </ul>
+  <p><strong>Version 5.1.3 - Februrary 12, 2007</strong></p>
+  <ul>
+    <li>Improved <a href="http://gibberlings3.net/forums/index.php?showtopic=9465">granulation
+        of the progress bar</a>.</li>
+    <li><a href="http://gibberlings3.net/forums/index.php?amp;act=ST&amp;f=97&amp;t=5345&amp;st=0">TOB
+        detection in mods</a> should now work properly, even if data/ isn't copied.</li>
+    <li>Added links to the readme version history.</li>
+  </ul>
+  <p><strong>Version 5.1.2 - February 12, 2007</strong></p>
+  <ul>
+    <li>(MultiInstall.java, CloneWorker.java) Re-implemented exception reporting,
+      which <a href="http://gibberlings3.net/forums/index.php?showtopic=9462">broke</a> when
+      the cloning logic was put into a background thread.</li>
+    <li>(CloneWorker.java) Made CloneWorker.cloneWithLinking() and CloneWorker.cloneWithoutLinking()
+      return if they notice isCancelled() to be true - ie, <a href="http://gibberlings3.net/forums/index.php?showtopic=9464">they
+      now honour the cancel button</a>.</li>
+    <li>Dev readme now points to dev versions thread</li>
+  </ul>
+  <p><strong>Version 5.1.1 - Feburary 12, 2007</strong></p>
+  <ul>
+    <li>(Filesystem.java) recoded text replacement algorithm in "copy()" to use
+      java.io.Buffered{Reader,Writer}.</li>
+  </ul>
+  <p><strong>Version 5.1 - Feburary 7, 2007</strong></p>
+  <ul>
+    <li>Re-added support for copying extra folders which was not in the 5.0 series.</li>
+    <li>Added support for Icewind Dale 1 (the expansion packs for this game are
+      not supported yet).</li>
+  </ul>
+  <p><strong>Version 5.0.1 - January 27, 2007</strong></p>
+  <ul>
+    <li> The status bar should now work properly.</li>
+  </ul>
+  <p><strong>Version 5.0 - September 18, 2006</strong></p>
+  <ul>
+    <li> This version represents a complete rewrite of the Multi-Install Tool.
+      This version is the first to work on Mac OS X, and should also fix bugs
+      which may have occured on Windows 98 and <acronym title="Millenium Edition">ME</acronym>.</li>
+  </ul>
+  <p><strong>Version 4.2 - January 28, 2006</strong></p>
+  <ul>
+    <li> Improved Throne of Bhaal compatibility checks</li>
+  </ul>
+  <p><strong>Version 4.1 - October 30, 2005</strong></p>
+  <ul>
+    <li> Fixed starting <acronym title="Experience Points">XP</acronym> so it
+      isn't always 0</li>
+    <li> Improved sanity checks</li>
+  </ul>
+  <p><strong>Version 4 - June 14, 2005 </strong></p>
+  <ul>
+    <li> Various bugfixes</li>
+    <li> Interface overhaul</li>
+  </ul>
+  <p><strong> Version 3 </strong></p>
+  <ul>
+    <li> Various bugfixes</li>
+    <li> Interface overhaul</li>
+  </ul>
+  <p><strong> Version 2</strong></p>
+  <ul>
+    <li> Various bugfixes</li>
+    <li> Interface overhaul</li>
+  </ul>
+  <p><strong> Version 1</strong></p>
+  <ul>
+    <li> First release</li>
+  </ul>
+</div>
+</body>
+</html>

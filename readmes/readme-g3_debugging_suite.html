@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>The Gibberlings Three Debugging Suite for Baldur's Gate II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<h1>The Gibberlings Three Debugging Suite for Baldur's Gate II </h1>
+<div class="section">
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
+    Author: <a href="&amp;#109;a&amp;#x69;&amp;#x6c;&amp;#x74;o:&amp;#x77;&amp;#101;b&amp;#109;&amp;#x61;s&amp;#x74;&amp;#101;r&amp;#64;&amp;#103;i&amp;#x62;&amp;#x62;&amp;#101;&amp;#114;&amp;#x6c;&amp;#x69;&amp;#x6e;&amp;#x67;&amp;#x73;&amp;#51;&amp;#x2e;&amp;#110;&amp;#101;&amp;#116;">CamDawg</a>, <acronym title="Also Known As">aka</acronym> 'Cam'
+    Camagna <br />
+    O</strong><strong>n the web: <a href="http://www.gibberlings3.net/debug/">Home
+    page</a></strong> and <strong><a href="http://gibberlings3.net/forums/index.php?showforum=107">discussion
+    forum</a></strong></p>
+  <p><strong>Version 3 - <a href="http://gibberlings3.net/forums/index.php?app=downloads&amp;showcat=57">Check
+        for the most recent version</a></strong><br />
+    <strong> Languages:</strong> English<br />
+    <strong>Platforms: </strong>Windows and Mac OS X</p>
+</div>
+<h2>Overview</h2>
+<div class="section">
+  <p>In the course of <acronym title="Baldur's Gate II">BG2</acronym> Fixpack
+    development, several errors kept cropping up repeatedly--so much so that
+    it became time-efficient to write some automated checking tools. With some
+    polish, these tools are now ready to be released independently so that modders
+    can use them to diagnose issues in their own mods. </p>
+</div>
+<h2>Compatibility</h2>
+<div class="section">
+  <p>The Debugging Suite is designed to work with Baldur's Gate II with or without
+    the Throne of Bhaal expansion pack. Note that the suite doesn't actually
+    alter any game files and leaves no entry in the <acronym title="Weimer Dialogue Utility">WeiDU</acronym> log,
+    so that it can be used at any point in the install order, as many times as
+    needed. If there is interest for the Suite on other platforms (<acronym title="Baldur's Gate">BG</acronym>, <acronym title="Icewind Dale">IWD</acronym>,
+    etc.) it can be developed. For the most part, the file formats are the same
+    so certain components may work on non-<acronym title="Baldur's Gate II">BG2</acronym> variants
+    of the Infinity Engine, though I may not be able to actively support them. </p>
+</div>
+<h2>Installation</h2>
+<div class="section">
+  <p><strong>Windows</strong><br />
+    The <acronym title="The Gibberlings Three">G3</acronym> Debugging Suite is
+    packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym> and
+    is distributed as a self-extracting archive. To install, simply double-click
+    the archive and follow the instructions on screen.</p>
+  <p>Alternatively the files can be extracted from the archive using <a href="http://www.rarlab.com/">WinRAR</a>.
+    If properly extracted, you should have a G3_Debugging_Suite folder and Setup-G3_Debugging_Suite.exe
+    in your <acronym title="Baldur's Gate II">BG2</acronym> folder. To install,
+    simply double-click Setup-bg2fixpack.exe and follow the instructions on screen.</p>
+  <p>Please run Setup-G3_Debugging_Suite.exe in your <acronym title="Baldur's Gate II">BG2</acronym> folder
+    to run and re-run the suite as needed. </p>
+  <p><strong>Mac OS X</strong><br />
+    <em>If the mod was previously installed, uninstall it before extracting the
+    new version.</em> The <acronym title="The Gibberlings Three">G3</acronym> Debugging
+    Suite is packaged and installed with <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    To install, simply extract the contents of the mod into your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    If properly extracted, you should have a G3_Debugging_Suite folder, Setup-G3_Debugging_Suite,
+    and Setup-G3_Debugging_Suite.command in your <acronym title="Baldur's Gate II">BG2</acronym> folder.
+    To run or re-run, simply double-click <strong>Setup-G3_Debugging_Suite.command</strong> and
+    follow the instructions on screen.</p>
+</div>
+<h2>Contents</h2>
+<div class="section">
+  <p>Each different component leaves no log record in weidu.log and does not
+    modify any files--it generates a purely informational report. Any error messages
+    are also echoed to the install screen. An explanation of what is checked
+    and the possible error messages for each component is listed under each component's
+    description.Two very important points need to be made:</p>
+  <ol>
+    <li>This is the equivalent of running a fine-toothed comb over your files.
+      The Suite can (and will) generate false positives so it's important that
+      you verify warnings as legitimate issues that need to be fixed. </li>
+    <li>Many of the error messages generated will likely have little to no effect
+      on your game. That being said, the tool can still be incredibly useful
+      in tracking down file anomalies. </li>
+  </ol>
+  <p>The Suite also has a built-in tool to limit the files checked. At the top
+    of the t2 is a block in which you can set your modding prefix:</p>
+  <p class="code">ALWAYS<br />
+&nbsp;&nbsp;OUTER_SPRINT &quot;prefix&quot; &quot;&quot;<br />
+    END</p>
+  <p> To have it only scan files that start with CD, for example, use this: </p>
+  <p class="code">ALWAYS<br />
+&nbsp;&nbsp;OUTER_SPRINT &quot;prefix&quot; &quot;CD&quot;<br />
+    END</p>
+  <p>All file checks will be restricted by the prefix set by this line. To scan
+    all files, leave the value empty, as it is in the first example (this is
+    also the default value of the Suite when it's downloaded). </p>
+  <p><strong>Area Checker </strong><br />
+    Output of this check can be found in G3_Debugging_Suite/debugger_area_checker.log.
+      This component scans all area files present for common errors, such as
+      bad indices, references to non-existent files, trap errors, etc. The following
+      checks are performed, and listed along with their generated error message:</p>
+  <ul>
+    <li>Corrupt File: Area files must be at least 0x11c bytes in length to contain
+      all of the information below. If the file is below this size, none of the
+      following checks will be performed and the component will skip the area
+      with the message <em>foo.are error: Corrupt file, below minimum file size</em>. </li>
+    <li>Area Script: The suite will perform two checks here. If an area has a
+      script assigned, but the script doesn't exist, the message <em>foo.are
+      error: Area Script assigned but nonexistant (foo.bcs)</em>. Now, if the
+      area has no script assigned but there's a script that matches it (i.e.
+      if ar1000.are has no area script assigned, but ar1000.bcs exists) then
+      the message <em>foo.are error: Area Script exists but is unassigned (foo.bcs)</em>.</li>
+    <li>Offsets: The area files contain a series of offsets to tell the engine
+      where various information blocks within the file exist. These offsets are
+      expected to be in a particular order (though not required). As part of
+      its running checks, the tool will check the offset of each block in turn
+      and report incorrect offsets, based upon their expected order within the
+      file. The Map Note check in particular will generate a lot of messages,
+      as Bioware tended to consistently ignore the entry in areas without any
+      map notes.
+      <ul>
+        <li><em>foo.are error: Actor offset is incorrect </em></li>
+        <li><em>foo.are error: Info Point offset is incorrect</em></li>
+        <li><em>foo.are error: Spawn Point offset is incorrect</em></li>
+        <li><em>foo.are error: Entrances offset is incorrect</em></li>
+        <li><em>foo.are error: Containers offset is incorrect</em></li>
+        <li><em>foo.are error: Items offset is incorrect</em></li>
+        <li><em>foo.are error: Ambients offset is incorrect</em></li>
+        <li><em>foo.are error: Variables offset is incorrect</em></li>
+        <li><em>foo.are error: Door offset is incorrect</em></li>
+        <li><em>foo.are error: Tiled Objects offset is incorrect</em></li>
+        <li><em>foo.are error: Vertices offset is incorrect</em></li>
+        <li><em>foo.are error: Animations offset is incorrect</em></li>
+        <li><em>foo.are error: Bitmap offset is incorrect</em></li>
+        <li><em>foo.are error: Songs offset is incorrect</em></li>
+        <li><em>foo.are error: Rest Spawn offset is incorrect</em></li>
+        <li><em>foo.are error: Map Notes offset is incorrect</em></li>
+      </ul>
+    </li>
+    <li>Vertex Indices: Each area file has a list of points, used as vertices
+      by info points, containers, and doors. Each point in this list is supposed
+      to be used once; i.e. no door or info point should try and use a vertex
+      that has been used by another door. There should also be no unused points.
+      As such, the component will keep a running tally of the vertices and check
+      them against the indices used by doors and other area features to verify
+      them. If an error is found, one of the following messages is generated
+      (note that doors actually have four indices each):
+      <ul>
+        <li><em>foo.are error: Info Point #1 has vertex index error (should be
+            854)</em></li>
+        <li><em>foo.are error: Container #1 has vertex index error (should be
+            854)</em></li>
+        <li><em>foo.are error: Door #1 has vertex index error (should be 854)</em></li>
+      </ul>
+    </li>
+    <li>Actor Resources: The component will run through the list of actors and
+      verify that the creature files exist. Scripts and dialogues can also be
+      specified in these blocks, so any custom dialogue or script noted here
+      will also be cheecked for existence. Creature file names beginning with
+      RD are ignored, as these are handled correctly by spawngrp.2da.
+      <ul>
+        <li><em>foo.are error: Actor #1 dialogue file does not exist (bar.dlg)</em></li>
+        <li><em>foo.are error: Actor #1 script does not exist (bar.bcs)</em></li>
+        <li><em>foo.are error: Actor #1 does not exist (bar.cre)</em></li>
+      </ul>
+    </li>
+    <li>Info Points (Transitions): If the info point is actually a transition
+      to another area, the area is checked for existence and the component verifies
+      that the entrance point actually exists.
+      <ul>
+        <li><em>foo.are error: Info Point #1 has transition to non-existent area
+            (bar.are)</em></li>
+        <li><em>foo.are error: Info Point #1 has transition to non-existent entrance
+            point (bar.are, Exit0000)</em></li>
+      </ul>
+    </li>
+    <li>Info Points (Traps): The component also checks for common trap errors.
+      If the info point is flagged as trapped, the component checks for the existence
+      of a trap script and whether the trap is already detected.
+      <ul>
+        <li><em>foo.are error: Info Point #1 is trapped with no trap script (bar.bcs)</em></li>
+        <li><em>foo.are error: Info Point #1 is trapped and detected</em></li>
+      </ul>
+    </li>
+    <li>Spawn Points: The component will verify that all creatures listed exist.
+      Creature file names beginning with RD are ignored, as these are handled
+      correctly by spawngrp.2da.
+      <ul>
+        <li><em>foo.are error: Spawn Point #1 creature file does not exist (bar.cre)</em></li>
+      </ul>
+    </li>
+    <li>Containers (Traps): Similar to the checks on info points, the component
+      will perform checks for the existence of the trap script and whether the
+      trap is detected if the container is flagged as trapped.
+      <ul>
+        <li><em>foo.are error: Container #1 is trapped and detected</em></li>
+        <li><em>foo.are error: Container #1 is trapped with no trap script (bar.bcs)</em></li>
+      </ul>
+    </li>
+    <li>Item Indices: Like vertices, area files contain a list of items. Containrs
+      simpy refer to entries on the item list and, like vertices, each entry
+      should be used exactly once.
+      <ul>
+        <li><em>foo.are error: Containers #1 has an incorrect index</em></li>
+      </ul>
+    </li>
+    <li>Items: Items are verified for existence; if not then the message <em>foo.are
+        error: Item #1 does not exist (bar.itm)</em> will be displayed. This
+        component does not account for the random treasure tables, so expect
+        a few false positives.</li>
+    <li>Ambients: Like items, the referenced sound files are checked for existence
+      and the message<em> foo.are error: Ambient #1 does not exist (bar.wav)</em> is
+      displayed upon failure of the check.</li>
+    <li> Doors (Sounds): Doors can use opening and closing sounds. If sounds
+      are listed, the resources are checked for existence with the message <em>foo.are
+      error: Door #1 sound does not exist (bar.wav)</em> displayed if the check
+      fails.</li>
+    <li>Doors (Traps): Like the container and info point trap checks, a trap
+      script and detection flag are checked if the door is flagged as trapped.
+      <ul>
+        <li><em>foo.are error: Door #1 is trapped and detected</em></li>
+        <li><em>foo.are error: Door #1 is trapped with no trap script (bar.bcs)</em></li>
+      </ul>
+    </li>
+    <li>Doors (Keys): If a key is listed in a door, the key is checked for existence.
+      In addition, the door is checked to see if it is subject to being lockpicked.
+      The door is also checked to ensure it's actually locked.
+      <ul>
+        <li><em>foo.are error: Door #1 has non-existent key set (bar.itm)</em></li>
+        <li><em>foo.are error: Door #1 requires key (bar.itm) but the lock can
+            be picked</em></li>
+        <li><em>foo.are error: Door #1 requires key (bar.itm) but the door is
+            not locked</em></li>
+      </ul>
+    </li>
+    <li>Animations: The component will check for both BAMs and VVCs for any animation
+      listed. If none are found, the message <em>foo.are error: Animation #1
+      does not exist (bar.bam or bar.vvc)</em> is displayed. </li>
+    <li>Rest Spawns: The component will verify that all creatures listed exist.
+      Creature file names beginning with RD are ignored, as these are handled
+      correctly by spawngrp.2da.
+      <ul>
+        <li><em>foo.are error: Rest Spawn creature file does not exist (bar.cre)</em></li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Creature Checker </strong><br />
+    Output of this check can be found in G3_Debugging_Suite/debugger_creature_checker.log.
+      This component will check several potential issues in creature files. The
+      inventory is only given minimal treatement; please use the Creature Invenory
+      Checker component for in-depth inventory checks.</p>
+  <ul>
+    <li>Invalid File: If the file is below the minimum file size required to
+      have a complete header, the component will generate the message <em>foo.cre:
+      Invalid, below minimum size</em> and move to the next creature file. None
+      of the other checks will be performed. </li>
+    <li>Offsets: The creature files contain a series of offsets to tell the engine
+      where various information blocks within the file exist. These offsets are
+      expected to be in a particular order (though not required). As part of
+      its running checks, the tool will check the offset of each block in turn
+      and report incorrect offsets, based upon their expected order within the
+      file.
+      <ul>
+        <li><em>foo.cre error: Known Spells offset is incorrect</em></li>
+        <li><em>foo.cre error: Memorization Info offset is incorrect</em></li>
+        <li><em>foo.cre error: Memorized Spells offset is incorrect</em></li>
+        <li><em>foo.cre error: Effects offset is incorrect</em></li>
+        <li><em>foo.cre error: Item offset is incorrect</em></li>
+        <li><em>foo.cre error: Item Slot offset is incorrect</em></li>
+      </ul>
+    </li>
+    <li>Name Check: Creatures have two name fields, name and apparent name. If
+      strings are set in both, the component will verify that they match. If
+      not, the message<em> foo.cre: name fields do not match</em> will be displayed.</li>
+    <li>Portraits: If portraits are specified for the creature, they are checked
+      for existence.
+      <ul>
+        <li><em>foo.cre error: Small Portrait does not exist (bar.bmp)</em></li>
+        <li><em>foo.cre error: Large Portrait does not exist (bar.bmp)</em></li>
+      </ul>
+    </li>
+    <li>BG Proficiencies: If a creature has proficiencies from BG set in their
+      file, the message<em> foo.cre: Has BG proficiencies set</em> will be generated.
+      With all of the leftover creature files present in BG2, this component
+      can cause a number of false positives.</li>
+    <li>Sex/Gender: The component checks for conflicts between these two values.
+      As gender can have a broader range of values than sex, creatures with genders
+      other than male, female, both, or neither are not checked.
+      <ul>
+        <li><em>foo.cre: Gender and Sex do not match</em></li>
+      </ul>
+    </li>
+    <li>Attribute Checks: The component will verify that the attributes of the
+      creature fall within the normal minimum of 3 and maximum of 25.
+      <ul>
+        <li><em>foo.cre: Attributes fall outside min/max</em></li>
+      </ul>
+    </li>
+    <li>Scripts: The component will check for the existence of the creatures's
+      scripts, if they are assigned.
+      <ul>
+        <li><em>foo.cre error: Script does not exist (bar.bcs)</em></li>
+      </ul>
+    </li>
+    <li>Dialogue File: The component will check for the existence of the dialogue
+      file, if one is assigned. This component will generate a number of false
+      positives, as Bioware assigned many creatures dialogue files that do not
+      exist.
+      <ul>
+        <li><em>foo.cre error: Dialogue does not exist (bar.dlg)</em></li>
+      </ul>
+    </li>
+    <li>Known Spells: Each spell listed as known in the creature file has three
+      paramaters, all of which are checked. The spell resource itself is checked
+      for existence and the other two parameters (spel level and spell type)
+      are verified against the spell files.
+      <ul>
+        <li><em>foo.cre error: bar.spl in Known Spells section does not exist</em></li>
+        <li><em>foo.cre error: bar.spl level in Known Spells section does not
+            match spell file</em></li>
+        <li><em>foo.cre error: bar.spl type in Known Spells section does not
+            match spell file</em></li>
+      </ul>
+    </li>
+    <li>Memorization Info: The memorization information lists how many spells
+      can be memorized at every level and which spells are actually memorized.
+      As the block is a fixed length--it always contains information for 9 levels
+      of mage spells, 7 levels of cleric spells, and one for innate spells--the
+      length is checked. The spells are listed in an index system, so the indices
+      are validated to ensure each spell is listed exactly once.
+      <ul>
+        <li><em>foo.cre error: Memorization Info length is incorrect</em></li>
+        <li><em>foo.cre error: Memorization Info index is incorrect</em></li>
+      </ul>
+    </li>
+    <li>Memorized Spells: The listed spells are checked for existence.
+      <ul>
+        <li><em>foo.cre error: bar.spl in Memorized Spells section does not exist</em></li>
+      </ul>
+    </li>
+    <li>Items: The listed items are checked for existence.
+      <ul>
+        <li><em>foo.cre error: Item does not exist (bar.itm)</em></li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Creature Inventory Checker </strong><br />
+    Output of this check can be found in G3_Debugging_Suite/debugger_creature_inventory_checker.log.
+      Originally available separately, this has been rolled into the Suite. </p>
+  <ul>
+    <li>Invalid File: If the file is below the minimum file size required to
+      have a complete header, the component will generate the message <em>foo.cre:
+      Invalid, below minimum size</em> and move to the next creature file. None
+      of the other checks will be performed. </li>
+    <li>Ammo/Launcher Checks: These errors are all caused by a similar issue:
+      the creature has a launcher in its weapon slot, but lacks the requisite
+      ammunition in the quiver slots. Alternatively, the creature has ammo but
+      no launcher for it.
+      <ul>
+        <li><em>foo.cre: Bow with no arrow</em></li>
+        <li><em> foo.cre: Sling with no bullets</em></li>
+        <li><em> foo.cre: Crossbow with no bolts </em></li>
+        <li><em>foo.cre: Arrows with no bow</em></li>
+        <li><em> foo.cre: Bullets with no sling</em></li>
+        <li><em> foo.cre: Bolts with no crossbow </em></li>
+      </ul>
+    </li>
+    <li>Items in Incorrect Slots: All of these errors are caused by having an
+      invalid item equipped. For example, if a creature has an item not of the
+      type armor (2) in its armor slot, this error will be reported. Many of
+      the rings and amulet errors will be spurious, as Bioware tended to use
+      these slots for special items that give creature immunities and other special
+      abilities for their creature type. As many of these items are not flagged
+      with proper item types you will see a number of false positives.
+      <ul>
+        <li><em>foo.cre: Invalid Helm</em></li>
+        <li><em> foo.cre: Invalid Armor</em></li>
+        <li><em> foo.cre: Invalid Amulet</em></li>
+        <li><em> foo.cre: Invalid Ring</em></li>
+        <li><em>foo.cre: Invalid Cloak</em></li>
+        <li><em>foo.cre: Invalid Gloves </em></li>
+      </ul>
+    </li>
+    <li>Invalid Weapon: You will see the error message <em>foo.cre: Invalid Weapon </em>if
+      the creature has an item in its weapon slot that does not have a melee
+      (1), ranged (2), or launcher (4) ability. Originally, this was only a check
+      against item type, but there were a number of spurious errors resported
+      as many of the creature paws (such as b1-8.itm) are of the type Miscellaneous
+      (0).</li>
+    <li>Invalid Offhand Item: The message <em>foo.cre: Invalid offhand</em> is
+      caused by having an item in the offhand/shield slot that is not a one-handed
+      weapon or a shield. The offhand weapon must be melee-only (ranged weapons
+      are not allowed offhand) and not flagged as two-handed. </li>
+    <li>Invalid Quiver: The message <em>foo.cre: Invalid quiver</em> is generated
+      by an item in the quiver slot that is not arrows, bullets, or bolts.</li>
+    <li>Invalid Weapon Equipped: The utility will perform a compare against the
+      equipped weapon value and the weapon slots. This error is reported if there
+      is 1) a valid weapon available <strong>and</strong> 2) either no weapon
+      selected or the selected slot has no valid weapon. So if a creature has
+      weapon slot 1 set as equipped but has no weapons at all, this error will <em>not</em> be
+      generated as condition #1 is not satisfied.
+      <ul>
+        <li><em>foo.cre: Invalid weapon equipped </em></li>
+      </ul>
+    </li>
+    <li><em>Two-Handed Weapon and Offhand Item: </em>The message <em>foo.cre:
+        Two-handed weapon and offhand item</em> is triggered by one of the weapons
+        in the weapon slots being flagged as two-handed while the offhand/shield
+        slot is filled. This would cause a hard crash in <acronym title="Baldur's Gate II">BG2</acronym> if
+        such a creature were encountered.</li>
+    <li>Unequipped Items: The component is also looking for items that were possibly
+      meant to be assigned. As such, it performs a check in a creature inventory
+      for armor, shields, helms, etc. to see if an item could be equipped rather
+      than left in inventory.
+      <ul>
+        <li><em>foo.cre: Possible equippable item in inventory </em></li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Item Checker </strong><br />
+    Output of this check can be found in G3_Debugging_Suite/debugger_item_checker.log.
+      This component performs basic checks against item files. </p>
+  <ul>
+    <li>Invalid File: If the file is below the minimum file size required to
+      have a complete header, the component will generate the message <em>foo.itm:
+      Invalid, below minimum size</em> and move to the next creature file. None
+      of the other checks will be performed. </li>
+    <li>Offsets: Abilities traditionally start at 0x72, the end of the fixed
+      item information block, and effects begin immediately after the abilities.
+      The component will check both of these offsets for proper ordering and
+      values.
+      <ul>
+        <li><em>foo.itm: Abilities do not start at the proper offset</em></li>
+        <li><em>foo.itm: Effects do not start at the proper offset </em></li>
+      </ul>
+    </li>
+    <li>Effect Indices: All effects, whether global or via ability, are contained
+      in a list. Each effect shold be used exactly once--this is ensured by an
+      indexing system in the abilities. If these indices are incorrect, the message <em>foo.itm:
+      Ability #1 has an index error</em> will be generated.</li>
+    <li>Abilities: Ability types (melee, magical, etc.) are checked against whether
+      they appear in the weapon slots or item slots. If they're in the wrong
+      place, the error message <em>foo.itm error: Ability #1 appears in wrong
+      place</em> is displayed. The component also checks for extraneous default
+      (0) headers with the message <em>foo.itm error: Ability #1 is extraneous
+      Default(0) type</em>. </li>
+    <li>Effects on Abilities: Three rudimentary checks are performed on the effects
+      attached to abilities. If the effect is designed to be permanent, the duration
+      should be zero. Unknown timing modes are reported. Also, the durations
+      of limited effects are compared against one another to identify potential
+      errors. In this last check, effects with durations of less than one round
+      are ignored as many abilities include playing graphics or sounds for a
+      few seconds.
+      <ul>
+        <li><em>foo.itm: Ability #1 has a permanent effect with non-zero duration
+            (effect #2, opcode 147)</em></li>
+        <li><em>foo.itm: Ability #1 has an effect with incorrect/unknown timing
+            (effect #2, opcode 147)</em></li>
+        <li><em>foo.itm Warning: Limited duration effects on ability #1 have
+            mismatching durations</em></li>
+      </ul>
+    </li>
+    <li>Global Effects (<acronym title="also known as">aka</acronym> Equipping
+      Effects): The global effects are supposed to be more rigid as they are
+      supposed to affect the wearer while the item is equipped. As such, they
+      should target self, have a timing mode of instant/while equipped (2), should
+      be applied 100% of the time, and should not be subject to dispel magic.
+      <ul>
+        <li><em>foo.itm: Global Effect #1 (opcode 147) has an incorrect target</em></li>
+        <li><em>foo.itm: Global Effect #1 (opcode 147) has an incorrect timing
+            mode</em></li>
+        <li><em>foo.itm: Global Effect #1 (opcode 147) can be dispelled</em></li>
+        <li><em>foo.itm: Global Effect #1 (opcode 147) is not always applied
+            (check your probabilities)</em></li>
+      </ul>
+    </li>
+    <li>Enchantment/Magical: The component checks for agreement between the magical
+      flag and the enchantment level. If an item has non-zero enchantment and
+      is not flagged as magical, the message <em>foo.itm: Disagreement between
+      enchantment and magical flag</em> will be displayed. </li>
+    <li>Icons: If specified, the three icons (inventory, ground, and carried)
+      are checked for existence. The icons for the various abilities are also
+      checked.
+      <ul>
+        <li><em>foo.itm error: Icon does not exist (bar.bam)</em></li>
+        <li><em>foo.itm error: Ground Icon does not exist (bar.bam)</em></li>
+        <li><em>foo.itm error: Carried Icon does not exist (bar.bam)</em></li>
+        <li><em>foo.itm error: Ability #1 icon does not exist (bar.bam)</em></li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Spell Checker </strong><br />
+    Output of this check can be found in G3_Debugging_Suite/debugger_spell_checker.log.
+      This component performs basic checks against spell files. </p>
+  <ul>
+    <li>Invalid File: If the file is below the minimum file size required to
+      have a complete header, the component will generate the message <em>foo.spl:
+      Invalid, below minimum size</em> and move to the next creature file. None
+      of the other checks will be performed. </li>
+    <li>Innate Level: If a spell is of the type innate, it can potentially crash
+      the game when used in a HaveSpell() trigger and its level is not set to
+      one. This component will issue the warning <em>foo.spl warning: Innate
+      spells should be spell level one</em> in these cases. </li>
+    <li>Offsets: Abilities traditionally start at 0x72, the end of the fixed
+      spell information block, and effects begin immediately after the abilities.
+      The component will check both of these offsets for proper ordering and
+      values.
+      <ul>
+        <li><em>foo.spl: Abilities do not start at the proper offset</em></li>
+        <li><em>foo.spl: Effects do not start at the proper offset </em></li>
+      </ul>
+    </li>
+    <li>Effect Indices: All effects, whether global or via ability, are contained
+      in a list. Each effect should be used exactly once--this is ensured by
+      an indexing system in the abilities. If these indices are incorrect, the
+      message <em>foo.spl: Ability #1 has an index error</em> will be generated.</li>
+    <li>Abilities: Spell type is checked against the ability type to determine
+      whether they appear in the innate slots or spell slots. If they're in the
+      wrong place, the error message <em>foo.spl error: Ability #1 appears in
+      wrong place</em> is displayed. The component also checks for extraneous
+      default (0) headers with the message <em>foo.spl error: Ability #1 is extraneous
+      Default(0) type</em>. </li>
+    <li>Effects on Abilities: Three rudimentary checks are performed on the effects
+      attached to abilities. If the effect is designed to be permanent, the duration
+      should be zero. Unknown timing modes are reported. Also, the durations
+      of limited effects are compared against one another to identify potential
+      errors. In this last check, effects with durations of less than one round
+      are ignored as many abilities include playing graphics or sounds for a
+      few seconds.
+      <ul>
+        <li><em>foo.spl: Ability #1 has a permanent effect with non-zero duration
+            (effect #2, opcode 147)</em></li>
+        <li><em>foo.spl: Ability #1 has an effect with incorrect/unknown timing
+            (effect #2, opcode 147)</em></li>
+        <li><em>foo.spl: Ability #1 has a limited duration effect with zero duration
+            (effect #2, opcode 147)</em></li>
+        <li><em>foo.spl Warning: Limited duration effects on ability #1 have
+            mismatching durations</em></li>
+      </ul>
+    </li>
+    <li>Icons: If specified, the spell icon is checked for existence. The icons
+      for the various abilities are also checked.
+      <ul>
+        <li><em>foo.spl error: Icon does not exist (bar.bam)</em></li>
+        <li><em>foo.spl error: Ability #1 icon does not exist (bar.bam)</em></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<h2>Contact Information</h2>
+<div class="section">
+  <p><a href="mailto:webmaster@gibberlings3.net">CamDawg</a> created this tool.
+    You can find out more about the <acronym title="Baldur's Gate II">G3</acronym> Debugging
+    Suite by visiting the <a href="http://gibberlings3.net/forums/index.php?showforum=127">Debugging
+    Suite forum</a> or the <a href="http://www.gibberlings3.net/debug/">project
+    page</a>. Visit the <a href="http://gibberlings3.net/forums/">Gibberlings
+    Three Forums</a> for information on this and any other Gibberlings Three
+    mods on which we may be working.</p>
+</div>
+<h2>Thanks and Acknowledgements</h2>
+<div class="section">
+  <p>First, something like this would not be possible without the incredible
+    research and development that has resulted in resources like the <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> and
+    tools like <acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym>,
+    Near Infinity, and <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+    This suite certainly duplicates some of the error checking from other tools,
+    but I believe it's still beneficial as a standalone suite.</p>
+  <p>Second, a big thanks to the wonderful community at <a href="http://www.gibberlings3.net/">The
+      Gibberlings Three</a>. The atmosphere continues to be wonderful and drives
+      me to keep modding and producing. </p>
+  <p><strong>Tools Used in Creation</strong><br />
+    <a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by
+    Wes Weimer and the bigg <br />
+    <a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a> by Jon Olav Hauglid<br />
+    <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained
+    by igi</p>
+</div>
+<h2>Credits and Copyright Information</h2>
+<div class="section">
+  <p>This suite may not be sold, published, compiled or redistributed in any
+    form without the consent of its authors. The <acronym title="Baldur's Gate II">G3
+    Debugging Suite</acronym> is &copy;2006.</p>
+</div>
+<h2>Version History</h2>
+<div class="section">
+  <p><strong>Version 3 - March 1, 2010</strong></p>
+  <ul>
+    <li>Removed setup.bat</li>
+    <li>Updated to WeiDU v213</li>
+    <li>When checking area scripts, the debugging suite will now clarify whether
+      an area script is assigned but missing, or exists and is not assigned (thanks
+      smoketest) </li>
+  </ul>
+  <p><strong>Version 2 - February 19, 2007</strong></p>
+  <ul>
+    <li>Fixed bug where Creature Inventory Checker would fail when checking prefixed
+      files</li>
+    <li>Fixed bug where numerous false positives were being reported for actor
+      dialogue and script references in the area checker</li>
+    <li>When checking area scripts, the debugging suite will now clarify whether
+      an area script is assigned but missing, or exists and is not assigned (thanks
+      smoketest) </li>
+  </ul>
+  <p><strong>Version 1 - October 3, 2006</strong></p>
+  <ul>
+    <li>Initial release </li>
+  </ul>
+</div>
+</body>
+</html>
