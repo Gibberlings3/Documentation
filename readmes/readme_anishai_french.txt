@@ -2,12 +2,12 @@ Baldur's Gate II
 Anishai one-day NPC
 
 Auteur : Barren <barren50@hotmail.com>
-Mise à jour : Leomar <http://www.gibberlings3.net/forums/index.php?showuser=2431>
+Mise à jour : Leomar <http://forums.gibberlings3.net/index.php?showuser=2431>
 Version 1.5
 
 De sorte que les joueurs allemands, italiens et français puissent profiter de ce mod, nous l'avons recompilé et avons ajouté des traductions. Bien sûr, nous le retirerons du téléchargement dès que Barren mettra le mod à jour ou demandera qu'il soit retiré.
 
-Leomar <http://www.gibberlings3.net/forums/index.php?showuser=2431>
+Leomar <http://forums.gibberlings3.net/index.php?showuser=2431>
 
 
 
