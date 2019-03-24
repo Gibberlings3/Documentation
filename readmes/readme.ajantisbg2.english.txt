@@ -2,7 +2,7 @@
                            jastey's Sir Ajantis NPC for BGII Modification
 			for original BGII+ToB, BGT, BGII:EE, and EET
                              
-                                         Version 18
+                                         Version 19
 
 ABOUT
 
@@ -15,16 +15,18 @@ ToB: Ajantis will not travel with an evil aligned PC in ToB.
 
 For the EE games (BGII:EE and EET) the second optional component will install the BeamDog inventory BAM for Ajantis' family shield (green dragon on golden ground). If not installed, the BG1NPC Project shield graphic will be used.
 
-A third optional component will install crossmod content included into this mod. Install this third component as late as possible in your install. If Crossmod Banter Pack gets updated, this component might move there.
-It is recommended to install this component if you have the other mods installed, as it includes Ajantis' reaction to the (changed) game content.
-Mods currently considered are:
--Alternatives
--Gavin BGII
+From v19, the crossmod component is no longer part of tis mod, but moved into the Crossmod Banter Pack. (Note to modders: the DESIGNATED 2 of this former component is no longer used in teh mod.)
 
-Crossmod content of 'Skie Cost of one Soul' is included into both mods and will be installed intependently of install order.
+The now third optional component gives the choice to install the mature romance content (not teen rated). Please note that deinstalling this component midgame will not revert the mature romance level. Do not install this component if you want the romance to be teen rated.
+
+The 4th optional component gives the possibility to chose a different time between lovetalks in SoA. The standard of 1h between lovetalk is the default value and already installed by the main component. Only chose one of the install components if you want to have a different timer than 1h between lovetalks. To revert back to 1h, just uninstall this component.
+
+THe 5th component gives the possibility to make Ajantis Cavalier. Please note that this takes only effect before Ajantis was met the first time in the agem, and also, that deinstalling this component midgame (after meeting Ajantis) will not revert his class back to plain Paladin.
 
 
-The alternate portraits available in versions lower than 5 are now in a separate modification: The Ajantis Portrait Pack, also available from the Kerzenburg download section. 
+
+
+The alternate portraits available in versions lower than 5 are now in a separate modification: The Ajantis Portrait Pack, also available from the Kerzenburg and Gibberlings Three download sections. 
 
 One does NOT need to start a new game to gain the quest and have Ajantis join the party. The quest to retrieve Ajantis starts in Firkraag's lair (on the stairs in front of the room where Garren's kidnapped child is kept prisoner). This happens whether or not Firkraag has been defeated.
 
@@ -125,7 +127,7 @@ GENERAL
 -One does NOT need to start a new game to be able to play the modification with the main quest and romances, even if Firkraag is defeated and the Windspear Hills battles have been fought. Nevertheless, the story will be most convincing if the mod is installed before the first visit of the Windspear Hills. Also, there is content for the engaged path romance that is meant to be seen before the first meeting with Ajantis. It will only trigger if Ajantis is not yet in the party.
 -Ajantis has the same stats as in original BG1, only his WIS was increased by 3 points like Anomen's after his knighthood test.
 -The PC's decisions are counted and weighted in terms of good and evil in the game. To see what Ajantis counts as good or evil decision please refer to "Ajantis_reactions.txt". If the PC makes too many "evil" decisions, an active romance will break.
--The Ajantis romance will be only active as long as the PC does not commit herself to Anomen or Rasaad. For BGII:EE, this also goes for Rasaad, Dorn, and Hexxat. Should Ajantis be included in the Crossmodbanter Pack (G3), his romance will also be stopped if the PC commits to a romance with another mod-NPC.
+-The Ajantis romance will be only active as long as the PC does not commit herself to Anomen or Rasaad, Dorn, or Hexxat. Ajantis is included in the romance conflicts of the Crossmod Banter Pack (G3), i.e. his romance will also be stopped if the PC commits to a romance with another mod-NPC if you install the CBP.
 -the main quest does not have to be played fully: instead of going through the portal, the priests of Oghma in the Dock District can revert it, so that Ajantis will be available instantly. Note that this will mean that the quest cannot be played and that there will be no quest rewards.
 
 Communication with Ajantis:
@@ -159,18 +161,18 @@ For EET, install this mod to the BGII:EE folder after the EET transformation (i.
 Make sure you back up your dialog.tlk file (and dialogf.tlk, if it exists), just to be sure.
 Extract the contents of the archive to your game's main directory (BGII - SoA).
 
-Run the "Setup-ajantisbg2.exe" program. Choose the language you prefer and confirm installation. This will start extracting the needed files to the override folder. During installation, the options have to be chosen accordingly and be confirmed with pressing Enter.
+Run the "Setup-ajantisbg2.exe" program. Choose the language you prefer and confirm installation. This will start extracting the needed files to the override folder. 
 After compilation of the files the sound files will be extracted. Please wait with closing the installation window until the sound extraction is completed!
-
-During installation, there are the following options to choose from:
--Choose the romance rating: Teen or Adult content (only for engaged path).
--Time between lovetalks resp. dialogues (cyclic): 1 h, 45 min, 30 min, 15 min or 5 min.
--Ajantis' Kit: kitless paladin or cavalier.
-
 
 -Linux
 
 The mod depends on oggdec for linux as it is not supplied in the mod package.
+
+
+CROSSMOD
+
+All crossmod for Sir Ajantis for BGII mod that needs the other mods' dialogue is included in the Crossmod Banter Pack: https://www.gibberlings3.net/mods/npcs/crossmod/
+Please install the Crossmod Banter Pack to experience Ajantis's full personality, especially for the Alternatives mod and the dagger quest in Skie - Cost of one Girl's Soul if you have those mod installed.
 
 
 COMPATIBILITY
@@ -182,15 +184,14 @@ Smiling Imp's BG1 NPCs for SoA&ToB: compatibility is realized by its Ajantis com
 
 Dungeon-Be-Gone: in case someone does not want to switch to the better and serious alternative 'Skip Chateau Irenicus', the missing of a mod item that would be found in Irenicus Dungeon is covered by the Ajantis mod, so nothing is missed out.
 
-Questpack (PPG): the Ajantis BGII mod is not compatible (content-wise) with the component 'miscellaneous enhancements': "dispel the illusion from the initial encounter in the Windspear Hills".
-
-Conflicting mods that are fully compatible (this does not mean that mods / components not listed here are not compatible):
+Mods that are fully compatible although they sound like they could be conflicting (this does not mean that mods / components not listed here are not compatible):
 
 -'Sensible Entrance Points' of BGII Tweakpack (G3), independent of install order.
 
--Skip Chateau Irenicus (from Argent77)
+- Skip Chateau Irenicus (from Argent77)
 
--Questpack (PPG): components 'Revised Hell Trials', 'Improved Oasis II'
+- Questpack (PPG) (with reganrds to components 'Revised Hell Trials', 'Improved Oasis II', 'Miscellaneous Enhancements': "dispel the illusion from the initial encounter in the Windspear Hills".)
+
 
 
 
@@ -288,7 +289,7 @@ jastey's Sir Ajantis NPC for BGII - Modification was created using the resources
 IE-Modding Tools:
 
 BAM Workshop		http://www.shsforums.net/topic/57564-bamworkshop/
-DLTCEP			http://www.gibberlings3.net/tools/dltcep.php
+DLTCEP			https://www.gibberlings3.net/mods/tools/dltcep/
 Near Infinity		https://github.com/Argent77/NearInfinity/releases/latest
 Shadowkeeper		http://www.mud-master.com/shadowkeeper/index.html
 WeiDU			http://www.weidu.org
@@ -304,8 +305,8 @@ WinMerge		http://winmerge.org/
 
 Modding communities, tutorials and technical assistance:
 
-Kerzenburgforum		https://kerzenburg.baldurs-gate.eu/index.php
-The Gibberlings Three	http://gibberlings3.net
+Kerzenburgforum		https://www.baldurs-gate.de/index.php
+The Gibberlings Three	https://www.gibberlings3.net/
 Pocket Plane Group	http://pocketplane.net
 Spellhold Studios	http://www.spellholdstudios.net/
 
@@ -313,6 +314,15 @@ Spellhold Studios	http://www.spellholdstudios.net/
 
 
 HISTORY
+
+Version 19:
+-Ajantis hell talk will no longer loop for one of the reply options
+-EE use pvrz-tis (no black lines in areas)
+-restructured tp2: ACTION_READLN is removed, the mod has 6 components now
+-component "Install crossmod for Sir Ajantis for BGII" is no longer existent, crossmod content is moved into Crossmod Banter Pack 
+-change readme: compatibility with Questpack "Miscellaneous Enhancements, dispel illusion of knights in windspear hills" is given!
+-renamed "setup-ajantis.tp2" to "ajantis.tp2"
+-added ajantisbg2.ini with mod info meta data
 
 Version 18:
 -changed trigger from "Detect(Player1)" to "InMyArea(Player1)" inside temple after Ajantis finished his atonement

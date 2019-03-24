@@ -2,7 +2,7 @@
                            jasteys Sir Ajantis NPC für BGII - Modifikation
 		für original BGII (mit ToB), BGT, BGII:EE und EET
                              
-                                         Version 18
+                                         Version 19
 
 Über die Modifikation:
 Die Modifikation fügt Ajantis, den aus BG1 bekannten Paladin des Ordens des Strahlenden Herzens, als NPC in das Spiel Baldurs Tor II (mit Thron des Bhaal) ein. 
@@ -14,12 +14,14 @@ Im TdB-Teil wird Ajantis nicht mit einem HC böser Gesinnung reisen. Er verlässt 
 
 Für BGII:EE und EET gibt es als zweite, optionale Komponente die Möglichkeit, BeamDogs Graphik-BAM für Ajantis' Familienschild zu verwenden. Wenn die Komponente nicht installiert wird, wird die Inventar-Graphik des BG1NPC Projektes verwendet.
 
-Als dritte, optionale Komponente können Crossmod-Inhalte installiert werden. Diese Komponente sollte so spät wie möglich in der Installation installiert werden. 
-Sofern die entsprechenden anderen Mods installiert sind, wird die Installation dieser Komponente dringend empfohlen, da sie Ajantis' Reaktionen auf zum Teil wichtige (geänderte) Spielereignisse beinhaltet.
-Bisher berücksichtig sind (v16):
--Alternativen
--Skie Cost of one Sould Mod (1. Komponente)
-Falls das Crossmod Banter Pack geupdatet wird, könnte es sein, dass die Inhalte der dritten Komponente dorthin verschoben werden.
+Ab Version 19 ist die dritte Komponente nicht mehr der Crossmodinhalt. Dieser ist in das Crossmod Banter Pack gewandert. (Hinweis für Modder: die für diese Komponente vergebene DESIGNATED 2 wird nicht mehr in der Mod verwendet.)
+
+Als (neue) dritte, optionale Komponente kann der nicht-jugendfreie Inhalt der Romanze installiert werden. Achtung: Die Deinstallation dieser Komponente entfernt nicht die nicht-jugendreien Inhalte, wenn das Spiel bereits angespielt wurde. Installieren Sie diese Komponente nur, wenn die Romanze auch nicht-jugendfreie Inhalte beinhalten soll.
+
+Die vierte Komponente enthält die Möglichkeit, den zeitlichen Abstand zwischen den Romanzen-Dialogen ("Lovetalks") zu verändern. Mit der Basiskomponente wurde ein Avstand von einer Stunde Realzeit installiert. Intsallieren Sie nur dann diese Komponente, wenn Sie die Zeitspanne ändern möchten. Um auf eine Stunde zwischen den Dialogen zurückzuschalten, recht es, diese Komponente zu deinstallieren.
+
+Die fünfte Komponente gibt die Möglichkeit, Ajantis das Kit "Ritter" zu geben. Achtung: Dies tritt nur in Kraft, wenn die Komponente installiert wird, bevor Ajantis das erste Mal im Spiel getroffen wird. Bitte beachten Sie auch, dass das Deinstallieren dieser Komponente Ajantis nicht wieder zu einem Kit-losen Paladin macht, wenn er im Spiel bereits getroffen wurde.
+
 
 
 Die alternativen Ajantis-Portraits wurden in eine eigene Modifikation (Ajantis Portrait Pack) ausgelagert. In der Sir Ajantis für BGII Modifikation ist nur noch das BG1 Standardportrait enthalten. Alle anderen alternativen Portraits sind nun im Ajantis Portrait Pack enthalten, das ebenfalls von der Kerzenburgforum Downloadseite erhältlich ist.
@@ -147,17 +149,17 @@ Für EET wird diese Mod in den BGII:EE-Ordner nach der Umwandlung in EET aber vor
 
 Empfohlen sei ein Backup des override-Ordners und der dialog.tlk und dialogf.tlk vor der Installation.
 Vom Zip-Paket die Dateien und den ajantisbg2-Ordner in den BGII Hauptordner entpacken. Durch Doppelklick auf "Setup-ajantisbg2.exe" wird die Installation gestartet. 
-Während der Installation die Optionen entsprechend auswählen und mit Enter bestätigen. 
 
 Original BGII/BGT: Nach der Kompilierung der Dialog- und Skriptdateien werden die Sounddateien von .ogg- in .wav-Dateien umgewandelt, dies wird in einem Fenster angezeigt. Die Installation erst mit Enter beenden, wenn dies im Command-Window angezeigt wird.
 
-Während der Installation kann folgendes gewählt werden:
--Grad der Romanze: Jugendfrei ja oder nein.
--Zeitlicher Mindestabstand zwischen den zyklischen Lovetalks: 1 h, 45 min, 30 min, 15 min oder 1,5 h.
--Ajantis' Kit: Es stehen kitloser Paladin oder Ritter zur Auswahl.
-
 
 Sollte die Installation nicht klappen, dann schickt mir bitte die Datei "Setup-ajantisbg2.DEBUG", zusammen mit der Information, welche Version des Mods und welches Spiel Ihr benutzt an jastey@web.de.
+
+
+CROSSMOD
+
+Aller Crossmod-Inhalt für Ajantis befindet sich im Mod Crossmod Banter Pack, sofern die Inhalte die Dialogdateien der anderen Mods benötigen. Link: https://www.gibberlings3.net/mods/npcs/crossmod/
+Bitte installieren Sie das Crossmod Banter Pack (nach Ajantis), um alle Reaktionen von Ajantis und damit auch seine volle Persönlichkeit zu erleben, vor allem dann, wenn Sie die Mods "Alternativen" und den Dolch-Quest von "Skie - Cost of One Girl's Soul" installiert haben.
 
 
 
@@ -173,9 +175,7 @@ Dungeon Be Gone: Wer nicht zur ernsthaften und besseren Alternative "Skip Chatea
 
 "Skip Chateau Irenicus": volle Kompatibilität.
 
-Questpack (PPG): die Ajantis BGII Mod ist inhaltlich *NICHT* mit der Komponente "miscellaneous enhancements: "dispel the illusion from the initial encounter in the Windspear Hills" des Questpacks kompatibel.
-
-Questpack (PPG): die Ajantis BGII Mod *ist* kompatibel mit der Komponente "Revised Hell Trials" und "Improved Oasis II".
+Questpack (PPG): die Ajantis BGII Mod ist inhaltlich mit allen potentiell konfliktbehafteten Komponenten kompatibel: der Komponente "miscellaneous enhancements: "dispel the illusion from the initial encounter in the Windspear Hills", der Komponente "Revised Hell Trials" und "Improved Oasis II".
 
 
 BUGREPORTS
@@ -269,7 +269,7 @@ Des weiteren folgende Tools:
 IE-Modding Tools:
 
 BAM Workshop		http://www.shsforums.net/topic/57564-bamworkshop/
-DLTCEP			http://www.gibberlings3.net/tools/dltcep.php
+DLTCEP			https://www.gibberlings3.net/mods/tools/dltcep/
 Near Infinity		https://github.com/Argent77/NearInfinity/releases/latest
 Shadowkeeper		http://www.mud-master.com/shadowkeeper/index.html
 WeiDU			http://www.weidu.org
@@ -285,8 +285,8 @@ WinMerge		http://winmerge.org/
 
 Modding communities, tutorials and technical assistance:
 
-Kerzenburgforum		https://kerzenburg.baldurs-gate.eu/index.php
-The Gibberlings Three	http://gibberlings3.net
+Kerzenburgforum		https://www.baldurs-gate.de/index.php
+The Gibberlings Three	https://www.gibberlings3.net/
 Pocket Plane Group	http://pocketplane.net
 Spellhold Studios	http://www.spellholdstudios.net/
 
@@ -294,6 +294,15 @@ Spellhold Studios	http://www.spellholdstudios.net/
 
 
 HISTORY
+
+Version 19:
+-Ajantis hell talk will no longer loop for one of the reply options
+-EE use pvrz-tis (no black lines in areas)
+-restructured tp2: ACTION_READLN is removed, the mod has 6 components now
+-component "Install crossmod for Sir Ajantis for BGII" is no longer existent, crossmod content is moved into Crossmod Banter Pack 
+-change readme: compatibility with Questpack "Miscellaneous Enhancements, dispel illusion of knights in windspear hills" is given!
+-renamed "setup-ajantis.tp2" to "ajantis.tp2"
+-added ajantisbg2.ini with mod info meta data
 
 Version 18:
 -changed trigger from "Detect(Player1)" to "InMyArea(Player1)" inside temple after Ajantis finished his atonement
