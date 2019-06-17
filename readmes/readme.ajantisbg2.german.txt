@@ -2,7 +2,7 @@
                            jasteys Sir Ajantis NPC für BGII - Modifikation
 		für original BGII (mit ToB), BGT, BGII:EE und EET
                              
-                                         Version 19
+                                         Version 20
 
 Über die Modifikation:
 Die Modifikation fügt Ajantis, den aus BG1 bekannten Paladin des Ordens des Strahlenden Herzens, als NPC in das Spiel Baldurs Tor II (mit Thron des Bhaal) ein. 
@@ -134,8 +134,6 @@ Alle von mir in dieser Modifikation benutzten Dateien und Variablen beginnen mit
 
 KNOWN ISSUES
 
--Das Abbild der Windspeerhügel, in das die Gruppe teleportiert wird, hat an den Rändern noch die Verknüpfung zur Weltkarte. Dies ist nicht vorgesehen. Bitte nicht benutzen, da es den Quest brechen würde.
-
 -Es gibt PID-Fragen, die zu einem kurzen Bruch im Dialog führen, bevor Ajantis dann den gewünschten Dialog eröffnet. Das liegt an der Art und Weise, wie ich diese Dialoge gecodet habe, um eine Verdopplung der Zeilen zu vermeiden. (Falls hier jemand liest, der auch eine Mod schreiben möchte: Es wäre auch ohne diese Unterbrechung möglich gewesen, indem die verschiedenen .d-Dateien über ein gemeinsames COMPILE kompiliert werden. Da ich es nun anders gecodet habe, ist es nun so.)
 
 
@@ -207,6 +205,7 @@ Falls ich jemanden in der Liste vergessen habe, dann sagt bescheid. Ohne Euch wä
 
 Ich danke Sir Darian für das Hosten beim Kerzenburgforum!
 
+Acifer: Hilfe mit Area
 Ajnos: Betatesten
 Amaurea: Korrekturlesen (Englisch)
 AmyAE: Betatesten TdB
@@ -294,6 +293,14 @@ Spellhold Studios	http://www.spellholdstudios.net/
 
 
 HISTORY
+
+Version 20:
+-fixed Ajantis-Hexxat conflict stutter
+-quest area no longer exit to the worldmap (thank you Acifer)
+-added !StateCheck(Myself,CD_STATE_NOTVALID) to all relevant scripts
+-fixed "Ajantis levels upon joining the group" for BGII/BGT
+-fixed beginning of second dialogue about new engagement ring in case PC didn't decide in the first
+-compatibility with Imoen4Ever mod
 
 Version 19:
 -Ajantis hell talk will no longer loop for one of the reply options
