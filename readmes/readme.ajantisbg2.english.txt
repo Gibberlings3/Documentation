@@ -2,7 +2,7 @@
                            jastey's Sir Ajantis NPC for BGII Modification
 			for original BGII+ToB, BGT, BGII:EE, and EET
                              
-                                         Version 19
+                                         Version 20
 
 ABOUT
 
@@ -142,8 +142,6 @@ Note: Ajantis has PIDs throughout the whole game, also in the Underworld and in 
 
 KNOWN ISSUES
 
--The replica of the Windspear Hills area in which the player gets teleported to rescue Ajantis still has the links to the Worldmap. Do *not* leave the area by these links, or the quest will be broken.
-
 -There are PID options that trigger a normal dialogue. This leads to a "break" in the dialogue where Ajantis says something like "yes, let us talk about this" but then follows an "END DIALOGUE" and depending on the script run some seconds could pass until the dialogue is triggered. This is intentional behavior.
 
 
@@ -227,6 +225,7 @@ In case I forgot someone please let me know. The mod wouldn't be the way it is n
 
 Thank you, Sir Darian for hosting at Kerzenburgforum!
 
+Acifer: help with area
 Ajnos: beta testing
 Amaurea: proof reading (English)
 AmyAE: Betatesten ToB
@@ -314,6 +313,14 @@ Spellhold Studios	http://www.spellholdstudios.net/
 
 
 HISTORY
+
+Version 20:
+-fixed Ajantis-Hexxat conflict stutter
+-quest area no longer exit to the worldmap (thank you Acifer)
+-added !StateCheck(Myself,CD_STATE_NOTVALID) to all relevant scripts
+-fixed "Ajantis levels upon joining the group" for BGII/BGT
+-fixed beginning of second dialogue about new engagement ring in case PC didn't decide in the first
+-compatibility with Imoen4Ever mod
 
 Version 19:
 -Ajantis hell talk will no longer loop for one of the reply options
