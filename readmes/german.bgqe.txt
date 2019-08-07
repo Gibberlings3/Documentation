@@ -2,7 +2,7 @@
 				Modifikation  
 	für klassisches BG1:LdSk, BG1Tutu v4, EasyTutu, BGT, BG:EE und EET
 				von jastey 
-				Version 19
+				Version 20
 
 
 Dies ist eine Mini-Modifikation für klassisches BG1 (mit installierter Erweiterung Legenden der Schwertküste), BG1Tutu (v4), EasyTutu, BGT, BG:EE und EET, die mehrere kleine Quests in das Spiel einfügt. Klassisches BG1 ohne die Legenden der Schwertküste wird nicht mehr offiziell unterstützt, aber die Mod sollte trotzdem ohne große Probleme darauf laufen. 
@@ -238,13 +238,14 @@ zenblack: Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktio
 
 -Übersetzungen-
 
+Französische Übersetzung: Le Marquis (des d'Oghmatiques)
+Russische Übersetzung: v8 von hawkmoon & arcanecoast.ru team, Vervollständigung für v20 von d0lphin
+
+-v8-
+
 Spanische Übersetzung: Excalibur (Schleimquest), Immortality (proofreading)
 
-Französische Übersetzung: Le Marquis (des d'Oghmatiques)
-
 Italienische Übersetzung: Stoneangel, mit der Übersetzung des Schleimquests von Jakkus & Lord Hagen (GIMT)
-
-Russische Übersetzung: hawkmoon & arcanecoast.ru team
 
 Polnische Übersetzung: Zed Nocear
 
@@ -253,7 +254,7 @@ Polnische Übersetzung: Zed Nocear
 
 CamDawg, cmorgan and G3 staff: Uploading to G3 site and actualisation of links
 
-G3 Team, Hedian, Fridtjof, Sir Darian: Hosting of the Mod.
+G3 Team, Hedian, Fridtjof, Sir Darian, Kerzenburgforum: Hosting of the Mod.
 
 
 
@@ -263,18 +264,25 @@ VERWENDETE TOOLS
 BG1 Quest Mini-Modifikation was created using the resources provided by the IESDP (http://iesdp.gibberlings3.net) and with the following software:
 
 Infinity Explorer			http://infexp.sourceforge.net
-Near Infinity				http://www.idi.ntnu.no/~joh/ni
-WeiDU					http://www.weidu.org
+Near Infinity				https://forums.beamdog.com/discussion/30593/new-versions-of-nearinfinity-available/p1
+WeiDU					https://github.com/WeiDUorg/weidu/releases/latest
+ 					(formerly: http://www.weidu.org)
 BAM Workshop				http://wwww.teambg.eu/?page=tools&cat=32
+
 CpConverter		http://sourceforge.net/projects/cp-converter/files/cp-converter/CpConverter%20V%200.1.5.0/
+grepWin					http://tools.stefankueng.com/grepWin.html
+WinMerge				http://winmerge.org/
 
 Modding communities, tutorials and technical assistance:
 
-Kerzenburgforum				http://kerzenburg.baldurs-gate.eu/
+Kerzenburgforum				https://www.baldurs-gate.de/index.php
 The Gibberlings Three			http://gibberlings3.net
 Pocket Plane Group			http://pocketplane.net
 Spellhold Studios			http://www.shsforums.net/
 The Black Wyrm's Lair			http://blackwyrmlair.net
+
+Further Links:
+DLC Merger 				https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-steam-gog-sod-dlc-or-custom-dlcs-with-the-main-game
 
 
 LEGAL INFORMATION
@@ -293,6 +301,9 @@ REDISTRIBUTION NOTE: BG1 Quest Mini-Modifikation was created to be freely enjoye
 
 
 HISTORIE
+
+Version 20:
+-added updated full Russian translation by d0lphin
 
 Version 19:
 -"Slimequest":  Tulbor should give the antidotes after the PC bought them; "neutral" ending gives solved quest entry now, too.
