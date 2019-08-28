@@ -1,7 +1,7 @@
 			Ajantis BG1 Expansion Modification 
 	for BG1 (with or without TotSC), BG1Tutu v4, EasyTutu, BGT and BG:EE
 				by jastey (jastey@web.de)
-					Version 12
+					Version 13
 
 This is a mini-mod for original ("vanilla") Baldur’s Gate 1 game (with or without the add-on Tales of the Sword Coast), BG1Tutu v4, EasyTutu, Baldur’s Gate Trilogy (BGT), Baldur's Gate Enhanced Edition (BG:EE), and Enhanced Edition Trilogy (EET).
 
@@ -93,7 +93,8 @@ The Ajantis BG1 Expansion Mod was created using the resources provided by the IE
 
 Infinity Explorer			http://infexp.sourceforge.net
 Near Infinity				http://www.idi.ntnu.no/~joh/ni
-WeiDU				http://www.weidu.org
+WeiDU					https://github.com/WeiDUorg/weidu/releases/latest
+ 					(formerly: http://www.weidu.org)
 http://forums.pocketplane.net/index.php?board=44.0
 BAM Workshop			http://wwww.teambg.eu/?page=tools&cat=32
 
@@ -116,6 +117,13 @@ REDISTRIBUTION NOTE: The Ajantis BG1 Expansion Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+
+Version 13:
++ Leaving in SoD: Ajantis will no longer leave in Imoen's SoD dialogue, i.e. will not give party all equipment, but leaving will be handled in script as it is common for SoD
++ leaving in BGT in Duke Belt's dialogue: corrected kickout variable
++ crossmod comment on Symbol of Helm (NtotSC) fires properly and doesn't lead to stutter
++ all interjections translated to German
++ update to WeiDU v. 246
 
 Version 12:
 + German version: (SoD) letters from Ajantis will no longer crash the game
