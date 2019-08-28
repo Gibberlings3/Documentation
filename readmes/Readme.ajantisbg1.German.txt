@@ -1,7 +1,7 @@
 			Ajantis BG1 (Expansion Modification) 
 	für BG1 (mit oder ohne LdSk), BG1Tutu v4, EasyTutu, BGT, BG:EE und EET
 				von jastey (jastey@web.de)
-					Version 12
+					Version 13
 
 Die Ajantis BG1 Erweiterungs-Modifikation ist für das normale BG1 (mit oder ohne der Legenden der Schwertküste), BG1Tutu v4, EasyTutu, BGT, BG:EE und EET. Es fügt zusätzlichen Inhalt (Dialoge) für den BioWare NHC Ajantis ein.
 
@@ -86,21 +86,26 @@ German by the BG1NPC Übersetzungsteam (of Kerzenburgforum) & Leo
 
 TOOLS USED
 
-The Ajantis BG1 Expansion Mod was created using the resources provided by the IESDP (http://iesdp.gibberlings3.net/) and with the following software:
-
 Infinity Explorer			http://infexp.sourceforge.net
-Near Infinity				http://www.idi.ntnu.no/~joh/ni
-WeiDU				http://www.weidu.org
-http://forums.pocketplane.net/index.php?board=44.0
-BAM Workshop			http://wwww.teambg.eu/?page=tools&cat=32
+IESDP					https://gibberlings3.github.io/iesdp/index.htm
+Near Infinity				https://forums.beamdog.com/discussion/30593/new-versions-of-nearinfinity-available/p1
+WeiDU					https://github.com/WeiDUorg/weidu/releases/latest
+ 					(formerly: http://www.weidu.org)
+BAM Workshop				http://wwww.teambg.eu/?page=tools&cat=32
+
+grepWin					http://tools.stefankueng.com/grepWin.html
+WinMerge				http://winmerge.org/
 
 Modding communities, tutorials and technical assistance:
 
-Rosenranken 				http://www.rosenranken.org
-The Gibberlings Three		http://gibberlings3.net
+The Gibberlings Three			https://www.gibberlings3.net/
 Pocket Plane Group			http://pocketplane.net
-Spellhold Studios			http://spellholdstudios.net
-The Black Wyrm's Lair		http://blackwyrmlair.net
+Spellhold Studios			http://www.shsforums.net/
+Kerzenburgforum (German)		https://www.baldurs-gate.de/index.php
+The Black Wyrm's Lair			http://blackwyrmlair.net
+
+Further Links:
+DLC Merger 				https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-steam-gog-sod-dlc-or-custom-dlcs-with-the-main-game
 
 LEGAL INFORMATION
 
@@ -114,6 +119,13 @@ REDISTRIBUTION NOTE: The Ajantis BG1 Expansion Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+
+Version 13:
++ Leaving in SoD: Ajantis will no longer leave in Imoen's SoD dialogue, i.e. will not give party all equipment, but leaving will be handled in script as it is common for SoD
++ leaving in BGT in Duke Belt's dialogue: corrected kickout variable
++ crossmod comment on Symbol of Helm (NtotSC) fires properly and doesn't lead to stutter
++ all interjections translated to German
++ update to WeiDU v. 246
 
 Version 12:
 + German version: (SoD) letters from Ajantis will no longer crash the game
