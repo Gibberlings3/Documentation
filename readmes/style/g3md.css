@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Cinzel+Decorative:400|Cinzel:400|Inconsolata:400|Montserrat:400');
+
+body {
+  background: hsl(240, 8%, 70%);
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+	max-width: 1024px; 
+	margin: 0 auto;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+}
+
+main {
+  background: hsl(240, 16%, 94%);
+  color: #111;
+  padding: 2rem;
+  box-sizing: border-box;
+  min-height: calc(100vh);
+}
+
+@media only screen and (min-width : 1024px) {
+  main {
+    padding: 2rem 4rem;
+  }
+}
+
+
+h1, h2 {
+  font-weight: 400;
+  color: hsla(240, 50%, 25%, 1);
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid hsla(240, 50%, 25%, 0.5);
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+h3, h4, h5, h6 {
+  color: hsla(240, 50%, 25%, 1);
+  margin: 1rem 0;
+}
+
+h1 {
+  font-family: Cinzel Decorative, sans-serif;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: Cinzel, sans-serif;
+  font-size: 1.625rem;
+}
+
+h3 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background: hsl(240, 25%, 90%);
+  background: hsl(230, 30%, 90%);
+  padding: 0.625rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+table, blockquote, pre {
+  margin: 1em 1.5em;
+}
+
+blockquote {
+  background-color: hsl(0, 0%, 98%);
+  color: #333;
+  border-left: 4px solid #C8C8CF;
+  padding: 0.5rem 1rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  padding: 0.5rem 1rem;
+}
+
+pre, code {
+  background-color: hsl(0, 0%, 98%);
+}
+
+code {
+  font-family: Inconsolata, mono;
+  margin: 0 0.1em;
+  padding: 0 0.2em 0.2em;
+  background-color: hsl(240, 17%, 98%);
+  color: #8100c8;
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover {
+  color: #0000cd;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  font-size: 0.875rem;
+  display: flex;
+  background: hsl(222, 80%, 39%);
+}
+
+header ul {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  flex-grow: 1;
+  display: flex;
+  text-align: center;
+  background: hsl(222, 80%, 39%);
+}
+
+header ul li:hover {
+  background: #000099;
+}
+
+header ul li a {
+  padding: 0.25em 1.5em;
+  width: 100%;
+}
+
+header ul li a, header ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
