@@ -1,7 +1,7 @@
 			Ajantis BG1 (Expansion Modification) 
 	für BG1 (mit oder ohne LdSk), BG1Tutu v4, EasyTutu, BGT, BG:EE und EET
-				von jastey (jastey@web.de)
-					Version 13
+					von jastey 
+					Version 14
 
 Die Ajantis BG1 Erweiterungs-Modifikation ist für das normale BG1 (mit oder ohne der Legenden der Schwertküste), BG1Tutu v4, EasyTutu, BGT, BG:EE und EET. Es fügt zusätzlichen Inhalt (Dialoge) für den BioWare NHC Ajantis ein.
 
@@ -9,12 +9,17 @@ Für original BG1 (mit oder ohne LdSk) fügt die Modifikation einen Freundschaftsp
 
 Für Tutu, BGT, BG:EE und EET wird ein Freundschaftspfad und weiteren Inhalt für die BG1NPC Projekt Romanze eingefügt. Inhaltlich ist hier die Modifikation als Zusatz zum BG1NPC Projekt gedacht, daher sind (inhaltlich) wichtige Reaktionen von Ajantis zum Spielgeschehen hier nicht enthalten. Technisch kann die Modifikation aber auch ohne das BG1NPC Projekt installiert und gespielt werden.
 
-Das BG1NPC Projekt befindet sich bei den Gibberlings Three: http://www.gibberlings3.net/bg1npc/index.php
+Für die EE fügt die Mod mehrere Banter mit Rasaad und einen mit Baeloth ein, sowie einen Rasaad-Ajantis Romanzenkonflikt.
+
+Für SoD fügt die Mod einen Abschiedsdialog ein, bevor Ajantis die Gruppe verlässt. Im Romanzenfall erhält die HC drei Briefe von Ajantis während der SoD-Kampagne.
+
 
 Als zweite Installoption gibt es für BG:EE und EET die Möglichkeit, das in der EE vorhandene BAM für Ajantis Schild (grüner Drache auf goldenem Grund) im Spiel zu verwenden (sofern BG1NPC Projekt installiert ist).
 
 
 Hinweis: Die alternativen Ajantisportraits sind nun in die Modifikation "Ajantis Portrait Pack" ausgegliedert. 
+
+Das BG1NPC Projekt befindet sich bei den Gibberlings Three: http://www.gibberlings3.net/bg1npc/index.php
 
 
 GENERAL INFORMATION 
@@ -119,6 +124,12 @@ REDISTRIBUTION NOTE: The Ajantis BG1 Expansion Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+
+Version 14:
++ added after-Sarevok death dialogue which will only trigger if game remains in BG1 (BGT or EE with e.g. Endless BG1 Mod).
++ after Korlasz romance dialogue should trigger correctly 
++ added ajantisbg1.ini with mod info
++ added folder libiconv-1.9.2-1-src.7z with iconv licence info
 
 Version 13:
 + Leaving in SoD: Ajantis will no longer leave in Imoen's SoD dialogue, i.e. will not give party all equipment, but leaving will be handled in script as it is common for SoD

@@ -1,13 +1,17 @@
 			Ajantis BG1 Expansion Modification 
 	for BG1 (with or without TotSC), BG1Tutu v4, EasyTutu, BGT and BG:EE
-				by jastey (jastey@web.de)
-					Version 13
+					by jastey 
+					Version 14
 
 This is a mini-mod for original ("vanilla") Baldur’s Gate 1 game (with or without the add-on Tales of the Sword Coast), BG1Tutu v4, EasyTutu, Baldur’s Gate Trilogy (BGT), Baldur's Gate Enhanced Edition (BG:EE), and Enhanced Edition Trilogy (EET).
 
 For original BG1 (with or without TotSC), the mod adds a friendship track and the BG1NPC project romance for Ajantis. The original BG1NPC project romance was slightly altered to adjust to the restrictions of the BG1 engine, although overall the content stayed the same.
 
 For Tutu, BGT, BG:EE, and EET, the mod adds a friendship track and more romance content for the BG1NPC Project romance for Ajantis. Content-wise, the mod is meant as an addition to the BG1NPC project, but technically it can be installed and played without the BG1NPC project.
+
+For EE, the mod also adds several banters with Rassad and one with Baeloth, as well as a Rasaad-Ajantis romance conflict.
+
+For SoD, the mod adds farewell dialogues before Ajantis leaves. In romance case the PC will get three letters from Ajantis along the SoD campaign.
 
 The BG1NPC project can be found at the Gibberlings Three site: http://www.gibberlings3.net/bg1npc/index.php
 
@@ -41,8 +45,11 @@ Currently, only the Windows version of the mod exists. Using the correct install
 
 Extract the contents of the archive to your game's main directory. 
 
-If you use BG Enhanced Edition from GOG or Steam, you need to prepare your game with modmerge before installing any mods:
-https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use/p1
+If you use BG Enhanced Edition from GOG or Steam, you need to prepare your game before installing any mods:
+Link: https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-steam-gog-sod-dlc-or-custom-dlcs-with-the-main-game
+
+(deprecated tool: 
+https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use/p1)
 
 Run the "Setup-AjantisBG1" program. Choose the language you prefer and confirm installation. This should extract all needed files to the override folder.
 
@@ -117,6 +124,12 @@ REDISTRIBUTION NOTE: The Ajantis BG1 Expansion Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+
+Version 14:
++ added after-Sarevok death dialogue which will only trigger if game remains in BG1 (BGT or EE with e.g. Endless BG1 Mod).
++ after Korlasz romance dialogue should trigger correctly 
++ added ajantisbg1.ini with mod info
++ added folder libiconv-1.9.2-1-src.7z with iconv licence info
 
 Version 13:
 + Leaving in SoD: Ajantis will no longer leave in Imoen's SoD dialogue, i.e. will not give party all equipment, but leaving will be handled in script as it is common for SoD
