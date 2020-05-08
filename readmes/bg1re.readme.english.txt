@@ -1,6 +1,6 @@
 		Baldur's Gate Romantic Encounters Modification (BG1RE)
 	for BG1 (with TotSC), BG1Tutu v4, EasyTutu, BGT, BG:EE, and EET
-					Version 2.7
+					Version 3.0
 				A Gibberlings Three Mod
 				http://www.gibberlings3.net
 
@@ -103,7 +103,7 @@ Teen content in this mod means: no description or mentioning of explicit sexual 
 
 Mature content: contains explicit descriptions of intimate actions (though not explicit enough to be called porn) either as action description or in the characters' dialogues (including verbal mentioning of fantasies). 
 
-Trigger warnings are put to components that feature any content that include intimacies in a threatening atmosphere, discussion of consent issues, attempts of sexual coercion or other instances that might be triggering to some players. These components are tagged with a warning accordingly and can be skipped during install.
+Trigger warnings are put to components that feature any content that include intimacies in a threatening atmosphere, discussion of consent issues, attempts of sexual coercion, (nonsexual) violence to children, or other instances that might be triggering to some players. These components are tagged with a warning accordingly and can be skipped during install.
 
 
 2.  Component Types 
@@ -137,25 +137,26 @@ The mod consists of a number of optional components.
 Please, feel free to use all variables listed below for your own NPC reactions. Please note the section "Crossmodding" below for details on how to use the variables!
 
 
-0.  Install Choices
+0.  Main Component: ~Amount of -ahem- details and BG-style vs. description text!~ (Required)
 ------------------------------------------------------------------
-The mod offers three basic install choices in respect to the rating and the style of descriptions. This component is a required component.
+The mod offers different basic install choices in respect to the rating and the style of descriptions. This component is a required component.
 
-[1] "Teen version": Automatically installs the Teen versions of all components that also offer mature content, leaving out additional content for some encounters. Will skip whole encounters that offer no Teen version. 
+The install choices distinguish between teen/mature content and no components with warning/all components. The latter refers to the components marked with trigger warnings. Please read the notes in this readme carefully before chosing the components. The components in question are marked with (WARNING).
 
-[2] "BG-style": This component has Adult content. It leaves out descriptive content, but offers "dialogue based" content instead. With this install choice all components can be installed.
+During install you have the choice between rating and descriptiveness:
 
-[3] "Descriptive version": This will have description texts for the encounters that offer a descriptive version. Adult content, obviously. With this install choice all components can be installed.
+- "Teen version": Automatically installs the Teen versions of all components that also offer mature content, leaving out additional content for some encounters. Will skip whole encounters that offer no Teen version. 
 
+- "BG-style": This component has Adult content. It leaves out descriptive content, but offers "dialogue based" content instead. With this install choice all components can be installed.
 
-The second install choice refers to the components marked with trigger warnings. Please read the notes in this readme carefully before chosing the components. The components in question are marked with (WARNING)! 
-During install you have the choice between:
+- "Descriptive version": This will have description texts for the encounters that offer a descriptive version. Adult content, obviously. With this install choice all components can be installed.
 
-[1] Do not show/install components with warnings.
+Any of the three above is coupled with:
 
-[2] Show/install all components.
+- Skip components with warnings: the components tagged with warnings will be skipped completely.
 
-For Option [1], the components tagged with warnings will be skipped completely.
+- Show/install all components.
+
 
 
 
@@ -500,8 +501,10 @@ This component is a small mini-quest that shows exactly what Centeol felt before
 
 
 
-23. The Essential End, by Lava Del'Vortel
+23. The Essential End, by Lava Del'Vortel (mature content / teen version - WARNING)
 ------------------------------------------------------------------
+
+Warning: This encounter includes attempts at sexual coercion. While all involved parties ultimately make free choices, the content may be triggering for some players.
 
 Type: Encounter
 Availability: Undercity
@@ -615,10 +618,8 @@ Listen to two very specific ghosts and decide if you want to end their torture, 
 
 
 
-30. Necromancer's Trouble, by jastey (WARNING)
+30. Necromancer's Trouble, by jastey 
 ------------------------------------------------------------------
-
-Warning: Although of non-sexual nature, a warning might be in order since this encounter offers the possibility to raise weapon against a child. While this quest path can be avoided completely, the content may still be uncomfortable or even triggering for some players.
 
 Type: Quest 
 Availability: N Baldur's Gate, the house with the blue roof, at the far right. Sidequests: Nashkel cemetary, N Baldur's Gate behind the Temple of Helm.
@@ -1233,7 +1234,9 @@ To install the mod, follow the instructions:
 
 NOTE: For BG:EE it is important that you istall the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
 If you have BG:EE / SoD from Steam or GOG, please note that you need to run the modmerger first. Otherwise, installing the mod might break the game. 
-Link: https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use
+Link: https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-steam-gog-sod-dlc-or-custom-dlcs-with-the-main-game
+
+Link (deprecated): https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use
 
 Windows
 On successful extraction, there should be an bg1re folder and a setup-bg1re.exe file in your game folder. To install, simply double-click setup-bg1re.exe and follow the instructions on screen.
@@ -1335,33 +1338,59 @@ tibicina: contributor, alpha tester, proof reader
 Twani: contributor, alpha tester, proof reader
 Vanguard: beta tester
 
-Gerri & jastey: German translations
+German translations: Gerri, jastey. 
 
 ----------------
 XI. Tools Used
 ----------------
 
-The Baldur's Gate Romantic Encounters Modification was created using the resources provided by the IESDP (http://iesdp.gibberlings3.net/) and with the following software:
-
-DLTCEP					http://forums.gibberlings3.net/index.php?showforum=137
 Infinity Explorer			http://infexp.sourceforge.net
-Near Infinity				http://www.idi.ntnu.no/~joh/ni
-WeiDU					http://www.weidu.org
+IESDP					https://gibberlings3.github.io/iesdp/index.htm
+Near Infinity				https://forums.beamdog.com/discussion/30593/new-versions-of-nearinfinity-available/p1
+WeiDU					https://github.com/WeiDUorg/weidu/releases/latest
+ 					(formerly: http://www.weidu.org)
+BAM Workshop				http://wwww.teambg.eu/?page=tools&cat=32
+
+grepWin					http://tools.stefankueng.com/grepWin.html
+WinMerge				http://winmerge.org/
 
 Modding communities, tutorials and technical assistance:
 
-The Gibberlings Three			http://gibberlings3.net
+The Gibberlings Three			https://www.gibberlings3.net/
 Pocket Plane Group			http://pocketplane.net
 Spellhold Studios			http://www.shsforums.net/
-Kerzenburgforum				https://kerzenburg.baldurs-gate.eu/index.php
+Kerzenburgforum (German)		https://www.baldurs-gate.de/index.php
 
-Modmerger				https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-based-dlc-into-something-weidu-nearinfinity-dltcep-can-use
+Further Links:
+DLC Merger 				https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-steam-gog-sod-dlc-or-custom-dlcs-with-the-main-game
 
 
 
 ----------------
 XII. History
 ----------------
+
+Version 3.0:
+-installer of main component changed to SUBCOMPONENTs (substitute for READLN, for compatibility with ALIEN's Project Infinity)
+-new German translation by Gerri ("Cloakwood Lovers", "No Regrets")
+-"Sil's Blessing": Cordyr's quest can be completed even if the Sirene's are not killed; compatibility with Lure of Sirine's Call improved (Sirines will not get hostile if PC states that they want to loot the treasure if Sil just stated vir LoSC that they may do so.)
+-"The Novelists": will remain in the thieves guild until player read the book (also until after Sarevok's death if game continues)
+-"Bardolan's Briefing": no "No Valid Links or Replies" error if playing the non-descriptive version
+-"Mikala the Monk": Mikala won't "have nothing to say" in case she was talked to with another NPC first (trigger NumTimesTalkedTo(0) replaced with a variable)
+-"Scar's Return": Donnerjahn's Second Hand Shop has mapnote now. Donnerjahn shouldn't stand inside commoner.
+-"Della May from Thay": should be female; PC should not say that Denak et al are dead if they aren't.
+-"Cloakwood Lovers": should not talk to invisible NPC.
+-"Camryn and Tamah": letters items should not be stackable.
+-"Childhood Friend": -Alec should not be powerful mage with droppable robe and many XP. Alec should only spawn at next meeting if he wasn't killed. Alec should turn hostile if attacked.
+-"Girdle Reactions": Kivan should not mix up male/female PC reactions.
+-(BG1:TotSC) "Honest Lies of both Riversides": Reward stone should vanish after charges are up.
+-(BGT) "Dinner with Thalantyr": Ragefast can be talked to after Abela left even if Ramazith's quest was not accepted
+"The Essential End": tagged with warning as it contains elements of coercive sexual actions.
+-"Necromancer's Trouble": no longer tagged with warning because there is no sexual abusive content.
+-(Tutu) %tutu_var% added to bardol.cre patching 
+-#8 changed to #32 for script name patching
+-(BG:EE) Alora(6).cre does not need override script patching
+-bg1re.ini added to support ALIEN's Project Infinity
 
 Version 2.7:
 -(German version) "The Messenger": text of Dawn Priest Blaise does not display lines from setup.tra
@@ -1372,7 +1401,7 @@ Version 2.7:
 Version 2.6:
 -"Girdle of Gender Reactions" fixed Kivans PC M->F reaction. TotSC: All interjections of other NPC will show for Minsc's girdle change
 -"The Honest Lies of Two Riversides" journal entry about Brage will no longer be doubled (entry added by mod matches the original one). Stone pepple now gives the real spell "Blur" with AC and saving throw bonuses, for 120 s.
--"Sil's Blessing" (TotSC) Sil can only be talked to once for her blessing. Cloak will have 10 charges when given by Sil.
+-"Sil's Blessing" (TotSC) Sil can only be talked to once for her blessing.
 -(TotSC) "The Messenger" All lines of Dawn Priest Blaise will now show in dialogue (rearranged CHAIN syntax a bit)
 - "Husam's Personal Preparation" Husam will disappear after PC descended into the maze to follow Sarevok (is in changelog for v2.0 but wasn't present yet)
 
@@ -1405,7 +1434,7 @@ Version 2.2:
 -(BGT, Tutu; BG:EE, EET) ("The Messenger 2: Rain or Snow or Gloom of Night") quest spell doesn't show at spell table any more
 -(EET) ("The Honest Lies of Two Riversides", "The Novelists", "Necromancer's Trouble") area scripts are now correctly patched with quest script blocks
 -(compatibility) ("Bardolan's Briefing") altered Bardolan's reaction at first meeting a tiny bit to introduce another line so the variable for his meeting will be set (if BG1NPC is installed and Kivan / SharTeel are interjecting into the dialogue, there was an instance where the variable did not get set and Bardolan wouldn't show in the barracks.)
--(SoD from GOG/Steam) Mod won't install on Steam/GOG SoD if modmerge didn't run.
+-(SoD from GOG/Steam) Mod won't install on Steam/GOG SoD if your SoD game is not modmerged.
 
 Version 2.1:
 -fixed installer from leftover backup infos
