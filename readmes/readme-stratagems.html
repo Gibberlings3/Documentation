@@ -4,7 +4,7 @@
 <title>Sword Coast Stratagems</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="style/g3readme_cam_022916.css" type="text/css" />
-<link href="style/g3icon.ico" rel="icon" type="image/bmp" />
+<link href="files/g3icon.ico" rel="icon" type="image/bmp" />
 </head>
 <body> 
 <div id="container">
@@ -32,7 +32,7 @@
 <div class="section"> 
   <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />  </strong>
 Author: </strong><a href="http://www.gibberlings3.net/forums/index.php?showuser=1067">DavidW</a></p>
-  <p><strong>Version 32</a></strong><br />
+  <p><strong>Version 33</a></strong><br />
     <strong> Languages:</strong> Chinese, English, French, German, Italian, Korean, Polish, Russian, and Spanish<br />
     <strong>Platforms: </strong>Windows, Linux (Enhanced Edition only), Mac OS X (Enhanced Edition only)</p>
   <p>Sword Coast Stratagems (<acronym title="Sword Coast Stratagems">SCS
@@ -73,8 +73,8 @@ Author: </strong><a href="http://www.gibberlings3.net/forums/index.php?showuser=
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
 <div class="section">
-  <p>Sword Coast Stratagems is a collection of mini-mods for the Enhanced Editions of Baldur's Gate I and II, the original edition of Baldur's Gate II: Throne of Bhaal, Baldur's Gate TUTU, and Baldur's Gate Trilogy. Although it contains many tweaks and ease-of-use components, as well as a full implementation of the Icewind Dale spell system in Baldur's Gate, it is primarily a tactics mod, intended to make the combats in the
-    game more challenging and interesting. A full install basically rewrites the entire AI system of the game.</p>
+  <p>Sword Coast Stratagems is a collection of mini-mods for Baldur's Gate series of games. It is compatible with the Enhanced Editions of Baldur's Gate I and II, the original edition of Baldur's Gate II with the Throne of Bhaal extension, with the "EasyTUTU" conversion of Baldur's Gate to the Baldur's Gate II engine, and with the 'Baldur's Gate Trilogy' and 'Enhanced Edition Trilogy' combinations of the two games. (It is not compatible with the original BG1, or with the original BG2 without Throne of Bhaal.) </p>
+<p>Sword Coast Stratagems contains many optional tweaks to various aspects of gameplay, including a full implementation of the Icewind Dale spell system, but at its core it is a tactical/AI mod. It carries out a fairly systematic restructing of the games' core artificial intelligence, affecting spell and proficiency choices, kits, high-level abilities, and most importantly enemy AI scripting, with a full install rewriting the AI of practically every creature in the game, though in most cases without significantly affecting their core abilities. It further offers a large number of tailored components that modify individual set-piece encounters at various points throughout the two games. The idea throughout is to make combat more challenging, interesting, and most importantly immersive and realistic, insofar as that can be done with a 1990s-vintage game engine - I focus on trying to get enemies to use their abilities intelligently and effectively, and in the harder parts on making moderate changes to their powers and spells, rather than the brute-force method of increasing hit-rolls, saving throws and the like.</p>
   <p> Since there are a lot of tactics mods out there, of very different styles,
     it's probably simplest to describe the distinctive features of <acronym title="Sword Coast Stratagems">SCS</acronym>. (I don't want to suggest that all of these are automatically
     advantages: there are lots of different styles of play, and different mods
@@ -417,12 +417,11 @@ fully compatible with my Throne of Bhaal content-enhancement mod, Wheels of Prop
   they really <b>are</b> ruthless predators. Its main point is to spare the author (who rather likes wolves) the heartache
   of perpetually having to cut them down and listen to the rather sad yelp they make when you kill them.</p>
 
-  <p><strong>Improved shapeshifting</strong></p>
+  <p><strong><a name="shapeshift" id="shapeshift"></a>Improved shapeshifting</strong></p>
 <p>This component (inspired in part by Wesley Weimer's Shapeshifter Rebalancing component) modifies all of the druid innate shapeshift abilities (and the druid/cleric elemental-shapeshift HLA)
 to be useable instantly (that is, without requiring a six-second cooldown before the next spell can be cast). It does so by creating "symbolic paws":
 if you equip one, you instantly shapeshift. Other than that, the effects of the shapeshift are largely the same as previously, though some of the ability score
 and attack bonuses have been tweaked slightly. Note that shapeshifting still blocks spellcasting. </p>
-<p>If you have both this component and the "improved priests" component installed, enemy druids will use improved shapeshifting. </p>
     <p><strong>Decrease the rate at which reputation improves</strong></b>
   <p>In general, if you're playing a half-way honorable character, your reputation fairly rapidly reaches 20 and stays there. The idea of this component
   is to slow down the rate at which you gain reputation: you can choose the degree of slowdown.</p>
@@ -434,7 +433,8 @@ and attack bonuses have been tweaked slightly. Note that shapeshifting still blo
   <p>This component makes it much easier to customise <acronym
 title="Non-Player Characters">NPCs</acronym> and to make sure they keep up with your main character even if you swap them in and out of the group. When it is installed, NPCs (including mod-added NPCs) join your party at level zero. If you want, you can activate a special 'customise' power on their innate abilities to change their class and kit to whatever you like. After that, you can level the character to first level and choose their proficiencies, skills and the like. The character will continue levelling until they reach about the same level as your character. (The 'customise' power is unavailable once you increase above level zero.) </p> If you kick the NPC out of the party and subsequently re-recruit them, they will again start levelling until they reach about your character's level. (To be more precise: they are given that level which they would have if they had as much XP as you do; they get given exactly the right amount of XP to reach that level.)
 </p>
-<p>Engine limitations lead to two slight awkwardnesses with this component. Firstly, thieves don't gain quite the right number of skill points at level one. To fix this, thieves are given one-off innate abilities that allow you to increase your thief skills by the missing amount. Secondly, mages and bards have their spellbooks selected from a fixed list (you don't get to choose yourself). </p>
+<p>Engine limitations lead to a few slight awkwardnesses with this component. Firstly, thieves don't gain quite the right number of skill points at level one. To fix this, thieves are given one-off innate abilities that allow you to increase your thief skills by the missing amount. Secondly, mages and bards have their spellbooks selected from a fixed list (you don't get to choose yourself). Thirdly, if you have the Party AI disabled, you may occasionally notice minor glitches in the amount of experience your characters receive (this will be most noticeable if you use the customise program to change a character's class). Turning AI back on (even if only briefly) will resolve this (though it is possible to get a slightly-too-high level character if you change from single-class to multiclass and then level without AI on.</p>
+<p>Some NPCs are only partially affected by this component: notably, Wilson the bear and the joinable vampire in BG2EE cannot be customised.</p>
 <p>This component makes very extensive use of features of the Enhanced-Edition game engine, and so is not (and never will be) available for original BG/BG2.</p>
   <p><strong>Allow player to choose <acronym title="Non-Player Character">NPC</acronym> proficiencies and skills (BG1TUTU, BGT)</strong></p>
   <p>At the moment the various <acronym
@@ -566,8 +566,12 @@ title="Experience Points">XP</acronym> from him. He'll give you a decent interva
 
 
   <p><strong>Cosmetic change: stop Stoneskins from changing the caster's colour (BG2,TUTU,BGT)</strong></p>
-The Stoneskin spell causes the recipient to turn a uniform grey colour, which is realistic but does get a bit monotonous when your spellcasters are permanently
-protected by it. Note that this effects NPC mages too. This tweak (which uses Ascension64's "ToB Extender" and so is unavailable on the Enhanced Edition) removes the colour change from the spell.
+<p>The Stoneskin spell causes the recipient to turn a uniform grey colour, which is realistic but does get a bit monotonous when your spellcasters are permanently
+protected by it. Note that this effects NPC mages too. This tweak (which uses Ascension64's "ToB Extender" and so is unavailable on the Enhanced Edition) removes the colour change from the spell.</p>
+  <p><strong>Improved Tales of the Sword Coast textscreens (BGEE,EET)</strong></p>
+<p>This small, cosmetic component makes two changes to the textscreens shown in the Tales of the Sword Coast part of Baldur's Gate: Enhanced Edition (the bit based out of Ulgoth's Beard). Firstly, in BGEE the scroll speed is slightly faster than the speed at which the text is read aloud. This doesn't matter in most cases, but in the very long textscreen when you sail to Balduran's Isle, the written and spoken text gets completely out of sync. I space out the written text a bit so that they stay roughly in line.</p>
+<p>Secondly, I turn the text introduction to Ulgoth's Beard itself (which just appears in your text box when you arrive) into a proper (though not voiced) textscreen.</p>
+
 
   </div>
 
@@ -751,6 +755,7 @@ You can override these difficulty settings for each component separately. A new 
   <p>This component upgrades the intelligence of the clerics and fighter-clerics
     in the game, in much the same way as the "Smarter Mages" component does for
     mages etc. It is sensitive to the difficulty setting in the same way as that component (note that priest and mage diffiulty may be set independently).</p>
+  <p>By default, this component gets enemy druids to use the 'improved shapeshifting' style of shapeshift (made available for players by <a href="#shapeshift">this component</a>). You can turn this off by setting no_swift_shapeshift to 1 in stratagems.ini (see under <a href="#customisation">customisation</a> for more detailed instructions).</p>
   <p><strong>Potions for <acronym title="Non-Player Character">NPC</acronym>s</strong></p>
   <p>Potions are one of the most effective and cheap ways for a humanoid creature
     to enhance its combat ability. The party collect literally hundreds of them
@@ -1467,6 +1472,10 @@ instead of Protection from Magic Weapons, though this shouldn't be too noticeabl
   <p>In IWD:EE (and in IWDification) Entropy Shield has powerful, hidden protections: it makes the caster immune to Imprisonment, Spellstrike and Breach (the only spell that can take it down!).</p>
   <p>This is pretty obviously a bug. None of these spells exist in vanilla IWD; there is no added documentation; what blocks them is that they all use the same projectile file (a green sparkling ball); that projectile is in just the right place to be accidently blocked by someone making an out-by-one error in editing the spell. The version of the spell shipped with SCS fixes the bug.</p>
   <p>That said, it's actually quite an interesting thing to do to what's otherwise a somewhat underpowered spell, and usefully improves clerics' somewhat weak defenses, making NPC clerics more capable of surviving a few rounds. So we systematise it a bit, making it block Breach, Dispel Magic and Imprisonment, but not anti-spell attacks (and changing its type to SPELLPROTECTION, so that it can be removed by those spells).</p>
+  <p><strong>Rebalance bombardier beetle cloud</strong></p>
+  <p>In IWD, bombardier beetles have a gas cloud which has a 1/5 chance of stunning its target for 5 rounds (no save) and a 1/4 chance of deafening any non-stunned target for 7 rounds (again, no save). This is a pretty faithful conversion of the 2nd edition AD&D power, but while it's balanced about right for low-level play (where these creatures are encountered) its excessively, and implausibly, powerful at higher levels.</p>
+  <p>This tweak grants a save vs. breath against both effects; as partial compensation, the probabilities increase, so that a creature is always targeted either by the stun or the deafness, with a 50% chance of each.</p>
+
 </div>
 <div class="ribbon_rectangle_h3">    <a name="iwd_tweaks_arcane" id="iwd_tweaks_arcane"> </a>
 <h3>Icewind Dale arcane changes</h3>
@@ -1787,7 +1796,7 @@ More crucially, Sarevok is the beneficiary of a spell which lets him draw protec
   <p>All Balors
     now wield the vorpal swords that the Watchers' Keep Balors wield; but these
     have been modified so that they kill but don't chunk, and so that they allow
-    a saving throw.</p> 
+    a saving throw (vs death, at -4).</p> 
   <p> Bone Fiends (cast at 12th level): </p> 
   <ul>
     <li>Teleport without Error, Improved Invisibility, and Cone of Cold, all
@@ -2051,6 +2060,77 @@ href="http://iesdp.gibberlings3.net/">Infinity Engine Structure Description Proj
 
 <p>Changelogs for versions 1-21 of SCS and SCSII can be found in their respective v21 readmes in the "doc" folder.</p>
 </div>
+<div class="ribbon_rectangle_h3"><h3>Version 33 (May 2020)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section">
+      <b>New or Substantially Modified Content</b>
+      <ul>
+      <li>Updated Russian translation (thanks to Arkie)</li>
+      <li>New Enhanced-Edition-only component: improved Tales of the Sword Coast textscreens. (This spaces out the text in the go-to-island textscreen to keep pace with the spoken text, and moves the intro text when you arrive at Ulgoth's Beard into a new textscreen.)</li>
+	  </ul>
+      <b>Other content changes</b>
+      <ul>
+	  <li>Various tweaks to shapeshift tokens: they no longer count as daggers for proficiency purposes; they block any changes to Strength, Dexterity and (for Earth Elemental form) physical damage resistance; they now do token-appropriate damage types (instead of all doing Slashing); they are now granted direct when you level  up, instead of the 'create token' spell being granted instead</li>
+	  <li>On EE, IWD spells (and any third-party spells you have installed) are now available for hotkeys</li>
+	<li>Fiends more often avoid using attack spells against obviously-immune targets</li>
+	<li>High-level wizards will try to take down antimagic shells</li>
+	<li>High-level wizards carry Spell Strike slightly more often</li>
+	<li>The fear auras of demons, dragons and liches no longer penetrate an antimagic field or the protection from a Scroll of Protection from Magic</li>
+	</ul>
+	<b>Bugfixes</b>
+	<ul>
+	<li>The NPC auto-leveller now works (mostly) even if party AI is turned off
+	<li>Added a guard into the NPC auto-leveller so that it fails more gracefully if there are any other problems (characters should level once and stop, rather than infinitely levelling)
+	<li>A few characters who are plausibly enemies to fight (currently Caelar (SoD) and Hexxat (BG2) ) are no longer set to level zero. (A side effect is that these characters cannot be customized.)
+	<li>NPC auto-leveller now more robustly ensures that NPCs who go hostile aren't invincible.
+	<li>"Wider range of random spell scrolls" component is recoded to work slightly differently, and to avoid (I hope) the duplicate-scrolls bug.
+	<li>'Earth/Fire elemental transformation' are no longer mislabeled 'Earth/Fire elemental token' on the HLA select screen 
+	<li>'Ease of use AI' hotkeys can now be reallocated from stratagems.ini at install time (previously this wasn't working properly)
+	<li>'Ease of use AI' no longer spams Impervious Sanctity of Mind</li>
+	<li>Fine flails and composite bows now do the correct amount of damage  - thanks to Merlin for catching that</li>
+	<li>Entropy Shield no longer displays (harmless) cruft when cast</li>
+	<li>Entropy Shield blocks Flame Strike properly</li>
+	<li>Fixed glitches in the ds_make_detectable function (they were causing a couple of spell-labelling problems)</li>
+	<li>Summoned lesser air elementals no longer look like myconids</li>
+	<li>Cure Moderate Wounds now properly matches the other (level 1-5) healing spells</li>
+	<li>Storm Shell is no longer non-functional</li>
+	<li>Balor swords now grant a save vs death at -4, and kill without chunking (this had been lost at some point)</li>
+	<li>Some minor fixes to 'innate triggers': triggers no longer appear on sorcerer spell-selection screens; Contingency is properly named in the quickbar and on level-up; Contingency no longer appears in sorcerer spellbooks.</li>
+	<li>Baresh's lycanthropy is now less virulent: he no longer transforms into two werewolves</li>
+	<li>Better journal handling in 'improved Balduran's Isle'</li>
+	<li>Rogues now use the 'Evasion' HLA</li>
+	<li>Bandit camp should more systematically gang up on the player if they go hostile</li>
+	<li>On non-EE installs, an incompatibility between Innate HLAs and Smarter Mages was causing CTDs; it's been fixed</li>
+	<li>The area-assigned scripts for Torgal's giant trolls no longer overwrite their creature-file-assigned scripts (this was largely cosmetic on EE, but made them unkillable on vanilla)</li>
+	<li>Improve demilich saves, give immunity to mace of disruption</li>
+	<li>Impervious Sanctity of Mind's SPELL_SHIELD splstate now removed correctly</li>
+	<li>Rakshasas and demiliches no longer absorb their own Sunfire spells</li>
+	<li>Truesight dispels blindness instead of just blocking it</li>
+	<li>Time Stop was not properly being marked for detection</li>
+	<li>The various anti-defense spells now correctly record whether they take down an Anti-Magic Shell (the only one that does is Spellstrike)</li>
+	<li>The modifications to protection from normal missiles no longer prevent Physical Mirror and Entropy Shield from reflecting Flame Arrows</li>
+	<li>Spellcasters do not avoid using summoning spells against foes protected by an scroll of protection from magic or an antimagic shell</li>
+	<li>Summoned fiends don't attack each other</li>
+	<li>Player can't target summoned fiends before they're properly gated in (hopefully actually working this time!)</li>
+	<li>Vampires now use their bat cloud correctly</li>
+	<li>Vampire summons turn up near the vampire, not offscreen (this was throwing bugs on EE due to the redefinition of the CreateCreatureOffscreen function in EE). </li>
+	<li>Conjurers can now use the scrolls added by IWD spells</li>
+	<li>Righteous Wrath of the Faithful handled correctly by DS</li>
+	<li>Faldorn and Cernd fight properly when Cernd is not in the party (for real, this time).</li>
+	<li>Cosmetic fix: the text on antimagic spells is better aligned</li>
+	<li>Though it remains controversial that Death Spell can be used to kill insects, it no longer annoys friendly NPCs so much that they turn hostile</li>
+	</ul>	
+	<b>Compatibility Fixes</b>
+	<ul>
+	<li>Item Upgrade now avoids using Contingency scrolls if Innate Contingencies is added (thanks to Cam for the code)</li>
+	<li>Most of SCS's functions now throw warnings, instead of failing outright, if they run into a broken item from another mod (e.g. "cmstq04.itm" from Dark Horizons)</li>
+	<li>Fixed some largely-cosmetic issues with Spell Revisions and Item Revisions compatibility, which were throwing WARNINGs at install time</li>
+	<li>Guarded some more against malformed copies of the max-spell 2das</li>
+	<li>Somewhat more systematically allowed for fighter/mage/thief characters in 'smarter mages'.</li>
+	</ul>
+
+</div>
 <div class="ribbon_rectangle_h3"><h3>Version 32 (June 2019)</h3></div>
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
@@ -2197,7 +2277,6 @@ href="http://iesdp.gibberlings3.net/">Infinity Engine Structure Description Proj
 <li>Fixed a glitch in the Help script which in some circumstances causes enemies to home on to an invisible PC.</li>
 <li>"Recover items from Hell" no longer breaks the transition to ToB on some installs; component generally recoded to be more resistant to problems in the future.</li>
 <li>Support for variable libraries (and in particular for SR-specific libraries) now works properly</li>
-<li>TO CHECK</li>
 <li>Fixed a typo causing the fission slime "fix" to install on EE installs rather than *non*-EE installs.</li>
 <li>Corrected a glitch in Ascension Irenicus's Mislead.</li>
 <li>Several mages (including a couple of rakshasa, a kobold witch-doctor, and a few BG2EE-added creatures) inadvertently got skipped by "Smarter Mages" and are now included properly.</li>
@@ -2260,8 +2339,112 @@ href="http://iesdp.gibberlings3.net/">Infinity Engine Structure Description Proj
              <li>'Smarter Vampires' no longer gets confused if SR version of invisibiliy is present.</li>
 <li>Fixed a bug in SR that can cause enemy-summoned Death Knights to be attacked by their allies
 <li>Fixed a bug in SR that prevented Holy Smite causing blindness
-
              </ul>
+             <b>Incremental updates</b>
+             <ul>
+             <li>Version 32.1 (4th June 2019)
+             <ul>
+                  <li>Updated Italian translation (thanks, Improbabilile)</li>
+                  <li>Fixed glitches in the difficulty system for Ascension</li>
+             </ul>
+             <li>Version 32.2 (10th June 2019)
+             <ul>
+<li>Fixed some typos in the Italian translation</li>
+<li>Preprogrammed teleport sequences (e.g. Davaeorn's) should no longer crash the game if triggered after the caster's death</li>
+<li>'Alignment-appropriate fiend summoning' subcomponent is now compatible with Tome and Blood</li>
+<li>SCS code to give IDS entries for SR spells is a bit more robust against a third mod messing with spell.ids</li>
+<li>Fixed a serious problem with DS that was causing crashes on non-EE installs</li>
+<li>Wand18 no longer has 2 projectiles</li>
+<li>Wild mage Chaos Shield didn't work properly due to a bug in Detectable Spells</li>
+<li>Auto-leveller gives wild mages their innately-granted spells</li>
+<li>We now edit Greywolf's script more surgically, so that it works properly on EE</li>
+<li>Insect Plague tweaks are now working correctly</li>
+<li>Bodhi in Ascension uses her Fire Shield (on Insane) and her other powers</li>
+<li>Abazigal in Ascension doesn't come forward before his cutscene triggers</li>
+<li>Fixed a vanilla bug in Fire Shield where some versions of Fire Shield were coded as zero-level and so bypassed certain immunities</li>
+</ul>
+<li>Version 32.3 (23rd June 2019)
+<ul>
+<li>Protective-item detection now fixed</li>
+<li>Improved Dragon hit points now work correctly when Ascension is installed</li>
+<li>Fixed the 'customise NPC level/class' ability, which 32.2 broke.</li>
+<li>Corrected typo in spell-revisions IDS file.</li>
+<li>Druids no longer get Armor of Faith if Spell Revisions is installed.</li>
+<li>NPC-detection code now allows correctly for NPCs in SoD.</li>
+<li>'Fear' in Durlag's tower is no longer indestructible in certain (mostly EET) situations.</li>
+<li>Journal and chapter updates are now handled slightly more elegantly by 'Make WK accessible' component</li>
+<li>Under the hood change: we now do script edits using the newer alter_script library rather than the lib_bcs library in sfo. Inter alia, this handles spaces in scripts properly, which was causing install failures in some (rare) circumstances.</li>
+<li>Although his Balor flunkies still chafe under Irenicus's yoke, they no longer attempt to rebel by attacking him or his other servants in Hell. (Actually, this was a wider bug that might have affected other Balors too.)</li>
+<li>Nabassu paralysation aura now requires only one saving throw, as intended</li>
+</ul>
+<li>Version 32.4 (14th July 2019)
+<ul>
+<li>The cutscene with the black dragons in Abazigal's lair no longer hangs</li>
+<li>Summoned boneguards get the right size animation</li>
+<li>Summoned ogre berserkers get Enrage</li>
+<li>Fixed a vanilla bug in the EE summoned-monster script that makes it stutter when foes go invisible (this was fixed in BG2EE on 32.3 but not on BGEE)</li>
+<li>Bombardier beetle stun/deafness now grants a saving throw (see full readme for details)</li>
+<li>Bombardier beetle stun no longer displays duplicate or inappropriate strings</li>
+<li>Fixed some oddities in spiderwebs on BGEE/Tutu</li>
+<li>Dorn no longer gets duplicate abilities in 'Improved NPC customisation/management'</li>
+<li>Some summoned monsters were missing on BGEE versions of IWD spells</li>
+<li>IWD-spell-summoned creatures' weapons are now unbreakable</li>
+<li>Added an in-game note to tell the player they need to save and reload to get Wild Mage spells after using 'NPC customisation and management'</li>
+<li>Druid swift-shapeshift is now controlled from the ini, rather than checking if the player is using swift-shapeshift (this was supposed to be present in v32.0 but was broken)</li>
+<li>Lizard man shades now have weapons</li>
+<li>Cause Light Wounds no longer does duplicate damage</li>
+<li>Storm Shell doesn't stack with itself</li>
+<li>Cure Serious Wounds and Cure Critical Wounds now have their alignment restrictions removed properly</li>
+</ul>
+<li>Version 32.5 (20th August 2019)
+<ul>
+<li>Italian translation updated (thanks, improb@bile)
+<li>IWD vampire-mage spell list referred to SUMMON_BONEGUARD instead of CREATE_BONEGUARD, causing Smarter Mages installation to fail in (rare) cases where a L18+ vampire mage was present</li>
+</ul>
+<li>Version 32.6 (22nd September 2019)
+<ul>
+<li>Updated function library to use a new and hopefully more reliable area-reflecter for Abazigal's lair</li>
+<li>Various fixes to the NPC customiser:</li>
+<ul>
+<li>Mage/Thief is now available as a multi-class option; fighter/mage/thief is not duplicated</li>
+<li>Sorcerers should now level up correctly</li>
+<li>Characters whose class is customized into or out of a multiclass should now level up correctly</li>
+<li>Customised characters now gain levels according to their new class, not their old class</li>
+<li>If you dual-class a character, they no longer gain extra XP</li>
+<li>Sorcerers no longer get extra spells</li>
+ </ul>
+<li>The Cowled Wizards have noted the softening market in heroic quests and have lowered the maximum charge for Spellhold from 1,120,000gp to 120,000 gp.</li>
+<li>Creatures with immunity to normal weapons no longer use Protection from Normal Missiles</li>
+<li>Restored compatibility with IWDification</li>
+<li>Lesser elementals now have the Small animation again</li>
+<li>Priests normally refrain from attacking under Sanctuary</li>
+<li>Fiends no longer use spells in the dead-magic area in WK</li>
+<li>Insect Plague should no longer be cast on targets who are protected from it</li>
+<li>Innate contingencies should now use the correct level for dual-class and multi-class mages</li>
+<li>The Baldur's Gate thieves' guild have reconsidered their loyalties and no longer automatically support Resar if he attacks the party</li>
+<li>The Ogre Mage leader in the ambush outside Candlekeep now goes hostile properly</li>
+<li>Odamaron's lich apprentice is properly named</li>
+<li>Odamaron's apprentices are now guaranteed to be the same alignment as he is (this prevents Blood War clashes if they all summon fiends)</li>
+<li>Temporarily disabled Improved Abazigal's Lair component on non-EE installs. The new areas are causing CTDs that I can't immediately work out how to fix (and I don't have time right now for an extended investigation)</li>
+<li>Improved Shapeshifting now installs correctly on top of CDTweaks "enforce dual-class proficiency restrictions". (There is a bug in the CDtweaks component that corrupts the CLAB files; I fix it en passant.)</li>
+<li>Random potion drops should no longer lead to occasional crashes on large installs</li>
+<li>Balors now use Implosion properly</li>
+<li>"Fine weapons" component no longer removes magic weapons from summoned undead</li>
+<li>Cleared up some minor issues with summoned fiends</li>
+</ul>
+<li>Version 32.7 (6th October 2019)
+<ul>
+<li>Fixed nasty bug with NPC customiser</li>
+</ul>
+</li>
+<li>Version 32.8 (22nd February 2020)
+<ul>
+<li>Fixed compatibility issues with SRv4b17+</li>
+<li>Fixed wrong mod version displayed for non-English installs</li>
+</ul>
+</li>
+</ul>
+
 </div>
 
 <div class="ribbon_rectangle_h3"><h3><h3>Version 31 (September 2018)</h3></div>

@@ -1,455 +1,1137 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-<title>Ascension</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ascension</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="style/g3readme_cam_022916.css" type="text/css" />
 <link href="style/g3icon.ico" rel="icon" type="image/bmp" />
 </head>
-<body> 
-<div id="container">
-  <div class="ribbon_menu">
-    <ul>
-      <li><a href="#over">Overview</a></li>
-      <li><a href="#compatibility">Compatibility</a></li>
-      <li><a href="#install">Installation</a></li>
-      <li><a href="#content">Contents</a></li>
-      <li><a href="#customisation">Customisation</a></li>
-      <li><a href="#credit">Credits</a></li>
-      <li><a href="#acknow">Acknowledgements</a></li>
-      <li><a href="#copy">Copyright info</a></li>
-      <li><a href="#version">History</a></li>
-    </ul>
-    <span><!--<img src="html_files/logo.gif" width="305" height="83" alt="G3" />--></span> </div>
-    <div class="ribbon_bubble">
-    <div class="ribbon_rectangle">
-<h1>Ascension</h1>
-</div>
 
-    <div class="ribbon_triangle-l"></div>
-    <div class="ribbon_triangle-r"></div>
-<div class="section"> 
- <!-- <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />  </strong>  -->
-Current maintainer for this version: </strong><a href="http://www.gibberlings3.net/forums/index.php?showuser=1067">DavidW</a></p>
-  <p><strong>Version 2.0</a></strong><br />
-    <strong> Languages:</strong> Chinese, Czech, English, French, German, Italian, Polish, Russian, Spanish<br />
-    <strong>Platforms: </strong>Windows, Linux, Mac OS X</p>
-</div>
-<div class="ribbon_rectangle_h2"><h2><a name="over" id="over"></a>Overview</h2></div>
+<body>
+    <div id="container">
+        <div class="ribbon_menu">
+            <ul>
+                <li><a href="#over">Overview</a></li>
+                <li><a href="#compatibility">Compatibility</a></li>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#content">Contents</a></li>
+                <li><a href="#customisation">Customisation</a></li>
+                <li><a href="#credit">Credits</a></li>
+                <li><a href="#acknow">Acknowledgements</a></li>
+                <li><a href="#copy">Copyright info</a></li>
+                <li><a href="#version">History</a></li>
+            </ul>
+            <span>
+                <!--<img src="html_files/logo.gif" width="305" height="83" alt="G3" />--></span>
+        </div>
+        <div class="ribbon_bubble">
+            <div class="ribbon_rectangle">
+                <h1>Ascension</h1>
+            </div>
 
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-<p>Ascension is a collection of changes to Throne of Bhaal, aimed at providing a richer story and more tactically interesting gameplay. Its largest component completely rewrites the finale (chapter 10) of Throne of Bhaal, adding new enemies and new allies; other components enhance the tactical challenge of many of the key battles in Throne of Bhaal, improve plot-central dialogues and player abilities, and more.</p>
-<p>Ascension dates back to the dawn of Baldur's Gate modding: the designers were Cuveronious, Quitch, Xyx, Spork, Vulgar Zildrah, and Kensai Ryu, and the project team leader was David Gaider, one of the writers on Throne of Bhaal itself (and later lead writer for the Dragon Age series). It has gone through many updates and many maintainers since then - Westley Weimer (original author of WEIDU); and Miloch; White Agnus and JediMindTrix; AlienQuake, and more - with contributions from many other modders.</p>
-<p>This version is coded by DavidW (author of Sword Coast Stratagems and Wheels of Prophecy). It is a fairly systematic, ground-up rewrite of Ascension using modern coding techniques and taking advantage of Enhanced Edition functionality (while remaining backward-compatible with non-enhanced versions of Throne of Bhaal). In the rewrite, the component structure of Ascension was modified, breaking the main component into several sub-components (this was not possible in the original Ascension because of the very limited modding methods of the time), a very large number of small bugs were fixed, and some minor changes in implementation were made, reflecting modern coding methods and resources. I have tried to remain extremely faithful to the original Ascension. (Still, purists might want to look at the <a href="#customisation">customisation</a> section for how to get a completely faithful experience.)</p>
-<p>
-This is probably redundant eighteen years after Ascension's release, but I have hidden the name of the final villain of Throne of Bhaal through the main part of this readme; I refer to her by her first initial, A.
-</p>
+            <div class="ribbon_triangle-l"></div>
+            <div class="ribbon_triangle-r"></div>
+            <div class="section">
+                <!--<p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br /></strong>-->
+                Current maintainer for this version: </strong>
+                <a href="https://www.gibberlings3.net/profile/1067-davidw/">DavidW</a>
+                <!--</p>-->
+                <p>
+                    <strong>Version: 2.0.11</a></strong><br />
+                    <strong>Languages: </strong>Chinese, Czech, English, French, German, Italian, Polish, Russian,
+                    Spanish<br />
+                    <strong>Platforms: </strong>Windows, Linux, macOS
+                </p>
+            </div>
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="over" id="over"></a>Overview</h2>
+            </div>
 
-</div>
-<div class="ribbon_rectangle_h2"><h2><a name="compat" id="compat"></a>Compatibility</h2> </div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>
+                    Ascension is a collection of changes to Throne of Bhaal, aimed at providing a richer story and more
+                    tactically interesting gameplay. Its largest component completely rewrites the finale (chapter 10)
+                    of Throne of Bhaal, adding new enemies and new allies; other components enhance the tactical
+                    challenge of many of the key battles in Throne of Bhaal, improve plot-central dialogues and player
+                    abilities, and more.
+                </p>
+                <p>
+                    Ascension dates back to the dawn of Baldur's Gate modding: the designers were Cuveronious, Quitch,
+                    Xyx, Spork, Vulgar Zildrah, and Kensai Ryu, and the project team leader was David Gaider, one of the
+                    writers on Throne of Bhaal itself (and later lead writer for the Dragon Age series). It has gone
+                    through many updates and many maintainers since then - Westley Weimer (original author of WeiDU);
+                    and Miloch; White Agnus and JediMindTrix; AL|EN, and more - with contributions from many other
+                    modders.
+                </p>
+                <p>
+                    This version is coded by DavidW (author of Sword Coast Stratagems and Wheels of Prophecy). It is a
+                    fairly systematic, ground-up rewrite of Ascension using modern coding techniques and taking
+                    advantage of Enhanced Edition functionality (while remaining backward-compatible with non-enhanced
+                    versions of Throne of Bhaal). In the rewrite, the component structure of Ascension was modified,
+                    breaking the main component into several sub-components (this was not possible in the original
+                    Ascension because of the very limited modding methods of the time), a very large number of small
+                    bugs were fixed, and some minor changes in implementation were made, reflecting modern coding
+                    methods and resources. I have tried to remain extremely faithful to the original Ascension. (Still,
+                    purists might want to look at the <a href="#customisation">customisation</a> section for how to get
+                    a completely faithful experience.)
+                </p>
+                <p>
+                    This is probably redundant eighteen years after Ascension's release, but I have hidden the name of
+                    the final villain of Throne of Bhaal through the main part of this readme; I refer to her by her
+                    first initial, A.
+                </p>
 
-<div class="section">
-<p>Ascension is compatible with both the original and Enhanced-Edition versions of Throne of Bhaal, as well as the Baldur's Gate Trilogy and Enhanced Edition Trilogy. On non-Enhanced versions of the game, it requires the BG2 fixpack, available at <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">Gibberlings Three</a>, to be installed first.</p>
-<p>Ascension is probably best installed fairly early in a multi-mod installation order (though of course after the fixpack) and in particular it should be installed before any tactical mods like Sword Coast Stratagems. (Because Ascension has been an iconic mod right through the modding era, many mods are likely to be aware of it and respond to it, but that requires Ascension to be installed first.)</p>
+            </div>
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="compat" id="compat"></a>Compatibility</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
 
-</div>
-<div class="ribbon_rectangle_h2"><h2><a name="install" id="install"></a>Installation</h2> </div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>
+                    Ascension is compatible with both the original and Enhanced-Edition versions of Throne of Bhaal, as
+                    well as the Baldur's Gate Trilogy and Enhanced Edition Trilogy. On non-Enhanced versions of the
+                    game, it requires the BG2 fixpack, available at
+                    <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">Gibberlings Three</a>, to be installed
+                    first.
+                </p>
+                <p>
+                    Ascension is probably best installed fairly early in a multi-mod installation order. (Because Ascension
+                    has been an iconic mod right through the modding era, many mods are likely to be aware of it and respond
+                    to it, but that requires Ascension to be installed first.) However, version 2.0 is much more compatibility-
+                    friendly than earlier versions, so it is less crucial to install it first.
+                </p>
+                <p>
+                    These specific mods should be installed <b>before</b> Ascension 2.0:
+                    <ul>
+                        <li>Edwin Romance (version 2.0.7) - Ascension has code specifically to allow for this mod
+                        </li>
+                        <li>Iylos (version 2.6) - Ascension has code specifically to allow for this mod
+                        </li>
+                        <li>The BG2 Fixpack - as noted above, Ascension actually requires this mod on a non-Enhanced
+                            install.
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    These specific mods should be installed <b>after</b> Ascension 2.0:
+                    <ul>
+                        <li>Longer Road EE
+                        </li>
+                        <li>Spell Revisions
+                        </li>
+                        <li>Sword Coast Stratagems
+                        </li>
+                        <li>Turnabout
+                        </li>
+                        <li>Wheels of Prophecy
+                        </li>
+                    </ul>
+                </p>
+
+            </div>
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="install" id="install"></a>Installation</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
 
 
-<div class="section">
-      <p><strong>Windows</strong><br />
-        Ascension is distributed as a self-extracting   archive and includes a WeiDU installer. To install, simply double-click  the archive and follow the instructions on screen.</p>
-      <p>Alternatively, the files can be extracted into your game directory using <a href="http://www.7-zip.org/download.html">7zip</a> or <a href="http://www.rarlab.com/download.htm">WinRAR</a>. When properly extracted, your game directory will contain <strong>setup-ascension.exe</strong> and the folder <strong>ascension</strong>. To install, double-click <strong>setup-ascension.exe</strong> and follow the instructions on screen.</p>
-      <p>You can run <strong>setup-ascension.exe</strong> in your game folder to reinstall, uninstall or otherwise change components.</p>
-      <p><strong>Mac OS X</strong><br />
-        Ascension for Mac OS X is distributed as a compressed tarball and includes a WeiDU installer.</p>
-      <p>First, extract the files from the tarball into your game directory. When properly extracted, your game directory will contain <strong>setup-ascension</strong>, <strong>setup-ascension.command</strong>, and the folder <strong>ascension</strong>. To install, double-click <strong>setup-ascension.command</strong> and follow the instructions on screen.</p>
-      <p>You can run <strong>setup-ascension.command</strong> in your game folder to reinstall, uninstall or otherwise change components.</p>
-      <p><strong>Linux</strong><br />
-        Ascension for Linux is distributed as a compressed tarball and does not include a WeiDU installer.</p>
-      <p>Extract the contents of the mod to the folder of the game you wish to modify.</p>
-      <p>Download the latest version of WeiDU for Linux from <a href="http://www.weidu.org/%7Ethebigg/">WeiDU.org</a> and copy WeiDU and WeInstall to /usr/bin. Following that, open a terminal, cd to your game installation directory, run tolower   and answer Y to both queries. You can avoid running the second option   (linux.ini) if you've already ran it once in the same directory. To save   time, the archive is already tolowered, so there's no need to run the   first option (lowercasing file names) either if you've extracted only   this mod since the last time you lowercased file names. If you're   unsure, running tolower and choosing both options is the safe bet.</p>
-      <p>To install, run WeInstall ascension in your game folder. Then run wine BGMain.exe and start playing. </p>
-      <p><strong> Note for Complete Uninstallation</strong><br />
-        In addition to the methods above for removing individual components, you can completely uninstall the mod using setup-ascension --uninstall at the command line to remove all components without wading through prompts. . </p>
+            <div class="section">
+                <p>
+                    <strong>Windows</strong><br />
+                    Ascension is distributed as a self-extracting archive and includes a WeiDU installer. To install,
+                    simply double-click the archive and follow the instructions on screen.
+                </p>
+                <p>
+                    Alternatively, the files can be extracted into your game directory using
+                    <a href="http://www.7-zip.org/download.html">7zip</a> or <a
+                        href="http://www.rarlab.com/download.htm">WinRAR</a>.
+                    When properly extracted, your game directory will contain <strong>setup-ascension.exe</strong> and
+                    the folder
+                    <strong>ascension</strong>. To install, double-click <strong>setup-ascension.exe</strong> and follow
+                    the instructions on screen.
+                </p>
+                <p>
+                    You can run <strong>setup-ascension.exe</strong> in your game folder to reinstall, uninstall or
+                    otherwise change components.</p>
+                <p>
+                    <strong>macOS</strong><br />
+                    Ascension for macOS is distributed as a compressed tarball and includes a WeiDU installer.</p>
+                <p>
+                    First, extract the files from the tarball into your game directory. When properly extracted, your
+                    game directory will contain <strong>setup-ascension</strong>,
+                    <strong>setup-ascension.command</strong>, and the folder <strong>ascension</strong>. To install,
+                    double-click <strong>setup-ascension.command</strong> and follow the instructions on screen.</p>
+                <p>
+                    You can run <strong>setup-ascension.command</strong> in your game folder to reinstall, uninstall or
+                    otherwise change components.
+                </p>
+                <p><strong>Linux</strong><br />
+                    Ascension for Linux is distributed as a compressed tarball and does not include a WeiDU installer.
+                </p>
+                <p>Extract the contents of the mod to the folder of the game you wish to modify.</p>
+                <p>
+                    Download the latest version of WeiDU for Linux from <a
+                        href="http://www.weidu.org/%7Ethebigg/">WeiDU.org</a> and copy WeiDU and WeInstall to /usr/bin.
+                    Following that, open a terminal, cd to your game installation directory, run tolower and answer Y to
+                    both queries. You can avoid running the second option (linux.ini) if you've already ran it once in
+                    the same directory. To save time, the archive is already tolowered, so there's no need to run the
+                    first option (lowercasing file names) either if you've extracted only this mod since the last time
+                    you lowercased file names. If you're unsure, running tolower and choosing both options is the safe
+                    bet.
+                </p>
+                <p>To install, run WeInstall ascension in your game folder. Then run wine BGMain.exe and start playing.
+                </p>
+                <p>
+                    <strong>Note for Complete Uninstallation</strong><br />
+                    In addition to the methods above for removing individual components, you can completely uninstall
+                    the mod using setup-ascension --uninstall at the command line to remove all components without
+                    wading through prompts.
+                </p>
+            </div>
+
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="content" id="content"></a>Contents</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>
+                    This is a fairly spoiler-free, minimal list of contents. In many places I have included a quote from
+                    the original Ascension readmes (usually from David Gaider) to explain the contents. Much more
+                    detailed (and spoiler-y) descriptions of many parts of Ascension can be found in the
+                    <a href="ascension-additional.html">additional content notes</a>
+                    (see also the specific links below to the additional content notes).
+                </p>
+            </div>
+            <div class="ribbon_rectangle_h3">
+                <h3><a name="ascension" id="ascension"></a>The Ascension</h3>
+            </div>
+            <div class="ribbon_triangle_h3-l"></div>
+            <div class="ribbon_triangle_h3-r"></div>
+            <div class="section">
+                <div class="spell_description">
+                    <p>
+                        Some people like the ending to Throne of Bhaal well enough, I guess. I liked it well enough (I
+                        did a lot of the work on it, after all), but I remember wishing that we had had the time to
+                        tinker with it more. At Bioware we never seemed to have enough time to tinker with the Infinity
+                        Engine scripting language as much as I might have liked. With better AI and some leisurely time
+                        spent considering various options, the ending might have been more fully realized. That's a game
+                        designer's fantasy, obviously, especially when you're working within the time-frame of an
+                        expansion (which must come out while the game's still on peoples' HARD-drives)...but seeing as a
+                        mod like this can be done in one's spare time, it doesn't have to be. Consider this my offering
+                        of what might have been. You might not necessarily like it better...heck, you might not even
+                        like it at all...but I think it shows off what the Infinity Engine can do when stretched to its
+                        limit and offers a bit more bite to Throne of Bhaal's climax for those who think that's not a
+                        bad idea.
+                    </p>
+                    <p>
+                        The whole thing started on Black Isle's BG2 message boards. A friend of mine, Kevin Dorner ...
+                        had expressed a bit of disappointment at the fact that he had had no choice but to fight the
+                        strongest member of the Five, Balthazar. Balthazar was a Lawful Good monk, after all, and
+                        wouldn't a charismatic and heroic Lawful Good character be able to maybe talk some sense into
+                        him? He suggested that it would have been better to offer a non-fighting alternative or, hey,
+                        how about getting Balthazar to fight with you in the final battle?</p>
+                    <p>
+                        Another poster (alas, I forget who exactly) offered another idea that it would have been a great
+                        idea if the Five had been resurrected in the final battle...that it would be cool to face them
+                        all at once. And I agreed...that was a very interesting idea.</p>
+                    <p>
+                        So the Ascension was born. At first it was just a bit of extra dialogue for Balthazar and some
+                        work on the final battle, itself...but it's turned into a lot more than was expected.</p>
+                    <div align="right">
+                        <p><b>David Gaider</b></p>
+                    </div>
+                </div>
+
+                <p>
+                    These components collectively make up the original 'Ascension' mod. They all relate to the core
+                    story
+                    of the player's conflict with his/her essence and the others who seek it.
+                    <p><strong>Rewritten final chapter</strong></p>
+
+                    <div class="spell_description">
+                        <p>The highlights of the Ascension, itself, are: ...
+                            <ul>
+                                <li>
+                                    <p>
+                                        Irenicus & Bodhi: ... [F]or those of you who wouldn't think of pairing up with a
+                                        goody two-shoes pansy like Balthazar, there's another opportunity for an ally in
+                                        the final battle here, as well.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        a totally redone final battle: the battle at the Throne of Bhaal has been
+                                        completely redone, from start to finish. Gone are the Elemental Princes and the
+                                        multiple battles with A. and her Slayer Shadows. A. has been completely re-done,
+                                        and the allies she brings to bear against you make this a whole new fight. ...
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        better AI: a lot of work has gone into the AI of the opponents you'll face. You
+                                        can often disrupt their spells, but they'll work at preventing you from being
+                                        able to. They are still immune to stuff that's appropriate, but the stuff they
+                                        aren't immune to they will try and deal with when you use it on them. They'll
+                                        target appropriate opponents with the appropriate attacks and generally use
+                                        their abilities wisely. A. is still a power-house...but she's practically a
+                                        demigod...the fight against her this time is much more tactical and you've got
+                                        to figure out how to weaken her before you can take her down.</p>
+                                </li>
+                                <div align="right">
+                                    <p>
+                                        <b>David Gaider</b>
+                                    </p>
+                                </div>
+                    </div>
+                    <p>
+                        This component entirely replaces Chapter 10 of Throne of Bhaal, substantially affecting both the
+                        story and the tactical gameplay. A detailed walkthrough, with spoilers, is <a
+                            href="ascension-additional.html#ascension_details">here</a>, so I'll say little about the
+                        contents beyond Gaider's comments above. But anyone new to Ascension should know two things.
+                        Firstly, it is highly responsive to the difficulty slider (even more so in this version than in
+                        previous versions). And secondly, it is much more difficult than the baseline game. If you are
+                        used to playing Baldur's Gate on Core difficulty and without difficulty mods, I recommend trying
+                        Ascension on the Easy, or at most the Normal, difficulty setting. 'Core' difficulty is probably
+                        about equivalent to the lower end of the Sword Coast Stratagems mod. For veterans of Ascension,
+                        'Hard' fairly accurately reproduces the 'Core" experience of previous versions of Ascension;
+                        'Core' is slightly easier than previously.</p>
+                    <p>
+                        In the original Readme, Gaider laments that he can't disable the automatic increased/decreased
+                        damage on different difficulty settings; modern tools allow this on either the Enhanced Edition
+                        or on Windows versions of original Throne of Bhaal, and this version of Ascension implements
+                        Gaider's wishes. See under <a href="#customisation">customisation</a> for how to disable this
+                        (though in the Enhanced Edition, you can just do so on the Gameplay page).
+                    </p>
+
+
+                    <p><strong>Redeemable Balthazar</strong></p>
+                    <div class="spell_description">
+                        <p>
+                            Balthazar has a lot more to discuss with you when you meet him in his stronghold. He's a
+                            Lawful Good monk determined to destroy Bhaal and his evil essence forever, even in
+                            himself...but, depending on your own nature, you may be able to talk him into forgoing a
+                            battle or even fighting A. at your side. This is, however, not an easy thing to do.
+                        </p>
+                        <div align="right">
+                            <p><b>David Gaider</b></p>
+                        </div>
+                    </div>
+                    <p>
+                        This implementation of Balthazar separates the possibility of redeeming him as an ally both from
+                        the general rewrite of Chapter 10 and from the 'tougher Balthazar' tactical improvement (now a
+                        separate component). This means in particular that you can get Balthazar's help against A. even
+                        if you decide to go for the non-Ascension version of chapter 10. (This is code by DavidW,
+                        adapted from the Wheels of Prophecy mod.) If you want some hints on how Balthazar can be
+                        redeemed, see <a href="ascension-additional.html#redeeming_balthazar">here.</a></p>
+                    <p>
+                        Version 2.0 also makes Balthazar's powers fully usable by the player (this required some minor
+                        tweaks in the powers themselves, and some icons borrowed, with thanks, from the ones CamDawg
+                        designed for Kish's Oversight mod). For full details of Balthazar's powers, see
+                        <a href="ascension-additional.html#balthazar_abilities">here</a>.
+                    </p>
+                    <p>You can toggle Balthazar's AI on and off with the 'E' hotkey.</p>
+                    <p><strong>Improved Sarevok-Player interactions</strong></p>
+                    <div class="spell_description">
+                        <p>
+                            Imoen and Sarevok have some dialogues with the PC in ToB that are fairly important. For
+                            Imoen, it involves her growing taint and she gets some Bhaalspawn abilities. For Sarevok, it
+                            involves the chance of him changing alignment. In ToB these were completely random...but
+                            since their stories come up in the Ascension, I thought it was important that these be seen.
+                        </p>
+                        <div align="right">
+                            <p>
+                                <b>David Gaider</b>
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        This component ensures that Sarevok's key interactions with the player definitely happen,
+                        instead
+                        of being random. Sarevok will have these discussions with the player (unless they happen to come
+                        up randomly) the first time you rest after (i) he joins; (ii) Gromnir is defeated; (iii) the
+                        first of Sendai and Abazigal is defeated.
+                    </p>
+                    <p>
+                        In addition, this component adds conversation, and a weapon upgrade, if you return to Sarevok
+                        his
+                        old sword, which you probably picked up in Irenicus's dungeon.</p>
+                    <p>
+                        <strong>Improved Imoen-Player interactions</strong>
+                    </p>
+                    <p>
+                        This component ensures that the key interactions with Imoen, likewise, actually happen; they
+                        trigger (if not before) on resting after: (i) you start Throne of Bhaal; (ii) Yaga-Shura is
+                        defeated; (iii) Balthazar is first encountered.
+                    </p>
+                    <p>
+                        <strong>Restored Bhaalspawn Powers</strong>
+                    </p>
+                    <p>
+                        Throne of Bhaal contains unimplemented content granting the player some new Bhaalspawn powers;
+                        this component restores them. Powers are awarded after each of the Pocket Plane challenges
+                        (except the fourth), with a good or evil flavor according to the attitude you express in your
+                        conversations with the Solar.
+                    </p>
+                    <p>
+                        (This implementation also has code by DavidW restoring your <b>original</b> Bhaalspawn powers
+                        (since it doesn't make much sense that you gain new powers but never get those back even once
+                        your soul is restored). See under <a href="#customisation">customisation</a> for how to turn it
+                        off if you don't want it.
+                    </p>
+                    <p>
+                        Detailed information on the powers can be found <a
+                            href="ascension-additional.html#bhaalspawn_powers">here</a>
+                        ; they are also documented in-game, by right-clicking on the power in Enhanced Edition, or as a
+                        journal entry in original
+                        BG2.
+                    </p>
+                    <p>
+                        <strong>Improved Slayer Transformation</strong>
+                    </p>
+                    <div class="spell_description">
+                        <p>
+                            The Slayer form that the player picks up in Spellhold all the way back in BG2 now upgrades.
+                            It does so when you exceed 2 million, 4 million and 6 million XP. The upgrades get
+                            considerably stronger and deadlier, and one big change you will notice is that occasionally
+                            you will lose control over yourself. The Slayer can sometimes go berserk and will attack the
+                            nearest target...this can last one round or go on for several...although there will always
+                            be a respite in the very last round before you take too much damage. The last upgrade gives
+                            the player the option to become the Ravager...the ultimate incarnation of murder...which is
+                            incredibly powerful but also the most difficult form to control.
+                        </p>
+                        <div align="right">
+                            <p><b>David Gaider</b></p>
+                        </div>
+                    </div>
+                    Detailed information on the Slayer form can be found <a
+                        href="ascension-additional.html#slayer">here</a>
+                    and is also documented in-game, by right-clicking on the Slayer Change power in Enhanced Edition,
+                    or as a journal entry in original BG2. It is possible to customise several features of the slayer,
+                    including the XP thresholds at which the form changes and the level of reputation loss; see under
+                    <a href="#customisation">customisation</a> for details.
+                </p>
+                <p>
+                    <strong>Expanded Epilogues</strong>
+                </p>
+                <div class="spell_description">
+                    [N]ot all of the epilogues have changed, but some of them have been lengthened to what they had been
+                    originally written as. A couple have changed completely, and a few new ones have been added.
+                    <div align="right">
+                        <p><b>David Gaider</b></p>
+                    </div>
+                </div>
+                <p>
+                    This component expands and modifies the epilogues (the text played just before the credits) for
+                    several of the Bioware NPCs: Aerie, Anomen, Cernd, Haer'Dalis, Imoen, Jaheira, Mazzy, Nalia,
+                    Sarevok, Valygar, and Viconia. (There are no changes to Edwin, Jan, Keldorn, Korgan, or Minsc (or to
+                    the NPCs added by the Enhanced Edition, i.e. Dorn, Hexxat, Neera, Rasaad, and Wilson). Viconia
+                    receives a new epilogue if her alignment changes to non-evil; Sarevok receives a new epilogue if he
+                    <em>remains</em> evil.
+                </p>
+                <p>
+                    As of about 2015 (~version 1.6 of Ascension) an alternative set of epilogues written by Shawne was
+                    added (including extended epilogues for the Bioware NPCs not extended by original Ascension) and is
+                    available as an alternative. It's a matter of taste whose writing style you prefer: Gaider's or
+                    Shawne's. (If you want a preview, you can see the raw (English-language) text of Gaider's versions
+                    as a text file <a href="../lang/english/epilogues.tra">here</a>, and Shawne's alternatives
+                    <a href="../lang/english/shawnesepilogues.tra">here</a>.
+                </p>
+
+            </div>
+            <div class="ribbon_rectangle_h3">
+                <h3><a name="misctweaks" id="misctweaks"></a>Tougher Enemies</h3>
+            </div>
+            <div class="ribbon_triangle_h3-l"></div>
+            <div class="ribbon_triangle_h3-r"></div>
+            <div class="section">
+
+                <p>
+                    These components leave the story essentially unchanged, but significantly enhance the difficulty of
+                    some of the key fights in Throne of Bhaal. All the battles with powerful Bhaalspawn, except for
+                    Sendai, are modified; so is the confrontation with Demogorgon. None of these components respond much
+                    to the difficulty slider. All are written by David Gaider (the 'tougher Balthazar' component was
+                    part of the original Ascension component and had some input from other members of the Ascension
+                    team).
+                </p>
+                <p>
+                    Detailed information on the Bhaalspawn's abilities can be found
+                    <a href="ascension-additional.html#abilities_immunities_the_five">here</a>.
+                </p>
+                <p><strong>Tougher Abazigal</strong></p>
+                <div class="spell_description">
+                    <p>
+                        Some of the posters [on 2001-vintage discussion forums] were recommending a multiple-dragon
+                        battle, so I added in some smaller drakes and a purple dragon into the Abazigal fight. The AI
+                        has been tweaked heavily as well, blending in the mobility of Draconis (whom many thought was
+                        tougher than his father). It's quite the fight, now...NOT for the faint of heart...but I'm told
+                        it's quite fun.
+                        <div align="right">
+                            <p><b>David Gaider</b></p>
+                        </div>
+                </div>
+                <p>
+                    A note about this version: the modding tools available when this component was originally written
+                    made it extremely difficult to add new names for creatures, so the drakes added use rather strange
+                    names re-used from minor peasants and shopkeepers in the original Baldur's Gate (and are not
+                    identified in game as drakes at all). I (DavidW) took the opportunity to give them more evocative
+                    and meaningful names: Earth Drake, Fire Drake, Ice Drake, Shadow Drake. (If you prefer the
+                    originals, you can disable this; see under <a href="#customisation">customisation</a>.) Technically
+                    this is also true for the purple dragon, 'Tamah': she is named for an incredibly minor character in
+                    BG1. But Tamah has rather better name recognition, so I've left this alone.
+                </p>
+                <p>
+                    This version also modifies the humanoid-form version Abazigal to include his much more sophisticated
+                    script and powers from the Final-Five battle (minus the Spell Trigger and Chain Contingency that he
+                    saves to use in dragon form), rather than the very rudimentary script in the original 'tougher
+                    enemies', and to use the magical/electrical damage sword he wields in that battle. Again, see under
+                    <a href="#customisation">customisation</a> for how to turn these choices off.
+                </p>
+                <p><strong>Tougher Balthazar</strong></p>
+                <p>
+                    This component enhances Balthazar and his monks when you encounter them late in Chapter 9, and
+                    improves their AI. It is extracted from the original 'Ascension' component (it is not the original,
+                    ancient 'tougher Balthazar' which Gaider wrote before Ascension).
+                </p>
+                <p><strong>Tougher Demogorgon</strong></p>
+                <div class="spell_description">
+                    <p>
+                        [These changes] have been provided by BioWare Senior Designer David Gaider as a supplement to
+                        the
+                        Throne Of Bhaal expansion. They increase the difficulty of the Demogorgon battle, as it was
+                        originally planned before it was "toned down" for game balance reasons.
+                    </p>
+                    <div align="right">
+                        <p><b>From the original component's readme</b></p>
+                    </div>
+                </div>
+                <p>
+                    This implementation of 'Tougher Demogorgon' makes some cosmetic improvements to Demogorgon's Gate
+                    spells (the gate animation plays properly before the demons appear, rather than being overlaid on
+                    already-summoned demons) and also implements a change made around v1.5 of Ascension, where the
+                    'Summon the Infernal Host' spell is renamed to 'Summon the Abyssal Host' for lore reasons. (As usual
+                    you can disable both: see under <a href="#customisation">customisation</a>.)
+                </p>
+                <p><strong>Tougher Gromnir</strong></p>
+                <div class="spell_description">
+                    <p>
+                        It's just a little spruce-up to a fight that I
+                        thought was a little boring...it makes Gromnir a bit more formidable and
+                        gives both him and the other Bhaalspawn with him some extra abilities and
+                        better scripting. I'm told it's of moderate difficulty but quite fun.
+                    </p>
+                    <div align="right">
+                        <p><b>David Gaider</b></p>
+                    </div>
+                </div>
+                <p>
+                    This version of 'Tougher Gromnir' reads back to the original Gromnir the standard suite of
+                    protections that Throne of Bhaal's Bhaalspawn get in Ascension. It also provides new names for two
+                    added creatures: as with the 'Tougher Abazigal' component, additional creatures have re-used names,
+                    in this case taken from a Beregost shopkeeper and from one of Sendai's allies. I rename them
+                    'Minotaur Battle-Priest' and 'Il-Khan Medusa'. As usual, see under <a
+                        href="#customisation">customisation</a> for how to disable these tweaks.
+                </p>
+                <p><strong>Tougher Illasera</strong></p>
+                <div class="spell_description">
+                    <p>
+                        It is not very high difficulty...as a battle
+                        right at the beginning of the game shouldn't be...but it does make Illasera
+                        a credible opponent and member of the Five. She's a ranger/archer now,
+                        which was her original concept before we were forced to make the battle
+                        much, much easier (since people could potentially meet her with a single,
+                        newly-created sorcerer...and since the fight was unavoidable, those who
+                        couldn't get past it would be quite frustrated).
+                    </p>
+                    <div align="right">
+                        <p><b>David Gaider</b></p>
+                    </div>
+                    <p>
+                        Despite what Gaider is saying, the Tougher Illasera
+                        battle is widely regarded as insanely difficult (although certain tactics,
+                        like the shield of reflection, physical mirror or a mordy jail can make it
+                        too simple). It's much HARDer than the Yaga-Shura or Gromnir fights.
+                    </p>
+                    <div align="right">
+                        <p><b>Westley Weimer</b></p>
+                    </div>
+                </div>
+                <p>
+                    Although I (DavidW) haven't tested it on the original game, at least in Enhanced-Edition BG2 an
+                    engine glitch means that Illasera's powerful magical arrows deliver their payload twice per hit,
+                    which would certainly enhance the difficulty! This is fixed in this version. (It's obviously a bug,
+                    so I haven't offered a way to disable it.)
+                </p>
+                <p><strong>Tougher Yaga-Shura</strong></p>
+                <div class="spell_description">
+                    <p>
+                        This mod makes the last fight with Yaga-Shura a
+                        bit more of a tussle... the army spawns have been increased in number and
+                        given better AI (as well as had some low-level mages and clerics thrown
+                        into the mix). Yaga-Shura himself has been given some better powers and
+                        AI, including his lieutenants...and his invulnerability slowly wears off
+                        during the course of the battle with him, making this fight a bit trickier.
+                    </p>
+                    <div align="right">
+                        <p><b>David Gaider</b></p>
+                    </div>
+                </div>
+                <p>
+                    Note that this version (and indeed the last several releases) fixes a notorious crash bug in this
+                    component, present at least up to v1.4 of Ascension. This version also names Yaga-Shura's army
+                    clerics in line with the way all other army members are named, i.e. just as 'Yaga-Shura Cleric'. (As
+                    with other components, original Ascension could not introduce new strings, and so had to re-use an
+                    existing name - in this case, 'Cleric of Talos'. As usual, see under
+                    <a href="#customisation">customisation</a> for how to disable this.)</p>
+            </div>
+
+            <div class="ribbon_rectangle_h3">
+                <h3><a name="additional" id="additional"></a>Additional content</h3>
+            </div>
+            <div class="ribbon_triangle_h3-l"></div>
+            <div class="ribbon_triangle_h3-r"></div>
+            <div class="section">
+                <p>
+                    These components were written after the release of the original Ascension, and are not part of the
+                    content produced by David Gaider (though one of them is by one of Gaider's co-writers.) The first
+                    three were included in Ascension releases around version 1.6; the fourth and fifth are new in
+                    version 2.0.</p>
+                <p><strong>Full-body portrait for Bodhi</strong></p>
+                <p>
+                    This component (whose author I don't know) uses the full-body illustration of Bodhi (used in the
+                    game's promotional material, and used by Ascension for Bodhi's epilogue) as her in-game
+                    illustration, used in her dialogue. You can see the portrait
+                    <a href="../ascport/altbodhi/abodhi_330.bmp" target="_blank">here</a></p>
+                <p><strong>Alternate Balthazar portrait, by Cuv</strong></p>
+                <p>
+                    This component introduces a new portrait for Balthazar, used for his dialogs and for his epilogue if
+                    you recruit him. You can see the portrait <a href="../ascport/cuvbalth/cbaltha_330.bmp"
+                        target="_blank">here</a>. The artist is Lorne Ledger, aka 'Cuv' or 'Cuveronius', who worked on
+                    the original Ascension and wrote Balthazar's epilogue (and who also coded parts of the first
+                    conversion of Ascension to the Enhanced Edition).</p>
+                <p><strong>Extended Epilogues for additional Beamdog NPCs by shawne (Enhanced Edition only)</strong></p>
+                <p>
+                    This component extends and modifies the epilogues for all of the new Beamdog NPCs (Dorn, Hexxat,
+                    Neera, Rasaad, Wilson); it also adds two new epilogues for Dorn (one applies if he is romancing a
+                    player who ascends; the other applies if Dorn loses his blackguard status). You can get a preview of
+                    the new epilogues by using a text editor to open ascension/lang/english/shawnesepilogues_eenpc.tra.
+                </p>
+                <p><strong>Sharpened portraits of Abazigal and Gromnir, by DavidW (Enhanced Edition only)</strong></p>
+                <p>
+                    The portraits for most NPCs in BG2 are upscaled in the Enhanced Edition, but for some reason
+                    Abazigal, Balthazar and Gromnir were omitted. The engine automatically scales the portraits, but
+                    they end up quite blurry as a result. In the case of Balthazar, Ascension automatically supplies a
+                    sharp, higher-resolution image; this component makes some attempt to do the same for Abazigal and
+                    Gromnir, using Photoshop's sharpening algorithm. You can see the effect if you compare
+                    <a href="../ascport/dwsharpen/grom_old.png" target="_blank">old</a> and
+                    <a href="../ascport/dwsharpen/grom_new.png" target="_blank">new</a> versions of Gromnir - it's not
+                    dramatic, but it's a noticeable improvement.
+                </p>
+                <p><strong>Slightly improved Bhaalspawncutscenes, by DavidW</strong></p>
+                <p>
+                    This minor component slightly tightens the implementation of the cutscenes just before encountering
+                    Yaga-Shura and Gromnir. In the former, the soldiers you run into don't sometimes randomly give the
+                    same line three times. In the latter, the party arrive in Gromnir's throne room just after Melissan
+                    is taken away, rather than standing around passively and watching while this happens.
+                </p>
+            </div>
+
+            <div class="ribbon_rectangle_h2">
+                <h2> <a name="customisation" id="customisation"></a>Customisation options (contains spoilers)</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>
+                    As of version 2.0, Ascension permits a significant amount of "fine tuning" over and above your
+                    install
+                    choices, using the file "ascension.ini", found in the ascension directory. To do this, just edit the
+                    file in Notepad or another text editor. Each line consists of a configuration option, then '=', then
+                    a
+                    value (almost always a number). The only thing you should edit is the value. Note that the .ini file
+                    is
+                    read during installation of Ascension; changing it after you have finished installing will have no
+                    effect.
+                </p>
+                <p>
+                    The current options are listed below, by section. I list the default value in parentheses after the
+                    setting.
+                </p>
+                <strong>Regeneration</strong>
+                <p>
+                    There was a systematic bug in all pre-2.0 versions of Ascension, which meant that the (many)
+                    creatures who were given the ability to regenerate did not actually receive it. Originally I
+                    intended just to fix this - but some of the rates are quite fast, and I'm worried about unbalancing
+                    the game (after all, Ascension's playtesting was with the bug present). I toyed with setting it up
+                    so that regeneration only happened at or above a certain difficulty: 'HARD', by default. But in the
+                    end I decided to deactivate it. These settings let you reactivate it, and tweak it.</p>
+                <ul>
+                    <li>skip_regeneration_fix(1) - set to 0 to enable the fixes to regeneration.</li>
+                    <li>regeneration_difficulty_minimum(4) - this determines the minimum difficulty setting when
+                        regeneration occurs, on a scale where 1=Easy, 2=Normal, 3=Core, 4=Hard, 5=Insane. (Of course,
+                        this is moot unless regeneration is enabled.)</li>
+                    <li>yaga_shura_regenerates(0) - Yaga-Shura has a regeneration rate of 7 hit points per second, and
+                        in combination with his very high resistances I worry this will be especially unbalanced; so by
+                        default, it's disabled. Set this to 1 to enable it.</li>
+                </ul>
+                <strong>Demons</strong>
+                <p>These variables control tweaks I made to a few of the demons in Chapter 10. (For more details, see
+                    the comments in the file 'ascension_demons.tpa', in ascension/ascensionmain.</p>
+                <ul>
+                    <li>restore_original_babau_weapon(0) - Babaus have a weapon clearly inspired (as with most of
+                        Ascension's demons) by second edition D&D's demons: in that source material, Babaus are covered
+                        in slime which causes weapons to corrode. But the implementation is weird, and uses the
+                        unpopular 'drop weapons in panic' opcode. I replace it with a thematically similar effect - a
+                        5-round, -2 to melee damage, -2 to melee attack, penalty, with a 20% chance of being applied
+                        with each hit, no save. Set this to 1 to restore the original weapon.</li>
+                    <li>restore_original_glabrezu_weapon(0) - Similarly, Glabrezu have a D&D-inspired grab ability,
+                        which has some odd implementation glitches. I redo this, fairly minimally - but set this
+                        variable to 1 if you want the original weapon.</li>
+                </ul>
+                <strong>Slayer form</strong>
+                <p>These make tweaks to the player's Slayer form, including the upgraded versions introduced by
+                    Ascension.</p>
+                <ul>
+                    <li>slayer_enhancement_threshold_1 (2000000) - this is the XP required to gain the first slayer
+                        upgrade. I don't actually change this (2,000,000 is Gaider's original choice), it's just
+                        externalised for players who want to customise it.</li>
+                    <li>slayer_enhancement_threshold_2 (4000000) - the XP threshold required to gain the second slayer
+                        upgrade.</li>
+                    <li>slayer_enhancement_threshold_3 (6000000) - the XP threshold required to gain the final slayer
+                        upgrade.</li>
+                    <li>slayer_reputation_penalty_1 (1) - the Reputation penalty incurred each time you use the Slayer.
+                        This is actually unchanged from the original version in Ascension; again, it's just externalised
+                        for players' convenience. (Note that in-game documentation is not adjusted if you change this
+                        value.)</li>
+                    <li>slayer_reputation_penalty_2 (1) - the Reputation penalty incurred when you use the upgraded form
+                        of the Slayer you get at 2 million XP.</li>
+                    <li>slayer_reputation_penalty_3 (2) - the Reputation penalty incurred when you use the
+                        still-further-upgraded form of the Slayer you get at 4 million XP.</li>
+                    <li>slayer_reputation_penalty_4 (3) - the Reputation penalty incurred when you change into the
+                        Ravager.</li>
+                    <li>slayer_2_regeneration (2) - the per-second regeneration rate of the upgraded Slayer form. This
+                        is a v2.0 tweak (part of a slight rebalancing / systematising of the Slayer form, and based on
+                        Imoen's slayer form); the original Ascension value for this and other regeneration rates is
+                        zero. Tweaks to this value (and the two that follow) are reflected in in-game documentation on
+                        the Enhanced Edition.</li>
+                    <li>slayer_3_regeneration (3) - the per-second regeneration rate of the second upgraded Slayer form.
+                        (Again, the original Ascension value is zero.)</li>
+                    <li>ravager_regeneration (5) - the per-second regeneration rate of the Ravager form. (The original
+                        Ascension value is zero; this matches the actual Ravager.)</li>
+                    <li>slayer_mr_reduction (10) - the Magic Resistance reduction caused by the slayer's hits when a
+                        Dispel Magic is triggered (which happens 10% of the time for the second upgraded Slayer form).
+                        This is a slight tweak on the original Ascension value, which is 5%.</li>
+                    <li>ravager_knockback (0) - the Ravager form in original Ascension has an automatic knockback on a
+                        small fraction of hits. My experience of knockbacks is that they are bug-prone (creatures get
+                        knocked into inaccessible areas) and so are probably best avoided, given that the Ravager power
+                        can be used anywhere and might not be under the player's control. But you can set this value to
+                        1 to re-enable it.</li>
+                    <li>additive_slayer_hitpoints(1) - Ascension documentation is a bit unclear as to whether the slayer
+                        form is supposed to get a fixed *number* of hit points, or a fixed *bonus* to hit points. To be
+                        honest it's probably the former, but as a matter of balance the latter works better (the slayer
+                        form can actually be a hit point downgrade for fighters). By default, Ascension makes it
+                        additive; set this to zero to make it a fixed hit point level.</li>
+                </ul>
+                <strong>Player powers</strong>
+
+                <p>These affect the various powers acquired by the player (except the Slayer form).</p>
+                <ul>
+                    <li>no_restored_bg1_powers (1) - set this to 0 if you don't want the original Bhaalspawn powers
+                        (taken from you in Spellhold) to be regained at the start of Throne of Bhaal (or have already
+                        installed/plan to install a component of another mod that does it).</li>
+                    <li>demon_control_battle_duration (3) - this determines the length, in seconds, of the mental battle
+                        that the player fights with demons in the final chapter. In original Ascension it's 6 seconds,
+                        with a 50% chance of success, but removing the player from play for a full round in exchange for
+                        a 50% chance of controlling a demon seems underpowered (and much weaker than Melissan's
+                        comparable ability). So I've tweaked the default values to make it a bit more effective,
+                        matching Melissan's.</li>
+                    <li>demon_control_success_probability (75) - this is the percentage probability of the player's
+                        demon control power works. (The original Ascension default, as noted above, is 50%.) </li>
+                    <li>unleash_dice_number (20) - this is the number of d12 rolled to determine the damage of the
+                        player's 'unleash' power, with a save for half. In original Ascension it's 10d12, but I think
+                        that's underpowered for this ability (especially given its disadvantages) so I've tweaked it up
+                        by default.</li>
+                    <li>replace_duhm (1) - one of the good-aligned Bhaalspawn powers is 'Draw Upon Holy Might',
+                        repeating one of the original BG1 powers. This seems a bit unexciting (all the other powers are
+                        new) so I replace it with a thematically-similar, slightly-more-powerful ability, 'Divine Gift'
+                        (see <a href="ascension-additional.html#bhaalspawn_powers"> here</a> for the details). Set this
+                        to 0 to restore the original Draw Upon Holy Might.</li>
+                    <li>dimdoor_classic(0) - the teleport power that the player is granted in chapter 10 is, by default,
+                        the standard Dimension Door power. Version 2.0 of Ascension tweaks it to something a bit more
+                        visually new; but set this to 1 to restore the original.</li>
+                </ul>
+                <strong>The Five</strong>
+                <p>These affect the Five Bhaalspawn and their minions.</p>
+                <ul>
+                    <li>gromnir_immunities (1): by default, Gromnir gets the same suite of immunities that all
+                        Bhaalspawn get. This wasn't the case in original Ascension; I think this was probably an
+                        oversight or error, but in any case set this to 0 to restore original behavior.</li>
+                    <li>gromnir_ally_renames (1): if this is 1, then Gromnir's minotaur and medusa allies get new
+                        names; if it is zero, they continue to use recycled names from elsewhere in BG and BG2.</li>
+                    <li>abazigal_drake_renames (1): similarly, set this to 0 to get Abazigal's drakes to revert to
+                        using names borrowed from elsewhere in BG and BG2, rather than new names of their own.</li>
+                    <li>yagashura_cleric_rename (1): if this is 1, then the army clerics in Yaga-Shura's army are
+                        named as 'Yaga-Shura Cleric', along the lines of the rest of his army. If it is zero, they
+                        continue to use a recycled name from elsewhere in BG2 ('Cleric of Talos').</li>
+                    <li>tougher_abazigal_uses_finale_script (1): set it to 0 if you want Abazigal (when originally
+                        encountered) to use the original 'tougher enemies' version of his script, not the Final-Five
+                        version.</li>
+                    <li>tougher_abazigal_uses_sword (1): set it to 0 if you don't want Abazigal (when originally
+                        encountered) to use the undroppable variant on his sword that he carries in the Final-Five
+                        battle.</li>
+                    <li>lava_bomb_tweak (1): v2.0 of Ascension tweaks Lava Bomb's knockback to be more in line with
+                        similar effects elsewhere, so that it knocks its targets unconscious for 3 seconds if they
+                        fail to save at -10, rather than for 18 seconds if they fail to save at -2. Set this to 0 to
+                        revert to the classic behavior.</li>
+
+                </ul>
+                <strong>Miscellaneous settings</strong>
+                <p>These change other features of the mod.</p>
+                <ul>
+                    <li>no_ee_sarevok_sword_use_restriction (0): Sarevok gets to upgrade his Sword of Chaos; in
+                        original Ascension, that upgrade comes with a penalty applied to anyone except Sarevok.
+                        Since that penalty is too extreme for anyone in their right mind to tolerate it, I
+                        assume this is simply a way of restricting the weapon to Sarevok, which can't be done
+                        directly in original Baldur's Gate. Since it <em>can</em> be done on the Enhanced
+                        Edition, I implement it directly on BG2EE and EET installs; set this to 1 to revert to
+                        the original even in EE games.</li>
+                    <li>abyssal_host (1): Set this to 0 to prevent Demogorgon's lore-inaccurate 'summon the
+                        infernal host' power being rewritten as 'summon the abyssal host'.</li>
+                    <li>demogorgon_gate_aesthetics (1): set this to 0 to revert my cosmetic changes to
+                        Demogorgon's summoning power. (I've coded an override here because those cosmetic
+                        changes do slightly delay the demons' arrival, so there is a (very minor) tactical
+                        consequence.)</li>
+                    <li>enable_difficulty_based_damage_changes (0): set this to 1 to revert Ascension 2.0's
+                        default behavior (following Gaider's preference) of disabling the hardcoded damage
+                        changes caused by the difficulty slider.</li>
+                    <li>balthazar_hotkey(E): set this to whatever key you want to use to toggle Balthazar's AI
+                        on and off.</li>
+                    <li>ignore_sarevok_edge_case(0): it is possible for Sarevok to become good-aligned but not
+                        be in the party when you confront Melissan. In this situation, in vanilla Ascension
+                        Sarevok always opposes you. Perhaps this represents his backsliding towards evil if
+                        you're not around, but I think it's much more likely just to be an edge case the
+                        original writers didn't notice or didn't have time to sort. In any case, Ascension v2.0
+                        allows a redeemed-but-not-in-party Sarevok to end up rejecting Melissan's blandishments
+                        and joining you. Set this parameter to 1 if you want to revert to the original behavior.
+                    </li>
+                    <li>sarevok_hotkey(E): set this to whatever key you want to use to toggle Sarevok's AI on
+                        and off, in case he joins you in the final fight in the edge-case scenario above.</li>
+                </ul>
+                <strong>Internal/Debug</strong>
+                <p>Don't touch these: they're for testing and internal use.</p>
+
+            </div>
+
+
+
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="credit" id="credit"></a>Credits</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <strong>Original Mod Design</strong>
+                <ul>
+                    <li>Lead designer: David Gaider</li>
+                    <li>Designers: Cuveronious, Quitch, Xyx, Spork, Vulgar Zildrah, Kensai Ryu</li>
+                </ul>
+                <strong>WeiDU version (v1.4)</strong>
+                <ul>
+                    <li>Original design: Westley Weimer</li>
+                    <li>Subsequent contributions: Kish, Quitch, Jason Compton</li>
+                </ul>
+                <strong>Enhanced-edition version (v 1.5-1.7)</strong>
+                <ul>
+                    <li>Lead designers: JediMindTrix, WhiteAgnus</li>
+                    <li>Coding: Turumbar, Cuv, Miloch</li>
+                    <li>Subsequent maintainers: Aedan, Edvin, AL|EN, Quitch, agb1, badungu, CamDawg</li>
+                    <li>New epilogues: Shawne</li>
+                </ul>
+                <strong>Ascension 2.0</strong>
+                <ul>
+                    <li>Designer: DavidW</li>
+                    <li>Balthazar's spell icons: Kish and CamDawg</li>
+                </ul>
+                <p>This list may be incomplete (Ascension has had many maintainers over the years). Contact DavidW at
+                    the <a href="http://www.gibberlings3.net/forums">Gibberlings Three forums</a> for any emendations or
+                    additions.</p>
+            </div>
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="acknow" id="acknow"></a>Acknowledgements</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>For <strong>David Gaider's and Westley Weimer's acknowledgements</strong>, see <a
+                        href="doc/v 1.4 readme/Ascension-WeiDU-v1.4.24.txt">the v1.4 readme</a>.</p>
+                <p>For <strong>JediMindTrix's acknowledgements</strong>, see <a
+                        href="doc/v 1.5-1.7 readme/Ascension v17.txt">the v1.7 readme</a>.</p>
+                <strong>DavidW's acknowledgements:</strong>
+                <p>
+                    First and foremost, thanks to David Gaider and his original team. Ascension has stood the test of
+                    time as one of the all-time great mods; it's been a privilege to work on it.
+                </p>
+                <p>
+                    Secondly, huge thanks to those heroes - especially WhiteAgnus and JediMindTrix - who did the heavy
+                    lifting required to drag Ascension into the modern-coding, Enhanced-Edition era. Ascension 2.0 is
+                    built on the bones of their work and couldn't have existed without it.
+                </p>
+                <p>
+                    Thirdly, thanks to those who created the tools that made the modern Infinity Engine modding scene
+                    possible: in particular, Westley Weimer, for the original WeiDU; TheBigg and Wisp for developing it
+                    into the remarkable tool it now is; CamDawg, for building many of the function libraries on which
+                    Ascension is constructed and for leading the 'Fixpack' project which Ascension 2.0 relies on;
+                    Ascension64, for finally realising David Gaider's goal of a more finely controllable difficulty
+                    setting.
+                </p>
+                <p>
+                    The icons for Balthazar's abilities are borrowed from the Oversight mod; thanks to its creator,
+                    Kish,
+                    for permission, and to CamDawg for actually creating the icons (at least according to the readme; he
+                    doesn't actually remember doing so :) ).
+                </p>
+                <p>
+                    Last but not least, thanks to the original Bioware team for Throne of Bhaal, and to Beamdog - and
+                    the
+                    many modders and ex-modders who work with them - for reinventing the Infinity Engine.
+                </p>
+            </div>
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="copy" id="copy"></a>Copyright Information</h2>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>The original content of Ascension is &copy;2001, David Gaider.</p>
+                <p>Ascension is not released under any formal license (they are not really enforceable in the modding
+                    world, in any case). Its authors and maintainers have generally worked with the consent of their
+                    predecessors, and with a respect for what has been done before. If you borrow code or content from
+                    Ascension, please give full credit in your own mod when you do so.</p>
+
+            </div>
+            <div class="ribbon_rectangle_h2">
+                <h2><a name="version" id="version"></a>Version History</h2>
+            </div>
+
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>
+                    This is split into two parts: a detailed changelog for v2.0 and later, and a more abbreviated
+                    description of the major.
+                </p>
+            </div>
+            <div class="ribbon_rectangle_h3">
+                <h3>Version 2.0 changelog</h3>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>2.0.0 2 June 2019</p>
+                <ul>
+                    <li>Original release of v2</li>
+                </ul>
+                <p>2.0.1 - 3 June 2019</p>
+                <ul>
+                    <li>Fixed a crash bug with Bodhi's return-to-humanoid-form spell</li>
+                </ul>
+                <p>2.0.2 - 3 June 2019</p>
+                <ul>
+                    <li>Slightly tweaked pool dialog, to more robustly give Imoen powers and to allow for compatibility
+                        with Turnabout</li>
+                </ul>
+                <p>2.0.3 - 3 June 2019</p>
+                <ul>
+                    <li>Fixed critical bug whereby some of the Five weren't getting their scripts</li>
+                    <li>Babau now have the correct names</li>
+                </ul>
+                <p>2.0.4 - 10 June 2019</p>
+                <ul>
+                    <li>Fixed a bug in DS that was leading to crashes on non-EE installs</li>
+                    <li>Added some guards against Fallen Solars using spells on their allies</li>
+                    <li>Tightened up the logic of Tougher Abazigal's initial cutscene</li>
+                    <li>Final-Five Abazigal wasn't getting his spells</li>
+                    <li>Final-Five Abazigal should use the wizard version of stoneskin, not the dragon version</li>
+                    <li>Tougher Abazigal now uses the script and resources of the Final-Five version (can be overridden
+                        via the ini)</li>
+                    <li>Slight refactoring of the dialogs to facilitate SCS difficulty system (no in-game effect, this
+                        is just to remove problems caused by text substitution into OR() blocks)</li>
+                </ul>
+                <p>2.0.5 - 12 June 2019</p>
+                <ul>
+                    <li>Fixed version number inside tp2</li>
+                </ul>
+                <p>2.0.6 - 16 June 2019</p>
+                <ul>
+                    <li>gpmage1.baf is properly compiled</li>
+                    <li>Added native compatibility with Edwin Romance 2.0.7 and Iylos 2.6</li>
+                </ul>
+                <p>2.0.7 - 10 July 2019</p>
+                <ul>
+                    <li>Fixed a nasty bug with 2.0.6 that was breaking dialogs all along the critical path</li>
+                    <li>Balthazar no longer stutters during the fight with Irenicus</li>
+                    <li>Fixed some vanilla bugs in Irenicus's scripting: primarily, his Project Image and Simulacrum now work properly</li>
+                    <li>You no longer re-acquire the basic Slayer Power, and lose your original Bhaalspawn powers, on reload</li>
+                    <li>Melissan's defenses are properly reduced if Gromnir is killed</li>
+                    <li>Cosmetic improvements to the cutscene where the Five appear: all now appear visibly in the cutscene</li>
+                    <li>Cosmetic improvements to the cutscene when Melissan is defeated: any stray demons are removed so they don't clutter up the finale</li>
+                </ul>
+                <p>2.0.8 - 11 August 2019</p>
+                <ul>
+                    <li>Balthazar and Sarevok no longer cause crashes in the final battle on vanilla (non-Enhanced Edition) installs</li>
+                    <li>You no longer acquire your original Bhaalspawn powers early if you go to Watcher's Keep in SoA</li>
+                    <li>Fixed a minor English-language typo ('sacridice')</li>
+                    <li>Mod-added epilogues are no longer overwritten</li>
+                </ul>
+                <p>2.0.9 - 05 October 2019</p>
+                <ul>
+                    <li>Added globally unique identifiers for all components to allow other mods for interactions</li>
+                </ul>
+                <p>2.0.10 - 18 February 2020</p>
+                <ul>
+                    <li>Updated Italian translation</li>
+                    <li>formatting of the changelog</li>
+                </ul>
+                <p>2.0.11 - 16 May 2020</p>
+                <ul>
+                    <li>Slayer power is no longer granted (and re-granted, and regranted...) if you go to Watcher's Keep in SoA</li>
+					<li>slightly tightened the script that grants Bhaalspawn powers</li>
+					<li>Blocked a (rare) scenario where Balthazar or another NPC ally could get resurrected, mid-battle, as a neutral</li>
+					<li>'Slightly improved cutscenes' was erroneously requiring Enhanced Edition</li>
+					<li>Imoen and Sarevok's banters should now be less interruptable (thanks to Jastey for advice on this one)</li>
+					<li>Imoen's NPC dialogs no longer lead to a stutter-bug clash with Imoen Romance</li>
+					<li>Removed compatibility code with Iylos and Edwin, since those mods have updated to work without it</li>
+					<li>Enforced the requirement that Iylos and Spell Revisions are installed after Ascension</li>
+					<li>Melissan's spear ('spermel') is now patched correctly (and no longer throws a WARNING) if the beta fixes from BG2 fixpack are installed</li>
+
+
+                </ul>
+            </div>
+            <div class="ribbon_rectangle_h3">
+                <h3>Previous versions</h3>
+            </div>
+            <div class="ribbon_triangle_h2-l"></div>
+            <div class="ribbon_triangle_h2-r"></div>
+            <div class="section">
+                <p>(This account is incomplete; I (DavidW) would be interested in more details if anyone knows them.)
+                </p>
+                <strong>Version 1.1</strong> (David Gaider, c.2001)
+                <ul>
+                    <li>Original release (as a non-WeiDU mod, with files and .tlk just dropped in)</li>
+                    <li>Released at about the same time as (but I think not bundled with) Gaider's various 'tougher'
+                        mods</li>
+                    <li>Readmes for Ascension and the 'tougher' mods can be found in 'ascension/doc/original readmes'
+                    </li>
+                </ul>
+                <strong>Versions 1.2-1.3</strong> (David Gaider, c.2001)
+                <ul>
+                    <li>Subsequent non-WeiDU releases</li>
+                    <li>No recorded changelog</li>
+                </ul>
+                <strong>Version 1.4</strong> (Westley Weimer, c.2002)
+                <ul>
+                    <li>First release as a WeiDU mod (indeed, as one of the first WeiDU mods)</li>
+                    <li>Although the mod uses WeiDU, most files are simply overwrites</li>
+                    <li>Versions up to 1.4.41 released, though later ones mostly just update translations.</li>
+                    <li>Hosted at weidu.org (and still up there, as of 2019) with discussion forum at
+                        forums.pocketplane.net </li>
+                    <li>The Readme for Ascension-WeiDU can be found in 'ascension/doc/v 1.4 readme' </li>
+                </ul>
+                <strong>Version 1.5</strong> (WhiteAgnus/JediMindTrix, January 2016)
+                <ul>
+                    <li>Systematic rewriting to use more modern WeiDU tricks and to be compatible with the Enhanced
+                        Edition</li>
+                    <li>Based on earlier code by Cuv, Turumbar, and Miloch</li>
+                    <li>Hosted on WhiteAgnus's GitHub page</li>
+                    <li>No formal discussion forum</li>
+                    <li>Various contributions from other writers</li>
+                    <li>The Readme for the 1.5-era Ascension can be found in 'ascension/doc/v 1.5-1.7 readme' </li>
+                </ul>
+                <strong>Version 1.6</strong> (AL|EN, September 2016)
+                <ul>
+                    <li>In September 2016 Ascension moved to the BigWorldProject Github page (now renamed to InfinityMods).</li>
+                    <li>The version numbering had broken down by this point; I'm using '1.6' to refer to Ascension once it's moved to
+                        InfinityMods, but releases in this period just carried dates.</li>
+                    <li>Updates were localised bugfixes and translations; many contributors.</li>
+                </ul>
+                <strong>Version 1.7</strong> (multiple authors, November 2018)
+                <ul>
+                    <li>In November 2018, Roxanne collected together various fixes into a new release, and reinstated a
+                        versioning system, starting at 1.7.0</li>
+                    <li>This version of Ascension was still an incremental development of 1.5, and remained hosted at the
+                        BigWorldProject Github page (now renamed to InfinityMods).</li>
+
+                </ul>
+                <strong>Version 2.0</strong> (DavidW, June 2019)
+
+                <p>This was quite a large project and I may well have missed some small changes, but these are the main
+                    changes:</p>
+
+                <ul>
+                    <li>The main component of Ascension has been split into 8 subcomponents: rewritten chapter 10;
+                        redeemable Balthazar; restored Bhaalspawn powers; improved Sarevok/player dialog; improved
+                        Imoen/player dialog; improved Slayer transformation; extended epilogues; tougher Balthazar.
+                        (Ascension is so old that when it shipped, it was necessary to bundle as much as possible
+                        into one place because you could only add dialog lines once.)</li>
+                    <li>The components have been reorganized into three groups to make the mod's structure more
+                        transparent: the Ascension (the various bits of the main component, less Tougher Balthazar);
+                        Tougher Enemies; Additional Content (added to Ascension well after its release).</li>
+                    <li>Dozens of small (mostly cosmetic) bugs were fixed, and the logic of the final chapter has
+                        been tightened to correct a few persistent reported bugs</li>
+                    <li>Tightened up the cosmetic features of some cutscenes and abilities (the line between this
+                        and bugfixes is a little blurry.)</li>
+                    <li>The code for the pool powers fairly clearly allows that Imoen should be able to receive them
+                        instead of the player, but for technical reasons that wasn't working; I've restored it.</li>
+                    <li>Added additional code (though no additional dialog) to permit a redeemed Balthazar to help
+                        you even if you're using the original (non-Ascension) version of the final chapter</li>
+                    <li>If Balthazar is allied with you, you should get much finer control of him (the previous AI
+                        is quite willful) and can use any of his powers from the innate bar</li>
+                    <li>Lots of small changes to allow for better compatibility with the Enhanced Edition (e.g., the
+                        save-for-half flag is implemented; new innate powers have in-game descriptions instead of
+                        being described in journal entries)</li>
+                    <li>David Gaider's original Readme laments the fact that the hardcoded bits of the difficulty
+                        slider can't be disabled. Since they can be disabled in modern BG (either on the Enhanced
+                        Edition or on ToBex) I've disabled them, and taken the opportunity to spread the difficulty
+                        settings a bit more evenly. 'Insane' is still just as hard as ever, but on the lower
+                        difficulty settings the mod's combats are slightly less brutal than previously. (This is all
+                        documented in some detail.)</li>
+                    <li>Slightly tweaked the implementation of certain abilities to make use of modern tools and
+                        techniques (again, see the documentation.)</li>
+                    <li>In the original Ascension there is a (pretty edge-case) scenario where Sarevok is redeemed
+                        but then leaves the party only to be summoned by Melissan. I've allowed for this in
+                        Sarevok's dialog: he gets the 'redeemed' dialog option even if he has left the party, and
+                        can fight for you.</li>
+                    <li>The original mod's documentation suggests that there is a route through Balthazar's
+                        redemption for a high-wisdom Evil character. That wasn't actually the case in the
+                        distributed version so far as I can tell (and I checked the logic pretty thoroughly); I have
+                        tweaked the parameters of the conversation very slightly so that a narrow route now exists.
+                    </li>
+                    <li>Added a very small component of my own that fixes an anomaly on the cutscenes with
+                        Yaga-Shura and Gromnir (it could have lived in SCS but it seemed a more natural fit to
+                        Ascension).</li>
+                    <li>Added another small component of my own (for EE only) that sharpens the portraits for
+                        Gromnir and Abazigal (for some reason, BG2EE sharpens all the other portraits, but not those
+                        ones).</li>
+                    <li>The cutscene in 'tougher Abazigal' is a bit of a mess; I've rebuilt it.</li>
+                    <li>Restored the original Bhaalspawn powers as part of 'Restored Bhaalspawn powers': it doesn't
+                        seem logical that you get new powers and Imoen gets old-style powers but you never get the
+                        original ones.</li>
+                    <li>Ascension now has an ini file that allows power-users fine control over some features of the
+                        install. For instance, most of my tweaks that aren't straight bugfixes can be disabled
+                        there, and I've externalized some other features, e.g. the XP thresholds to upgrade the
+                        Slayer.</li>
+                    <li>Very thoroughly documented the whole mod, including detailed information (behind a spoiler
+                        link) on the effect of the difficulty slider.</li>
+                    <li>Under the hood: complete recoding of Ascension</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-
-
-<div class="ribbon_rectangle_h2"><h2><a name="content" id="content"></a>Contents</h2> </div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-<p>This is a fairly spoiler-free, minimal list of contents. In many places I have included a quote from the original Ascension readmes (usually from David Gaider) to explain the contents. Much more detailed (and spoiler-y) descriptions of many parts of Ascension can be found in the <a href="ascension-additional.html">additional content notes</a> (see also the specific links below to the additional content notes).</p>
-</div>
-  <div class="ribbon_rectangle_h3"><h3><a name="ascension" id="ascension"></a>The Ascension</h3></div>
-      <div class="ribbon_triangle_h3-l"></div>
-    <div class="ribbon_triangle_h3-r"></div>
-<div class="section">
-<div class="spell_description">
- <p>Some people like the ending to Throne of Bhaal well enough, I guess.  I liked it well enough (I did a lot of the work on it, after all), but I remember wishing that we had had the time to tinker with it more.  At Bioware we never seemed to have enough time to tinker with the Infinity Engine scripting language as much as I might have liked.  With better AI and some leisurely time spent considering various options, the ending might have been more fully realized.  That's a game designer's fantasy, obviously, especially when you're working within the time-frame of an expansion (which must come out while the game's still on peoples' HARD-drives)...but seeing as a mod like this can be done in one's spare time, it doesn't have to be.  Consider this my offering of what might have been.  You might not necessarily like it better...heck, you might not even like it at all...but I think it shows off what the Infinity Engine can do when stretched to its limit and offers a bit more bite to Throne of Bhaal's climax for those who think that's not a bad idea.</p>
-<p>The whole thing started on Black Isle's BG2 message boards.  A friend of mine, Kevin Dorner ... had expressed a bit of disappointment at the fact that he had had no choice but to fight the strongest member of the Five, Balthazar.  Balthazar was a Lawful Good monk, after all, and wouldn't a charismatic and heroic Lawful Good character be able to maybe talk some sense into him?  He suggested that it would have been better to offer a non-fighting alternative or, hey, how about getting Balthazar to fight with you in the final battle?</p>
-<p>
-Another poster (alas, I forget who exactly) offered another idea that it would have been a great idea if the Five had been resurrected in the final battle...that it would be cool to face them all at once.  And I agreed...that was a very interesting idea.</p>
-<p>
-So the Ascension was born.  At first it was just a bit of extra dialogue for Balthazar and some work on the final battle, itself...but it's turned into a lot more than was expected.</p>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-
-<p>These components collectively make up the original 'Ascension' mod. They all relate to the core story of the player's conflict with his/her essence and the others who seek it.
-<p><strong>Rewritten final chapter</strong></p>
-
-<div class="spell_description">
-<p>The highlights of the Ascension, itself, are: ...
-<ul>
-<li>
-<p>Irenicus & Bodhi: ... [F]or those of you who wouldn't think of pairing up with a goody two-shoes pansy like Balthazar, there's another opportunity for an ally in the final battle here, as well.</p></li>
-<li><p>a totally redone final battle: the battle at the Throne of Bhaal has been completely redone, from start to finish.  Gone are the Elemental Princes and the multiple battles with A. and her Slayer Shadows.  A. has been completely re-done, and the allies she brings to bear against you make this a whole new fight. ...</p></li>
-<li><p>better AI: a lot of work has gone into the AI of the opponents you'll face.  You can often disrupt their spells, but they'll work at preventing you from being able to.  They are still immune to stuff that's appropriate, but the stuff they aren't immune to they will try and deal with when you use it on them.  They'll target appropriate opponents with the appropriate attacks and generally use their abilities wisely.  A. is still a power-house...but she's practically a demigod...the fight against her this time is much more tactical and you've got to figure out how to weaken her before you can take her down.</p></li>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>
-This component entirely replaces Chapter 10 of Throne of Bhaal, substantially affecting both the story and the tactical gameplay. A detailed walkthrough, with spoilers, is <a href="ascension-additional.html#ascension_details">here</a>, so I'll say little about the contents beyond Gaider's comments above. But anyone new to Ascension should know two things. Firstly, it is highly responsive to the difficulty slider (even more so in this version than in previous versions). And secondly, it is much more difficult than the baseline game. If you are used to playing Baldur's Gate on Core difficulty and without difficulty mods, I recommend trying Ascension on the Easy, or at most the Normal, difficulty setting. 'Core' difficulty is probably about equivalent to the lower end of the Sword Coast Stratagems mod. For veterans of Ascension, 'Hard' fairly accurately reproduces the 'Core" experience of previous versions of Ascension; 'Core' is slightly easier than previously.</p> <p>In the original Readme, Gaider laments that he can't disable the automatic increased/decreased damage on different difficulty settings; modern tools allow this on either the Enhanced Edition or on Windows versions of original Throne of Bhaal, and this version of Ascension implements Gaider's wishes. See under <a href="#customisation">customisation</a> for how to disable this (though in the Enhanced Edition, you can just do so on the Gameplay page).</p>
-
-
-<p><strong>Redeemable Balthazar</strong></p>  
-<div class="spell_description">
-<p> Balthazar has a lot more to discuss with you when you meet him in his stronghold.  He's a Lawful Good monk determined to destroy Bhaal and his evil essence forever, even in himself...but, depending on your own nature, you may be able to talk him into forgoing a battle or even fighting A. at your side.  This is, however, not an easy thing to do. </p>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>This implementation of Balthazar separates the possibility of redeeming him as an ally both from the general rewrite of Chapter 10 and from the 'tougher Balthazar' tactical improvement (now a separate component). This means in particular that you can get Balthazar's help against A. even if you decide to go for the non-Ascension version of chapter 10. (This is code by DavidW, adapted from the Wheels of Prophecy mod.) If you want some hints on how Balthazar can be redeemed, see <a href="ascension-additional.html#redeeming_balthazar">here.</a></p>
-<p>Version 2.0 also makes Balthazar's powers fully usable by the player (this required some minor tweaks in the powers themselves, and some icons borrowed, with thanks, from the ones CamDawg designed for Kish's Oversight mod). For full details of Balthazar's powers, see <a href="ascension-additional.html#balthazar_abilities">here</a>.</p>
-<p>You can toggle Balthazar's AI on and off with the 'E' hotkey.</p>
-<p><strong>Improved Sarevok-Player interactions</strong></p>
-<div class="spell_description"><p>Imoen and Sarevok have some dialogues with the PC in ToB that are fairly important.  For Imoen, it involves her growing taint and she gets some Bhaalspawn abilities.  For Sarevok, it involves the chance of him changing alignment.  In ToB these were completely random...but since their stories come up in the Ascension, I thought it was important that these be seen.</p>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>This component ensures that Sarevok's key interactions with the player definitely happen, instead of being random. Sarevok will have these discussions with the player (unless they happen to come up randomly) the first time you rest after (i) he joins; (ii) Gromnir is defeated; (iii) the first of Sendai and Abazigal is defeated.</p>
-<p>In addition, this component adds conversation, and a weapon upgrade, if you return to Sarevok his old sword, which you probably picked up in Irenicus's dungeon.</p>
-<p><strong>Improved Imoen-Player interactions</strong></p> 
-<p>This component ensures that the key interactions with Imoen, likewise, actually happen; they trigger (if not before) on resting after: (i) you start Throne of Bhaal; (ii) Yaga-Shura is defeated; (iii) Balthazar is first encountered.</p>
-<p><strong>Restored Bhaalspawn Powers</strong></p>  
-<p>Throne of Bhaal contains unimplemented content granting the player some new Bhaalspawn powers; this component restores them. Powers are awarded after each of the Pocket Plane challenges (except the fourth), with a good or evil flavor according to the attitude you express in your conversations with the Solar.</p>
-<p>(This implementation also has code by DavidW restoring your <b>original</b> Bhaalspawn powers (since it doesn't make much sense that you gain new powers but never get those back even once your soul is restored). See under <a href="#customisation">customisation</a> for how to turn it off if you don't want it.</p>
-<p>Detailed information on the powers can be found <a href="ascension-additional.html#bhaalspawn_powers">here</a>; they are also documented in-game, by right-clicking on the power in Enhanced Edition, or as a journal entry in original BG2.</p>
-<p><strong>Improved Slayer Transformation</strong></p>
-<div class="spell_description">
-<p>The Slayer form that the player picks up in Spellhold all the way back in BG2 now upgrades.  It does so when you exceed 2 million, 4 million and 6 million XP.  The upgrades get considerably stronger and deadlier, and one big change you will notice is that occasionally you will lose control over yourself.  The Slayer can sometimes go berserk and will attack the nearest target...this can last one round or go on for several...although there will always be a respite in the very last round before you take too much damage.  The last upgrade gives the player the option to become the Ravager...the ultimate incarnation of murder...which is incredibly powerful but also the most difficult form to control.</p>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-Detailed information on the Slayer form can be found <a href="ascension-additional.html#slayer">here</a> and is also documented in-game, by right-clicking on the Slayer Change power in Enhanced Edition, or as a journal entry in original BG2. It is possible to customise several features of the slayer, including the XP thresholds at which the form changes and the level of reputation loss; see under <a href="#customisation">customisation</a> for details.</p>
-<p><strong>Expanded Epilogues</strong></p>
-<div class="spell_description">
-[N]ot all of the epilogues have changed, but some of them have been lengthened to what they had been originally written as.  A couple have changed completely, and a few new ones have been added.
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>This component expands and modifies the epilogues (the text played just before the credits) for several of the Bioware NPCs: Aerie, Anomen, Cernd, Haer'Dalis, Imoen, Jaheira, Mazzy, Nalia, Sarevok, Valygar, and Viconia. (There are no changes to Edwin, Jan, Keldorn, Korgan, or Minsc (or to the NPCs added by the Enhanced Edition, i.e. Dorn, Hexxat, Neera, Rasaad, and Wilson). Viconia receives a new epilogue if her alignment changes to non-evil; Sarevok receives a new epilogue if he <em>remains</em> evil.</p>
-<p>As of about 2015 (~version 1.6 of Ascension) an alternative set of epilogues written by Shawne was added (including extended epilogues for the Bioware NPCs not extended by original Ascension) and is available as an alternative. It's a matter of taste whose writing style you prefer: Gaider's or Shawne's. (If you want a preview, you can see the raw (English-language) text of Gaider's versions as a text file <a href="../lang/english/epilogues.tra">here</a>, and Shawne's alternatives <a href="../lang/english/shawnesepilogues.tra">here</a>.</p>
-
-
-
-    </div>
-  <div class="ribbon_rectangle_h3"><h3><a name="misctweaks" id="misctweaks"></a>Tougher Enemies</h3></div>
-      <div class="ribbon_triangle_h3-l"></div>
-    <div class="ribbon_triangle_h3-r"></div>
-    <div class="section">
-
-  <p> These components leave the story essentially unchanged, but significantly enhance the difficulty of some of the key fights in Throne of Bhaal. All the battles with powerful Bhaalspawn, except for Sendai, are modified; so is the confrontation with Demogorgon. None of these components respond much to the difficulty slider. All are written by David Gaider (the 'tougher Balthazar' component was part of the original Ascension component and had some input from other members of the Ascension team).</p>
-<p>Detailed information on the Bhaalspawn's abilities can be found <a href="ascension-additional.html#abilities_immunities_the_five">here </a>.</p>
-<p><strong>Tougher Abazigal</strong></p>
-<div class="spell_description">
-<p>Some of the posters [on 2001-vintage discussion forums] were recommending a multiple-dragon battle, so I added in some smaller drakes and a purple dragon into the Abazigal fight.  The AI has been tweaked heavily as well, blending in the mobility of Draconis (whom many thought was tougher than his father).  It's quite the fight, now...NOT for the faint of heart...but I'm told it's quite fun.
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>A note about this version: the modding tools available when this component was originally written made it extremely difficult to add new names for creatures, so the drakes added use rather strange names re-used from minor peasants and shopkeepers in the original Baldur's Gate (and are not identified in game as drakes at all). I (DavidW) took the opportunity to give them more evocative and meaningful names: Earth Drake, Fire Drake, Ice Drake, Shadow Drake. (If you prefer the originals, you can disable this; see under <a href="#customisation">customisation</a>.) Technically this is also true for the purple dragon, 'Tamah': she is named for an incredibly minor character in BG1. But Tamah has rather better name recognition, so I've left this alone.</p>
-<p>This version also adds to 'tougher Abazigal' one change to Ascension Abazigal's gear: his sword does magical and electrical damage, and slightly heals Abazigal with each hit. Again, see under <a href="#customisation">customisation</a> for how to turn it off.</p>
-<p><strong>Tougher Balthazar</strong></p>
-<p>This component enhances Balthazar and his monks when you encounter them late in Chapter 9, and improves their AI. It is extracted from the original 'Ascension' component (it is not the original, ancient 'tougher Balthazar' which Gaider wrote before Ascension).</p>
-<p><strong>Tougher Demogorgon</strong></p>
-<div class="spell_description">
-<p>[These changes] have been provided by BioWare Senior Designer David Gaider as a supplement to the Throne Of Bhaal expansion. They increase the difficulty of the Demogorgon battle, as it was originally planned before it was "toned down" for game balance reasons.
-<div align="right"><p><b>From the original component's readme</b></p></div>
-</div>
-<p>This implementation of 'Tougher Demogorgon' makes some cosmetic improvements to Demogorgon's Gate spells (the gate animation plays properly before the demons appear, rather than being overlaid on already-summoned demons) and also implements a change made around v1.5 of Ascension, where the 'Summon the Infernal Host' spell is renamed to 'Summon the Abyssal Host' for lore reasons. (As usual you can disable both: see under <a href="#customisation">customisation</a>.)</p>
-<p><strong>Tougher Gromnir</strong></p>
-<div class="spell_description">
-<p>It's just a little spruce-up to a fight that I
-thought was a little boring...it makes Gromnir a bit more formidable and
-gives both him and the other Bhaalspawn with him some extra abilities and
-better scripting.  I'm told it's of moderate difficulty but quite fun.</p>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>This version of 'Tougher Gromnir' reads back to the original Gromnir the standard suite of protections that Throne of Bhaal's Bhaalspawn get in Ascension. It also provides new names for two added creatures: as with the 'Tougher Abazigal' component, additional creatures have re-used names, in this case taken from a Beregost shopkeeper and from one of Sendai's allies. I rename them 'Minotaur Battle-Priest' and 'Il-Khan Medusa'. As usual, see under <a href="#customisation">customisation</a> for how to disable these tweaks.</p>
-<p><strong>Tougher Illasera</strong></p>
-<div class="spell_description">
-<p>It is not very high difficulty...as a battle
-right at the beginning of the game shouldn't be...but it does make Illasera
-a credible opponent and member of the Five. She's a ranger/archer now,
-which was her original concept before we were forced to make the battle
-much, much easier (since people could potentially meet her with a single,
-newly-created sorcerer...and since the fight was unavoidable, those who
-couldn't get past it would be quite frustrated).</p>
-<div align="right"><p><b>David Gaider</b></p></div>
-<p>Despite what Gaider is saying, the Tougher Illasera
-battle is widely regarded as insanely difficult (although certain tactics,
-like the shield of reflection, physical mirror or a mordy jail can make it
-too simple). It's much HARDer than the Yaga-Shura or Gromnir fights. </p>
-<div align="right"><p><b>Westley Weimer</b></p></div>
-</div>
-<p>Although I (DavidW) haven't tested it on the original game, at least in Enhanced-Edition BG2 an engine glitch means that Illasera's powerful magical arrows deliver their payload twice per hit, which would certainly enhance the difficulty! This is fixed in this version. (It's obviously a bug, so I haven't offered a way to disable it.)
-</p>
-<p><strong>Tougher Yaga-Shura</strong></p>
-<div class="spell_description">
-<p>This mod makes the last fight with Yaga-Shura a
-bit more of a tussle... the army spawns have been increased in number and
-given better AI (as well as had some low-level mages and clerics thrown
-into the mix).  Yaga-Shura himself has been given some better powers and
-AI, including his lieutenants...and his invulnerability slowly wears off
-during the course of the battle with him, making this fight a bit trickier.</p>
-<div align="right"><p><b>David Gaider</b></p></div>
-</div>
-<p>Note that this version (and indeed the last several releases) fixes a notorious crash bug in this component, present at least up to v1.4 of Ascension. This version also names Yaga-Shura's army clerics in line with the way all other army members are named, i.e. just as 'Yaga-Shura Cleric'. (As with other components, original Ascension could not introduce new strings, and so had to re-use an existing name - in this case, 'Cleric of Talos'. As usual, see under <a href="#customisation">customisation</a> for how to disable this.)</p>
-  </div>
-
-  <div class="ribbon_rectangle_h3"><h3><a name="additional" id="additional"></a>Additional content</h3></div>
-    <div class="ribbon_triangle_h3-l"></div>
-    <div class="ribbon_triangle_h3-r"></div>
-    <div class="section">
-<p>These components were written after the release of the original Ascension, and are not part of the content produced by David Gaider (though one of them is by one of Gaider's co-writers.) The first three were included in Ascension releases around version 1.6; the fourth and fifth are new in version 2.0.</p>
-<p><strong>Full-body portrait for Bodhi</strong></p>
-<p>This component (whose author I don't know) uses the full-body illustration of Bodhi (used in the game's promotional material, and used by Ascension for Bodhi's epilogue) as her in-game illustration, used in her dialogue. You can see the portrait <a href="../ascport/altbodhi/abodhi_330.bmp" target="_blank">here</a></p>
-<p><strong>Alternate Balthazar portrait, by Cuv</strong></p>
-<p>This component introduces a new portrait for Balthazar, used for his dialogs and for his epilogue if you recruit him. You can see the portrait <a href="../ascport/cuvbalth/cbaltha_330.bmp" target="_blank">here</a>. The artist is Lorne Ledger, aka 'Cuv' or 'Cuveronius', who worked on the original Ascension and wrote Balthazar's epilogue (and who also coded parts of the first conversion of Ascension to the Enhanced Edition).</p>
-<p><strong>Extended Epilogues for additional Beamdog NPCs by shawne (Enhanced Edition only)</strong></p>
-<p>This component extends and modifies the epilogues for all of the new Beamdog NPCs (Dorn, Hexxat, Neera, Rasaad, Wilson); it also adds two new epilogues for Dorn (one applies if he is romancing a player who ascends; the other applies if Dorn loses his blackguard status). You can get a preview of the new epilogues by using a text editor to open ascension/lang/english/shawnesepilogues_eenpc.tra.</p>
-<p><strong>Sharpened portraits of Abazigal and Gromnir, by DavidW (Enhanced Edition only)</strong></p>
-<p>The portraits for most NPCs in BG2 are upscaled in the Enhanced Edition, but for some reason Abazigal, Balthazar and Gromnir were omitted. The engine automatically scales the portraits, but they end up quite blurry as a result. In the case of Balthazar, Ascension automatically supplies a sharp, higher-resolution image; this component makes some attempt to do the same for Abazigal and Gromnir, using Photoshop's sharpening algorithm. You can see the effect if you compare <a href="../ascport/dwsharpen/grom_old.png" target="_blank">old</a> and <a href="../ascport/dwsharpen/grom_new.png" target="_blank">new</a> versions of Gromnir - it's not dramatic, but it's a noticeable improvement.</p>
-<p><strong>Slightly improved Bhaalspawncutscenes, by DavidW</strong></p>
-<p>This minor component slightly tightens the implementation of the cutscenes just before encountering Yaga-Shura and Gromnir. In the former, the soldiers you run into don't sometimes randomly give the same line three times. In the latter, the party arrive in Gromnir's throne room just after Melissan is taken away, rather than standing around passively and watching while this happens.</p>
-</div>
-
-<div class="ribbon_rectangle_h2"><h2> <a name="customisation" id="customisation"></a>Customisation options (contains spoilers)</h2> </div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-As of version 2.0, Ascension permits a significant amount of "fine tuning" over and above your install choices, using the file "ascension.ini", found in the ascension directory. To do this, just edit the file in Notepad or another text editor. Each line consists of a configuration option, then '=', then a value (almost always a number). The only thing you should edit is the value. Note that the .ini file is read during installation of Ascension; changing it after you have finished installing will have no effect.</p>
-<p>The current options are listed below, by section. I list the default value in parentheses after the setting.</p>
-<strong>Regeneration</strong>
-<p>There was a systematic bug in all pre-2.0 versions of Ascension, which meant that the (many) creatures who were given the ability to regenerate did not actually receive it. Originally I intended just to fix this - but some of the rates are quite fast, and I'm worried about unbalancing the game (after all, Ascension's playtesting was with the bug present). I toyed with setting it up so that regeneration only happened at or above a certain difficulty: 'HARD', by default. But in the end I decided to deactivate it. These settings let you reactivate it, and tweak it.</p>
-<ul>
-<li>skip_regeneration_fix(1) - set to 0 to enable the fixes to regeneration.</li>
-<li>regeneration_difficulty_minimum(4) - this determines the minimum difficulty setting when regeneration occurs, on a scale where 1=Easy, 2=Normal, 3=Core, 4=Hard, 5=Insane. (Of course, this is moot unless regeneration is enabled.)</li>
-<li>yaga_shura_regenerates(0) - Yaga-Shura has a regeneration rate of 7 hit points per second, and in combination with his very high resistances I worry this will be especially unbalanced; so by default, it's disabled. Set this to 1 to enable it.</li>
-</ul>
-<strong>Demons</strong>
-<p>These variables control tweaks I made to a few of the demons in Chapter 10. (For more details, see the comments in the file 'ascension_demons.tpa', in ascension/ascensionmain.</p>
-<ul>
-<li>restore_original_babau_weapon(0) - Babaus have a weapon clearly inspired (as with most of Ascension's demons) by second edition D&D's demons: in that source material, Babaus are covered in slime which causes weapons to corrode. But the implementation is weird, and uses the unpopular 'drop weapons in panic' opcode. I replace it with a thematically similar effect - a 5-round, -2 to melee damage, -2 to melee attack, penalty, with a 20% chance of being applied with each hit, no save. Set this to 1 to restore the original weapon.</li>
-<li>restore_original_glabrezu_weapon(0) - Similarly, Glabrezu have a D&D-inspired grab ability, which has some odd implementation glitches. I redo this, fairly minimally - but set this variable to 1 if you want the original weapon.</li>
-</ul>
-<strong>Slayer form</strong>
-<p>These make tweaks to the player's Slayer form, including the upgraded versions introduced by Ascension.</p>
-<ul>
- <li>slayer_enhancement_threshold_1 (2000000) - this is the XP required to gain the first slayer upgrade. I don't actually change this (2,000,000 is Gaider's original choice), it's just externalised for players who want to customise it.</li>
- <li>slayer_enhancement_threshold_2 (4000000) - the XP threshold required to gain the second slayer upgrade.</li>
- <li>slayer_enhancement_threshold_3 (6000000) - the XP threshold required to gain the final slayer upgrade.</li>
- <li>slayer_reputation_penalty_1 (1) - the Reputation penalty incurred each time you use the Slayer. This is actually unchanged from the original version in Ascension; again, it's just externalised for players' convenience. (Note that in-game documentation is not adjusted if you change this value.)</li>
-  <li>slayer_reputation_penalty_2 (1) - the Reputation penalty incurred when you use the upgraded form of the Slayer you get at 2 million XP.</li>
-  <li>slayer_reputation_penalty_3 (2) - the Reputation penalty incurred when you use the still-further-upgraded form of the Slayer you get at 4 million XP.</li>
-  <li>slayer_reputation_penalty_4 (3) - the Reputation penalty incurred when you change into the Ravager.</li>
-  <li>slayer_2_regeneration (2) - the per-second regeneration rate of the upgraded Slayer form. This is a v2.0 tweak (part of a slight rebalancing / systematising of the Slayer form, and based on Imoen's slayer form); the original Ascension value for this and other regeneration rates is zero. Tweaks to this value (and the two that follow) are reflected in in-game documentation on the Enhanced Edition.</li>
-  <li>slayer_3_regeneration (3) - the per-second regeneration rate of the second upgraded Slayer form. (Again, the original Ascension value is zero.)</li>
-  <li>ravager_regeneration (5) - the per-second regeneration rate of the Ravager form. (The original Ascension value is zero; this matches the actual Ravager.)</li>
-  <li>slayer_mr_reduction (10) - the Magic Resistance reduction caused by the slayer's hits when a Dispel Magic is triggered (which happens 10% of the time for the second upgraded Slayer form). This is a slight tweak on the original Ascension value, which is 5%.</li>
-  <li>ravager_knockback (0) - the Ravager form in original Ascension has an automatic knockback on a small fraction of hits. My experience of knockbacks is that they are bug-prone (creatures get knocked into inaccessible areas) and so are probably best avoided, given that the Ravager power can be used anywhere and might not be under the player's control. But you can set this value to 1 to re-enable it.</li>
-  <li>additive_slayer_hitpoints(1) - Ascension documentation is a bit unclear as to whether the slayer form is supposed to get a fixed *number* of hit points, or a fixed *bonus* to hit points. To be honest it's probably the former, but as a matter of balance the latter works better (the slayer form can actually be a hit point downgrade for fighters). By default, Ascension makes it additive; set this to zero to make it a fixed hit point level.</li>
-</ul>
-<strong>Player powers</strong>
-
-<p>These affect the various powers acquired by the player (except the Slayer form).</p>
-<ul>
-<li>no_restored_bg1_powers (1) - set this to 0 if you don't want the original Bhaalspawn powers (taken from you in Spellhold) to be regained at the start of Throne of Bhaal (or have already installed/plan to install a component of another mod that does it).</li>
-<li>demon_control_battle_duration (3) - this determines the length, in seconds, of the mental battle that the player fights with demons in the final chapter. In original Ascension it's 6 seconds, with a 50% chance of success, but removing the player from play for a full round in exchange for a 50% chance of controlling a demon seems underpowered (and much weaker than Melissan's comparable ability). So I've tweaked the default values to make it a bit more effective, matching Melissan's.</li>
-<li>demon_control_success_probability (75) - this is the percentage probability of the player's demon control power works. (The original Ascension default, as noted above, is 50%.) </li>
-<li>unleash_dice_number (20) - this is the number of d12 rolled to determine the damage of the player's 'unleash' power, with a save for half. In original Ascension it's 10d12, but I think that's underpowered for this ability (especially given its disadvantages) so I've tweaked it up by default.</li>
-<li>replace_duhm (1) - one of the good-aligned Bhaalspawn powers is 'Draw Upon Holy Might', repeating one of the original BG1 powers. This seems a bit unexciting (all the other powers are new) so I replace it with a thematically-similar, slightly-more-powerful ability, 'Divine Gift' (see <a href="ascension-additional.html#bhaalspawn_powers"> here</a> for the details). Set this to 0 to restore the original Draw Upon Holy Might.</li> 
-<li>dimdoor_classic(0) - the teleport power that the player is granted in chapter 10 is, by default, the standard Dimension Door power. Version 2.0 of Ascension tweaks it to something a bit more visually new; but set this to 1 to restore the original.</li>
-</ul>
-<strong>The Five</strong>
-<p>These affect the Five Bhaalspawn and their minions.</li>
-<ul>
-<li>gromnir_immunities (1): by default, Gromnir gets the same suite of immunities that all Bhaalspawn get. This wasn't the case in original Ascension; I think this was probably an oversight or error, but in any case set this to 0 to restore original behavior.</li>
-<li>gromnir_ally_renames (1): if this is 1, then Gromnir's minotaur and medusa allies get new names; if it is zero, they continue to use recycled names from elsewhere in BG and BG2.</li>
-<li>abazigal_drake_renames (1): similarly, set this to 0 to get Abazigal's drakes to revert to using names borrowed from elsewhere in BG and BG2, rather than new names of their own.</li>
-<li>yagashura_cleric_rename (1): if this is 1, then the army clerics in Yaga-Shura's army are named as 'Yaga-Shura Cleric', along the lines of the rest of his army. If it is zero, they continue to use a recycled name from elsewhere in BG2 ('Cleric of Talos').</li>
-tougher_abazigal_uses_sword (1): set it to 0 if you don't want Abazigal (when originally encountered) to use the undroppable variant on his sword that he carries in the Final-Five battle.</li>
-<li>lava_bomb_tweak (1): v2.0 of Ascension tweaks Lava Bomb's knockback to be more in line with similar effects elsewhere, so that it knocks its targets unconscious for 3 seconds if they fail to save at -10, rather than for 18 seconds if they fail to save at -2. Set this to 0 to revert to the classic behavior.</li>
-
-</ul>
-<strong>Miscellaneous settings</strong>
-<p>These change other features of the mod.</li>
-<ul>
-<li>no_ee_sarevok_sword_use_restriction (0): Sarevok gets to upgrade his Sword of Chaos; in original Ascension, that upgrade comes with a penalty applied to anyone except Sarevok. Since that penalty is too extreme for anyone in their right mind to tolerate it, I assume this is simply a way of restricting the weapon to Sarevok, which can't be done directly in original Baldur's Gate. Since it <em>can</em> be done on the Enhanced Edition, I implement it directly on BG2EE and EET installs; set this to 1 to revert to the original even in EE games.</li> 
-<li>abyssal_host (1): Set this to 0 to prevent Demogorgon's lore-inaccurate 'summon the infernal host' power being rewritten as 'summon the abyssal host'.</li>
-<li>demogorgon_gate_aesthetics (1): set this to 0 to revert my cosmetic changes to Demogorgon's summoning power. (I've coded an override here because those cosmetic changes do slightly delay the demons' arrival, so there is a (very minor) tactical consequence.)</li>
-<li>enable_difficulty_based_damage_changes (0): set this to 1 to revert Ascension 2.0's default behavior (following Gaider's preference) of disabling the hardcoded damage changes caused by the difficulty slider.</li>
-<li>balthazar_hotkey(E): set this to whatever key you want to use to toggle Balthazar's AI on and off.</li>
-<li>ignore_sarevok_edge_case(0): it is possible for Sarevok to become good-aligned but not be in the party when you confront Melissan. In this situation, in vanilla Ascension Sarevok always opposes you. Perhaps this represents his backsliding towards evil if you're not around, but I think it's much more likely just to be an edge case the original writers didn't notice or didn't have time to sort. In any case, Ascension v2.0 allows a redeemed-but-not-in-party Sarevok to end up rejecting Melissan's blandishments and joining you. Set this parameter to 1 if you want to revert to the original behavior.</li>
-<li>sarevok_hotkey(E): set this to whatever key you want to use to toggle Sarevok's AI on and off, in case he joins you in the final fight in the edge-case scenario above.</li>
-</ul>
-<strong>Internal/Debug</strong>
-<p>Don't touch these: they're for testing and internal use.</p>
-
-</div>
-
-
-
-<div class="ribbon_rectangle_h2"><h2><a name="credit" id="credit"></a>Credits</h2></div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-<strong>Original Mod Design</strong>
-<ul>
-<li>Lead designer: David Gaider</li>
-<li>Designers: Cuveronious, Quitch, Xyx, Spork, Vulgar Zildrah, Kensai Ryu</li>
-</ul>
-<strong>WEIDU version (v1.4)</strong>
-<ul>
-<li>Original design: Westley Weimer</li>
-<li>Subsequent contributions: Kish, Quitch, Jason Compton</li>
-</ul>
-<strong>Enhanced-edition version (v 1.5-1.7)</strong>
-<ul>
-<li>Lead designers: JediMindTrix, WhiteAgnus</li>
-<li>Coding: Turumbar, Cuv, Miloch</li>
-<li>Subsequent maintainers: Aedan, Edvin, AlIen, Quitch, agb1, badungu, CamDawg</li>
-<li>New epilogues: Shawne</li>
-</ul>
-<strong>Ascension 2.0</strong>
-<ul>
-<li>Designer: DavidW</li>
-<li>Balthazar's spell icons: Kish and CamDawg</li>
-</ul>
-<p>This list may be incomplete (Ascension has had many maintainers over the years). Contact DavidW at the <a href="www.gibberlings3.net/forums">Gibberlings Three forums</a> for any emendations or additions.</p>
-</div>
-<div class="ribbon_rectangle_h2"><h2><a name="acknow" id="acknow"></a>Acknowledgements</h2></div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
- <p>For <strong>David Gaider's and Westley Weimer's acknowledgements</strong>, see <a href="doc/v 1.4 readme/Ascension-WeiDU-v1.4.24.txt">the v1.4 readme</a>.</p>
- <p>For <strong>JediMindTrix's acknowledgements</strong>, see <a href="doc/v 1.5-1.7 readme/Ascension v17.txt">the v1.7 readme</a>.</p>
- <strong>DavidW's acknowledgements:</strong>
-<p>First and foremost, thanks to David Gaider and his original team. Ascension has stood the test of time as one of the all-time great mods; it's been a privilege to work on it.</p>
-<p>Secondly, huge thanks to those heroes - especially WhiteAgnus and JediMindTrix - who did the heavy lifting required to drag Ascension into the modern-coding, Enhanced-Edition era. Ascension 2.0 is built on the bones of their work and couldn't have existed without it.</p>
-<p>Thirdly, thanks to those who created the tools that made the modern Infinity Engine modding scene possible: in particular, Westley Weimer, for the original WEIDU; TheBigg and Wisp for developing it into the remarkable tool it now is; CamDawg, for building many of the function libraries on which Ascension is constructed and for leading the 'Fixpack' project which Ascension 2.0 relies on; Ascension64, for finally realising David Gaider's goal of a more finely controllable difficulty setting.</p>
-<p>The icons for Balthazar's abilities are borrowed from the Oversight mod; thanks to its creator, Kish, for permission, and to CamDawg for actually creating the icons (at least according to the readme; he doesn't actually remember doing so :) ).</p>
-<p>Last but not least, thanks to the original Bioware team for Throne of Bhaal, and to Beamdog - and the many modders and ex-modders who work with them - for reinventing the Infinity Engine.</p>
-</div>
-<div class="ribbon_rectangle_h2"><h2><a name="copy" id="copy"></a>Copyright Information</h2> </div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-  <p>The original content of Ascension is &copy;2001, David Gaider.</p>
-  <p>Ascension is not released under any formal license (they are not really enforceable in the modding world, in any case). Its authors and maintainers have generally worked with the consent of their predecessors, and with a respect for what has been done before. If you borrow code or content from Ascension, please give full credit in your own mod when you do so.</p>
-
-</div> 
-<div class="ribbon_rectangle_h2"><h2><a name="version" id="version"></a>Version History</h2>  </div>
-
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section"> 
-
-<p>This is split into two parts: a detailed changelog for v2.0 and later, and a more abbreviated description of the major .</p>
-</div>
-<div class="ribbon_rectangle_h3">
-<h3>Version 2.0 changelog</h3>
-</div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-<p>April 2019: original 2.0 release</p>
-</div>
-<div class="ribbon_rectangle_h3">
-<h3>Previous versions</h3>
-</div>
-    <div class="ribbon_triangle_h2-l"></div>
-    <div class="ribbon_triangle_h2-r"></div>
-<div class="section">
-<p>(This account is incomplete; I (DavidW) would be interested in more details if anyone knows them.)</p>
-<strong>Version 1.1</strong> (David Gaider, c.2001)
-<ul>
-<li>Original release (as a non-WEIDU mod, with files and .tlk just dropped in)</li>
-<li>Released at about the same time as (but I think not bundled with) Gaider's various 'tougher' mods</li>
-<li>Readmes for Ascension and the 'tougher' mods can be found in 'ascension/doc/original readmes' </li>
-</ul>
-<strong>Versions 1.2-1.3</strong> (David Gaider, c.2001)
-<ul>
-<li>Subsequent non-WEIDU releases</li>
-<li>No recorded changelog</li>
-</ul>
-<strong>Version 1.4</strong> (Westley Weimer, c.2002)
-<ul>
-<li>First release as a WEIDU mod (indeed, as one of the first WEIDU mods)</li>
-<li>Although the mod uses WEIDU, most files are simply overwrites</li>
-<li>Versions up to 1.4.41 released, though later ones mostly just update translations.</li>
-<li>Hosted at weidu.org (and still up there, as of 2019) with discussion forum at forums.pocketplane.net </li>
-<li>The Readme for Ascension-WEIDU can be found in 'ascension/doc/v 1.4 readme' </li>
-</ul>
-<strong>Version 1.5</strong> (WhiteAgnus/JediMindTrix, January 2016)
-<ul>
-<li>Systematic rewriting to use more modern WEIDU tricks and to be compatible with the Enhanced Edition</li>
-<li>Based on earlier code by Cuv, Turumbar, and Miloch</li>
-<li>Hosted on WhiteAgnus's GitHub page.</li>
-<li>No formal discussion forum.</li>
-<li>Various contributions from other writers</li>
-<li>The Readme for the 1.5-era Ascension can be found in 'ascension/doc/v 1.5-1.7 readme' </li>
-</ul>
-<strong>Version 1.6</strong> (AlIenQuake, September 2016)
-<ul>
-<li>In September 2016 Ascension moves to the Big World System (BWS) Github pages.</li>
-<li>The version numbering has broken down; I'm using '1.6' to refer to Ascension once it's moved to BWS, but releases in this period just carry dates.</li>
-<li>Updates are localised bugfixes and translations; many contributors.</li>
-</ul>
-<strong>Version 1.7</strong> (multiple authors, November 2018)
-<ul>
-<li>In November 2018, Roxanne collects together various fixes into a new release, and reinstates a versioning system, starting at 1.7.0</li>
-<li>This version of Ascension is still an incremental development of 1.5, and remains hosted at the BWS Github page.</li>
-</ul>
-<strong>Version 2.0</strong> (DavidW, June 2019)
-
-<p>This was quite a large project and I may well have missed some small changes, but these are the main changes:
-
-<ul>
-<li>The main component of Ascension has been split into 8 subcomponents: rewritten chapter 10; redeemable Balthazar; restored Bhaalspawn powers; improved Sarevok/player dialog; improved Imoen/player dialog; improved Slayer transformation; extended epilogues; tougher Balthazar. (Ascension is so old that when it shipped, it was necessary to bundle as much as possible into one place because you could only add dialog lines once.)</li>
-<li>The components have been reorganized into three groups to make the mod's structure more transparent: the Ascension (the various bits of the main component, less Tougher Balthazar); Tougher Enemies; Additional Content (added to Ascension well after its release).</li>
-<li>Dozens of small (mostly cosmetic) bugs were fixed, and the logic of the final chapter has been tightened to correct a few persistent reported bugs</li>
-<li> Tightened up the cosmetic features of some cutscenes and abilities (the line between this and bugfixes is a little blurry.)</li>
-<li>The code for the pool powers fairly clearly allows that Imoen should be able to receive them instead of the player, but for technical reasons that wasn't working; I've restored it.</li>
-<li>Added additional code (though no additional dialog) to permit a redeemed Balthazar to help you even if you're using the original (non-Ascension) version of the final chapter</li>
-<li>If Balthazar is allied with you, you should get much finer control of him (the previous AI is quite willful) and can use any of his powers from the innate bar</li>
-<li>Lots of small changes to allow for better compatibility with the Enhanced Edition (e.g., the save-for-half flag is implemented; new innate powers have in-game descriptions instead of being described in journal entries)</li>
-<li>David Gaider's original Readme laments the fact that the hardcoded bits of the difficulty slider can't be disabled. Since they can be disabled in modern BG (either on the Enhanced Edition or on ToBex) I've disabled them, and taken the opportunity to spread the difficulty settings a bit more evenly. 'Insane' is still just as hard as ever, but on the lower difficulty settings the mod's combats are slightly less brutal than previously. (This is all documented in some detail.)</li>
-<li>Slightly tweaked the implementation of certain abilities to make use of modern tools and techniques (again, see the documentation.)</li>
-<li> In the original Ascension there is a (pretty edge-case) scenario where Sarevok is redeemed but then leaves the party only to be summoned by Melissan. I've allowed for this in Sarevok's dialog: he gets the 'redeemed' dialog option even if he has left the party, and can fight for you.</li>
-<li>The original mod's documentation suggests that there is a route through Balthazar's redemption for a high-wisdom Evil character. That wasn't actually the case in the distributed version so far as I can tell (and I checked the logic pretty thoroughly); I have tweaked the parameters of the conversation very slightly so that a narrow route now exists.</li>
-<li>Added a very small component of my own that fixes an anomaly on the cutscenes with Yaga-Shura and Gromnir (it could have lived in SCS but it seemed a more natural fit to Ascension).</li>
-<li>Added another small component of my own (for EE only) that sharpens the portraits for Gromnir and Abazigal (for some reason, BG2EE sharpens all the other portraits, but not those ones).</li>
-<li>The cutscene in 'tougher Abazigal' is a bit of a mess; I've rebuilt it.</li>
-<li>Restored the original Bhaalspawn powers as part of 'Restored Bhaalspawn powers': it doesn't seem logical that you get new powers and Imoen gets old-style powers but you never get the original ones.</li>
-<li>Ascension now has an ini file that allows power-users fine control over some features of the install. For instance, most of my tweaks that aren't straight bugfixes can be disabled there, and I've externalized some other features, e.g. the XP thresholds to upgrade the Slayer.</li>
-<li>Very thoroughly documented the whole mod, including detailed information (behind a spoiler link) on the effect of the difficulty slider.</li>
-<li>Under the hood: complete recoding of Ascension</li>
-</ul>
-</p>
-
-</div>
-</div>
-</div>
 </body>
+
 </html>
