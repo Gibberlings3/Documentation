@@ -21,7 +21,7 @@ DESCRIPTION
 
 1 Main Component (Required)
 -----------------------------------
- For BG:EE, BG:SoD, and EET, this component adds the following functionality:
+For BG:EE, BG:SoD, and EET, this component adds the following functionality:
 
 - prevent end of game/transition to SoD after Sarevok's death: after the "Sarevok died" movie, the game returns to the Undercity Temple
 - add basic dialogue to Duke Jannath (if Jannath is still alive and present)
@@ -186,6 +186,7 @@ COMPATIBILITY
 
 The Endless BG1 Mod will set the variable "Global"C#EndlessBG1","GLOBAL",1)" in the thieves guild (after the Palace fight) for (NPC) mods to know that the game will remain in BG1 after Sarevok's death.
 
+The mod is full compatible with Transitions Mod if Endless BG1 is installed first.
 
 
 CREDITS
@@ -213,6 +214,11 @@ Spellhold Studios			http://www.shsforums.net/
 
 
 HISTORY
+
+Version 5:
+-compatibility with Transitions
+-ebg1 considers Transitions' versions of Sarevok Items in Duke Belt's and Denkod's dialogue
+-typo corrections in readme and setup.tra by Mike1072
 
 Version 4:
 -Russian translation added by Austin, Arkie & Arcanecoast.ru
