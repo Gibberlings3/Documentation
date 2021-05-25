@@ -262,14 +262,14 @@ Argent77 - Codinghilfe für nicht-destruktives ADD_TRANS_TRIGGER Patchen
 
 Lauriel - Korrekturlesen (Englisch)
 
-Unbekannter User: Idee, dass Imoen aufgrund ihrer Vergiftung in SoD im Palast zurückbleibt. Lasst mich wissen, wer diese Idee hatte, wenn Ihr es wisst!
+UnderstandMouseMagic: Idee, dass Imoen aufgrund ihrer Vergiftung in SoD im Palast zurückbleibt. 
 
 Translations:
 ------------
 
 memory - Polnisch
 
-Raza, stn & Arcanecoast Team - Russisch
+Raza, stn & Arcanecoast Team, Arkie - Russisch
 
 
 
@@ -299,6 +299,20 @@ REDISTRIBUTION NOTE: Imoen 4 Ever Mod was created to be freely enjoyed by all Ba
 
 
 HISTORY
+
+Version 7.1:
+-completion of Russian version with changes of v7, by Arkie
+
+Version 7:
+-Ophyllis should reply correctly after Imoen's interjection
+-Imoen should start her correct dialogue at the Sewer exit
+-more interjections in SoD
+-more lines altered from "searching for Imoen" to "going after Irenicus"
+-typo corrections
+-added UnderstandMouseMagic to credits
+-Internal restructure: texts will be copied to "autotra" folder before used in game (and converting them to utf8 for EE) and using marker file so text conversion is done only once; Russian version now uses English setup.tra directly. 
+-added check to tp2 to forbid installation after EET_End
+-corrected entry for "Beregost_House08_L2" on cpmvars.tpas
 
 Version 6:
 -Added Russian version by Raza, stn & Arcanecoast Team
