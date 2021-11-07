@@ -1343,10 +1343,8 @@ tibicina: contributor, alpha tester, proof reader
 Twani: contributor, alpha tester, proof reader
 Vanguard: beta tester
 
-Traduction par les d'Oghmatiques (Le Marquis, Galathée, Lothringen, Shaywen, Zooloo) et Jazira ; relecture par Graoumf.
-
 German translations: Gerri, jastey. 
-
+French translations by les d'Oghmatiques : Le Marquis, Jazira, Zooloo, Shaywen, Galathée, Lothringen. Proofreadings by Graoumf.
 
 ----------------
 XI. Tools Used
@@ -1377,20 +1375,6 @@ DLC Merger 				https://forums.beamdog.com/discussion/71305/mod-dlc-merger-merge-
 ----------------
 XII. History
 ----------------
-
-Version 9.0:
--French version completed, by les d'Oghmatiques (Le Marquis, Galathée, Lothringen, Shaywen, Zooloo) and Jazira ; proofreading par Graoumf.
--crossmod with Transitions: install should not fail and quest about Scar should be available after Sarevok's death.
--updated install order data (added Brage's Redemption).
--added globally unique LABELs to support Project Infinity.
-
-Version 8.1:
--corrected version number in tp2
-
-Version 8.0:
--Russian version Staylos, Apxu & Arcanecoast Team, by Staylos, Apxu & Arcanecoast Team added
--patching of Sil to make removing of turning hostile more stable
--Kitty should not vanish after Sarevok's death before PC finished the encounter
 
 Version 7.0:
 -"Dinner with Thalantyr": Thalantyr's private quarters is now area art from Lava! (Same as in SotSC); PC should not be able to ask carpenter about chess piece a second time, journal entry shold be removed correctly; added references to bgqe "Warm Place for Noober" quest.
