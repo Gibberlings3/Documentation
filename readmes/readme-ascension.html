@@ -4,11 +4,12 @@
 <head>
     <title>Ascension</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="style/g3readme_cam_022916.css" type="text/css" />
-<link href="style/g3icon.ico" rel="icon" type="image/bmp" />
+    <link rel="stylesheet" href="html_files/g3readme_cam_022916_dwedit.css" type="text/css" />
+    <link href="html_files/g3icon.ico" rel="icon" type="image/bmp" />
 </head>
 
 <body>
+    <script type="module" > document.getElementById("latestVersion").innerText = (document.getElementById('versionHistory').getElementsByTagName("p"))[(document.getElementById('versionHistory').getElementsByTagName("p")).length-1].innerText </script>
     <div id="container">
         <div class="ribbon_menu">
             <ul>
@@ -38,7 +39,7 @@
                 <a href="https://www.gibberlings3.net/profile/1067-davidw/">DavidW</a>
                 <!--</p>-->
                 <p>
-                    <strong>Version: 2.0.11</a></strong><br />
+                    <strong>Version: <span id="latestVersion"></a></strong><br />
                     <strong>Languages: </strong>Chinese, Czech, English, French, German, Italian, Polish, Russian,
                     Spanish<br />
                     <strong>Platforms: </strong>Windows, Linux, macOS
@@ -741,7 +742,7 @@
 
                 <p>These affect the various powers acquired by the player (except the Slayer form).</p>
                 <ul>
-                    <li>no_restored_bg1_powers (1) - set this to 0 if you don't want the original Bhaalspawn powers
+                    <li>no_restored_bg1_powers (1) - set this to 1 if you don't want the original Bhaalspawn powers
                         (taken from you in Spellhold) to be regained at the start of Throne of Bhaal (or have already
                         installed/plan to install a component of another mod that does it).</li>
                     <li>demon_control_battle_duration (3) - this determines the length, in seconds, of the mental battle
@@ -931,8 +932,8 @@
             </div>
             <div class="ribbon_triangle_h2-l"></div>
             <div class="ribbon_triangle_h2-r"></div>
-            <div class="section">
-                <p>2.0.0 2 June 2019</p>
+            <div class="section" id="versionHistory">
+                <p>2.0.0 - 2 June 2019</p>
                 <ul>
                     <li>Original release of v2</li>
                 </ul>
@@ -1009,8 +1010,55 @@
 					<li>Enforced the requirement that Iylos and Spell Revisions are installed after Ascension</li>
 					<li>Melissan's spear ('spermel') is now patched correctly (and no longer throws a WARNING) if the beta fixes from BG2 fixpack are installed</li>
 
-
                 </ul>
+				<p>2.0.12 - 31 May 2020</p>
+				<ul>
+					<li>Many translation updates, including a full revision of the Russian translation (thanks, Austin)</li>
+				</ul>
+				<p>2.0.13 - 23 August 2020</p>
+				<ul>
+					<li>Further Russian translation updates</li>
+					<li>Updated Detectable Spells</li>
+					<li>Guarded against Timestop detection variable not properly being deactivated</li>
+				</ul>
+				<p>2.0.14 - 27 September 2020</p>
+				<ul>
+					<li>Fixed a bug that was preventing some non-English translation lines being used properly</li>
+					<li>Replaced outdated use of LONG_BOW as a synonym for MAGE_ALL in scripts (in rare cases this was causing compatibility issues with other mods)</li>
+                </ul>
+                <p>2.0.15 - 28 September 2020</p>
+				<ul>
+					<li>VERSION keyword has proper number</li>
+				</ul>
+                <p>2.0.16 - 23 April 2021</p>
+				<ul>
+					<li>fixed patch 2.6 warnings by morpheus562</li>
+                    <li>updated Chinese translation</li>
+				</ul>
+                <p>2.0.17 - 23 April 2021</p>
+				<ul>
+                    <li>better patch 2.6 fix by grodrigues</li>
+				</ul>
+                <p>2.0.18 - 04 July 2021</p>
+				<ul>
+                    <li>added support for Project Infinity dynamic install order</li>
+                    <li>added LabelType = GloballyUnique to support Project Infinity saving mod components</li>
+                    <li>significant proofreading of polish translation</li>
+                    <li>minor corrections to the source text</li>
+				</ul>
+                <p>2.0.19 - 16 July 2021</p>
+				<ul>
+                    <li>removed unicode characters</li>
+                    <li>rename ee.tra to items-ee.tra in order to not fall for tra.bgforge.net 'force UTF8' regex</li>
+				</ul>
+                <p>2.0.20 - 28 August 2021</p>
+				<ul>
+                    <li>fixed missing 1-8 lines from tougher.tra because of tra.bgforge.net 'only tildes' regex</li>
+				</ul>
+                <p>2.0.21 - 10 December 2021</p>
+				<ul>
+                    <li>russian translation of 1-8 lines from tougher.tra</li>
+				</ul>
             </div>
             <div class="ribbon_rectangle_h3">
                 <h3>Previous versions</h3>
