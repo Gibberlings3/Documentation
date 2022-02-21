@@ -1,19 +1,18 @@
 			Ajantis Portrait Pack Modification 
   for BG1 (with or without TotSC), BG1Tutu v4, EasyTutu, BGT, BG:EE, BGII:EE, and  EET
-				coder: jastey (jastey@web.de)
-					Version 4
+				
 
 
-This portrait pack includes alternate Ajantis portrait formerly included in the Sir Ajantis for BGII mod as well as the Ajantis BG1 Expansion Modification.
+This portrait pack includes alternate Ajantis portraits formerly included in the Sir Ajantis for BGII mod as well as the Ajantis BG1 Expansion Modification. 
 
+The portraits will be used for BG1 Ajantis as well as jastey's Sir Ajantis BGII mod, independent on install order. The Ajantis Portrait Pack detects automatically the game install. 
 
-The Mod gives a choice of custom portraits for Ajantis. Some of these portraits are also available in separate BG-Portrait mods from the relevant authors (as specified). The Ajantis Portrait Pack detects automatically the game install. 
+NOTE: For all games, the portraits have the same naming convention as the BG1 default portrait since with v15 and up, the Sir Ajantis for BGII mod uses the BG1 portrait (which is also present in all BG2 games). This means, that if you installed an Ajantis portrait from another source, that the same portrait will be used as well in the BGII part of the game without need of further action.
 
-NOTE: For all games, the portraits have the same naming convention as the BG1 default portrait since with v15 and up, the Sir Ajantis for BGII mod (v15 and up) uses the BG1 portrait (which is also present in all BG2 games). This means, that if you installed an Ajantis portrait from another source, that the same portrait will be used as well in the BGII part of the game without need of further action.
+Many thanks to the artists for granting permition to include them as alternatives for Ajantis: Amaurea, Azguz aka Azze, berelinde, Casul, Catlepha, Miloch, Senka and wonnimchunha!
 
-Many thanks to the artists for granting permition to include them as alternatives for Ajantis: Amaurea, Azguz aka Azze, berelinde, Casul, Catlepha, Domi, Miloch, Plasmocat, Rabain, Senka and wonnimchunha!
-
-Currently there is no possibility to have a look at the portraits other than opening them in the mod-folders.
+The portraits can be looked at at the Gibberlings3 Portrait Gallery: 
+https://www.gibberlings3.net/gallery/album/30-ajantis-portrait-pack/
 
 
 GENERAL INFO
@@ -35,10 +34,6 @@ The mod includes the following portraits:
 
 INSTALLATION
  
-For installation of an alternate portrait for Ajantis BGII(:EE), you have to install the Sir Ajantis for BGII mod first.
- 
-Currently, only the Windows version of the mod exists. Using the correct install method, it should be working on MAC OS X and Linux installs, too.
-
 Extract the contents of the archive to your game's main directory. 
 Your game's main directory would be one of the following:
 - your main original Baldur's Gate (II) (:EE) folder, or
@@ -46,7 +41,7 @@ Your game's main directory would be one of the following:
 - your main Tutu folder if you are playing Tutu, or
 - your main BGT folder if you are playing BGT.
 
-Run the "setup-ajantisportraitpack" program. Choose the language you prefer and confirm installation. This should extract all needed files to the override folder.
+Run the "setup-ajantisportraitpack" executable. Choose the language you prefer and confirm installation. This should extract all needed files to the override folder.
 
 NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
 
@@ -82,14 +77,14 @@ TOOLS USED
 
 GIMP                  			http://www.gimp.org/
 WeiDU					http://www.weidu.org
-Near Infinity				http://www.idi.ntnu.no/~joh/ni
+Near Infinity				https://github.com/Argent77/NearInfinity/releases/latest
 
 
 Modding communities, tutorials and technical assistance:
 
-Kerzenburgforum				http://kerzenburg.baldurs-gate.eu/index.php
-The Gibberlings Three		        http://gibberlings3.net
-Pocket Plane Group			http://pocketplane.net
+Kerzenburgforum				https://baldurs-gate.de/index.php
+The Gibberlings Three		        https://www.gibberlings3.net/
+Pocket Plane Group			https://www.pocketplane.net/
 Spellhold Studios			http://www.shsforums.net/
 
 LEGAL INFORMATION
@@ -103,6 +98,12 @@ REDISTRIBUTION NOTE: The Ajantis Portrait Pack Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+
+Version 5:
+-corrected installation mixup for BG1 and BGII.
+-added support for Project Infinity: changed READLN to SUBCOMPONENT, added ini with metadata, and globally unique LABELs.
+-update to always most current weidu in the package thanks to GitHub and AL|EN's automated mod packager tool.
+-readme name changed to give it a unique name.
 
 Version 4:
 -Taking account of changes in the Sir Ajantis BGII mod with regard to v15 (bgt and eet use the BG1 portrait, detection of mod install via tp2 entry)
