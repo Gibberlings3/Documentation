@@ -1,10 +1,8 @@
 			Ajantis Portrait Pack Modification 
     für BG1 (mit oder ohne LdSk), BG1Tutu v4, EasyTutu, BGT, BG:EE, BGII:EE, und EET
-				Coder: jastey (jastey@web.de)
-					Version 4
 
 
-Das Ajantis Portrait Pack enthält alle alternativen Ajantisportraits, wie sie vorher in der Sir Ajantis für BGII Mod und der Ajantis BG1 Expansion Modification enthalten waren.
+Das Ajantis Portrait Pack enthält alle alternativen Ajantisportraits, wie sie vorher in der Sir Ajantis für BGII Mod und der Ajantis BG1 Expansion Modification enthalten waren. Die Mod kann unabhängig von meinen anderen Ajantis-Mods installiert werden.
 
 Die Modifikation bietet die Möglichkeit, Ajantis eines von mehreren Fan-erzeugten alternativen Portraits zu geben. Einige dieser Portraits sind in separaten BG-Portrait Mods der entsprechenden Autoren enthalten (wie angegeben). 
 
@@ -13,6 +11,9 @@ Das Ajantis Portrait Pack erkennt automatisch die BG-Installation.
 Die Mod verwendet für die Portraits die BG1-Dateinamen, da die Originalportraits des BG1-Ajantis auch in den BGII-Spielen enthalten sind. Dies hat den Vorteil, dass Ajantis-Portraits aus einer anderen Quelle (z.B. ein anderes Portrait-Pack) auch das Portrait von Ajantis in BGII verändern werden (für BGT, EET). Es heißt gleichzeitig, dass das Bild des BGII-Ajantis durch Änderungen am BG1-Bild ebenfalls betroffen ist (für die Sir Ajantis NPC für BGII-Mod ab Version 15).
 
 Vielen Dank an Amaurea, Azguz aka Azze, berelinde, Casul, Catlepha, Miloch, Senka und wonnimchunha für das Einverständnis, ihre selber erstellten Ajantisportraits bzw. Edits als Alternativen verwenden zu dürfen!
+
+Die Portraits können in der Portraitgallerie bei Gibberlings3 angesehen werden:
+https://www.gibberlings3.net/gallery/album/30-ajantis-portrait-pack/
 
 
 GENERELLES ZUM INHALT
@@ -34,11 +35,7 @@ Die Modifikation bietet die folgenden Portraits. Momentan existiert keine Seite,
 
 
 INSTALLATION
-
-For installation of an alternate portrait for Ajantis BGII(:EE), you have to install the Sir Ajantis for BGII mod first.
  
-Currently, only the Windows version of the mod exists. Using the correct install method, it should be working on MAC OS X and Linux installs, too.
-
 Extract the contents of the archive to your game's main directory. 
 Your game's main directory would be one of the following:
 - your main original Baldur's Gate (II) (:EE) folder, or
@@ -46,7 +43,7 @@ Your game's main directory would be one of the following:
 - your main Tutu folder if you are playing Tutu, or
 - your main BGT folder if you are playing BGT.
 
-Run the "setup-ajantisportraitpack" program. Choose the language you prefer and confirm installation. This should extract all needed files to the override folder.
+Run the "setup-ajantisportraitpack" executable. Choose the language you prefer and confirm installation. This should extract all needed files to the override folder.
 
 NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
 
@@ -83,14 +80,14 @@ TOOLS USED
 
 GIMP                  			http://www.gimp.org/
 WeiDU					http://www.weidu.org
-Near Infinity				http://www.idi.ntnu.no/~joh/ni
+Near Infinity				https://github.com/Argent77/NearInfinity/releases/latest
 
 
 Modding communities, tutorials and technical assistance:
 
-Kerzenburgforum				http://kerzenburg.baldurs-gate.eu/index.php
-The Gibberlings Three		        http://gibberlings3.net
-Pocket Plane Group			http://pocketplane.net
+Kerzenburgforum				https://baldurs-gate.de/index.php
+The Gibberlings Three		        https://www.gibberlings3.net/
+Pocket Plane Group			https://www.pocketplane.net/
 Spellhold Studios			http://www.shsforums.net/
 
 LEGAL INFORMATION
@@ -104,6 +101,12 @@ REDISTRIBUTION NOTE: The Ajantis Portrait Pack Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+
+Version 5:
+-corrected installation mixup for BG1 and BGII.
+-added support for Project Infinity: changed READLN to SUBCOMPONENT, added ini with metadata, and globally unique LABELs.
+-update to always most current weidu in the package thanks to GitHub and AL|EN's automated mod packager tool.
+-readme name changed to give it a unique name.
 
 Version 4:
 -Taking account of changes in the Sir Ajantis BGII mod with regard to v15 (bgt and eet use the BG1 portrait, detection of mod install via tp2 entry)
