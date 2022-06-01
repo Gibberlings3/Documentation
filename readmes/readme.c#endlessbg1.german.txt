@@ -230,6 +230,7 @@ Aristo: Polish (proofreading)
 Austin, Arkie & Arcanecoast.ru and yota13: Russian
 Roberciiik: Polish
 Gwendolyne, Machiavélique, and Shodead: French
+improb@bile: Italian
 Proofreading of English version & readme: Lauriel, Mike1072, Roberciiik
 
 
@@ -251,6 +252,9 @@ Spellhold Studios			http://www.shsforums.net/
 
 
 HISTORY
+
+Version 11:
+-Italian version added.
 
 Version 10:
 -PC now gets keyring when visiting Korlasz' Tomb for the first time.
