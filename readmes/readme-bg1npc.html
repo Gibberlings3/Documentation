@@ -15,7 +15,7 @@
 <p><strong>On the web: <a href="https://www.gibberlings3.net/mods/npcs/bg1npc/">Home page</a></strong> and <strong><a href="https://www.gibberlings3.net/forums/forum/45-bg1-npc-project/">discussion forum</a></strong>
 For support issues please contact <a href="http://www.gibberlings3.net/">www.gibberlings3.net</a>. </p>
 
-<p><strong>Version</strong> 27.1 <a href="https://www.gibberlings3.net/files/file/908-bg1-npc-project/">Check for the most recent version</a>
+<p><strong>Version</strong> 29 <a href="https://www.gibberlings3.net/files/file/908-bg1-npc-project/">Check for the most recent version</a>
 </p>
 <strong>Languages:</strong> English, Spanish, French, Polish, Italian, Russian, German* (teilweise noch in englisch)</p>
 <strong>Games:</strong> BG:EE, Tutu (with or without TotSC), BGT, and EET</p>
@@ -144,6 +144,38 @@ For support issues please contact <a href="http://www.gibberlings3.net/">www.gib
 <h3>The BG1NPC Project: Female Romance Challenges, Ajantis vs. Xan vs. Coran</h3>
 
 <p>This component expands the romance options and content for female characters being courted by Coran, Ajantis, and/or Xan. It only appears for female characters who have two or three of these NPCs in their party.</p>
+
+<h3>The BG1NPC Project: NPCs Can Be Sent to Wait in an Inn</h3>
+
+      <p>
+        </strong> <em>not compatible with BGT. After being removed for v24, the component was restored for v29. It was not yet thoroughly tested for the EE v2.6 (BG:EE, BG:SoD, EET) and is in beta status.</em>
+        <br/>
+        This component allows BG NPCs to be sent to an Inn, another location, or to wait for you when you dismiss them from the party. This component is most likely not compatible with other mods that will make NPCs go to or wait at specific places, e.g. "BG NPCs go to inns" from Tweaks Anthology. Do not install mod components that conflict. In the BG1NPC version, slightly different waiting places are used, and NPCs will highly dislike being abandoned alone in dangerous areas...<br />
+		NPC waiting locations:
+        <ul>
+		<li>Ajantis - Friendly Arm Inn or Elfsong Tavern
+		<li>Alora - Friendly Arm Inn or Elfsong Tavern
+		<li>Branwen - Friendly Arm Inn or Elfsong Tavern
+		<li>Coran - Belching Dragon in Nashkel or Elfsong Tavern
+		<li>Dynaheir/Minsc - Friendly Arm Inn or Elfsong Tavern
+		<li>Edwin - Belching Dragon in Nashkel or Low Lantern
+		<li>Eldoth/Skie - Feldpost's Inn or Elfsong Tavern
+		<li>Faldorn - Cloakwood (what, you think she'd wait in an inn?)
+		<li>Garrick - Friendly Arm Inn or Elfsong Tavern
+		<li>Imoen - Friendly Arm Inn or Elfsong Tavern
+        <li>Jaheria/Khalid - Friendly Arm Inn or Elfsong Tavern
+		<li>Kagain - His store or Blusing Mermaid
+		<li>Kivan - Friendly Arm Inn or Elfsong Tavern
+		<li>Montaron/Xzar - Belching Dragon in Nashkel or Low Lantern
+		<li>Quayle - Friendly Arm Inn or Elfsong Tavern
+		<li>Safana - Belching Dragon in Nashkel or Elfsong Tavern
+		<li>Shar-Teel - Belching Dragon in Nashkel or Blushing Mermaid
+		<li>Viconia - A cave on the South Beregost Road or Blushing Mermaid
+		<li>Xan - Friendly Arm Inn or Elfsong Tavern
+		<li>Yeslick - Friendly Arm Inn or Elfsong Tavern
+		</ul>
+      </p>
+
 
 <h3>Jason Compton's Accelerated Banter Script</h3>
 
@@ -492,6 +524,7 @@ This component utilizes the new BANTTIMG.2DA file available in BGEE to adjust ba
 <ul>
 <li>Translators: Cuttooth (coordinator), Jinete, Miss misery, Chisette, Yennyfer, Krist Algar, Nero, Morgan, Christoff, Marlong, Parys, Craven, Dead, Thug Poet, Yarpen, Lord Pawel</li>
 <li>Proof readers: Cuttooth (coordinator), Kol (coordinator), Lua Nova, Claudiad, Morgan, Li, Jinete, Zireael, Soul Reaver, Picollo, Zed Nocear, Arientar, Tinuviel, Euler, Grazin</li>
+<li>Additional sounds: Anoim2666 (coordinator), Joshua Szpilarski (Drizzt dubbing)</li>
 </ul>
 
 
@@ -568,10 +601,43 @@ This component utilizes the new BANTTIMG.2DA file available in BGEE to adjust ba
 
 <h2>Version History</h2>
 
+<p><strong>Version 29 - 2022-06-20</strong></p>
+
+<ul>
+<li>Reinserted the component "NPCs Can Be Sent to Wait in an Inn" which was removed for v24.</li>
+<li>Fixed install error for some languages (missing new text line added).</li>
+<li>Kivan's lines revised, by Belryll.</li>
+<li>Romances: "Do not flirt with me anymore" will only disable the repetitive NPC initiated flirts. Not any PID options. Not the individual flirty dialogues. Romances without any repetitive flirts should not have this dialogue option.</li>
+<li>Fixed reference to PC's class in one of Coran's lovetalks.</li>
+<li>Fixed dlg reference in Xan-Alora banter (Alora should say her line).</li>
+<li>Fixed reference to PC for quest character in Kivan's encounter.</li>
+<li>Fixed spell level for spwi401 in nythrun_fixes.tpa.</li>
+</ul>
+
+<p><strong>Version 28 - 2022-06-15</strong></p>
+
+<ul>
+<li>Italian translation of PIDs completed, by improb@bile.</li>
+<li>German translation for Coran, Kivan, and Xan finished, by Belryll.</li>
+<li>French translation completed, by Mickaël Leduque.</li>
+<li>Polish only: Drizzt dubbing thanks to Anoim2666. Voice of Joshua Szpilarski.</li>
+<li>Polish translation: typo and small corrections, by Roberciiik.</li>
+<li>"ar2700.bcs" loop bug in EE should not affect BG1NPC (Gorion burial, Dynaheir romance end scene).</li>
+<li>Kivan should react if Tazok is killed, also if it's after Sarevok's death with EndlessBG1 or Transitions.</li>
+<li>Enable Imoen's Artifact polymorph effect: Allow the polymorph effect to happen by fixing the IDS value; Add lighting/sound effects when polymorph wears off; Change polymorph duration from 1200 (4 hours) to 12 (2 rounds); Change spell name to clarify effect impermanence: Polymorph Other -> Temporary Polymorph.</li>
+<li>Corrected some EET compatibility oversights.</li>
+<li>EE: Added name reference to item_use.2da for Ajantis' shield.</li>
+<li>EE: Description of Kivan's bow usability now mentions "Kivan" (not in capital letters).</li>
+<li>Removed Tutu item reference from cre (Coran romance challenge).</li>
+<li>AJROM_TIMER patching in gtime.ids should not be skipped for C#AJROM_TIMER from Ajantis BG2.</li>
+<li>Crossmod Compatibility with MPTweaks: Ajantis reacting to doppelgangers should not interfere with MPTweaks ability to pause the game for multiplayer sessions.</li>
+<li>Typos and other small corrections.</li>
+</ul>
+
 <p><strong>Version 27.1 - 2021-07-28</strong></p>
 
 <ul>
-<li>Dryads should acknowledge woodcutters' deathd with Xzar in party.</li>
+<li>Dryads should acknowledge woodcutters' death with Xzar in party.</li>
 </ul>
 
 <p><strong>Version 27 - 2021-07-14</strong></p>
