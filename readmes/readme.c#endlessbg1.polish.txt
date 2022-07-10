@@ -257,8 +257,8 @@ Translations:
 Aristo: Polish (proofreading)
 Austin, Arkie & Arcanecoast.ru and yota13: Russian
 Roberciiik: Polish
-improb@bile: Italian
 Gwendolyne, Machiavélique, and Shodead: French
+improb@bile: Italian
 Proofreading of English version & readme: Lauriel, Mike1072, Roberciiik
 
 
@@ -280,6 +280,9 @@ Spellhold Studios - http://www.shsforums.net/
 
 
 HISTORIA ZMIAN:
+
+Version 12:
+-Fixed install error on BG:EE.
 
 Version 11:
 -Italian version added.
