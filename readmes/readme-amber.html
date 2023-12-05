@@ -33,7 +33,7 @@
         <strong> On the web: </strong><a href="https://www.gibberlings3.net/mods/npcs/amber/">Home
         page</a>, <a href="https://www.gibberlings3.net/forum/69-amber/">discussion
         forum</a>, and <a href="https://discord.gg/yTzjMTb">Discord</a></p>
-      <p><strong> Version 7</strong><br />
+      <p><strong> Version 8</strong><br />
         <strong> Languages:</strong> English, German, and Spanish<br />
         <strong>Platforms: </strong>Windows,  macOS, Linux</p>
     </div>
@@ -297,6 +297,10 @@
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
+      <p><strong>Version 8 (05.12.2023)</strong></p>
+      <ul>
+        <li>All of the area files, the lone store file, and most of the creature files had some bad offsets, where it was reporting the  wrong location for a block of information. By itself, these were harmless as there was no information to convey, e.g. a bad  offset for map notes when the area had no map notes. However, this becomes an issue when subsequent mods try to modify assets  from Amber--at best they'll report an error and move on, at worst they'll corrupt the file based on this bad info.    Thanks to Argent77 implementing a new NI feature, I was able to track down all of these errors beyond the two files <a href="https://www.gibberlings3.net/forums/topic/37360-version-7-of-amber-now-available/#comment-330290">that  initially led to the bug report</a>. </li>
+      </ul>
       <p><strong>Version 7 (17.11.2023)</strong></p>
       <ul>
         <li>Some strings were duplicated, causing the name of the second component in the installer to be gibberish</li>
