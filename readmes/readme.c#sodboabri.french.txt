@@ -129,9 +129,12 @@ Acifer - ideas
 maus - ideas, scripting help
 
 Translations
-Italian: improb@bile (v2)
 French: JohnBob, proofreading by Mera (vAlpha_220505)
+Italian: improb@bile (v2)
 Polish: GoForTheEyes (v5)
+Russian: scheele (v4)
+Chinese (simplified) by yoshimo0417, setup.tra format corrections by MephistoSatanDevil (v7)
+Spanish: ElGamerViejuno (v6)
 
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
@@ -168,6 +171,13 @@ https://www.deepl.com/translator
 
 
 HISTORY
+
+Version 7
+-Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
+-typo ocrrections.
+
+Version 6
+-Spanish version added, by ElGamerViejuno
 
 Version 5
 -Polish version added, by GoForTheEyes.

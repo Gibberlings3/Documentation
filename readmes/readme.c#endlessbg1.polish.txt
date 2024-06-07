@@ -163,7 +163,7 @@ Denkod w Gildii Z³odziei Cienia, który powiedzia³ wczeœniej, gdzie poszed³ Sarev
 Po zabiciu Sarevoka, wyjœcie z Podziemnego Miasta pominie labirynt z³odziei i pozwoli na przejœcie bezpoœrednio do Gildii Z³odziei. Przejœcie do labiryntu zostanie przywrócone po powrotnym wejœciu tamt¹ drog¹.
 
 
-14. Krypta Korlasz bêdzie dostêpna w BG1
+14. Krypta Korlasz bêdzie dostêpna w BG1 (tylko SoD/EET)
 -----------------------------------
 
 Wraz z tym komponentem krypta rodziny Korlasz bêdzie dostêpna ju¿ podczas rozgrywki w Baldur's Gate 1. Dru¿yna zostanie przeniesiona do grobowca w momencie, gdy g³ówny bohater porozmawia z ksiêciem Beltem o poœcigu za ostatnimi poplecznikami Sarevoka.
@@ -176,7 +176,7 @@ Zmiany te nie afektuj¹ nowej gry bezpoœrednio w kampanii SoD.
 Uwaga: ten komponent z pewnoœci¹ popsuje treœæ modyfikacji Transitions, jako ¿e nie zosta³ on jeszcze tam uwzglêdniony (wersje 2.0 i ni¿sze). Nie instaluj tego komponentu jeœli planujesz instalacjê Transitions.
 
 
-15. Uzdrowiciel Fenster bêdzie w pa³acu
+15. Uzdrowiciel Fenster bêdzie w pa³acu (tylko SoD/EET)
 -----------------------------------
 
 Fenster bêdzie urzêdowa³ na parterze w pa³acu, oferuj¹c podobne us³ugi, jakie oferuje kap³an w krypcie Korlasz.
@@ -184,7 +184,7 @@ Fenster bêdzie urzêdowa³ na parterze w pa³acu, oferuj¹c podobne us³ugi, jakie of
 Uwaga: ten komponent mo¿e spowodowaæ, ¿e bêdzie dwóch Fensterów, jeœli modyfikacja Transitions bêdzie równie¿ zainstalowana. Transitions w wersji 2.0 i ni¿szej jeszcze nie uwzglêdnia tego komponentu.
 
 
-16. Kapitan Corwin bêdzie w pa³acu
+16. Kapitan Corwin bêdzie w pa³acu (tylko SoD/EET)
 -----------------------------------
 
 Corwin bêdzie przebywaæ na parterze pa³acu, wœród Ksi¹¿¹t. W tej chwili nie ma z ni¹ ¿adnych nowych treœci czy interakcji.
@@ -226,22 +226,74 @@ Uruchom WeInstall c#endlessbg1 w folderze z gr¹, aby zainstalowaæ modyfikacjê. N
  
 
 Uwaga: Gry BG(II):EE s¹ wci¹¿ aktywnie rozwijane. Nale¿y pamiêtaæ, ¿e ka¿dy patch lub aktualizacja gry zepsuje aktualn¹ instalacjê modyfikacji!
-Jeœli w trakcie gry postanowisz zainstalowaæ aktualizacjê gry a nastêpnie przeinstalowaæ modyfikacje, stare zapisy gry mog¹ nie dzia³aæ poprawnie.
+Jeœli w trakcie gry postanowisz zainstalowaæ aktualizacjê gry, a nastêpnie przeinstalowaæ modyfikacje, stare zapisy gry mog¹ nie dzia³aæ poprawnie.
 Jeœli masz problem z instalacj¹ lub znalaz³eœ/aœ b³¹d, proszê zg³oœ to w jednym z w¹tków na forum.
 
 
 KOMPATYBILNOŒÆ:
 
-Modyfikacja Endless BG1 ustawia zmienn¹ "Global("C#EndlessBG1","GLOBAL",1)" w Gildii Z³odziei (po walce w pa³acu) dla modyfikacji (np. tych dodaj¹cych NPC) tak aby wiedzia³y, ¿e gra pozostanie w œwiecie BG1 po œmierci Sarevoka.
-Ponadto, od wersji v7 modyfikacja ustawia zmienn¹ "Global("SarevokBehavior","GLOBAL",5)" na wartoœæ 5 po œmierci Sarevoka.
-
-Komponenty 1-13 tej modyfikacji s¹ w pe³ni kompatybilne z modyfikacj¹ Transitions jeœli zosta³y one zainstalowane przed Transitions.
+Komponenty 1-13 tej modyfikacji s¹ w pe³ni kompatybilne z modyfikacj¹ Transitions, jeœli zosta³y one zainstalowane przed Transitions.
 Komponenty 14-16 nie s¹ jeszcze wspierane w po³¹czeniu z Transitions (v2.0 i wersje nowsze). Natomiast komponent 14 prawdopodobnie jest w ca³oœci niekompatybilny z Transitions. Instalacja tych komponentów wraz z Transitions mo¿e popsuæ grê. Wiêcej informacji znajduje siê w opisie poszczególnych komponentów.
 
 Dodatkowe zadanie "Scar's Return" modyfikacji bg1re mo¿e byæ w pe³ni rozegrane po œmierci Sarevoka.
 
 Uwaga: jeœli modyfikacja "Jarl's Adventure Pack" w wersji v0.8.0 jest zainstalowana po Endless BG1 to otworzenie skrzynii bêdzie traktowane jako próba kradzie¿y. W takim wypadku skrzynia na trzecim piêtrze Pa³acu Ksi¹¿êcego nie mo¿e byæ wykorzystywana przez grupê, nawet jeœli s³u¿ba twierdzi co innego.
 
+Informacje o kompatybilnoœci dla modderów:
+Modyfikacja Endless BG1 ustawia zmienn¹ "Global("C#EndlessBG1","GLOBAL",1)" w Gildii Z³odziei (po walce w pa³acu), dziêki czemu modyfikacje (np. takie dodaj¹ce NPC) bêd¹ wiedzia³y, ¿e gra pozostanie w œwiecie BG1 po œmierci Sarevoka.
+Ponadto, od wersji v7 modyfikacja ustawia zmienn¹ "Global("SarevokBehavior","GLOBAL",5)" na wartoœæ 5 po œmierci Sarevoka.
+
+W przypadku modyfikacji, które pozwalaj¹ na pozostanie NPCów w dru¿ynie w trakcie przygód z dodatku SoD (np. AjantisBG1), nale¿y zauwa¿yæ, ¿e komponent "Krypta Korlasz bêdzie dostêpna w BG1" ustawia OVERRIDE skrypt i plik dialogu na ten z SoD, tak jak ma to miejsce w niezmodowanym bdintro.bcs.
+To oznacza, ¿e dla wszystkich NPCów, którzy nie maj¹ swojego skryptu w SoD (wszyscy co nie pojawiaj¹ siê w SoD, na przyk³ad: Ajantis, Alora, Branwen, Coran, Faldorn, Garrick, Kagain, Kivan, Montaron, Quayle, Shar-Teel, Skie, Tiax, Xan, Xzar, Yeslick), zostanie przypisana pusta wartoœæ (ChangeAIScript("",OVERRIDE)).
+Jeœli chcesz, ¿eby NPC mia³ poprawny skrypt w Krypcie Korlasz, musisz wykonaæ patch nie tylko na bdintro.bcs, ale tak¿e bd0120.bcs i bd0130.bcs, gdzie EndlessBG1 dodaje równie¿ swoje resetowanie tych wartoœci.
+
+Poni¿ej przyk³ad, jak zosta³o to zrobione z modyfikacj¹ AjantisBG1:
+
+----------------------------------
+/* Crossmod with EndlessBG1 "Korlasz Tomb in BG1 */
+ACTION_IF (MOD_IS_INSTALLED ~c#endlessbg1.tp2~ ~14~) BEGIN
+
+/* make sure Ajantis' SoD override script is used in Korlasz' Crypt */
+COPY_EXISTING ~bd0120.bcs~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("Ajantis",ChangeAIScript("",OVERRIDE))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~ActionOverride("Ajantis",ChangeAIScript("BDAJANTI",OVERRIDE))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~bd0130.bcs~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("Ajantis",ChangeAIScript("",OVERRIDE))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~ActionOverride("Ajantis",ChangeAIScript("BDAJANTI",OVERRIDE))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+END
+BUT_ONLY_IF_IT_CHANGES
+/* this might not be needed here since you'll have to patch bdintro.bcs anyway for your NPC mod */
+COPY_EXISTING ~bdintro.bcs~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("Ajantis",ChangeAIScript("",OVERRIDE))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~ActionOverride("Ajantis",ChangeAIScript("BDAJANTI",OVERRIDE))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+END
+BUT_ONLY_IF_IT_CHANGES
+
+END //~c#endlessbg1.tp2~ ~14~
+------------------------------------
 
 
 CREDITS:
@@ -255,11 +307,14 @@ Tantalus: pliki BAM przedmiotów Sarevoka. Pliki BAM wziête z modyfikacji Tantalu
 
 Translations:
 Aristo: Polish (proofreading)
-Austin, Arkie & Arcanecoast.ru and yota13: Russian
+Austin, Arkie & Arcanecoast.ru and yota13: Russian (v17)
+Ulpian: Russian (v18)
 Roberciiik: Polish
 Gwendolyne, Machiavélique, and Shodead: French
 improb@bile: Italian
 Inueb and ElGamerViejuno: Spanish
+Sauro: Brazilian Portuguese
+
 Proofreading of English version & readme: Lauriel, Mike1072, Roberciiik
 
 
@@ -281,6 +336,31 @@ Spellhold Studios - http://www.shsforums.net/
 
 
 HISTORIA ZMIAN:
+
+Version 19:
+- Brazilian Portuguese translation added, by Sauro
+- fixed install error when JAP is installed.
+- typo %HARTEEL_JOINED% _> "%SHARTEEL_JOINED%"
+
+Version 18.1:
+-(BG:EE, EET) Translations of new lines added for Italian (by Frenzgyn) and French (by JohnBob), too.
+
+Version 18:
+-Revised Russian version, by Ulpian.
+-"Duke Eltan Is in the Palace": the mod added Duke Eltan will be removed after BG1 is finished to clear the area for mods that reopen the palace in EET(BGII).
+-Duke Eltan's body will be silently removed after Sarevok was defeated in case it wasn't brought to the Harbor master, either by the FF healers in Undercity or upon reentering the palace.
+-Corrected path to journal entries for ADD_JOURNAL.
+-Harbour master should not accept Eltan's body after Sarevok is defeated. Translations of new lines by yota13 (Russian), Roberciiik (Polish), Frenzgyn (Italian), JohnBob (French), ElGamerViejuno (Spanisch).
+-Corwin should be removed after BG1 is over (fixed typo in script).
+-(BG:EE, EET) Better journal handling after Sarevok is defeated.
+-All lines in tp2 should be in tra files.
+
+Version 17:
+-Korlasz' Crypt in BG1: NPCs should always use their SoD scripts while inside the crypt.
+-Duke Jannath should not ask for the tomes if Imoen already gave them to her.
+-More cleanup after Sarevok: Delthyr in ThreeOldKegs, Sorrel in NBaldursGate.
+-Journal entries that make no more sense after Sarevok's defeat should be closed or erased (work in progress).
+-Added compatibility note to readme for "BG1 NPCs in SoD"-Mods and dlg/bcs handling for "Korlasz' Dungeon in BG1": NPCs get their SoD dialogue and script assigned. If BG1 NPCs do not have an original SoD script they would have to be patched accordingly if a mod requires them to have one.
 
 Version 16:
 -(BGT) Corrected wrong value for "start_bg1end_sod_cutscene" (by Ychap).

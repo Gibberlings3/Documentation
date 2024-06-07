@@ -25,7 +25,7 @@ The mod has 14 components. The first 5 are for BGII; for these, the 1st componen
 The last components (numbers 6 to 13) are for SoD; for these, components 6 *or* 7 are required to install any of the other, optional components (for details refer to components' descriptions).
 Component 14 offers an alternate portrait for Imoen by Acifer. It is optional and independent on any other I4E component.
 
-Please note: For Imoen to react to game events in SoD accordingly, the main component (Tracking System, 2nd component) of "Road to Discovery" needs to be installed.
+Please note: For Imoen to react to game events in SoD accordingly, the main component (Tracking System, 2nd component) of "Road to Discovery" needs to be included in your install (independent of install order).
 
 
 Components for BGII content:
@@ -124,7 +124,7 @@ There is also a small quest that plays out in the main coalition camp. Imoen nee
 
 This component requires component 7 "Imoen Returns to PC in First Coalition Camp" to be installed.
 
-Please note: For Imoen to react to game events in SoD accordingly, the main component (Tracking System, 2nd component) of "Road to Discovery" needs to be installed.
+Please note: For Imoen to react to game events in SoD accordingly, the main component (Tracking System, 2nd component) of "Road to Discovery" needs to be included in your install (independent of install order).
 
 
 11 I4E in SoD: Imoen at the End of the Game Should be the One that Was in Party (SoD Only)
@@ -221,7 +221,7 @@ As of 09/01/20, the mod is compatible with the following mods that add dialogues
     Afaaq, the Djinni Companion for BG2 and BG2:EE
     Ajantis NPC for BGII
     Almateria's Restauration Project "Extended Waukeen's Promenade Cutscene" (independent of installation order)
-    Alternatives (independent of installation order)
+    Alternatives (independent of installation order as long as the compatibility component is installed after Alternatives)
     Ascalon's Breagar NPC
     Edwin Romance
     IEP Banters Mod (v5.7 or higher)
@@ -294,22 +294,31 @@ This should be helpful in case Imoen came back but was not taken into party but 
 
 
 
+NOTE TO GERMAN PLAYERS
+
+The German version is consistent to the fan-made "Shai Huluds Text-Patch". This means, that names and terms could differ from the official German version shipped with the game. Install the fan made SoD translation for a consistent game experience.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
+
+
+
 CREDITS
 
 Acifer - Imoen portrait, promotion picture, beta testing, mod name
 
 Argent77 - coding help for non-destructive ADD_TRANS_TRIGGER patching
 
-Lauriel - proof reading (English)
-
 UnderstandMouseMagic: idea about Imoen staying behind in SoD because of her poison injury.
 
 Translations:
 ------------
 
-memory, Roberciiik - Polish
+Lauriel - proof reading (English) (v4)
 
-Raza, stn & Arcanecoast Team, Arkie - Russian
+memory, Roberciiik - Polish (v9)
+
+Raza, stn & Arcanecoast Team, Arkie - Russian (v11.3)
+
+Shai Hulud - German (v11.3)
 
 
 
@@ -346,6 +355,25 @@ REDISTRIBUTION NOTE: Imoen 4 Ever Mod was created to be freely enjoyed by all Ba
 
 
 HISTORY
+
+Version 11.4:
+-Imoen should not give her BGII-Kickout dialogue in BG1 (for BGT).
+-All lines should be traified.
+-Typo corrections.
+-Rephrased note about compatibility with Road to Discovery in the readme: RtD does not have to be installed before I4E.
+
+Version 11.3:
+-Russian version finished, by Arkie.
+-One more dialogue added to SoD: Imoen will react to the second dream.
+-All lines from tp2 should be in setup.tra.
+-typo corrections and small text corrections.
+
+Version 11.2:
+-German version finished, by Shai Hulud.
+-All strings should be traify-d.
+
+Version 11.1:
+-English version should not contain German string.
 
 Version 11:
 -SoD content finished.
