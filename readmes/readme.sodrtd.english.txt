@@ -408,6 +408,7 @@ Using the variables with the postfix "_SET" ensures that knowledge is not lost: 
 
 CREDITS
 
+Arkie: Russian translation (v3.0)
 ElGamerViejuno - Spanish translation (v2.0)
 Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
@@ -415,7 +416,9 @@ jastey - author, main mod head
 JohnBob - French translation (v1)
 Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
 Machiavélique - proofreading French (v0.4 Beta)
+MephistoSatanDevil: setup.tra format corrections for Chinese (simplified) (v4.0)
 Shai Hulud - German translation (v0.2 Beta)
+yoshimo0417: Chinese (simplified) (v4.0)
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
 Thanks to Kerzenburgforum and GibberlingsThree for giving a place for exchange of ideas and technical advice.
@@ -456,6 +459,13 @@ https://www.gibberlings3.net/forums/topic/1649-community-filename-prefix-reserva
 
 
 HISTORY
+
+Version 4.0
+-Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
+
+Version 3.0
+-Russian translation, by Arkie.
+-All lines in scripts should be traified.
 
 Version 2.0
 - Spanish version, by ElGamerViejuno.

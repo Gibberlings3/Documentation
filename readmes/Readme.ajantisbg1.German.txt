@@ -96,6 +96,7 @@ Translations:
 
 French by Galathée (of the d'Oghmatiques)
 German by the BG1NPC Übersetzungsteam (of Kerzenburgforum) & Leo
+Chinese (simplified) by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
 
 
 The Ajantis BG1 Expansion Mod was created using the resources provided by the IESDP (https://gibberlings3.github.io/iesdp/index.htm) and with the following software:
@@ -132,6 +133,19 @@ REDISTRIBUTION NOTE: The Ajantis BG1 Expansion Mod was created to be freely enjo
 =============================================================================
 
 HISTORY
+Version 20:
+-Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
+
+Version 19.3:
+-If BG1NPC Romance is installed, Friendship Path should not start for low rep.
+-Reaction to three FF on the road should not lead to a stutter.
+-Reaction to SoD romances should happen independent whether another ended already.
+-Rephrased note about compatibility with Road to Discovery in the readme: RtD does not have to be installed before Ajantis Expansion.
+
+Version 19.2:
+-Fixed install error for French version.
+-Corrected patching of scripts for compatibility with EndlessBG1 (no notable bug for players).
+-Comment on being arrested should also fire if Candlekeep is visited early via Framed mod.
 
 Version 19.1:
 -Fixed install error for BG1NPC' Ajantis shield crossmod compatibility.

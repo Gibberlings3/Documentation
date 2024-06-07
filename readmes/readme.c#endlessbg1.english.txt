@@ -148,7 +148,7 @@ Denkod in the Thieves' Guild, who told the PC where Sarevok went, will still be 
 After Sarevok's Death, the exit of the Undercity will skip the Thieves' Maze once and lead directly into the Thieves' Guild. After going in that direction once, the normal entrances will be reactivated so that the Thieves' Maze can be visited normally after that. 
 
 
-14 Korlasz' Dungeon is in BG1
+14 Korlasz' Dungeon is in BG1 (SoD/EET Only)
 -----------------------------------
 This component moves Korlasz' Tomb into the BG1 part of the game. It transports the group into the dungeon after Belt told the PC to come along to hear the details of pursuing Sarevok last follower. 
 The dungeon can be left and entered after that at will, and is also available in SoD (Iron Throne building area).
@@ -161,14 +161,14 @@ Changes do not apply to a new SoD game.
 Note: This component will most certainly screw Transitions mod as it is not considered there yet (v2.0 and lower). Do not install this component if you were planning on installing Transitions, anyway.
 
 
-15 Fenster the Palace Healer Is in the Palace
+15 Fenster the Palace Healer Is in the Palace (SoD/EET Only)
 -----------------------------------
 Fenster will be inside the palace ground floor, offering similar healing services like the cleric inside Korlasz' Dungeon.
 
 Note: This component might lead to two Fensters being present if combined with the component from Transitions mod as it is not considered there yet (v2.0 and lower). 
 
 
-16 Captain Corwin Is in the Palace
+16 Captain Corwin Is in the Palace (SoD/EET Only)
 -----------------------------------
 Corwin will be inside the palace ground floor with the Dukes, and has no notable content whatsoever.
 
@@ -215,15 +215,63 @@ If you have installation problems or encounter any bugs, please post your bug re
 
 COMPATIBILITY
 
-The Endless BG1 Mod will set the variable "Global("C#EndlessBG1","GLOBAL",1)" in the thieves guild (after the Palace fight) for (NPC) mods to know that the game will remain in BG1 after Sarevok's death.
-Also, from v7 it will set "Global("SarevokBehavior","GLOBAL",5)" to 5 after Sarevok is dead.
-
 Components 1-13 of EndlessBG1 mod are fully compatible with Transitions Mod if Endless BG1 is installed first. Note: Transitions Mod overwrites a lot of components of BG1 with own versions of the content, if considering EBG1's content is not explicitely offered as an install choice. 
 Components 14-16 are not considered in Transitions yet (v2.0 and lower). Component 14 is probably incompatible with Transitions. Installing both will probably mess up the game. Also see compatibility notes in the component descriptions.
 
 The bonus quest "Scar's Return" from bg1re is fully playable after Sarevok's death.
 
 If Jarl's Adventure Pack v0.8.0 is installed, opening the chests on the 3rd floor of the Palace will be counted as a theft - in this case, the chests cannot be used by the group despite the servants stating otherwise.
+
+Compatibility note for modder:
+The Endless BG1 Mod will set the variable "Global("C#EndlessBG1","GLOBAL",1)" in the thieves guild (after the Palace fight) for (NPC) mods to know that the game will remain in BG1 after Sarevok's death.
+Also, from v7 it will set "Global("SarevokBehavior","GLOBAL",5)" to 5 after Sarevok is dead.
+For mods that integrate BG1NPCs into SoD by letting them continue with their BG1 cre (for example like Ajantis BG1 does), please note that the component "Korlasz' Dungeon in BG1" sets the NPCs dialogue and OVERRIDE script to their original SoD ones like it is done in the original bdintro.bcs. This means that NPCs who do not have an SoD script (i.e. all NPCs that do not reappear in SoD as a compagnion: Ajantis, Alora, Branwen, Coran, Faldorn, Garrick, Kagain, Kivan, Montaron, Quayle, Shar-Teel, Skie, Tiax, Xan, Xzar, Yeslick) do get their OVERRIDE script set to nothing (ChangeAIScript("",OVERRIDE)). If you want the acording NPC to have a script in Korlasz' Dungeon nontheless, you need to patch not only bdintro.bcs but also bd0120.bcs and bd0130.bcs where EndlessBG1 adds the resetting of SoD-dlg and bcs to. As an example, this is what I do in AjantisBG1:
+
+----------------------------------
+/* Crossmod with EndlessBG1 "Korlasz Tomb in BG1 */
+ACTION_IF (MOD_IS_INSTALLED ~c#endlessbg1.tp2~ ~14~) BEGIN
+
+/* make sure Ajantis' SoD override script is used in Korlasz' Crypt */
+COPY_EXISTING ~bd0120.bcs~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("Ajantis",ChangeAIScript("",OVERRIDE))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~ActionOverride("Ajantis",ChangeAIScript("BDAJANTI",OVERRIDE))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~bd0130.bcs~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("Ajantis",ChangeAIScript("",OVERRIDE))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~ActionOverride("Ajantis",ChangeAIScript("BDAJANTI",OVERRIDE))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+END
+BUT_ONLY_IF_IT_CHANGES
+/* this might not be needed here since you'll have to patch bdintro.bcs anyway for your NPC mod */
+COPY_EXISTING ~bdintro.bcs~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("Ajantis",ChangeAIScript("",OVERRIDE))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~ActionOverride("Ajantis",ChangeAIScript("BDAJANTI",OVERRIDE))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+END
+BUT_ONLY_IF_IT_CHANGES
+
+END //~c#endlessbg1.tp2~ ~14~
+------------------------------------
 
 
 CREDITS
@@ -237,11 +285,14 @@ Tantalus: BAMs of Sarevok unique items. The BAMs where taken out of Tantalus' Mo
 
 Translations:
 Aristo: Polish (proofreading)
-Austin, Arkie & Arcanecoast.ru and yota13: Russian
-Roberciiik: Polish
-Gwendolyne, Machiavélique, and Shodead: French
-improb@bile: Italian
+Austin, Arkie & Arcanecoast.ru and yota13: Russian (v16, new lines in v18)
+Ulpian: Russian (content of v17, released with v18)
+Roberciiik: Polish (v18)
+Gwendolyne, Machiavélique, and Shodead, JohnBob (new lines in v18): French
+improb@bile, Frenzgyn (new lines in v18): Italian
 Inueb and ElGamerViejuno: Spanish
+Sauro: Brazilian Portuguese
+
 Proofreading of English version & readme: Lauriel, Mike1072, Roberciiik
 
 
@@ -263,6 +314,31 @@ Spellhold Studios			http://www.shsforums.net/
 
 
 HISTORY
+
+Version 19:
+- Brazilian Portuguese translation added, by Sauro
+- fixed install error when JAP is installed.
+- typo %HARTEEL_JOINED% _> "%SHARTEEL_JOINED%"
+
+Version 18.1:
+-(BG:EE, EET) Translations of new lines added for Italian (by Frenzgyn) and French (by JohnBob), too.
+
+Version 18:
+-Revised Russian version, by Ulpian. 
+-"Duke Eltan Is in the Palace": the mod added Duke Eltan will be removed after BG1 is finished to clear the area for mods that reopen the palace in EET(BGII).
+-Duke Eltan's body will be silently removed after Sarevok was defeated in case it wasn't brought to the Harbor master, either by the FF healers in Undercity or upon reentering the palace.
+-Corrected path to journal entries for ADD_JOURNAL.
+-Corwin should be removed after BG1 is over (fixed typo in script).
+-Harbour master should not accept Eltan's body after Sarevok is defeated.
+-(BG:EE, EET) Better journal handling after Sarevok is defeated. Translations of new lines by yota13 (Russian), Roberciiik (Polish), Frenzgyn (Italian), JohnBob (French), ElGamerViejuno (Spanisch).
+-All lines in tp2 should be in tra files.
+
+Version 17:
+-Korlasz' Crypt in BG1: NPCs should always use their SoD scripts while inside the crypt.
+-Duke Jannath should not ask for the tomes if Imoen already gave them to her.
+-More cleanup after Sarevok: Delthyr in ThreeOldKegs, Sorrel in NBaldursGate.
+-Journal entries that make no more sense after Sarevok's defeat should be closed or erased (work in progress).
+-Added compatibility note to readme for "BG1 NPCs in SoD"-Mods and dlg/bcs handling for "Korlasz' Dungeon in BG1": NPCs get their SoD dialogue and script assigned. If BG1 NPCs do not have an original SoD script they would have to be patched accordingly if a mod requires them to have one.
 
 Version 16:
 -(BGT) Corrected wrong value for "start_bg1end_sod_cutscene" (by Ychap).
