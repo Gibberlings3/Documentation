@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>The Bullet Sponge (BS) Mod</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="style/g3readme_cam_022916.css" type="text/css" />
+<link href="style/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<div id="container">
+  <div class="ribbon_menu">
+    <ul>
+      <li><a href="#Overview">Overview</a></li>
+      <li><a href="#Compatibility">Compatibility</a></li>
+      <li><a href="#Bugs">Bug Reporting</a></li>
+      <li><a href="#Installation">Installation</a></li>
+      <li><a href="#Contents">Contents</a></li>
+      <li><a href="#Contact">Contact</a></li>
+      <li><a href="#Thanks">Thanks</a></li>
+      <li><a href="#Credits">Credits</a></li>
+      <li><a href="#History">History</a></li>
+    </ul>
+    <span><img src="style/g3_logo_2018.gif" alt="G3" width="237" height="83" /></span> </div>
+  <div class="ribbon_bubble">
+    <div class="ribbon_rectangle">
+      <h1> The Bullet Sponge (BS) Mod</h1>
+    </div>
+    <div class="ribbon_triangle-l"></div>
+    <div class="ribbon_triangle-r"></div>
+    <div class="section">
+      <p> <strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
+        Aithor: </strong><a href="https://www.gibberlings3.net/profile/8-camdawg/">CamDawg</a><br />
+        <strong>On the web: </strong><a href="https://www.gibberlings3.net/mods/tweaks/bs/">Home page</a>, <a href="https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/">discussion forum</a>,and <a href="https://discord.gg/yTzjMTb">Discord</a></p>
+      <p> <strong>Version Beta 1</strong><br />
+        <strong>Languages:</strong> English<br />
+        <strong>Platforms: </strong>Windows, macOS, Linux<br />
+        <strong>GitHub: </strong><a href="https://github.com/Gibberlings3/bullet_sponge">Gibberlings3/bullet_sponge</a> </p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Overview" name="Overview"></a>
+      <h2> Overview </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> The Bullet Sponge (BS) Mod is a <abbr title="Weimer Dialogue Utility">WeiDU</abbr> compilation of small modifications to adjust the difficulty of your game by brute-forcing the statistics of non-party creatures.  This mod started as an outgrowth of the Max HP Creatures component from Tweaks Anthology. About a year ago, I modified the code to allow for an arbitrary percentage change to HP, not just 100%, and it got me thinking about other creature stats that could be adjusted similarly. After some experimentation, I came up with an array of basic stats that can be adjusted to make the game easier or harder, controlled by the config.txt file. </p>
+      <p>The term '<a href="https://en.wikipedia.org/wiki/Glossary_of_video_game_terms#bullet_sponge">bullet sponge</a>' refers to a technique where higher difficulty levels, especially in older games, just added higher and higher stats (such as hit points) to enemies to make them more difficult. </p>
+<p>While the stats can be adjusted to make the game easier, I expect most players will use this to make their games more difficult&mdash;after losing a frustrating fight, the player will confidently be able to say &quot;yeah, that was BS&quot;. </p>
+</div>
+    <div class="ribbon_rectangle_h2"> <a id="Compatibility" name="Compatibility"></a>
+      <h2> Compatibility </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> This mod works on all Infinity Engine games. This includes </p>
+      <ul>
+        <li> The series of Enhanced Editions (<abbr title="Enhanced Edition">EE</abbr>) published by Beamdog, which at present includes Baldur&#39;s Gate: Enhanced Edition (<abbr title="Baldur's Gate: Enhanced Edition">BGEE</abbr>), Baldur&#39;s Gate II: Enhanced Edition (<abbr title="Baldur's Gate II: Enhanced Edition">BG2EE</abbr>), Icewind Dale: Enhanced Edition (<abbr title="Icewind Dale: Enhanced Edition">IWDEE</abbr>), and Planescape: Torment: Enhanced Edition (<abbr title="Planescape: Torment: Enhanced Edition">PsTEE</abbr>). The <abbr title="Baldur's Gate: Enhanced Edition">BGEE</abbr> Siege of Dragonspear expansion (<abbr title="Siege of Dragonspear">SoD</abbr>) is supported as well. All of the Enhanced Edition games include the original expansion packs, e.g. <abbr title="Icewind Dale: Enhanced Edition">IWDEE</abbr> includes Heart of Winter and Trials of the Luremaster. </li>
+        <li> The original Baldur&#39;s Gate (<abbr title="Baldur's Gate">BG</abbr>), with or without the Tales of the Sword Coast (<abbr title="Tales of the Sword Coast">TotSC</abbr>) expansion </li>
+        <li> The original Baldur&#39;s Gate II (<abbr title="Baldur's Gate II">BG2</abbr> or just Shadows of Amn (<abbr title="Shadows of Amn">SoA</abbr>)), with or without the Throne of Bhaal (<abbr title="Throne of Bhaal">ToB</abbr>) expansion </li>
+        <li> The conversion projects Baldur&#39;s Gate Trilogy (<abbr title="Baldur's Gate Trilogy">BGT</abbr>), Baldur&#39;s Gate Tutu (Tutu), Icewind Dale-in-Baldur&#39;s Gate II (<abbr title="Icewind Dale">IWD</abbr>-in-<abbr title="Baldur's Gate II">BG2</abbr>), and Enhanced Edition Trilogy (<abbr title="Enhanced Edition Trilogy">EET</abbr>) </li>
+        <li> The original Icewind Dale (<abbr title="Icewind Dale">IWD</abbr>) with or without either of its expansions, Heart of Winter (<abbr title="Heart of Winter">HoW</abbr>) and Trials of the Luremaster (<abbr title="Trials of the Luremaster">TotLM</abbr>) </li>
+        <li> Icewind Dale II (<abbr title="Icewind Dale II">IWD2</abbr>) </li>
+        <li> Planescape: Torment (<abbr title="Planescape: Torment">PsT</abbr>) </li>
+      </ul>
+      <p>In terms of install order, it should go as late as possible (even after SCS) to take advantage of boosts and improvements that other mods have already made to creatures in the game. The additional memorized spells, for example, will strongly benefit from SCS' improvements to spellbooks. </p>
+      <p> While the mod works on all of these platforms, not every adjustment is available for every game; check the individual stats below.</p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Bugs" name="Bugs"></a>
+      <h2> Bug Reporting and Known Issues </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> If you should encounter any bugs, please report them to the author at the <a href="https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/">Miscellaneous Released Mods</a> forum. In addition, BS Mod is <a href="https://github.com/Gibberlings3/bullet_sponge">available on GitHub</a>, so fixes and changes can be submitted by the community. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Installation" name="Installation"></a>
+      <h2> Installation </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> First time installing a mod? Check out <abbr title="The Gibberlings Three">G3</abbr>&#39;s comprehensive tutorial: <a href="https://www.gibberlings3.net/forums/topic/33164-a-new-player%E2%80%99s-guide-to-installing-and-playing-mods/">A New Player's Guide to Installing and Playing Mods</a>. </p>
+      <p> <strong>Special Note for Siege of Dragonspear from Steam/<abbr title="Good Old Games">GOG</abbr></strong><br />
+        Good Old Games (<abbr title="Good Old Games">GOG</abbr>) and Steam both package the additional content for Siege of Dragonspear in a method that <abbr title="Weimer Dialogue Utility">WeiDU</abbr>, the tool used to install this mod, cannot access. You must run a program called <a href="https://github.com/Argent77/A7-DlcMerger/releases"><abbr title="Downloadable Content">DLC</abbr> Merger</a> on your <abbr title="Siege of Dragonspear">SoD</abbr> installation before you can install this or any other <abbr title="Weimer Dialogue Utility">WeiDU</abbr>-based mod. </p>
+      <p> <strong>Enhanced Editions Note</strong><br />
+        The Enhanced Editions are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update (if possible) as even after reinstalling the mods, you might not be able to continue with your old savegames. Alternatively, copy the whole game&#39;s folder into a new one that can be modded and will stay untouched by game patches. It is important that you install the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages. </p>
+      <p> <strong>Windows</strong><br />
+        The BS Mod for Windows is distributed as a self-extracting archive and includes a <abbr title="Weimer Dialogue Utility">WeiDU</abbr> installer. To install, simply double-click the archive and follow the instructions on screen. </p>
+      <p> Alternatively, the files can be extracted into your game directory using <a href="http://www.7-zip.org/download.html">7zip</a> or <a href="http://www.rarlab.com/download.htm">WinRAR</a>. When properly extracted, your game directory will contain <strong>setup-cd_bullet_sponge.exe</strong> and the folder <strong>cd_bullet_sponge</strong>. To install, double-click <strong>setup-cd_bullet_sponge.exe</strong> and follow the instructions on screen. </p>
+      <p> You can run <strong>setup-cd_bullet_sponge.exe</strong> in your game folder to reinstall, uninstall or otherwise change components. </p>
+      <p> <strong>macOS</strong><br />
+        The BS Mod for macOS is distributed as a compressed tarball and includes a <abbr title="Weimer Dialogue Utility">WeiDU</abbr> installer. </p>
+      <p> First, extract the files from the tarball into your game directory. When properly extracted, your game directory will contain <strong>setup-cd_bullet_sponge</strong>, <strong>setup-cd_bullet_sponge.command</strong>, and the folder <strong>cd_bullet_sponge</strong>. To install, double-click <strong>setup-cd_bullet_sponge.command</strong> and follow the instructions on screen. </p>
+      <p> You can run <strong>setup-cd_bullet_sponge.command</strong> in your game folder to reinstall, uninstall or otherwise change components. </p>
+      <p> <strong>Linux</strong><br />
+        The BS Mod for Linux is distributed as a compressed tarball and does not include a <abbr title="Weimer Dialogue Utility">WeiDU</abbr> installer. Linux users will need to do a one-time install of <abbr title="Weimer Dialogue Utility">WeiDU</abbr> (and a few other adjustments) as described in <a href="https://moebiusproject.gitlab.io/mods_on_linux">this great writeup</a>. </p>
+      <p> To install, run &#39;WeInstall cd_bullet_sponge in your game folder. </p>
+      <p> <strong>Note for Complete Uninstallation</strong><br />
+        In addition to the methods above for removing individual components, you can completely uninstall the mod using setup-cd_bullet_sponge --uninstall at the command line to remove all components without wading through prompts. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Contents" name="Contents"></a>
+      <h2> Contents </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> The BS Mod has a single component, which will put into effect the changes specified in the mod's config.txt file. The variables and their effects are described below. These changes will affect all creatures in the game excluding party members. </p>
+      <p><strong>For the first time running the mod, you will need to find and rename _config.txt in the mod's folder to config.txt (removing the underscore), and input the desired changes. </strong></p>
+      <p>The changes in the config.txt will be implemented when you install the mod. If you want to make further changes, you will have to update the config.txt and then re-install BS. <em>Changing the config.txt, by itself, doesn't change anything in-game. </em></p>
+      <h3>General Notes </h3>
+      <p>All of the values in config.txt should be whole, integer values, e.g. no decimal places. Negative values are generally allowed except where notes. Each config option also has two ranges: what values you're allowed to set in the config, and what values are allowed in the game. We'll use a strength bonus as an example. Positive numbers should just be written as the number; negative values need a dash (e.g. -1) preceding them, and keep the whole expression within the existing quotation marks. </p>
+      <p>Note that when I mention that something works &quot;on BG2&quot;, I mean the BG2 engine, so it will also work on conversion projects such as BGT, IWD-in-BG2, or Tutu. Similarly, working &quot;on EE&quot; includes the baseline EE games and EET.</p>
+      <h3>Basic Combat Stats</h3>
+      <p class="code">OUTER_SET ac_bonus     = &quot;0&quot; // final range -20 to 10 (IWD2 0 to 30); allowed outside this range on EEs, BG2 engine<br />
+        OUTER_SET to-hit_bonus = &quot;0&quot; // final range 0 to 20 (IWD2 0 to 25); allowed outside this range on EEs, BG2 engine</p>
+      <p>These make basic to-hit and armor class adjustments, with a slightly different range for the 2e and 3e rulesets. On the BG2 engine and the Enhanced Edition games, these bonuses are applied as external effects and not adjustments to the base scores, allowing these scores to potentially range outside their normal values. Note that the engine usually caps effects in these circumstances, but it's still done this way to give a little more flexibility to the player. </p>
+      <p class="code">OUTER_SET hd_bonus     = &quot;0&quot; // final range 1 - 50</p>
+      <p>The goal here is to make spells and abilities a little more dangerous; combined with the HP tweaks this can also bump up hit points as well. </p>
+      <p>In non-IWD2 games, this will bump up all  classes of the creatures with the bonus, e.g. specifying a +2 HD bonus will give +2 levels to both a fighter-mage's fighter AND mage class, and a +2 bonus to a single-class thief's level. </p>
+      <p>On IWD2 games, it will distribute the added levels evenly among the existing levels present in the creature. If it cannot be evenly divided, remainders will favor spellcasting classes, e.g. specifying a +5 bonus would get distributed as +3 sorcerer, +2 rogue if those were the only existing levels in the creature file. </p>
+      <p class="code">OUTER_SET apr_bonus    = &quot;0&quot; // final range 0 - 5</p>
+      <p>The desired APR bonus must be multiplied by two to get the desired outcome, as WeiDU does not allow for fractions. So if you want to add 1.5 attacks per round, use a value of 3. For an additional 4 attacks per round, use a value of 8. </p>
+      <p class="code">OUTER_SET damage_bonus = &quot;100&quot; // only works on EEs and BG2; minimum value 1</p>
+      <p>As noted, this only works on EEs and BG2-based games. This allows you to adjust the damage that enemies are doing; 200 would set enemies to double damage and 50 to half. </p>
+      <h3>Basic Attributes</h3>
+      <p class="code">OUTER_SET str_bonus = &quot;0&quot; // final range 1 to 25 (IWD2 1 to 40)<br />
+        OUTER_SET dex_bonus = &quot;0&quot;<br />
+        OUTER_SET con_bonus = &quot;0&quot;<br />
+        OUTER_SET int_bonus = &quot;0&quot;<br />
+        OUTER_SET wis_bonus = &quot;0&quot;<br />
+        OUTER_SET chr_bonus = &quot;0&quot;</p>
+      <p>The six basic stats&mdash;strength, dexterity, constitution, intelligence, wisdom, and charisma&mdash;can be adjusted up or down with these variables. Since 2e and 3e have different caps, they run to 25 on 2e games and 40 on 3e games. </p>
+      <h3>Damage Resistances</h3>
+      <p class="code"> OUTER_SET resistance_fire_bonus         = &quot;0&quot; // final range 0-99<br />
+        OUTER_SET resistance_cold_bonus         = &quot;0&quot;<br />
+        OUTER_SET resistance_electricity_bonus  = &quot;0&quot;<br />
+        OUTER_SET resistance_acid_bonus         = &quot;0&quot;<br />
+        OUTER_SET resistance_slashing_bonus     = &quot;0&quot;<br />
+        OUTER_SET resistance_crushing_bonus     = &quot;0&quot;<br />
+        OUTER_SET resistance_piercing_bonus     = &quot;0&quot;<br />
+        OUTER_SET resistance_missile_bonus      = &quot;0&quot;<br />
+        OUTER_SET resistance_magic_damage_bonus = &quot;0&quot; // only works on EEs, BG2, and IWD2<br />
+        OUTER_SET resistance_magic_bonus = &quot;0&quot; // not for IWD2<br />
+        OUTER_SET spell_resistance_bonus = &quot;0&quot; // IWD2-only </p>
+      <p>These affect resistances to various damage types in the game. However, two certain creatures are exempt from changes: if a creature is already immune to an element or take extra damage from a damage type, they will not be changed. E.g. specifying -20 to cold resistance will not mean that ice golems now take ice damage; on the flipside, specifying +20 to fire resistance won't change kuo-toa since they take extra fire damage. </p>
+      <p>Outside of those exceptions, the scores can be adjusted as desired. They cap at 99 to prevent a creature becoming completely immune, and they are applied multiplicatively. As an example, if you specify +50% electrical resistance, then mummies (baseline 40% resistant) will be improved to 70% resistance. A creature with no prior electrical resistance will go from 0 to 50. </p>
+      <h3>Hit Point Adjustments</h3>
+      <p class="code">OUTER_SET hit_point_percentage = &quot;100&quot;<br />
+        OUTER_SET flat_hit_point_bonus = &quot;0&quot;</p>
+      <p>Like Tweaks Anthology's Max HP Creatures, this allows you to fine-tune enemy HP. It calculates a maximum HP based on the creature's class and levels, which is then multiplied by the specified percentage, and the flat bonus added on top of that. If the resulting adjustment is higher than the current HP, then it is applied, otherwise the existing (and higher) HP remains unchanged. If the percentage is being used to lower HP off the maximum, then the opposite calculation occurs: it will only commit a new HP total if it's below their current HP. </p>
+      <h3>Saving Throws</h3>
+      <p>Non-IWD2:</p>
+      <p class="code">OUTER_SET save_death_bonus     = &quot;0&quot;  // final range 0-20; allowed outside this range on EEs, BG2 engine<br />
+        OUTER_SET save_wand_bonus      = &quot;0&quot;<br />
+        OUTER_SET save_polymorph_bonus = &quot;0&quot;<br />
+        OUTER_SET save_breath_bonus    = &quot;0&quot;<br />
+        OUTER_SET save_spell_bonus     = &quot;0&quot;</p>
+      <p>IWD2: </p>
+      <p class="code"> OUTER_SET save_fortitude_bonus   = &quot;0&quot;  // final range 0-25<br />
+        OUTER_SET save_reflex_bonus      = &quot;0&quot;<br />
+        OUTER_SET save_will_bonus        = &quot;0&quot;</p>
+      <p>Adjustments to all saving throws in the game. Like the AC and to-hit bonuses, these are attached as external effects in BG2 and EE games, allowing them to range outside of their normal values. </p>
+      <h3>Movement Speed </h3>
+      <p class="code">OUTER_SET movement_speed_bonus = &quot;100&quot; // only works on EEs and BG2</p>
+      <p>As noted, this only works on EEs and BG2-based games. This allows you to adjust the base movement speed of enemies, as a percentage, and it will not be affected by free action. Half speed enemies would need a score of 50; a score of 120 would make them 20% faster than normal. </p>
+      <p>A prime use case for this would to increase enemy speed to reduce or eliminate the player's ability to kite enemies. Alternatively, you could lower enemy speeds to favor ranged attacks or spellcasting.</p>
+      <h3>Additional Memorized Spells</h3>
+      <p class="code">OUTER_SET extra_divine_spells_1 = &quot;0&quot;<br />
+        OUTER_SET extra_divine_spells_2 = &quot;0&quot;<br />
+        OUTER_SET extra_divine_spells_3 = &quot;0&quot;<br />
+        OUTER_SET extra_divine_spells_4 = &quot;0&quot;<br />
+        OUTER_SET extra_divine_spells_5 = &quot;0&quot;<br />
+        OUTER_SET extra_divine_spells_6 = &quot;0&quot;<br />
+        OUTER_SET extra_divine_spells_7 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_1 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_2 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_3 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_4 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_5 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_6 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_7 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_8 = &quot;0&quot;<br />
+        OUTER_SET extra_arcane_spells_9 = &quot;0&quot;</p>
+      <p>All of these allow the player to add additional memorizations of spells that enemies already have memorized, allowing them to endure longer and be more dangerous in prolonged fights. It will browse the existing memorized divine/arcane side at the specified level, pick one at random, and then give the creature an additional casting of that spell. It will repeat these process, with a new random selection every iteration, until the number of spells matches what the player has requested. Note that this greatly benefits from being installed after a mod like SCS, which already optimizes spell selection. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Contact" name="Contact"></a>
+      <h2> Contact Information </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The BS mod was created by <a href="https://www.gibberlings3.net/profile/8-camdawg/">CamDawg</a>. For issues, suggestions and          general feedback, G3's <a href="https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/">Miscellaneous Released Mods</a> forum  are the best resource. Visit the <a href="https://www.gibberlings3.net/forum/">Gibberlings          Three Forums</a> for information on this and any other Gibberlings Three          mods on which we may be working.</p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Thanks" name="Thanks"></a>
+      <h2> Thanks and Acknowledgements </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> This mod started as an outgrowth of the Max HP Creatures component from tweaks Anthology. About a year ago, I modified the code to allow for an arbitrary percentage change to HP, not just 100%, and it got me thinking about other basic stats that could be adjusted similarly. </p>
+      <p> <strong>Tools Used in Creation</strong> </p>
+      <ul>
+        <li> <a href="http://www.weidu.org/"><abbr title="Weimer Dialogue Utility">WeiDU</abbr></a> by Wes Weimer, the bigg, and Wisp </li>
+        <li> <a href="https://github.com/NearInfinityBrowser/NearInfinity/wiki">Near Infinity</a> by Jon Olav Hauglid, FredSRichardson, and argent77 </li>
+        <li> <a href="https://notepad-plus-plus.org/">Notepad++</a>, by the Notepad++ team </li>
+        <li> <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/"><abbr title="Weimer Dialogue Utility">WeiDU</abbr> Notepad++ Highlighters</a> by cmorgan, updated by argent77 </li>
+        <li> <a href="http://www.context.cx/">ConTEXT Text Editor</a> by Eden Kirin </li>
+        <li> <a href="https://www.gibberlings3.net/mods/tools/weidu/"><abbr title="Weimer Dialogue Utility">WeiDU</abbr> ConTEXT Highlighters</a> by Idobek, updated by cmorgan </li>
+        <li> <a href="https://gibberlings3.github.io/iesdp/"><abbr title="Infinity Engine Structures Description Project">IESDP</abbr></a> maintained by igi and lynx </li>
+        <li>The shared <a href="https://github.com/Gibberlings3/modding-resources">modding resource library</a> at G3</li>
+      </ul>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="Credits" name="Credits"></a>
+      <h2> Credits and Copyright Information </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> The modding community for the Infinity Engine has been going strong for more than 20 years now, and is the culmination of thousands of unpaid modding hours by fellow fans of the game. Modders produce their best work and players get the best, well-supported mods when we all work together. </p>
+      <p> There are two big ways to upset this harmony. One is to claim someone else&#39;s work as your own. The second is to host and redistribute a mod without permission from the author(s). </p>
+      <p> Be kind to your fellow players and modders. Don&#39;t do either. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"> <a id="History" name="History"></a>
+      <h2> Version History </h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> <strong>Version Beta - January 8, 2025</strong></p>
+      <ul>
+        <li>Initial release</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
