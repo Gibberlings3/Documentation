@@ -31,7 +31,7 @@
       <p> <strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
         Aithor: </strong><a href="https://www.gibberlings3.net/profile/8-camdawg/">CamDawg</a><br />
         <strong>On the web: </strong><a href="https://www.gibberlings3.net/mods/tweaks/bs/">Home page</a>, <a href="https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/">discussion forum</a>,and <a href="https://discord.gg/yTzjMTb">Discord</a></p>
-      <p> <strong>Version Beta 1</strong><br />
+      <p> <strong>Version Beta 2</strong><br />
         <strong>Languages:</strong> English<br />
         <strong>Platforms: </strong>Windows, macOS, Linux<br />
         <strong>GitHub: </strong><a href="https://github.com/Gibberlings3/bullet_sponge">Gibberlings3/bullet_sponge</a> </p>
@@ -165,23 +165,40 @@
       <p>As noted, this only works on EEs and BG2-based games. This allows you to adjust the base movement speed of enemies, as a percentage, and it will not be affected by free action. Half speed enemies would need a score of 50; a score of 120 would make them 20% faster than normal. </p>
       <p>A prime use case for this would to increase enemy speed to reduce or eliminate the player's ability to kite enemies. Alternatively, you could lower enemy speeds to favor ranged attacks or spellcasting.</p>
       <h3>Additional Memorized Spells</h3>
+      <p><strong>Non-IWD2:</strong></p>
       <p class="code">OUTER_SET extra_divine_spells_1 = &quot;0&quot;<br />
-        OUTER_SET extra_divine_spells_2 = &quot;0&quot;<br />
-        OUTER_SET extra_divine_spells_3 = &quot;0&quot;<br />
-        OUTER_SET extra_divine_spells_4 = &quot;0&quot;<br />
-        OUTER_SET extra_divine_spells_5 = &quot;0&quot;<br />
-        OUTER_SET extra_divine_spells_6 = &quot;0&quot;<br />
+        ...<br />
         OUTER_SET extra_divine_spells_7 = &quot;0&quot;<br />
         OUTER_SET extra_arcane_spells_1 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_2 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_3 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_4 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_5 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_6 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_7 = &quot;0&quot;<br />
-        OUTER_SET extra_arcane_spells_8 = &quot;0&quot;<br />
+        ...<br />
         OUTER_SET extra_arcane_spells_9 = &quot;0&quot;</p>
-      <p>All of these allow the player to add additional memorizations of spells that enemies already have memorized, allowing them to endure longer and be more dangerous in prolonged fights. It will browse the existing memorized divine/arcane side at the specified level, pick one at random, and then give the creature an additional casting of that spell. It will repeat these process, with a new random selection every iteration, until the number of spells matches what the player has requested. Note that this greatly benefits from being installed after a mod like SCS, which already optimizes spell selection. </p>
+      <p>All of these allow the player to add additional memorizations of spells that enemies already have memorized, allowing them to endure longer and be more dangerous in prolonged fights. It will browse the existing memorized divine/arcane side at the specified level, pick one at random, and then give the creature an additional casting of that spell. It will repeat these process, with a new random selection every iteration, until the number of spells matches what the player has requested. Note that this greatly benefits from being installed after a mod like SCS, which already optimizes spell selection.</p>
+      <p><strong>IWD2:</strong></p>
+      <p class="code">OUTER_SET extra_bard_spells_1     = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_bard_spells_9     = &quot;0&quot;<br />
+        OUTER_SET extra_cleric_spells_1   = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_cleric_spells_9   = &quot;0&quot;<br />
+        OUTER_SET extra_druid_spells_1    = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_druid_spells_9    = &quot;0&quot;<br />
+        OUTER_SET extra_paladin_spells_1  = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_paladin_spells_9  = &quot;0&quot;<br />
+        OUTER_SET extra_ranger_spells_1   = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_ranger_spells_9   = &quot;0&quot;<br />
+        OUTER_SET extra_sorcerer_spells_1 = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_sorcerer_spells_9 = &quot;0&quot;<br />
+        OUTER_SET extra_wizard_spells_1   = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_wizard_spells_9   = &quot;0&quot;<br />
+        OUTER_SET extra_domain_spells_1   = &quot;0&quot;<br />
+        ...<br />
+        OUTER_SET extra_domain_spells_9   = &quot;0&quot;</p>
+      <p>All of these allow the player to add additional memorizations of spells that enemies already have memorized, allowing them to endure longer and be more dangerous in prolonged fights. It will browse the existing memorized spell type at the specified level, pick one at random, and then give the creature an additional casting of that spell. It will repeat these process, with a new random selection every iteration, until the number of spells matches what the player has requested. Note that this greatly benefits from being installed after a mod which already optimizes spell selection.</p>
     </div>
     <div class="ribbon_rectangle_h2"> <a id="Contact" name="Contact"></a>
       <h2> Contact Information </h2>
@@ -226,7 +243,12 @@
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
-      <p> <strong>Version Beta - January 8, 2025</strong></p>
+      <p> <strong>Version Beta 2 - January 12, 2025</strong></p>
+      <ul>
+        <li>Fixed bug with extra memorized spells for sorcerers and shaman</li>
+        <li>Extended additional memorized spells to work on IWD2, albeit with their own suite of variables</li>
+      </ul>
+      <p> <strong>Version Beta 1 - January 8, 2025</strong></p>
       <ul>
         <li>Initial release</li>
       </ul>
