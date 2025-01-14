@@ -31,7 +31,7 @@
       <p> <strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
         Aithor: </strong><a href="https://www.gibberlings3.net/profile/8-camdawg/">CamDawg</a><br />
         <strong>On the web: </strong><a href="https://www.gibberlings3.net/mods/tweaks/bs/">Home page</a>, <a href="https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/">discussion forum</a>,and <a href="https://discord.gg/yTzjMTb">Discord</a></p>
-      <p> <strong>Version Beta 2</strong><br />
+      <p> <strong>Version 1</strong><br />
         <strong>Languages:</strong> English<br />
         <strong>Platforms: </strong>Windows, macOS, Linux<br />
         <strong>GitHub: </strong><a href="https://github.com/Gibberlings3/bullet_sponge">Gibberlings3/bullet_sponge</a> </p>
@@ -44,8 +44,8 @@
     <div class="section">
       <p> The Bullet Sponge (BS) Mod is a <abbr title="Weimer Dialogue Utility">WeiDU</abbr> compilation of small modifications to adjust the difficulty of your game by brute-forcing the statistics of non-party creatures.  This mod started as an outgrowth of the Max HP Creatures component from Tweaks Anthology. About a year ago, I modified the code to allow for an arbitrary percentage change to HP, not just 100%, and it got me thinking about other creature stats that could be adjusted similarly. After some experimentation, I came up with an array of basic stats that can be adjusted to make the game easier or harder, controlled by the config.txt file. </p>
       <p>The term '<a href="https://en.wikipedia.org/wiki/Glossary_of_video_game_terms#bullet_sponge">bullet sponge</a>' refers to a technique where higher difficulty levels, especially in older games, just added higher and higher stats (such as hit points) to enemies to make them more difficult. </p>
-<p>While the stats can be adjusted to make the game easier, I expect most players will use this to make their games more difficult&mdash;after losing a frustrating fight, the player will confidently be able to say &quot;yeah, that was BS&quot;. </p>
-</div>
+      <p>While the stats can be adjusted to make the game easier, I expect most players will use this to make their games more difficult&mdash;after losing a frustrating fight, the player will confidently be able to say &quot;yeah, that was BS&quot;. </p>
+    </div>
     <div class="ribbon_rectangle_h2"> <a id="Compatibility" name="Compatibility"></a>
       <h2> Compatibility </h2>
     </div>
@@ -106,7 +106,8 @@
     <div class="section">
       <p> The BS Mod has a single component, which will put into effect the changes specified in the mod's config.txt file. The variables and their effects are described below. These changes will affect all creatures in the game excluding party members. </p>
       <p><strong>For the first time running the mod, you will need to find and rename _config.txt in the mod's folder to config.txt (removing the underscore), and input the desired changes. </strong></p>
-      <p>The changes in the config.txt will be implemented when you install the mod. If you want to make further changes, you will have to update the config.txt and then re-install BS. <em>Changing the config.txt, by itself, doesn't change anything in-game. </em></p>
+      <p>The changes in the config.txt will be implemented when you install the mod. If you want to make further changes, you will have to update the config.txt and then re-install BS. <em>Changing the config.txt, by itself, doesn't change anything in-game until you re-install BS. </em></p>
+      <p>If you want to change the pace of experience progression, check out the <a href="https://www.pocketplane.net/house-of-sim/">Ding0 Experience Fixer</a> aka DEF JAM. </p>
       <h3>General Notes </h3>
       <p>All of the values in config.txt should be whole, integer values, e.g. no decimal places. Negative values are generally allowed except where notes. Each config option also has two ranges: what values you're allowed to set in the config, and what values are allowed in the game. We'll use a strength bonus as an example. Positive numbers should just be written as the number; negative values need a dash (e.g. -1) preceding them, and keep the whole expression within the existing quotation marks. </p>
       <p>Note that when I mention that something works &quot;on BG2&quot;, I mean the BG2 engine, so it will also work on conversion projects such as BGT, IWD-in-BG2, or Tutu. Similarly, working &quot;on EE&quot; includes the baseline EE games and EET.</p>
@@ -243,6 +244,11 @@
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
+      <p> <strong>Version 1 - January 14, 2025</strong></p>
+      <ul>
+        <li>Fixed bug with save bonuses on non-BG2 games</li>
+        <li>Added input checks for IWD2 bonus spells</li>
+      </ul>
       <p> <strong>Version Beta 2 - January 12, 2025</strong></p>
       <ul>
         <li>Fixed bug with extra memorized spells for sorcerers and shaman</li>
