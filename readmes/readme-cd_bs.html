@@ -31,7 +31,7 @@
       <p> <strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
         Aithor: </strong><a href="https://www.gibberlings3.net/profile/8-camdawg/">CamDawg</a><br />
         <strong>On the web: </strong><a href="https://www.gibberlings3.net/mods/tweaks/bs/">Home page</a>, <a href="https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/">discussion forum</a>,and <a href="https://discord.gg/yTzjMTb">Discord</a></p>
-      <p> <strong>Version 1</strong><br />
+      <p> <strong>Version 2</strong><br />
         <strong>Languages:</strong> English<br />
         <strong>Platforms: </strong>Windows, macOS, Linux<br />
         <strong>GitHub: </strong><a href="https://github.com/Gibberlings3/bullet_sponge">Gibberlings3/bullet_sponge</a> </p>
@@ -62,7 +62,7 @@
         <li> Icewind Dale II (<abbr title="Icewind Dale II">IWD2</abbr>) </li>
         <li> Planescape: Torment (<abbr title="Planescape: Torment">PsT</abbr>) </li>
       </ul>
-      <p>In terms of install order, it should go as late as possible (even after SCS) to take advantage of boosts and improvements that other mods have already made to creatures in the game. The additional memorized spells, for example, will strongly benefit from SCS' improvements to spellbooks. </p>
+      <p>In terms of install order, it should go as late as possible (even after SCS) to take advantage of boosts and improvements that other mods have already made to creatures in the game. The additional memorized spells, for example, will strongly benefit from SCS' improvements to spellbooks. As of v2, BS mow generates its own function at installation to allow other mods to tap into its adjustments if they want to be installed after BS. </p>
       <p> While the mod works on all of these platforms, not every adjustment is available for every game; check the individual stats below.</p>
     </div>
     <div class="ribbon_rectangle_h2"> <a id="Bugs" name="Bugs"></a>
@@ -111,7 +111,12 @@
       <h3>General Notes </h3>
       <p>All of the values in config.txt should be whole, integer values, e.g. no decimal places. Negative values are generally allowed except where notes. Each config option also has two ranges: what values you're allowed to set in the config, and what values are allowed in the game. We'll use a strength bonus as an example. Positive numbers should just be written as the number; negative values need a dash (e.g. -1) preceding them, and keep the whole expression within the existing quotation marks. </p>
       <p>Note that when I mention that something works &quot;on BG2&quot;, I mean the BG2 engine, so it will also work on conversion projects such as BGT, IWD-in-BG2, or Tutu. Similarly, working &quot;on EE&quot; includes the baseline EE games and EET.</p>
-      <h3>Basic Combat Stats</h3>
+      <h3>Experience Progression</h3>
+      <p>As of v2, BS allows you to tailor your experience gains:</p>
+      <p class="code">OUTER_SET xp_creature_bonus = &quot;100&quot;<br />
+      OUTER_SET xp_quest_bonus = &quot;100&quot;      </p>
+      <p>Both of these set the experience gain as a percentage, so  100 is normal XP (no change), 50 is half XP, 200 is double XP. The xp_creature_bonus value applies to the XP you get from defeating monsters while xp_quest_bonus applies to the XP you get for completing quests or other activites. </p>
+<h3>Basic Combat Stats</h3>
       <p class="code">OUTER_SET ac_bonus     = &quot;0&quot; // final range -20 to 10 (IWD2 0 to 30); allowed outside this range on EEs, BG2 engine<br />
         OUTER_SET to-hit_bonus = &quot;0&quot; // final range 0 to 20 (IWD2 0 to 25); allowed outside this range on EEs, BG2 engine</p>
       <p>These make basic to-hit and armor class adjustments, with a slightly different range for the 2e and 3e rulesets. On the BG2 engine and the Enhanced Edition games, these bonuses are applied as external effects and not adjustments to the base scores, allowing these scores to potentially range outside their normal values. Note that the engine usually caps effects in these circumstances, but it's still done this way to give a little more flexibility to the player. </p>
@@ -244,6 +249,11 @@
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
+      <p> <strong>Version 2 - June 26, 2025</strong></p>
+      <ul>
+        <li>Added two new variables to control XP progression</li>
+        <li>Fixed a minor bug where AC bonuses on BG2 games were only being applied to one of the two listed AC stats on creatures </li>
+      </ul>
       <p> <strong>Version 1 - January 14, 2025</strong></p>
       <ul>
         <li>Fixed bug with save bonuses on non-BG2 games</li>
