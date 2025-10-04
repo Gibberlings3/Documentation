@@ -75,6 +75,21 @@ div#container {
 	background: #31465f;
 	text-align: right;
 }
+
+.ribbon_menu_narrow ul li {
+	-webkit-transform: rotate(-45deg); /* rotate the list item */
+	-moz-transform: rotate(-45deg); /* rotate the list item */
+	transform: rotate(-45deg); /* rotate the list item */
+	width: 115px;
+	overflow: hidden;	
+	margin: 30px -54px;
+	padding: 3px 8px 5px 18px;
+	float: left;
+	background: #31465f;
+	text-align: right;
+
+}
+
 .ribbon_menu ul li:hover {background: #000099;}
 
 .ribbon_menu ul li a {
@@ -237,3 +252,10 @@ a:hover.spoiler {
   padding: 5px;
   }
 .deprecated {color:#999;}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+

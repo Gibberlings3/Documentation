@@ -32,7 +32,7 @@
         <strong> On the web: </strong><a href="https://www.gibberlings3.net/mods/tweaks/tof/">Home
         page</a>, <a href="https://www.gibberlings3.net/forums/forum/236-talents-of-faer&ucirc;n/">discussion
         forum</a>, <a href="https://www.gibberlings3.net/gallery/album/42-talents-of-faer&ucirc;n/">image gallery</a>, and <a href="https://discord.gg/yTzjMTb">Discord</a></p>
-      <p> <strong>Version beta 1</strong><br />
+      <p> <strong>Version beta 15</strong><br />
         <strong>Languages: </strong>English<br />
         <strong>Platforms: </strong>Windows, macOS, Linux </p>
       <p> Talents of Faer&ucirc;n (ToF) is a collection of about 85 mini-mods for the Enhanced Edition versions of Baldur's Gate, Baldur's Gate II, and Icewind Dale, partially inspired by existing mods and tabletop Dungeons and Dragons resources. It contains many optional tweaks to various parts of gameplay, focusing on expanding and rebalancing player character abilities. Features include 150-odd new high-level abilities, a new 'feat' system where lower-level characters gain abilities every few levels, revisions to existing kits, new classes, new kits for multi-class characters, new types of magical specialization, a dozen or so new spells, many spell tweaks, 20-odd new gods for clerics to worship, a subrace system, a revised system of cleric/druid spells, and tweaks to the rules for ability scores and proficiencies. </p>
@@ -47,7 +47,7 @@
       <ol>
         <li><a href="#over">Overview </a> </li>
         <li><a href="#install">Installation</a></li>
-        <li><a href="#compat">Compatibility with other mods</a></li>
+        <li><a href="#compat">Compatibility</a></li>
         <li><a href="#content">Detailed content</a>
           <ul>
             <li><a href="#spelltweaks">Spell System Revisions and New Spells </a></li>
@@ -114,10 +114,13 @@
         <li>ToF really needs to be installed as late as possible in the install order. It should go before Sword Coast Stratagems and can <em>probably</em> cope with going before Tweaks Anthology; otherwise, install it last. If you have another mod that insists on being installed last because it makes large-scale changes to the game, that other mod is fairly likely to be incompatible with ToF.</li>
         <li>ToF <em>absolutely cannot be installed before any UI mod</em>; doing so will almost certainly break your game. It <em>might</em> be able to cope with being installed after a UI mod, but I haven't tested this.</li>
         <li>ToF will be incompatible with any other mod that makes the sort of changes to the game system that ToF does. For instance, it will be incompatible with other mods that introduce a sphere system (like Divine Remix), that add subraces (like Tipun's subrace mod), or that require specialists to learn spells from their school. Because of the way mods like these work, ToF will probably be incompatible with them even if you don't use the specific bit of ToF that overlaps with them. (I hope to be able to reduce the incompatibilities here in the medium term by sharing the code base that ToF uses.)</li>
+		<li>There are various ways in which ToF may cause compatibility problems with mods that alter the proficiency system. In some cases this can happen even if you don't install proficiency-changing ToF components.</li>
 		<li>ToF is <em>probably</em> compatible with mods that use OlvynChuru's ClassSpellTool (such as OlvynChuru's Spell Pack), provided it is installed after them. (It is definitely not compatible with them if installed before them.)</li>
         <li>The good news is that ToF ought to be compatible with most 'simple' (i.e., not systematically-rule-changing) kit, spell, item, quest, and NPC mods.</li>
 		<li>ToF should be compatible with my 'Sword Coast Stratagems' (SCS) mod, provided ToF is installed before SCS. SCS will detect ToF and respond to some of its components (it will use the new priest kits, new spells, and new HLAs, for instance).</li>
       </ul>
+	  <h3>Manual editing</h3>
+	  <p>Be <b>extremely</b> careful using manual editors, like Near Infinity or EEKeeper, to modify the game or your saved games after ToF is installed. ToF externalizes quite a lot of information to the UI instead of the usual game files, stores information in odd places (e.g. the proficiency system) and then gets the UI to hide that from you. Changes you make with an editor may not do what you expect and have some chance of breaking your game. At the very least, make sure you back up your changes.</p>
     </div>
     <div class="ribbon_rectangle_h2">
       <h2><a name="install" id="install"></a>Installation</h2>
@@ -283,7 +286,9 @@
       <p> This component adds Icewind Dale II-style subraces for dwarves, elves, gnomes, and halflings. Subraces are selected when you generate a character: if you select a race with subraces, you will be offered a menu to select from. There are three dwarven subraces (shield dwarves, gold dwarves, gray dwarves), five elven subraces (moon elves, sun elves, wild elves, wood elves, drow), two gnomish subraces (rock gnomes, deep gnomes), and three halfling subraces (lightfoot, strongheart, ghostwise). The component also adds a new category of races, 'planetouched' (meaning creatures whose ancestry is partly other-planar) which contains six further races: aasimar, tieflings, air genasi, earth genasi, fire genasi, and water genasi. (Planetouched creatures count as human for the purposes of multi-classing and class choices.) And it slightly improves the basic abilities granted to humans and half-orcs.</p>
       <p>The powers and weaknesses of these races and subraces are based on a mixture of D&amp;D 2nd and 3rd edition. They're 'balanced' in the sense that I don't think any race you choose will imbalance the wider game. I haven't made that much effort to strictly balance them one against another: a deep gnome, for instance, is probably just better than a rock gnome. A full list of races, subraces, and their powers can be found <a href="subdocuments_dw/tof_race.html">here</a>. </p>
       <p>Ideally, a component like this would also alter in-game dialog options and responses, so that NPCs react to your race/subrace&mdash;especially for 'exotic' races like tieflings or gray dwarves. I haven't (yet) done this, though.</p>
-      <p>Two choices are barred on BG/BG2: you can't play as a drow (because it would break the plot of BG2 chapter 5) and you can't play as an aasimar (because I find a Bhaalspawn aasimar a bit implausible). If you want to ignore the story-based problems with these choices, you can reactivate them using dw_talents.ini; there's no mechanical problem with either.</p>
+      <p>On BG/BG2, you can't play as a drow,because it would break the plot of BG2 chapter 5. If you want to ignore the story-based problems with drow, you can reactivate them using dw_talents.ini; there's no mechanical problem with them.</p>
+	  <p>For technical reasons (which I admit I don't fully understand) <strong>this component does not work properly if you play Icewind Dale and start a new game in Heart of Winter</strong>. (It functions fine if you start in the main Icewind Dale campaign, or in any of the BG and BG2 start setups.) Starting in Heart of Winter is disabled.</p>
+	  <p>Modders might want to read <a href="dw_subdocuments/identifying_subraces.html">this document</a>, which discusses how to detect a subrace or apply it to an NPC.</p>
     </div>
     <div class="ribbon_rectangle_h3">
       <h3><a name="kit_change" id="kit_change"></a>Class and Kit Revisions</h3>
@@ -292,7 +297,7 @@
     <div class="ribbon_triangle_h3-r"></div>
     <div class="section">
       <p><strong>Eliminate Class/Race Restrictions and Most Class/Ability Score Restrictions</strong></p>
-      <p>This component makes all classes available to PCs of any race, allows PC mages of any race to specialize in any school of magic, and allows both humans and non-humans to dual-class and multi-class. It reduces all ability score requirements to 10, and eliminates the high ability score requirements for dual-classing. In-game text descriptions during character creation are altered to allow for these changes.</p>
+      <p>This component makes all classes available to PCs of any race, allows PC mages of any race to specialize in any school of magic, and allows both humans and non-humans to dual-class and multi-class (though 'exotic' races, like Tieflings and Vampires, still cannot dual-class). It reduces all ability score requirements to 10, and eliminates the high ability score requirements for dual-classing. In-game text descriptions during character creation are altered to allow for these changes.</p>
       <p>Kit race restrictions are lifted when they coincide with their parent class's race restrictions, but not otherwise. In an otherwise-unmodded game, the only kit not available to all races in this fashion is the Dwarven Defender.</p>
       <p>There are no animations available for non-human monks, so I repurpose the priest animation for them. As a consequence, non-human monks won't have the flashy unarmed-combat animation that human monks do.</p>
       <p>If this component is installed, multi-class gnome mages will no longer be illusionists. If you want to create gnome illusionists, use the 'Allow Multi-Class Mages to Specialize' component.</p>
@@ -305,36 +310,52 @@
         <li>Thieves (except for assassins) may now be of any alignment.</li>
         <li>Assassins may no longer be good-aligned.</li>
       </ul>
-      <p><strong>Icewind Dale-Style Paladins</strong><strong><br />
+	  </p>
+     <p><strong>Make Barbarian Into a Class</strong><br />
+	  <p>This component changes Barbarians to function as a proper character class, instead of a fighter kit (as was the case before the Enhanced Editions). Barbarians can multiclass and dual-class with Cleric, Druid, and Thief, with the same restrictions as for Fighters. (Multiclass and dual-class Barbarian/Mage is not allowed for conceptual and balance reasons; Barbarian/Fighter and Barbarian/Ranger are not allowed for technical reasons.)</p>
+     <p><strong>Make the Wizard Slayer kit Available to Barbarians</strong><br />
+       <em>Requires the 'Make Barbarian Into a Class' component.</em></p>
+	  <p>This component makes the fighter 'Wizard Slayer' kit available as a barbarian kit. (It remains available to fighters).</p>
+	  <p><strong>Revised Paladins and Blackguards</strong></br />
+	  <p>This component makes various revisions to Paladins and Blackguards: 
+      <ul>
+        <li>The paladin can use Detect Evil at will. (Already present on IWDEE.)</li>
+        <li>The paladin is immune to all diseases and can cure disease once per day, by touch. (Already present on IWDEE.)</li>
+        <li>At third level, the paladin becomes immune to fear. (Already present on IWDEE.)</li>
+        <li>The paladin is able to cast cleric spells from 6th level rather than 9th level. (Already present on IWDEE)</li>
+		<li>The paladin may use Protection from Evil once per day only, it affects only the paladin, and has a duration of 4 hours (24 turns). (Already present on IWDEE).</li>
+
+		<li>The paladin receives the Smite Evil ability, which affects the paladin's attacks: they receive a Charisma-dependent bonus to melee attacks against evil creatures until their next successful attack, and that attack then does 1d6 magic damage, +1d6 per two levels above first level. Cavaliers' Smite Evil is especially effective against dragons and fiends; Undead Hunters' Smite Evil is especially effective against undead. Blackguards instead gain Smite Good. A second use of Smite Evil (or Smite Good) is granted every 6 levels, starting at level 7. (On IWDEE, this replaces the normal Smite Evil ability.)</li>
+		<li>Paladins gain extra uses of Lay on Hands: an additional use is gained every 4 levels, starting at level 5. Blackguards instead gain extra uses of Absorb Health, on the same pattern.
+ 	  </ul>
+
+
+	 <p><strong>Icewind Dale-Style Paladins and Blackguards</strong><strong><br />
         </strong><em>Not available for IWDEE</em></p>
       <p>This component gives paladins in Baldur's Gate and Baldur's Gate II the modified (and mostly enhanced) powers they receive in Icewind Dale: </p>
       <ul>
         <li>The paladin can use Detect Evil at will.</li>
         <li>The paladin is immune to all diseases and can cure disease once per day, by touch.</li>
         <li>At third level, the paladin becomes immune to fear.</li>
-        <li>Once per day, the paladin can use Smite Evil to call down a beam of holy light onto a single evil target, for 1d6 damage + 1d6 per three levels.</li>
+        <li>Once per day, the paladin can use Smite Evil to call down a beam of holy light onto a single evil target, for 1d6 damage + 1d6 per three levels. Blackguards instead receive Smite Good.</li>
         <li>The paladin may use Protection from Evil once per day only, it affects only the paladin, and has a duration of 4 hours (24 turns). </li>
         <li>The paladin is able to cast cleric spells from 6th level rather than 9th level.</li>
       </ul>
+	  <p>This component is included in 'Revised Paladins and Blackguards' and will be skipped if that component is installed.</p>
       <p><strong>Revised Smite Evil</strong><br />
         <em>Requires either Icewind Dale, or the 'Icewind Dale-Style Paladins' component.</em></p>
-      <p>This component revises the paladin's Smite Evil power to more closely resemble the 3rd edition D&amp;D power which inspires it. Instead of directly striking a foe, the power affects the paladin's attacks: they receive a Charisma-dependent bonus to melee attacks against evil creatures until their next successful attack, and that attack then does 1d6 magic damage, +1d6 per two levels above first level.</p>
+      <p>This component revises the paladin's Smite Evil power to more closely resemble the 3rd edition D&amp;D power which inspires it. Instead of directly striking a foe, the power affects the paladin's attacks: they receive a Charisma-dependent bonus to melee attacks against evil creatures until their next successful attack, and that attack then does 1d6 magic damage, +1d6 per two levels above first level. Cavaliers' Smite Evil is especially effective against dragons and fiends; Undead Hunters' Smite Evil is especially effective against undead. Blackguards instead gain Smite Good.</p>
+	  <p>This component is included in 'Revised Paladins and Blackguards' and will be skipped if that component is installed.</p>
       <p><strong>Higher-Level Paladins Get Additional Uses of Lay on Hands and Smite Evil</strong></p>
-      <p>This component grants paladins additional uses of their Lay on Hands and (if you're using it) Smite Evil powers as they gain level. An additional use of Lay on Hands is gained at 5th level and every 4 levels thereafter; an additional use of Smite Evil is gained at 7th level and every 8 levels thereafter.</p>
+      <p>This component grants paladins additional uses of their Lay on Hands and (if you're using it) Smite Evil powers as they gain level. An additional use of Lay on Hands is gained at 5th level and every 4 levels thereafter; an additional use of Smite Evil is gained at 7th level and every 8 levels thereafter. Blackguards instead gain extra uses of Smite Good and Absorb Health.</p>
       <p>(Partly this tracks the way these powers work in 3rd edition D&amp;D; partly it's my subjective assessment that other classes and kits tend to give out extra uses of similarly-powerful abilities.)</p>
-      <p><strong>Icewind Dale-Style Bard Songs</strong><strong><br />
+	  <p>This component is included in 'Revised Paladins and Blackguards' and will be skipped if that component is installed.</p>
+
+		<p><strong>Rangers use Icewind Dale-style spell memorisation</strong><br/>
         </strong><em>Not available for IWDEE</em></p>
-      <p>This component gives Bards in Baldur's Gate and Baldur's Gate II six different bard songs (gained as they gain levels), to match the Icewind Dale version of the bard. The songs gained are: </p>
-      <ul>
-        <li>1st level: The Ballad of Three Heroes (allies within 30ft. get +1 to attack rolls, damage rolls, and saving throws)</li>
-        <li>3rd level: The Tale of Curran Strongheart (allies within 30ft. are immune to fear, and any fear effects on them are removed)</li>
-        <li>5th level: Tymora's Melody (allies within 30ft. get +1 to luck, +3 to saving throws, +10 to lore, and +10% to all thieving skills)</li>
-        <li>7th level: The Song of Kaudies (allies within 30ft. have a 50% chance to shrug off the effects of spells such as Silence, Shout, Great Shout, Command, Greater Command, or any other sound-based attack)</li>
-        <li>9th level: The Siren's Yearning (enemies within 30 ft. must make a Will save or become enthralled, unable to take action until 1 round passes or they take damage)</li>
-        <li>11th level: War Chant of Sith (allies within 30ft. get +2 to Armor Class, +10% resistance to slashing, piercing, crushing, and missile damage, and regenerate 2 hit points per round)</li>
-      </ul>
-      <p>As in Icewind Dale: Enhanced Edition, only trueclass (non-kitted) bards get these new bard songs.</p>
-      <p><strong>Thieves Gain the Evasion Ability (on a successful save for half damage against abilities that require you to dodge, take no damage) <br />
+		<p>This component changes ranger spell progression to match Icewind Dale. This means that rangers begin gaining spells at 6th level rather than 9th level.</p>
+
+ <p><strong>Thieves Gain the Evasion Ability (on a successful save for half damage against abilities that require you to dodge, take no damage) <br />
         </strong><em>Not available for IWDEE</em></p>
       <p>With this component installed, thieves (single and multi-classed) gain the Evasion ability at 7th level. This allows the thief, on making a successful saving throw for half damage from a spell or effect, to entirely avoid the effect.</p>
       <p>Evasion applies to spells or effects which require the character to dodge or jump clear, like Fireball and Lightning Bolt. It does not apply to spells like Holy Smite (which require willpower to resist) or Abi-Dalzim's Horrid Wilting (which requires fortitude and resilience to resist). A full list of affected spells can be found <a href="subdocuments_dw/evasion.html">here</a>.</p>
@@ -350,6 +371,10 @@
         <li>a 1st-level rogue's snare does 1d8+5 damage (previously 2d8+5)</li>
         <li>a 6th-level rogue's snare does 2d8+5 damage (previously 3d8+5) and slows the target for 5 rounds if they fail an unmodified save vs. spell (previously it was a save vs. spell at -4)</li>
       </ul>
+     <p><strong>Revised favored enemy for rangers: new enemy groups, and rangers reselect their favored enemy at 4th level and every third level thereafter</strong></p>
+	  <p>This component rearranges ranger racial enemy groups to make them somewhat more useful (for instance, the 'dragonkin' category includes dragons, wyverns, and basilisks) and renames them 'favored enemy', partly because they no longer correspond to single races. The component also allows rangers to change their favored enemy from time to time. (Minsc isn't stuck with gnolls forever, for instance.) You first get the chance at level 4, and then every 3 subsequent levels. The change is handled through the UI: you'll just be offered the chance to reselect your favored enemy when you level up.</p>
+	  
+	  
       <p><strong>Revised Druid Shapeshifting</strong></p>
       <p> This component significantly revises the druid's (and the Avenger's) shapeshift ability, somewhat inspired by Icewind Dale. Druids now gain one use of a general Shapeshift ability at third level, and then another use every three levels after that. The available forms vary by level, and are selected at the time the spell is cast: </p>
       <ul>
@@ -467,26 +492,30 @@
         <li>Tenser's Transformation and Otiluke's Resilient Sphere are both Alteration/Invocation, again matching IWD. (In BG/BG2, they're both plain Invocation.)</li>
       </ul>
       <p>If you use this component together with 'Include Arcane Spells from Icewind Dale: Enhanced Edition', 'Add Nine New Arcane Spells ', 'Move Power Words to the School of Enchantment', and 'Move Symbols to the School of Enchantment', you should find that there are sufficiently many more-or-less useful spells at every level for each speciality to have reasonable options, with the exception of Diviners.</p>
+      <p><strong>Speciality Mages Automatically Get One Speciality Spell at Each Level (where possible)</strong></p>
+      <p>This component does not need 'Require Speciality Mages to Memorize at Least One Spell per Level from their Speciality School' to be installed, but it is designed with it in mind: by making sure that specialists always know at least one spell of each level, it prevents the serious weakness (and annoyance) that occurs when a mage has just failed to find any spells of their speciality at the appropriate level.</p>
       <p><a name="multiclass-specialists" id="multiclass-specialists"></a><strong>Allow Multi-Classed and Dual-Classed Mages to Become Specialists and Wild Mages</strong></p>
       <p>This component permits cleric/mage, fighter/mage, mage/thief, fighter/mage/cleric and fighter/mage/thief characters to be wild mages or specialist mages, instead of generalists. In-game documentation is adjusted to recognize this change.</p>
       <p>Existing racial restrictions on specialities are enforced: unless you have installed 'Eliminate Class/Race Restrictions and Most Class/Ability Score Restrictions' then elves can only be diviners, enchanters, and wild mages; half-elves can be conjurers, diviners, enchanters, transmuters, and wild mages; and gnomes are automatically illusionists.</p>
       <p>The component also permits <em>unkitted</em> characters who dual-class into mages to become specialists or wild mages. Again, existing racial restrictions are enforced; so are ability-score requirements (again, unless you have deactivated them via 'Eliminate Class/Race Restrictions and Most Class/Ability Score Restrictions').</p>
       <p>This component automatically installs the contents of the <a href="#tidy-up-class">'Tidy Up Class-Selection Menu' component</a>.</p>
-      <p><strong>Speciality Mages Automatically Get One Speciality Spell at Each Level (where possible)</strong></p>
-      <p>This component does not need 'Require Speciality Mages to Memorize at Least One Spell per Level from their Speciality School' to be installed, but it is designed with it in mind: by making sure that specialists always know at least one spell of each level, it prevents the serious weakness (and annoyance) that occurs when a mage has just failed to find any spells of their speciality at the appropriate level.</p>
-      <p><strong>Dragon Disciples can be Disciples of Any Chromatic Dragon (Red/Blue/Green/Black/White)</strong></p>
+      <p><strong>Bloodlines for Sorcerers</strong></p>
+	  <p>This component (inspired by Pathfinder's treatment of sorcerers) gives each sorcerer an arcane bloodline, tied to the source of their magic. The 'arcane' bloodline is the default, and functions just like sorcerers in the unmodded game. Other bloodlines (the list is: Celestial, Deepearth, Efreeti, Fiendish, Gravetouched, Rimefrost, Stormborn) gain an additional known spell at every level, thematically connected to their bloodline (some of these spells are from the cleric list) and in exchange are denied access to one school or elemental type of magic. The details of the sorcerous bloodlines can be found <a href="subdocuments_dw/bloodline_desc.html">here</a>.</p>
+	  
+	  
+	  <p><strong>Dragon Disciples can be Disciples of Any Chromatic Dragon (Red/Blue/Green/Black/White)</strong></p>
       <p>In the unmodded game, all Dragon Disciples are specifically disciples of red dragons. This component allows sorcerers to be disciples of any chromatic dragon type: red, blue, green, black, white. The character's elemental resistance and breath weapon damage will be tied to their dragon type: red=fire, blue=electricity, green=poison, black=acid, white=cold.</p>
       <p><strong>Rebalanced and Revised Kits</strong></p>
       <p>Nearly all the kits in the unmodded game come from the original Baldur's Gate II, and many of them are not really well balanced for the other games&mdash;many kits gain powerful abilities too early, since the BG2 kits were only designed to be used from 7th level onward; some kits provide static benefits for long periods in the early game (e.g. the Jester's song, which is fixed from 1st level to 14th level); some abilities are specifically based around Shadows of Amn content (such as the cavalier's resistance to fire and acid, the two elemental damage types used by dragons in Shadows of Amn). In addition, a few kits (in my judgement) are a little too weak or strong.</p>
       <p>This component modifies the following kits (main changes are listed): </p>
       <ul>
         <li>Assassin: sneak attack increases at 1/3 levels; on IWD, Poison Weapon is changed to function as the (better-balanced) BGEE/BG2EE version</li>
-        <li>Barbarian: Rage power scales with level (immunities are gained gradually until level 14, not all at once)</li>
-        <li>Berserker: Rage power scales with level (extra hit points are level-dependent; immunities are gained gradually until level 14, not all at once)</li>
+        <li>Barbarian: Damage Resistance starts at level 7; Rage power scales with level (immunities are gained gradually until level 14, not all at once, and match berserker immunities)</li>
+        <li>Berserker: Rage power scales with level (extra hit points are level-dependent; immunities are gained gradually until level 14, not all at once, and include immunity to hold but not to paralyze)</li>
         <li>Blade: Defensive Spin gained at level 3; Offensive Spin gained at level 5.</li>
         <li>Cavalier: resistances changed to all elemental types; begins at 10% and increases by 5% every 5 levels; immunity to poison/charm gained gradually; may evade dragon breath weapons entirely on a successful save at level 12</li>
-        <li>Dragon Disciple: gains immunity to paralysis at level 7 and immunity to charm at level 13.</li>
-        <li>Inquisitor: True Sight replaced by Detect Invisibility until level 9; immunity to paralysis/charm gained gradually; dispel magic not gained until 3rd level.</li>
+        <li>Dragon Disciple: gains immunity to hold at level 7 and immunity to charm at level 13.</li>
+        <li>Inquisitor: True Sight replaced by Detect Invisibility until level 9; immunity to hold/charm gained gradually (and does not include paralyze); dispel magic not gained until 3rd level.</li>
         <li>Jester: bard song gradually improves with level</li>
         <li>Shapeshifter: weaker werewolf form until 7th level; stronger form at 19th level; old werewolf forms are replaced by new ones once gained</li>
         <li>Skald: bard song gradually improves with level</li>
@@ -494,7 +523,7 @@
         <li>Undead Hunter: bonuses to hit and immunities gained gradually until 9th level, not all at once</li>
         <li>Wizard Slayer: magic resistance changed to 20% + 1%/level</li>
       </ul>
-      Cleric kits are unmodified by this component because the 'Revised Speciality Priests of Lathander/Helm/Talos/Tempus/Tyr' handles them. The Bounty Hunter kit is affected by the 'Rebalanced Thief and Bounty Hunter Traps at Low Levels' component. The Avenger kit is affected by the 'Revised Druid Shapeshifting' component. The Kensai, Dwarven Defender, Swashbuckler, Shadowdancer, and Totemic Druid kits, and all Ranger kits, are not affected.
+      Cleric kits are unmodified by this component because the 'Revised Speciality Priests of Lathander/Helm/Talos/Tempus/Tyr' handles them. The Bounty Hunter kit is affected by the 'Rebalanced Thief and Bounty Hunter Traps at Low Levels' component. The Avenger kit is affected by the 'Revised Druid Shapeshifting' component. The Kensai, Dwarven Defender, Swashbuckler, Shadowdancer, and Totemic Druid kits, and all Ranger kits, are not affected. Barbarians are affected whether or not the 'Make Barbarian into a Class' component is installed.
       <p>Full documentation for any kits altered by Talents of Faer&ucirc;n (except cleric speciality priests) may be found <a href="subdocuments_dw/vanilla_kit_desc.html">here</a>. </p>
     </div>
     <div class="ribbon_rectangle_h3">
@@ -587,16 +616,23 @@
       <p>(Priests of Cyric, game-mechanically, are pretty much equivalent to priests of Bhaal; priests of Velsharoon are pretty much equivalent to priests of Myrkul; priests of Iyachtu Xvim are pretty much equivalent to priests of Bane.)</p>
       <p>Unless otherwise noted, all gods and goddesses introduced may be worshiped by clerics of any race.</p>
       <p>By default, priests of Auril, Myrkul and Talona are not available as player characters in Icewind Dale, and priestesses of Lolth and Umberlee are not available as player characters in Baldur's Gate and Baldur's Gate II. In both cases, this is for plot reasons: having a priest of that deity in your party would mess with the plot in significant ways. These gods are installed in any case and are usable by enemy NPCs (if you install Sword Coast Stratagems). You can enable these choices for player characters via the ini if you want, though in-game dialog will not really respond appropriately.</p>
-      <p>On a BG or BG2 install, Viconia becomes a cleric of Shar.</p>
+      <p>On a BG or BG2 install, Viconia becomes a cleric of Shar. (This can be disabled or modified by editing dw_talents/3p/original_game.ini, or you can change his class/kit using the 'Improved NPC Customization and Management' component.)</p></p>
       <p>This component requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed from Sword Coast Stratagems, IWDification, or Talents of Faer&ucirc;n) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
      <p>Full documentation for the Talents of Faer&ucirc;n cleric speciality priests may be found <a href="subdocuments_dw/all_priest_desc.html">here</a>. </p>
  
 	<p><strong>New Class: Favored Soul</strong></p>
       <p>Favored souls are spellcasters with an innate connection to a particular god or goddess. They are similar to clerics, but their power flows directly from their patron, without any need to study the litanies of a church. In game terms, they cast spells spontaneously, like a sorcerer or shaman, but choose their spells from the cleric list (with some modifications according to their faith). They lack the ability to turn undead, but gain additional known spells based on the god or goddess they serve.</p>
       <p>Favored souls must select a god/goddess to serve at character creation, chosen from almost all of those included in Talents of Faer&ucirc;n as well as the 'core five' in the unmodded game. For the purposes of dialog options, strongholds, and the like, they are treated as clerics of their chosen deity. ('Under the hood', favored souls are formally a set of kits for shamans, but hopefully this should not be visible in-game.)</p>
-      <p>This component requires the 'New Choices of God/Goddess for Speciality Priests' component to be installed. It also requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
+      <p>This component requires the 'Revised speciality priests of Lathander/Helm/Talos/Tempus/Tyr' and 'New Choices of God/Goddess for Speciality Priests' components to be installed. It also requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
       <p>This component automatically installs the contents of the <a href="#tidy-up-class">'Tidy Up Class-Selection Menu' component</a>, and makes use of the ToF revised sphere system, which is documented <a href="subdocuments_dw/spheres.html">here</a>.</p>
-      <p><strong>Druids May Multi-Class as Mages, Rangers, and Thieves</strong></p>
+       <p><strong>New Kits for Blackguards</strong></p>
+	  <p><em>Requires the 'Revised Paladins and Blackguards' component to be installed.</em></p>
+      <p>This component introduces two new kits for Blackguards:</p>
+      <ul>
+        <li>Disciple of Asmodeus</li>
+        <li>Thrall of Orcus</li>
+      </ul>
+	<p><strong>Druids May Multi-Class as Mages, Rangers, and Thieves</strong></p>
       <p>This component introduces three new multi-class options: druid/mage, druid/ranger, and druid/thief. All three are legal 2nd edition Advanced Dungeons and Dragons classes, but were omitted from Baldur's Gate. These work as you would expect: all three are restricted to druid weapon choices, druid/mages cannot cast spells in armor, and druid/thieves cannot use thief skills in armor heavier than studded leather. All three classes are correctly treated as druid multi-classes in in-game conversations (for instance, in Baldur's Gate II they all will be offered the druid stronghold, as well as the stronghold corresponding to their other class). The component also adjusts cleric/rangers so as to use the cleric spell list (in the unmodded game they used the druid list).</p>
       <p>These classes are available to the same races as (respectively) the cleric/mage, cleric/ranger, and cleric/thief. So in an otherwise unmodded game, only half-elves can be druid/mages and druid/rangers, and only gnomes can be druid/thieves. If you install the 'Eliminate Class/Race Restrictions and Most Class/Ability Score Restrictions' component, all races can select these classes.</p>
       <p>Druid/mages cannot specialize in a school of magic, even if you have 'Allow Multi-Classed and Dual-Classed Mages to Become Specialists and Wild Mages' installed. They can, however, become elementalists if 'New Wizard Specializations: Elemental Specialists' and 'Allow Multi-Classed and Dual-Classed Mages to Become Specialists and Wild Mages' are both installed. Druid/Elementalists cannot use priest spells associated with their opposing element, and (if you are using Icewind Dale and/or 'Revised Druid Shapeshifting') cannot shapeshift into an elemental of the opposed type.</p>
@@ -608,7 +644,9 @@
       </ul>
       <p>('Under the hood', these limitations reflect the fact that technically these are all kits of the respective cleric multi-classes&mdash;but hopefully this should be pretty much invisible in game!)</p>
       <p>This component automatically installs the contents of the <a href="#tidy-up-class">'Tidy Up Class-Selection Menu' component</a>, and makes use of the ToF revised sphere system, which is documented <a href="subdocuments_dw/spheres.html">here</a>.</p>
-    </div>
+ 
+
+ </div>
     <div class="ribbon_rectangle_h3">
       <h3><a name="multiclass-kit" id="multiclass-kit"></a>Multi-Classed/Dual-Classed Kits</h3>
     </div>
@@ -619,8 +657,8 @@
       <p>Multi-classed characters can select these kits at character creation; unless otherwise noted, they are available to all races. Dual-classed characters must dual-class into these kits provided that their initial class and kit must match one or other part of the multi-classed kit. For instance, a wizard slayer or a priest of Helm can dual-class into a Magehunter of Helm (wizard slayer/priest of Helm), while an unkitted fighter or a priest of Lathander can dual-class into a Templar of Lathander (fighter/priest of Lathander). Dual-classing characters have to respect the alignment, ability and racial requirements of the kit.</p>
       <p>Full documentation of all multi-classed kits introduced by Talents of Faer&ucirc;n can be found <a href="subdocuments_dw/multi-classed-kits.html">here.</a> </p>
       <p>This component automatically installs the contents of the <a href="#tidy-up-class">'Tidy Up Class-Selection Menu' component</a>. Druid and cleric multi-class components also make use of the ToF revised sphere system, which is documented <a href="subdocuments_dw/spheres.html">here</a>.</p>
-      <p><strong>New Multi-Class/Dual-Class for Fighter/Clerics</strong></p>
-      <p>This component introduces 14 new kits for fighter/clerics:</p>
+      <p><strong>New Multi-Class/Dual-Class for Fighter/Clerics and Barbarian/Clerics</strong></p>
+      <p>This component introduces 15 new kits for fighter/clerics and barbarian/clerics:</p>
       <ul>
         <li>Axe of Clangeddin (fighter/priest of Clangeddin; dwarves only)</li>
         <li>Battlerager of Clangeddin (berserker/priest of Clangeddin; dwarves only)</li>
@@ -633,25 +671,25 @@
         <li>Knight of Iyachtu Xvim (fighter/priest of Iyachtu Xvim; BG/BG2 only)</li>
         <li>Magehunter of Helm (wizard slayer/priest of Helm)</li>
         <li>Raging Flame of Kossuth (berserker/priest of Kossuth)</li>
+		<li>Shaman of Tempus (barbarian/priest of Tempus)</li>
         <li>Sword of Sel&ucirc;ne (kensai/priest of Sel&ucirc;ne)</li>
         <li>Templar of Lathander (fighter/priest of Lathander)</li>
         <li>Wrathful Spear of Gruumsh (barbarian/priest of Gruumsh; half-orcs only)</li>
       </ul>
-      <p>On a BG install, Yeslick becomes an Axe of Clangeddin.</p>
+      <p>On a BG install, Yeslick becomes an Axe of Clangeddin. (This can be disabled or modified by editing dw_talents/3p/original_game.ini, or you can change his class/kit using the 'Improved NPC Customization and Management' component.)</p>
       <p>The Dark Knight of Bane and the Knight of Iyachtu Xvim are mechanically identical. This component requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
       <p><strong>New Multi-Class/Dual-Class for Fighter/Druids</strong></p>
-      <p>This component introduces two new kits for fighter/druids: the Totemic Shaman (barbarian/totemic druid) and the Raging Shifter (berserker/shapeshifter).</p>
+      <p>This component introduces one new kit each for barbarian/druids and fighter/druids: the Totemic Shaman (barbarian/totemic druid) and the Raging Shifter (berserker/shapeshifter).</p>
       <p><strong>New Multi-Class/Dual-Class for Fighter/Mages</strong></p>
-      <p>This component introduces up to 11 new kits for fighter/mages. The component always includes these kits:</p>
+      <p>This component introduces up to six new kits for fighter/mages. The component always includes these kits:</p>
       <ul>
         <li>Abjurant Defender (abjurer/dwarven defender; dwarves only)</li>
-        <li>Barbarian/Transmuter</li>
         <li>Berserker/Invoker</li>
         <li>Berserker/Wild Mage</li>
         <li>Kensai/Enchanter</li>
         <li>Kensai/Illusionist</li>
       </ul>
-      <p>If you have installed the 'New Wizard Specializations: Elemental Specialists' component, the component also includes the Barbarian/Elementalist kits (four versions). If you have installed the 'New Wizard Specialization: Force Mage' component, the component also includes the Kensai/Force Mage kit.</p>
+      <p>If you have installed the 'New Wizard Specialization: Force Mage' component, the component also includes the Kensai/Force Mage kit.</p>
       <p><strong>New Multi-Class/Dual-Class for Fighter/Thieves</strong></p>
       <p>This component introduces three new kits for fighter/thieves:</p>
       <ul>
@@ -660,7 +698,7 @@
         <li>Silent Sword (Kensai/Thief)</li>
       </ul>
       <p><strong>New Multi-Class/Dual-Class for Cleric/Mages</strong></p>
-      <p>This component introduces up to 26 new kits for cleric/mages. The component always includes these kits:</p>
+      <p>This component introduces up to 27 new kits for cleric/mages. The component always includes these kits:</p>
       <ul>
         <li>Abjurer of Ilmater</li>
         <li>Abjurer of Mystra</li>
@@ -675,6 +713,7 @@
         <li>Illusionist of Baervan (elves/half-elves/gnomes only)</li>
         <li>Illusionist of Shar</li>
         <li>Invoker of Lathander</li>
+        <li>Invoker of Mystra</li>
         <li>Invoker of Talos</li>
         <li>Necromancer of Velsharoon (BG/BG2 only)</li>
         <li>Necromancer of Talona (BG/BG2 only)</li>
@@ -695,9 +734,9 @@
       <p>If you have installed the 'New Wizard Specialization: Force Mage' component, the Force Mage of Mystra is also available. </p>
       <p>The conjurer of Bane and the conjurer of Iyachtu Xvim are game-mechanically identical. Multi-class clerics of Auril and Talona are disabled by default on IWD (as is a hidden 'necromancer of Myrkul'), and multi-class clerics of Umberlee are disabled by default on BG/BG2, because having a cleric of these gods in your party causes problems with the plot. If you want to ignore this and play one anyway, you can reactivate them via the ini.</p>
       <p>This component requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
-      <p>On BG2 installs, Aerie becomes an air elementalist of Baervan. On BG installs, Quayle becomes an illusionist of Baervan.</p>
+      <p>On BG2 installs, Aerie becomes an air elementalist of Baervan. (This can be disabled or modified by editing dw_talents/3p/original_game.ini, or you can change his class/kit using the 'Improved NPC Customization and Management' component.)</p></p>
       <p><strong>New Multi-Class/Dual-Class for Cleric/Rangers and Druid/Rangers</strong></p>
-      <p> This component introduces up to six new kits for cleric/rangers: </p>
+      <p> This component introduces up to seven new kits for cleric/rangers. The component always includes these kits: </p>
       <ul>
         <li>Forester of Baervan (Archer/Priest of Baervan; gnomes/elves/half-elves only)</li>
         <li>Hunter of Sel&ucirc;ne (Ranger/Priest of Sel&ucirc;ne) </li>
@@ -706,20 +745,21 @@
       </ul>
       <p>If you have installed the 'Druids May Multi-Class as Mages, Rangers, and Thieves' component, this component also adds one new kit for druid/rangers, the Night Wolf (stalker/shapeshifter). Druids and rangers cannot dual-class as druid/rangers and so cannot dual-class into a druid/ranger kit.</p>
       <p>This component requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
+	  <p>This component also grants cleric/rangers the ability to use shortbows and longbows.</li>
       <p><strong>New Multi-Class/Dual-Class for Cleric/Thieves and Druid/Thieves</strong></p>
-      <p> This component introduces six new kits for cleric/thieves: </p>
+      <p> This component introduces seven new kits for cleric/thieves: </p>
       <ul>
-        <li>Assassin of Talona (BG/BG2 only)</li>
         <li>Assassin of Bhaal (IWD only)</li>
-        <li>Assassin of Cyric (BG/BG2 only)</li>
-        <li>Bounty Hunter of Malar</li>
-        <li>Swashbuckler of Sune</li>
-        <li>Thief of Mask</li>
-        <li>Thief of Tymora</li>
+        <li>Dread Death of Cyric (BG/BG2 only)</li>
+        <li>Hunter of Malar</li>
+        <li>Plague-Rat of Talona (BG/BG2 only)</li>
+        <li>Rake of Sune</li>
+        <li>Scoundrel of Tymora</li>
+        <li>Shadow of Mask</li>
       </ul>
       <p>If you have installed the 'Druids May Multi-Class as Mages, Rangers, and Thieves' component, this component also adds one new kit for druid/thieves, the Silent Avenger (avenger/assassin). Druids and rangers cannot dual-class as druid/rangers and so cannot dual-class into a druid/ranger kit.</p>
       <p>The assassin of Bhaal is game-mechanically nearly identical to the assassin of Cyric. The assassin of Talona is disabled by default on Icewind Dale installs because having a priest of Talona in your party would break the story. If you want to ignore this and play one anyway, you can re-enable the kit via the ini.</p>
-      <p> On a BG install, Tiax becomes an assassin of Cyric.</p>
+      <p> On a BG install, Tiax becomes an assassin of Cyric. (This can be disabled or modified by editing dw_talents/3p/original_game.ini, or you can change his class/kit using the 'Improved NPC Customization and Management' component.)</p></p>
       <p>This component requires you to be using the Icewind Dale arcane and divine spells (either because you are playing IWD:EE, or because you have them installed) and the 'Add Nine New Arcane Spells' and 'Add Six New Divine Spells' components of ToF.</p>
       <p><strong>New Multi-Class/Dual-Class for Mage/Thieves</strong></p>
       <p> This component introduces three new kits for mage/thieves: </p>
@@ -745,8 +785,10 @@
     <div class="section">
       <p><strong>Characters Choose Minor New Abilities Every Three Levels</strong></p>
       <p>This component is based on the 'feats' system in Icewind Dale II (and in 3rd edition D&amp;D). At 2nd level, and every three levels thereafter, a character chooses a special ability from a list. For instance: a character might gain a bonus to some saving throws or damage rolls, an extra use of a special ability, the ability to brew potions or scribe scrolls, or a new spell slot. The abilities are intended to be modest rather than dramatic, though I welcome feedback. The full list of special abilities can be seen <a href="subdocuments_dw/feat_doc.html">here</a>.</p>
-      <p>Abilities are selected during the leveling process using a similar interface to the one used for High-Level Abilities in Baldur's Gate II. If you are playing Baldur's Gate II, the ability system merges into the High-Level Ability system when you become eligible for High-Level Abilities; normal abilities remain available as alternatives to High-Level Abilities as you continue to level.</p>
-      <p>Multi-classed and dual-classed characters gain abilities only according to their highest level.</p>
+      <p>Abilities are selected during the leveling process using a similar interface to the one used for High-Level Abilities in Baldur's Gate II. If you are playing Baldur's Gate II, the ability system merges into the High-Level Ability system when you become eligible for High-Level Abilities; normal abilities remain available as alternatives to High-Level Abilities as you continue to level.</p> 
+      <p>Multi-classed characters gain abilities only for one class (the one that normally levels most quickly). Dual-classed characters only gain abilities for their highest level.</p>
+	  <p>Engine limitations mean that abililities cannot be selected at character creation, even if you start at higher than 1st level (e.g. at the start of Shadows of Amn). To handle this, your character will begin at 1st level and then can be levelled up at the start of the game. There is a slight awkwardness here for bards and mages, who should be able to select spells from their spellbook at character creation but don't at level-up. This will be handled fine in BG2EE if you start in Shadows of Amn. If you plan to create a new character in Heart of Winter, Throne of Bhaal, Siege of Dragonspear, the EET version of Shadows of Amn, or the Black Pits 2, you will need to tell ToF this before you install it, by setting the appropriate ini value in dw_talents.ini. (Look in the default_start block; options are iwd, how, soa, tob, bg, sod, bp, bp2.) Failing to do so will grant you too few wizard spells on character creation. Engine limitations also mean that multi-classed mages will be given slightly too many spells at character creation.</p>
+	  <p>Joinable NPCs will also lack abilities if they join at level greater than 1. If you want to give them abilities I recommend using the 'NPC Customization and Management' component to set all joinable NPCs to level 1.</li>
       <p><strong>Revised High-Level Ability system<br />
         </strong><em>Only available for BG2EE, EET</em></p>
       <p>This component substantially revises and expands the High-Level Abilities (HLAs) granted to characters every level after reaching 3 million XP. The existing set of 46 HLAs is expanded to (depending on how you count them) 187 HLAs, of which: </p>
@@ -761,13 +803,12 @@
         </strong><em>Not available for IWDEE</em></p>
       <p>This component makes it much easier to customize <acronym
 title="Non-Player Characters">NPCs</acronym> and to make sure they keep up with your main character even if you swap them in and out of the group. When it is installed, NPCs (including mod-added NPCs) join your party at level zero. If you want, you can activate a special 'customize' power on their innate abilities to change their class and kit to whatever you like. After that, you can level the character to first level and choose their proficiencies, skills and the like. The character will continue leveling until they reach about the same level as your character. (The 'customize' power is unavailable once you increase above level zero.) </p>
-      If you kick the NPC out of the party and subsequently re-recruit them, they will again start leveling until they reach about your character's level. (To be more precise: they are given that level which they would have if they had as much XP as you do; they get given exactly the right amount of XP to reach that level.)
-      <p>(This component is identical to the equivalent component in Sword Coast Stratagems; it is included here because if you are using the Feat system, you may wish to start your characters at first level so that they gain feats properly.)</p>
-      <p>Engine limitations lead to some slight awkwardness with this component. Firstly, mages and bards have their spellbooks selected from a fixed list (you don't get to choose yourself). Secondly, if you have the Party AI disabled, you may occasionally notice minor glitches in the amount of experience your characters receive (this will be most noticeable if you use the customize program to change a character's class). Turning AI back on (even if only briefly) will resolve this (though it is possible to get a slightly-too-high level character if you change from single-class to multi-class and then level without AI on). Thirdly, a few NPCs in the game have illegal statistics (for instance, Coran has three proficiencies in bows); these will be lost if you use this component. Fourthly, wild mages will have to save and reload in order to get their special spells (Chaos Shield and the like.) Finally, it is not possible to let rangers choose their favored enemy.</p>
+      If you kick the NPC out of the party and subsequently re-recruit them, they will again start leveling until they reach about your character's level. (To be more precise: everyone in the party gets 90% of the XP that the highest-XP character gets.) 
+      <p>(This component is identical to the equivalent component in Sword Coast Stratagems (or rather: it's a more advanced version of that component, since I haven't updated SCS to the new version yet); it is included here because if you are using the Feat system, you may wish to start your characters at first level so that they gain feats properly.)</p>
+      <p>Engine limitations lead to some slight awkwardness with this component. Firstly, mages and bards have their spellbooks selected from a fixed list (you don't get to choose yourself). Secondly, a few NPCs in the game have illegal statistics (for instance, Coran has three proficiencies in bows); these will be lost if you use this component. Thirdly, wild mages will have to save and reload in order to get their special spells (Chaos Shield and the like).</p>
       <p>The component should be able to allow for other mods that let humans multi-class, non-humans dual-class, and multi-class characters select kits. However, it is incompatible with any mod (notably the component of Tweaks Anthology) that removes the ability to dual-class from humans&mdash;basically because the component doesn't know what to do with the existing dual-classed humans in the game, like Imoen.</p>
-      <p>Some NPCs are only partially affected by this component: notably, Wilson the bear and the joinable vampire in BG2EE cannot be customized; nor can the sorcerer added in Baldur's Gate and the aasimar in Siege of Dragonspear.</p>
-      <p>This component makes very extensive use of features of the Enhanced Edition game engine, and so is not (and never will be) available for original BG/BG2.</p>
-      <p><b>Important note:</b> Dual-classed NPCs begin at level zero in their original class; you level them until they can't level any more, then dual-class them, then level them again. <b>Do not</b> delay dual-classing them&mdash;it is likely to break the game. (If you want to adventure with them in their original class, just respec them to that class.)</p>
+     <p>This component makes very extensive use of features of the Enhanced Edition game engine, and so is not (and never will be) available for original BG/BG2.</p>
+      <p><b>Important note:</b> Dual-classed NPCs begin at level zero in their original class; you level them until they can't level any more, then dual-class them, then level them again.</p>
     </div>
     <div class="ribbon_rectangle_h3">
       <h3><a name="rules" id="rules"></a>Rules Changes</h3>
@@ -783,8 +824,8 @@ title="Non-Player Characters">NPCs</acronym> and to make sure they keep up with 
         <li><b>Dexterity</b>: Now affects saving throws vs. Wands and Breath Weapons. Still affects armor class, attack rolls with thrown and missile weapons, and initiative.</li>
         <li><b>Constitution</b>: Now affects saving throws vs. Poison and Paralysis. Still affects hit points (the variable fighter/non-fighter effect has been removed).</li>
         <li><b>Intelligence</b>: Now affects maximum number of memorizable spells for wizards. Still affects chance of learning arcane spells from scrolls.</li>
-        <li><b>Wisdom</b>: Now affects number of spell slots for shamans, and saving throws vs. Spell. Still affects maximum number of memorizable spells for priests.</li>
-        <li><b>Charisma</b>: Affects maximum number of memorizable spells for bards and number of spell slots for sorcerers and favored souls, the effective level of a cleric or paladin turning the undead, and (still) also the price you are charged in stores. Paladins receive an additional bonus to their saving throws based on Charisma.</li>
+        <li><b>Wisdom</b>: Now affects number of spell slots for shamans, saving throws vs. Spell, and Monk AC. Still affects maximum number of memorizable spells for priests.</li>
+        <li><b>Charisma</b>: Affects maximum number of memorizable spells for bards and number of spell slots for sorcerers and favored souls, the effective level of a cleric or paladin turning the undead (at half the normal modifier), and (still) also the price you are charged in stores. Paladins receive an additional bonus to their saving throws based on Charisma.</li>
       </ul>
       <p>Bonuses and penalties to attack rolls, hit points, armor class, and saving throws now use a common set of modifiers. (The change to a cleric or paladin's level for turning undead is half this modifier.) For ability scores between 1-18, that system is the same in both versions: </p>
       <table summary="Ability score modifiers (value 1-18)">
@@ -914,38 +955,39 @@ title="Non-Player Characters">NPCs</acronym> and to make sure they keep up with 
         </tr>
         <tr>
           <td>17</td>
-          <td>+2 spells at level 1, +1 spell at levels 2-5</td>
+          <td>+2 spells at level 1, +1 spell at levels 2-4</td>
           <td>+1 spell at levels 1-3</td>
         </tr>
         <tr>
           <td>18</td>
-          <td>+2 spells at level 1-2, +1 spell at levels 3-6</td>
+          <td>+2 spells at level 1-2, +1 spell at levels 3-4</td>
           <td>+1 spell at levels 1-4</td>
         </tr>
         <tr>
           <td>19</td>
-          <td>+2 spells at level 1-3, +1 spell at levels 4-7</td>
+          <td>+2 spells at level 1-3, +1 spell at level 4</td>
           <td>+1 spell at levels 1-4</td>
         </tr>
         <tr>
           <td>20</td>
-          <td>+2 spells at level 1-4, +1 spell at levels 5-8</td>
+          <td>+2 spells at level 1-3, +1 spell at levels 4-5</td>
           <td>+2 spells at level 1, +1 spell at levels 2-5</td>
         </tr>
         <tr>
           <td>21+</td>
-          <td>+3 spells at level 1, +2 spells at level 2-5, +1 spell at levels 6-9</td>
-          <td>+2 spells at level 1, +1 spell at levels 2-5</td>
+          <td>+2 spells at level 1-4, +2 spells at levels 5-6</td>
+          <td>+2 spells at level 1, +1 spell at levels 2-6</td>
         </tr>
         <tr></tr>
       </table>
       <p>The component also changes a few other rules, to fit better with this revised system: </p>
       <ul>
-        <li>Base saving throws are slightly weakened, to compensate for the bonuses gained by high ability scores.</li>
+        <li>Base saving throws are slightly weakened, to compensate for the bonuses gained by high ability scores. (This only applies to party members.)</li>
+		<li>Base known spells are slightly reduced for wizards and bards, to compensate for the bonus they are likely to get from high INT.</li>
         <li>Gnomes, halflings and dwarves now receive a flat saving throw bonus (+2 in each case) instead of a Constitution-dependent bonus.</li>
         <li>If you are using the low-level abilities component, a new ability, Force of Personality, is available; this allows a character to use their Charisma bonus in place of their Wisdom bonus for saves vs. spells.</li>
       </ul>
-      <p>For technical reasons, wizards and bards will not be able to learn any bonus spells during character creation, and sorcerers, shamans and favored souls will not receive their bonus spells until the first time they rest.</p>
+      <p>For technical reasons, wizards and bards will not be able to learn any bonus spells during character creation, and sorcerers, shamans and favored souls will not receive their bonus spells until the first time they rest. Creatures (including joinable NPCs) have their Strength, Dexterity and Constitution modifiers altered so that the effect of the new ability score is as close as possible to the effect of the old ability score under the old system. (Note that the saving throw changes of this component apply only to party members.)</p>
       <p><strong>Point-Buy System for Choosing Ability Scores</strong></p>
       <p>This component replaces the default random-roll-based system for choosing ability scores with a point-buy system: you have a fixed number of points (75,80,85,90,or a randomly determined number depending on which version of the component you install) and your ability scores all start with values of 10 (or the minimum allowed, whichever is higher), modified by your class, kit and race choices. (Exception: if you are eligible for exceptional strength, your Strength begins at 18, so you can see immediately what your (randomly rolled) exceptional Strength is.)</p>
       <p>(Really, the default system is also point-based; it's just that the total number of points is random and you start with your points all randomly allocated. The 'randomly determined number' version of the mod is equivalent to the standard system, just with the convenience of having your ability scores all preset to 10.)</p>
@@ -964,6 +1006,9 @@ title="Non-Player Characters">NPCs</acronym> and to make sure they keep up with 
         <li>Priests/Rogues: THAC0 = 20 - level x 3/4; minimum 2</li>
         <li>Mages: THAC0 = 20 - level/2; minimum 5</li>
       </ul>
+	  <p><strong>Revised Shields</strong></p>
+	  <p>This component revises and slightly increases the efficacy of shields. Bucklers are unchanged (+1 to AC, no benefit vs. piercing or missile attacks); small shields grant +2 AC (with no benefit vs. missile attacks); medium shields grant +2 AC; large shields grant +3 AC, with an additional +1 AC vs missile attacks, but prevent spellcasting and impose a -1 penalty on attack rolls.</p>
+	  <p>This component is independent of the 'Revised Ability Scores' and '3rd-Edition-Style THAC0s' components, but is balanced with them in mind.</p>
       <!--
 	<p><strong>3rd-edition-style Armor Class and attack rolls</strong></p>
 	<p>This component shifts the core attack-roll and Armor Class mechanic over to (something fairly close to) D&D 3rd edition, as used in Icewind Dale II. It works like this:
@@ -1002,7 +1047,7 @@ There are, however, a number of exceptions. (All in-game documentation has been 
       <p>This component removes restrictions on the maximum level of spells a mage (or bard) character can learn, and the maximum number of spells they can learn at each level. The UI is edited to remove any reference to these restrictions.</p>
       <p>In addition, the 'erase' button is removed from the spellbook, since the intended reason to erase spells is to make room for new ones and there is no longer a capacity limit.</p>
       <p><strong>Cleric/Rangers can Become Proficient with Bows</strong></p>
-      <p>This component grants Cleric/Rangers the ability to put up to two points into proficiency in shortbows and longbows. (It is obsolete if you install the 'Revised Weapon Proficiency System'.) </p>
+      <p>This component grants Cleric/Rangers the ability to put up to two points into proficiency in shortbows and longbows. (It is obsolete if you install the 'Revised Weapon Proficiency System', and is automatically installed if you use the 'New Multi-Class/Dual-Class for Cleric/Rangers and Druid/Rangers' component.) </p>
       <p><strong>Wider Access to Grand Mastery</strong></p>
       <p>This component permits warriors other than single-class fighters to achieve Grand Mastery (five slots) in their usable weapons. There are three versions: allow multi-classed fighters to achieve grand mastery; allow paladins and single-classed rangers to achieve grand mastery; allow all warriors, single and multi-classed, to achieve grand mastery.</p>
       <p><strong>Dual-Class Kitted Characters Must Obey the Weapon-Proficiency Restrictions of Their Kit</strong></p>
@@ -1016,12 +1061,43 @@ There are, however, a number of exceptions. (All in-game documentation has been 
         <li>Characters begin with a number of weapon proficiencies: roughly, they begin proficient in any weapon that they could use previously. So fighters begin proficient in all weapons; clerics begin proficient in blunt weapons, and so forth. (Fighter multi-classes are somewhat restricted compared to single-class fighters.) In addition, most classes can use crossbows and daggers.</li>
         <li>Dwarves and elves also gain proficiency with certain weapons: axes and hammers for dwarves; bows and longswords for elves.</li>
         <li>If you are using the cleric kits introduced by Talents of Faer&ucirc;n, clerics receive a bonus weapon proficiency point in the favored weapon of their deity.</li>
-        <li>All characters can at least become Specialized (two slots) with all weapons, and can specialize in any fighting style (other than weapon/shield, for characters who can't use shields). Characters who could already become Specialized improve their maximum achievable level by one slot.</li>
+        <li>All characters can at least become Specialized (two slots) with all weapons, and can put two points into any fighting style (other than weapon/shield, for characters who can't use shields), and three points into two-weapon fighting. Characters who could already become Specialized improve their maximum achievable level by one slot.</li>
         <li>Characters receive fewer proficiency points at first level: single-classed fighters receive two, multi-classed fighters, rangers, and paladins receive one, and all other classes receive none.</li>
         <li>A few other kits are modified to allow for these changes: for instance, blades and swashbucklers receive proficiency in two-weapon fighting style for free at first level, and swashbucklers receive a bonus proficiency slot.</li>
       </ul>
       <p>The various changes are fairly thoroughly documented in-game. </p>
-    </div>
+	  <p><strong>Revised Weapon Styles</strong></p>
+	  <p>This component mildly revises the various weapon styles, in general slightly improving them. (The changes are all documented in-game.) The specific changes are as follows:
+	  <ul>
+	  <li>Single Weapon style:
+		<ul>
+			<li>1 point: +1 bonus to hit, +2 bonus to melee AC, +1 bonus to missile AC, critical hits on 19-20.</li>
+			<li>2 point: +2 bonus to hit, +4 bonus to melee AC, +2 bonus to missile AC, critical hits on 18-20.</li>
+		</ul>
+	  </li>
+	  <li>Two-Handed style:
+		<ul>
+			<li>1 point: +2 damage, +2 speed bonus, critical hits on 19-20.</li>
+			<li>2 points: +5 damage, +4 speed bonus, critical hits on 19-20.</li>
+			</ul>
+	  </li>
+	  <li>Two-Weapon style:
+		<ul>
+			<li>1 point: -2 penalty to hit for on-hand, -6 for offhand; +1 bonus to melee AC.</li>
+			<li>2 points: no penalty to hit for on-hand, -4 for offhand; +2 bonus to melee AC.</li>
+			<li>3 points: no penalty to hit for on-hand, -2 for offhand; +3 bonus to melee AC.</li>
+			</ul>
+	  </li>
+	  <li>Weapon/Shield style:
+		<ul>
+			<li>1 point: +1 bonus to melee AC, +2 bonus to missile AC.</li>
+			<li>2 points: +2 bonus to melee AC, +4 bonus to missile AC.</li>
+		</ul>
+	  </li>
+	  </ul>
+	  </p>
+	  <p>This component is independent of the 'Revised Shields', 'Revised Ability Scores' and '3rd-Edition-Style THAC0s' components, but is balanced with them in mind.</p> 
+ </div>
     <div class="ribbon_rectangle_h3">
       <h3><a name="ui" id="ui"></a>User Interface Tweaks</h3>
     </div>
@@ -1073,13 +1149,15 @@ There are, however, a number of exceptions. (All in-game documentation has been 
         <li>The sorcerer bloodlines are inspired by<a href="https://paizo.com/products/btq01zp3"><em>Pathfinder Core Rulebook</em></a> (Paizo, 2009), by Jason Bulmahn and others.</li>
         <li>The Bloodrager kit is inspired by the Bloodrager class from <a href="https://paizo.com/products/btpy978v?Pathfinder-Roleplaying-Game-Advanced-Class-Guide"><em>Pathfinder Advanced Class Guide</em></a> (Paizo, 2014), by Jason Bulmahn and others.</li>
         <li>Militant wizards are inspired by the kit of the same name from <a href="https://www.drivethrurpg.com/product/16889/PHBR4-The-Complete-Wizards-Handbook-2e?manufacturers_id=44&amp;filters=44827_0_0_0_0"><em>The Complete Wizard's Handbook</em></a> (TSR, 1990), by Rick Swan.</li>
-        <li>I'm also grateful to the following:</li>
+		<li>The Disciple of Asmodeus and Thrall of Orcus blackguard kits are inspired by the (3rd edition) prestige classes of the same name from <em>Book of Vile Darkness</em> (Wizards of the Coast, 2002), by Monte Cook and others.</li> 
+		<li>I'm also grateful to the following:</li>
         <ul>
           <li>For the game itself, and its Enhanced Editions: Bioware, Black Isle, and Beamdog</li>
           <li>For Icewind Dale II: Black Isle.</li>
           <li>For hosting: Gibberlings Three, and especially CamDawg and Kat Bella (&quot;TheAceFes&quot;) </li>
           <li>For tools: Westley Weimer, Valerio Biggiani (&quot;the bigg&quot;), and Fredrik Lindgren (&quot;Wisp&quot;) for WEIDU; Jon Hauglid, devSin, argent77, and others (for Near Infinity)</li>
-          <li>For information about the game; Ascension64, for TobEx; the various contributors to the <a
+          <li>For designing many of the HLA icons: Lava.</li>
+		  <li>For information about the game; Ascension64, for TobEx; the various contributors to the <a
 href="https://gibberlings3.github.io/iesdp/">Infinity Engine Structure Description Project</a> </li>
           <li>For many insightful comments about the Infinity Engine kit system: SubtleDoctor.</li>
 		  <li>For proofreading this readme and cleaning up my execrable HTML: CamDawg.</li>
@@ -1112,10 +1190,550 @@ href="https://gibberlings3.github.io/iesdp/">Infinity Engine Structure Descripti
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
-      <p> <b>Version beta 1 </b>(November 2023) </p>
-      <p> Original release. </p>
-    </div>
+</div>
+<div class="ribbon_rectangle_h3"><h3>Version beta 1 (12th December 2023)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+
+
+<p> Original release. </p>
+</div>
+<div class="ribbon_rectangle_h3"><h3>Version beta 2 (18th December 2023)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+
+
+<p> 
+<ul>
+<li>Fixed some synchronization bugs between ToF and SCS versions of spell tweaks that were causing install-time failures.</li>
+<li>Installing the mage specialist memorization component by itself no longer breaks ui.menu.</li>
+<li>Multiclass subrace characters no longer receive their bonuses twice.</li>
+<li>Subrace abilities at level >1 should now be applied correctly.</li>
+<li>Added many component checks for compatibility with Tweaks Anthology.</li>
+<li>The fact that monks get to apply their Wisdom bonus to AC is now noted in the readme (it was already documented in-game).</li>
+<li>Added basic documentation for sorcerer bloodlines, since this was originally missing. (Fuller documentation to follow in a subsequent update.)</li>
+<li>Documented 'Rangers use Icewind Dale-style spell memorisation'.</li>
+<li>Documentation now notes that the 'Cleric/Rangers can use bows' component is automatically installed by the 'Cleric/Ranger and Druid/Ranger multiclass kits' component.</li>
+<li>Under-the-hood: Updated to new batch-mode system.</li>
+<li>Under-the-hood: Many library fixes and updates.</li>
+</ul>
+ </p>
+</div>
+
+<div class="ribbon_rectangle_h3"><h3>Version beta 3 (7th January 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+
+
+<p> 
+<ul>
+<li>Unique icons for the HLAs that were using reused or IWD2 icons - huge thanks to Lava for the design work here.</li>
+<li>LUA functions now load correctly in ability-modifier and ability-pointbuy components.</li>
+<li>Zero-level multiclassed characters can now level to 1st level (after fixing a complicated interaction of the HLA system with the level-0 hack for NPC customization).</li>
+<li>Kit (and god) selection screens in SoD now have scrollbars.</li>
+<li>Fixed a glitch in the Tweaks/ToF component-compatibility code.</li>
+<li>Smite Evil component now installs properly on batch mode.</li>
+<li>Barbarian Rage is no longer broken by the 'revised HLAs' component.</li>
+<li>Sorcerer bloodlines are now documented properly.</li>
+<li>Favored Soul component no longer breaks scripts containing 'OriginalClass'.</li>
+<li>New HLA system should now install properly even if spell system tweaks are not present.</li>
+<li>Recoded 'Empowered Healing' to avoid various instabilities.</li>
+<li>Fixed a number of problems with the 'NPC Customization and Management' component.</li>
+<li>Fixed some problems with Smite Evil/Good.</li>
+<li>Drow/Svirfneblin MR is now set correctly if you create a character of level >1.</li>
+<li>Library functions can now handle kit and class names with ' or " (but not both!) in them.</li>
+<li>Library functions can now handle kits which have not been assigned a HLA luxxxx file.</li>
+<li>Fixed a bug that was preventing third-party-added priest spells from showing up.</li>
+<li>Fixed some bugs in the code that hides unwanted abilities from the action bar.</li>
+<li>If you install the low-level ability system, characters start at level 1 and can level up at the start of the game, so as to get their abilities.</li>
+<li>Werewolves were not getting their correct AC modifiers due to a library bug.</li>
+<li>Werewolf regeneration has been restored.</li>
+<li>Sorted out some anomalies with assigning subraces to joinable NPCs.</li>
+<li>NPC-only kits are no longer made available to the PC if you use 'remove class/race restrictions'.</li>
+<li>Certain subraces were getting duplicate icons.</li>
+<li>Fixed many small errors in class/kit/race descriptions.</li>
+<li>Made the UI edits a bit more robust, in part to improve compatibility with Lefruet's UI and with EEUITweaks.</li>
+<li>Deprecated the 'use IWD slow poison' spell tweak, as it would require systematic regimenting of BG/BG2 poisons.</li>
+<li>'Increase the accuracy of Mordenkainen's Force Blade' tweak should now install.</li>
+<li>Resolved some inconsistencies in the Stonefist spell's description and effect, and fixed the missing level in the description of 'Telekinesis'. </li>
+<li>Resolved an invalid string in Chromatic Orb if the 'Use IWD Chromatic Orb' component is used.</li>
+<li>'Use IWD Chromatic Orb' component now affects avenger and trap versions of Chromatic Orb.</li>
+<li>Breach no longer bypasses Spell Turning.</li>
+<li>Strength of Stone should now work correctly.</li>
+<li>IWD bardsong component now correctly adjusts bard kit descriptions.</li>
+<li>New divine spell descriptions now match EE spell-description conventions.</li>
+<li>Various minor library fixes.</li>
+</ul>
+ </p>
+
   </div>
+  
+  <div class="ribbon_rectangle_h3"><h3>Version beta 4 (21st January 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>Reasonably systematic rebuilding of the part of the UI system that detects a character's kit and class, to avoid problems caused by accents and other non-alphanumeric symbols in kit names. This should fix various serious UI glitches people (mostly people uing non-English installs) were encountering.</li>
+<li>Kit-editing functions no longer choke on externalized weapon proficiencies of lower-cased kits (don't ask, but it was stopping, e.g., Amber from being compatible)</li>
+<li>2da files now try to cope better with the proliferation of illegal 2da formats in the mod ecology.</li>
+<li>CLAB-editing functions no longer delete CLAB rows outside the "ABILITY[0-9]+" namespace.</li>
+<li>Fixed a logic error in the function that handles stripping mid-level effects off HLAs; inter alia this was confusing SR.</li>
+<li>Protection from Fire no longer gets an annoying animation glitch from 'IWD-inspired tweaks to BG spells'.</li>
+<li>Library files no longer get confused trying to read in saving throws when they are defined up to level 50 for some classes and level 40 for others.</li>
+<li>Fixed a library bug that meant Polymorph Self and Shapechange were losing their casting-bar icons.</li>
+<li>Hill Giant barbarian rage (from Polymorph Self) no longer persists once you shapechange to something else.</li>
+<li>Tweaked Chromatic orb now correctly gives no saving throw against damage.</li>
+<li>A few miscellaneous library bug fixes.</li>
+</ul>
+
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 5 (25th January 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>Class detection should no longer cause install-time failures on IWDEE.</li>
+<li>Fixed a bunch of interaction issues between NPC Customization and Management and the Subrace and Proficiency components; hopefully you shouldn't find yourself being offered 33 proficiencies any more!</li>
+<li>Fixed some cosmetic issues where odd symbols were sometimes displayed next to class names.</li>
+<li>Fixed a library issue that in certain circumstances would cause install failures on sorcerer kits.</li>
+<li>Creatures with non-core races (e.g. genasi, svirfneblin) should have their race displayed correctly on Siege of Dragonspear and other campaigns using a variant racetext.2da.</li>
+<li>Ability score modifiers should work on Siege of Dragonspear and throughout EET.</li>
+<li>Ability-score component no longer mixes up weight and open-locks data.</li>
+<li>Help text for spell memorization notes that Favored Souls do not need to memorize spells.</li>
+<li>Poison selection should now work properly.</li>
+<li>Removed an unnecessary line break from the bloodrager disadvantages list.</li>
+<li>The winter wolf breath weapon now has its projectile set correctly.</li>
+<li>Blackguards no longer get the Extra Lay On Hands feat, but get the Extra Absorb Health feat instead.</li>
+<li>Low-Constitution NPCs have been vaccinated and no longer drop dead if you install Revised Ability Scores.</li>
+<li>Constitution modifiers to hitpoints have been capped below at -3 per die, to avoid stillborn PCs.</li>
+</ul>
+
+</div>
+
+   <div class="ribbon_rectangle_h3"><h3>Version beta 6 (8th February 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>Rewritten the 'Improved NPC customization and management' component from the ground up; hopefully it's now a lot more robust, but we'll see! (It also now allows rangers to choose their favored enemy.)</li>
+<li>Automatically assigned appropriate proficiencies to NPCs, if the revised proficiencies component is installed and NPC customization and management isn't.</li>
+<li>Fixed some bugs caused by interactions between various components that affect proficiencies.</li>
+<li>Fixed some more cosmetic issues where odd symbols were sometimes displayed next to class names.</li>
+<li>Blocked compatibility problems in IWD installs where the broken file '#bonecir.spl' has already been removed by another mod.</li>
+<li>Mantle spell tweak correctly lets ordinary Mantle protect against +3 weapons.</li>
+<li>Fixed some glitches with the monster summoning spell tweak.</li>
+<li>You can now dual-class into specialist mage kits.</li>
+<li>If you remove alignment restrictions, the select-favored-enemy screen no longer refers to rangers as 'protectors of good'.</li>
+<li>Svirfneblin should now get their magic resistance at higher levels.</li>
+<li>Noted that the subrace component is incompatible with starting a new game in Heart of Winter(!) and disabled that option if it is installed. (There is a possible, albeit awkward, workaround to this. I'm assuming few people use this option but if I'm wrong, let me know.)</li>
+<li>New component: rangers get revised favored-enemy categories, and can reselect their favored enemy every third level. (Yes, I should be fixing bugs before adding new components, but this one was a fairly straightforward spinoff from the new 'NPC customization and management.'</li>
+<li>Suppressed the (cosmetic, but annoying) display on levelling to 1st level that tells you you have 18 million trillion proficiencies.</li>
+</ul>
+
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 7 (10th February 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>Fixed a residual bug with the proficiency system that was affecting dual-classed characters.</li>
+<li>Ability score modifiers should work on Siege of Dragonspear and throughout EET, for real this time.</li>
+<li>The pregenerated PCs are now set to 1st level if you install low-level abilities, and get their proficiencies assigned correctly if the revised proficiency system is used.</li>
+<li>Fixed even more cosmetic issues where odd symbols were sometimes displayed next to class names.</li>
+<li>Shadowdancers no longer get the Trapmaster ability</li>
+<li>Fixed a minor issue with the Wand of Spell Striking in the 'more consistent breach' spell tweak.</li>
+<li>Fixed a library bug which meant the new Fiendish Warding spell was given to some non-evil joinable NPCs.</li>
+<li>If you have installed the remove-alignment-restrictions components, Beastmaster documentation no longer assumes they are good-aligned.</li>
+<li>Installing both the 'wider grand mastery' and 'revised proficiency system' components no longer leads to duplicate lines in class descriptions.</li>
+<li>Elementalists cannot be installed unless you are using both the IWD spells and the new arcane spells. (This was always the design intention but an error in the ini file was blocking it.</li>
+<li>Water elementalists have overcome their self-doubt, and are now correctly documented as unable to use fire spells, instead of water spells.</li>
+</ul>
+
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 8 (8th March 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>New component: make barbarians into a class.</li>
+<li>New component: make wizard slayer available as a barbarian kit.</li>
+<li>New component: new blackguard kits (largely as a proof-of-concept and a test as to how well my system handles kits for virtual classes).</li>
+<li>Fairly substantial rebuild of the code for handling proficiencies and proficiency documentation.</li>
+<li>Fairly substantial rebuild of the code for hacking the UI, which should be generally more robust and in particular hopefully solves various issues with ranger enemy selection.</li>
+<li>We should now be compatible with mods that change the proficiency system (like the various Tweaks Anthology components), provided they are installed before Talents of Faerun.</li>
+<li>An earlier update had broken the system that puts virtual classes (e.g. druid) on the character sheet; it should be working again now.</li>
+<li>Cleric/Mages who are also specialist mages should now be able to memorize their priest spells properly.</li>
+<li>Fixed a couple of glitches with the rewritten 'Improved NPC customization and management' component.</li>
+<li>Fixed a typo that was blocking install of the minor-abilities component on SoD.</li>
+<li>Dragon disciples' additional uses per day of their breath weapon is now documented in-game.</li>
+<li>Green and black dragon disciples' breath weapons get the correct projectile.</li>
+<li>Dragon disciples' breath weapons have the correct in-game description.</li>
+<li>Added a new 'concentrated venom' feat for mages, giving +10% poison damage and 10% resistance to poison damage, in parallel with Aegis of Rime, etc. (RoyalProtector's request.)</li>
+<li>Fixed a few redundancies and formatting errors in subrace and ability descriptions.</li>
+<li>The monk's description text now notes that they use Wisdom as an AC modifier.</li>
+<li>Half orcs were not receiving their hit point bonus.</li>
+<li>Ambidexterity was still leaving a residual -1 penalty to hit with offhand weapons.</li>
+<li>Fixed a small bug in the batch-mode TP2.</li>
+<li>Favored souls, and multiclassed priests, of Tempus now get an appropriate color scheme.</li>
+<li>Quayle has reconsidered his flirtation with the worship of Baervan, and has reaffirmed his faith to Baravar, even though that means he no longer gets a cool new kit. Truly, the path of Baravar's faithful is a difficult one.</li>
+<li>A new vaccination scheme against wyvern poison means that baby wyverns only do 1 hp damage per second with their poison, as per the documentation.</li>
+<li>Removed an unintended poison effect from the hunting spider Avenger form.</li>
+<li>We no longer bother blocking quick item use when shapechanged, since you can do it from the inventory screen anyway.</li>
+<li>Characters using Dirty Fighting are now less chivalrous, and can affect women (but can't affect undead, monsters, and animals; there was a typo in the exclusion code).</li>
+<li>Dirty Fighting now correctly displays 'slowed'.</li>
+<li>Blackguards can now use Dirty Fighting.</li>
+<li>The sphere system (and related components) now resets joinable characters' memorized spells (previously, some characters would have illegal spells, which could block spell slots).</li>
+<li>The leveller component no longer gives extra spells to characters who multiclass from mage/bard to sorcerer or priest to shaman.</li>
+<li>Fixed a subtle library bug which meant dummy kits were being added in an unnecessarily compatibility-unfriendly way.</li>
+<li>Fixed a library bug that was inserting a blank into the description of innate versions of priest spells.</li>
+<li>Malagents and necromancers of Talona should now correctly receive their Poison Weapon ability.</li>
+<li>By popular request (and because I was persuaded on lore grounds) Aasimar is now available as a PC subrace in BG/BG2.</li>
+<li>The 'stunned' string is correctly displayed when using Stonefist in BGEE.</li>
+<li>Symbols weren't being correctly moved over to the Enchantment school.</li>	
+<li>Fixed a documentation error for Sol's Searing Orb (no in-game change).</li>
+<li>Made a few changes to the 'Spell Tweaks' system to make things easier for translators.</li>
+<li>Fixed a couple of glitches in Faerie Fire (notably, it is now properly blocked in daylight).</li>
+<li>Tweaked Chromatic orb now correctly gives no saving throw against damage, for real this time.</li>
+<li>Fixed several issues with Strength of Stone.</li>
+<li>Under-the-hood change: new arcane and divine spells are added in 'normal' slots for spells if there are any available, and only added in 'extended' slots if normal slots are full.</li>
+</ul>
+
+</div>  
+   <div class="ribbon_rectangle_h3"><h3>Version beta 9 (15th April 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>Fixed a critical bug in the UI edits that was disabling the start of the game, and two related bugs that disrupted character generation and level-up.</li>
+<li>Selecting the character button no longer plays everyone's selection sounds if 'NPC Customization and Management' is installed.</li>
+<li>Fixed a library bug which was adding spurious entries to the fighter kit-select screen.</li>
+<li>Fixed a UI bug which sometimes caused the game to crash if you went from the wizard to priest spell screen when 8th or 9th level spells were selected.</li>
+<li>New component: revised shields.</li>
+<li>New component: revised weapon styles. (This and the last components are partly to address a bit of a mismatch in attack vs defense created by the new strength scores.)</li>
+<li>If you use the 3e-style ability scores, NPCs now have their Strength, Constitution and Dexterity ability scores adjusted to keep their modifiers approximately unchanged. In addition, various (mostly humanoid) monsters now have minimum strength and dexterity scores, determined by race. (This attempts to address the issue that ability scores are rather more important now than they were.)
+<li>New component: revised paladins and blackguards. This is just for convenience: it combines the 'IWD-style paladins', 'revised Smite Evil', and 'extra uses of Lay on Hands and Smite Evil' components. (They are still available separately.) This was actually added earlier (beta 7?) but I forgot to announce and document it.</li>
+<li>Third-party mods that add scrolls with '!' or '#' should no longer confuse the spell system.</li>
+<li>Fixed a couple of bugs that were making saving throws too good.</li>
+<li>Fixed a serious library logic error which was preventing kits properly installing on the BG and SoD parts of EET.</li>
+<li>Fixed a library bug that caused (harmless) WARNINGs when installing kits on EET.</li>
+<li>Subraces should now install on EET.</li>
+<li>Characters who dual-class into speciality mage kits now get their one bonus spell per level.</li>
+<li>Fixed some residual documentation issues with proficiencies.</li>
+<li>The deities of the realms have decided that their most powerful followers would be better served if they were actually granted a Holy Symbol at level 25, rather than just briefly glowing.</li>
+<li>Drow NPCs in BG/BG2 no longer cause a double Reputation penalty.</li>
+<li>Aasimar Sunscorch innate now works properly.</li>
+<li>Greater War Cry, Greater Whirlwind, and Greater Deathblow no longer work once only.</li>
+<li>Summon Elemental Prince no longer displays an erroneous 'the prince does not answer your call' message on first casting.</li>
+<li>Adjusted the descriptions of Abyssal Pact and Infernal Command to make clear that these are powers that command existing fiends, not summon new ones.</li>
+<li>Fixed a broken projectile in the paladin Holy Aura HLA, and also made the visual feedback a bit less intrusive.</li>
+<li>Projectiles weren't being set correctly for many rogue HLAs: Set Exploding Trap, Set Acid Trap, Set Toxic Trap, Sound Burst, Mass Charm, Enthralling Melody, enhanced bard song, enhanced Jester song, enhanced Skald song. (This caused them not to work at all, to target the party or caster, or other weirdness.)</li>
+<li>Set Spike Trap now does piercing damage as intended.</li>
+<li>Poison Aptitude and Poison Expertise should now work.</li>
+<li>Improved Defensive Stance can now be taken the correct number of times.</li>
+<li>Kensai can no longer take the Deadly Aim feat.</li>
+<li>Thunderous Rage and Fiery Rage no longer require Greater Rage to work (this is a holdover from an older design).</li>
+<li>Fixed a typo that prevented Volcanic Rage and Tempestuous Rage from working properly.</li>
+<li>Mass Raise Dead now has a proper description.</li>
+<li>Spirit Warriors have resolved to be team players and can now be selected.</li>
+<li>Resonating Weapon now has the correct icon.</li>
+<li>Barbarians can now multiclass as thieves.</li>
+<li>Barbarian Wizard Slayers now gain access to the Spell Immunity high level ability.</li>
+<li>Resist Magic high-level ability now adds 20% to Monk and Wizard Slayer MR, rather than just giving a flat 50%.</li>
+<li>Empowered summons should now get the correct AC and attack bonuses.</li>
+<li>Fixed a general effect-order bug that meant Berserker Rage was not granting most immunities.</li>
+<li>Barbarian Rage no longer stacks.</li>
+<li>Berserker and Barbarian Rage now protect against Feeblemind at level 8 rather than 6, as per their description.</li>
+<li>Fixed a library bug which was tying Feeblemind protection icons to the wrong opcode (Stun).</li>
+<li>Berserker and Barbarian Rage now correctly protect against Confusion.</li>
+<li>In light of EEFP discussions on Hold/Paralysis, better separated Hold from Paralysis in revised kits.</li>
+<li>Readme now clarifies that Barbarian immunities match Berserker immunities.</li>
+<li>Readme now documents that Barbarian damage resistance starts at level 7.</li>
+<li>Extended Barbarian damage resistance changes to barbarian multiclasses.</li>
+<li>The various Animal Spirit HLAs now work correctly, and have unique icons.</li>
+<li>Spirit of the Snake now protects from confusion as well as charm and poison.</li>
+<li>The Animal Spirit HLAs are now available to Shamans as well as Totemic Druids.</li>
+<li>We now adjust Str, Con and Dex scores for all creatures to values as close as possible in effect to their old values.</li>
+<li>The documentation for Thralls of Orcus listed their required alignment as Lawful Evil, not Chaotic Evil. (If Orcus is reading: this was Asmodeus's doing, not mine. Please don't kill me.)</li>
+<li>Reduced the benefit of Iron Will, Lightning Reflexes and Great Fortitude from +2 to +1.</li>
+<li>Fixed a small bug in the militant wizard/bloodrager code that might have been messing with  multiclass mages' item use.</li>
+<li>Fixed a couple of logic problems which were messing with the ability to detect druid multiclasses (this was breaking some quests that checked for the PC being a cleric).</li>
+<li>If you are using the new ability system, Blades automatically start with Ballad of Three Heroes rather than an unknown bard song, and Jesters/Skalds get the proper descriptive text for their special songs.</li>
+<li>Tweaked the description for bard kits to note that they do not <em>automatically</em> learn the IWD bard songs (they can get them through taking abilities).</li>
+<li>Nerfed water genasi damage resistance a bit, from 15% vs slashing/piercing/missile to 10% vs piercing/missile.</li>
+<li>Tweaked documentation to clarify that the Ballad of CHARNAME replaces the Ballad of Three Heroes, that the Mesmeric Melody replaces the Jester's Melody, and that the Saga of CHARNAME replaces the Saga of the North.</li>
+<li>Improved documentation of Mesmeric Melody.</li>
+<li>Deprecated the Concentrated Venom ability for now, as it's a bit underpowered.</li>
+<li>Increased the damage from Fury of the Pack, from 2d8 to 3d8 per wolf.</li>
+<li>The wolves summoned by Fury of the Pack can no longer critically miss.</li>
+<li>Thunderstorm now uses the correct projectile and associated visual effect (it was using Burning Hands, not Call Lightning.</li> 
+<li>Dragons and other very large creatures were not correctly immune to Abyssal Fury.</li>
+<li>Foebane+5 now casts Larloch's Minor Drain at level 1.</li>
+<li>Ice Knife correctly does piercing damage now.</li>
+<li>Scroll scribing now displays the correct XP cost.</li>
+<li>Elemental transformation now grants the correct animation.</li>
+<li>Elemental shapeshift forms now have weapon icons.</li>
+<li>Added a spell tweak that renames 'Favor of Ilmater' to 'Favor of the Martyr'.</li>
+<li>Goodberry is now correctly assigned to the Plant sphere rather than the Nature sphere.</li>
+<li>Cause Serious Wounds and Cause Critical Wounds are correctly assigned to the Necromantic sphere rather than the Divine sphere.</li>
+<li>Clerics and Favored Souls of Kossuth can no longer take the Elemental Immunity: Fire HLA (they don't benefit from it).</li>
+<li>Clerics and Favored Souls of Auril can no longer take the Elemental Immunity: Cold HLA (they don't benefit from it).</li>
+<li>Elementals are now immune to their own offensive spells.</li>
+<li>Ice para-elementals now cast Ice Storm, not Spike stones.</li>
+<li>The Conjure Fire Elemental power of clerics of Kossuth now correctly appears in the Innate Abilities bar.</li>
+<li>Beast Claw is now properly handled by the 'Revised Ability Score' component (including if you have the Priest of Malar kit).</li>
+<li>Oghma has recognized that his standards for what counts as 'learned' were overly demanding, and he now grants innate abilities to his followers.</li>
+<li>Talos has reached a deal with the Union of Talos Worshippers and has agreed to grant them a working version of the 'Lightning of Talos' spell.</li>
+<li>Lower Resistance now displays the correct level of resistance decrease.</li>
+<li>Fixed a typo in the description text for Tymora's Favor.</li>
+<li>The descriptive text for clerics of Velsharoon and Myrkul is a bit clearer on what bonus they get to Command Undead.</li>
+<li>Addressed an edge-case issue which meant that enemy-summoned fiends were sometimes party-controllable.</li>
+<li>Fixed a layout problem with the description of single-target Power Word Blind.</li>
+</ul>
+
+</div>  
+   <div class="ribbon_rectangle_h3"><h3>Version beta 10 (30th April 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>Fixed a critical bug that was causing ability bonuses/penalties to be applied multiple times on EET and SoD.</li>
+<li>Various tweaks to improve compatibility with other UIs (mostly Lefreut's and Dragonspear UI++).</li>
+<li>The low-level abilities component no longer disables casting healing spells on rest (though if you have the Empowered Healing ability, unfortunately it doesn't empower your heal-on-rest castings).</li>
+<li>You can no longer remove level one proficiencies and apply them elsewhere.</li>
+<li>The HLA selection screen now displays your current HLAs (to a maximum of 5).</li>
+<li>HP table for barbarian multiclass is generated properly.</li>
+<li>Simulacra and projected images are now correctly blocked from using items if you have installed the appropriate tweak.</li>
+<li>The various cleric multiclass kits now install correctly on batch mode.</li>
+</ul>
+</div>  
+   <div class="ribbon_rectangle_h3"><h3>Version beta 11 (7th May 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>'NPC Customization and Management' should avoid Imoen-related UI glitches on EET now.</li>
+<li>Fixed a library issue which caused kit installation to choke if a 3rd-party kit was missing a LUABBR entry.</li>
+<li>Fixed a library issue where dummy kits with no weapon entry could cause install failures (this was the weap_array_LATHANDER_X bug).</li>
+<li>Fixed an issue that could sometimes cause the Militant Wizards component to fail to install, depending what else you have installed.</li>
+<li>The proficiency system no longer breaks for unkitted sorcerers.</li>
+<li>Escaping out of the ranger Favored Enemy screen no longer breaks the UI (but please still don't do it; it shouldn't be possible at all but I can't immediately work out how to block it, so this is a temporary workaround.)</li>
+<li>Rakes of Sune are now more chivalrous and no longer get backstab.</li>
+<li>Chanthalas Ulbright has loosened up a bit and is now willing to talk to people who aren't followers of Tymora.</li>
+<li>'Improved NPC Customization and Management' should cope better with characters imported from one game into another (e.g. in EET or Endless BG).</li>
+<li>Adjusted strength scores for joinable NPCs are now slightly higher.</li>
+<li>Finger of Destruction is now available only to evil monks.</li>
+<li>We now properly enforce the rule that you can only take one Elemental Immunity HLA.</li>
+<li>Favored of the Spirits now correctly has Spirit Form as a prerequisite.</li>
+<li>Paladin protection from evil no longer loses its animation.</li>
+<li>Inquisitors (who can't cast spells) can no longer take the Empowered Casting ability.</li>
+<li>Undead Hunter and Cavalier versions of Smite Evil now correctly do double damage against appropriate foes.</li>
+<li>The 'Smite Undead' HLA now bypasses magic resistance.</li>
+<li>The 'Death Field' HLA now has an icon and is treated correctly as a (L10) spell.</li>
+<li>The 'Dark Pact' HLA now correctly doubles the target undead's hit points.</li>
+<li>Fixed some cosmetic issues with the 'Smite Undead' HLA.</li>
+<li>Fixed some cosmetic issues with the description of the Bloodrager kit.</li>
+<li>Fixed some cosmetic issues with the layout of some mage HLA descriptions.</li>
+<li>Fixed various issues with Conjure Flesh Golem (most importantly, golems are no longer hostile to the summoner.</li>
+<li>Adamantine Body correctly grants Grandmaster proficiency with its fists.</li>
+<li>The spell tweak that makes Truesight remove blindness no longer adds multiple 'this removes blindness' messages to Truesight's description.</li>
+<li>The spell tweak to Grease now correctly updates its description.</li>
+<li>Fixed a nasty interaction between two spell tweaks which caused the Mind Flayer shapechange effect to crash the game.</li>
+<li>A bunch of HLA animations, including the ones for Malavon's Fury, were missing and have now been restored.</li>
+<li>The gaze attack granted by the Shapechange spell's Basilisk ability is now correctly restored each round.</li>
+<li>Shamans may take the Spirit Form HLA more than once.</li>
+<li>Fixed a missing icon for Abyssal Fury which was causing it to crash the game.</li>
+<li>When using 'Improved NPC Customization and Management', Minsc (hopefully) no longer complains about his hit points immediately on joining.</li>
+
+</ul>
+</p>
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 12 (21st May 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+<li>The previous fix to paladin Holy Aura is now properly installed (no more cloud animation).</li>
+<li>Fixed cosmetic issue in the description text for Arcane Knowledge.</li>
+<li>Extra level 6,7,8 arcane spells abilities are now available again.</li>
+<li>Description of Spell Worm now notes that it does not remove 10th-level or Quest spells.</li>
+<li>Ultroloths are correctly assigned a soundset.</li>
+<li>Aasimar sunscorch now works properly, for real this time (it was being assigned the wrong projectile).</li>
+<li>Clerics and druids should now have access to spells in the sphere of Divination (there was a namespace clash with the Divination school).</li>
+<li>Cleric/Mages no longer have their mage spell restrictions imposed on their priest spells. (This got fixed in an earlier update but was broken by a more recent update to the way the UI is patched.)</li>
+<li>Un-broken a UI edit that makes sure kit selection options are properly displayed (e.g. when choosing a god or a sorcerous bloodline) - this was broken in one of the recent updates to the UI,not 100% sure which.</li>
+<li>If you dual-class into a mage speciality and then die, you don't lose your bonus spell.</li>
+<li>Fixed an issue with the ability point-buy system that in rare circumstances could cause the ability screen to hang.</li>
+<li>NPC Customization and Management correctly skips certain characters (notably Hexxat and Caelar) who shouldn't be set to level zero.</li>
+<li>NPC Customization and Management now correctly displays the extra thief skill points you get when advancing to first level.</li>
+<li>NPC Customization and Management now populates the spellbooks of generalist mages (including multi-classed and dual-classed mages) and wild mages.</li>
+<li>NPC Customization and Management no longer removes character-specific innates (e.g. Minsc's Berserk ability).</li>
+<li>Fixed some cosmetic issues in the descriptions of the new arcane spells.</li>
+<li>Fixed some cosmetic issues in the changes to spell descriptions in the spell tweaks components.</li>
+<li>New spell tweak: Otiluke's Freezing Sphere does half damage on a successful save.</li>
+<li>New spell tweak: Glyph of Warding does half damage on a successful save (BG/BG2 only; this is already true on IWD).</li>
+</ul>
+</p>
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 13 (22nd July 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+<ul>
+					
+					<li>Balancing changes:
+						<ul>
+						<li>Draw upon Holy Might and Bolt of Glory have been added to the Good sphere (they're still in the Combat sphere).</li>
+						<li>The 'custom' version of ability score modifications grants slightly slower bonus-spell progression, and the baseline number of spells for wizards and bards has been adjusted down slightly.</li>
+						<li>Force mages get +40% resistance to magic damage (up from +10%).</li>
+						</ul>
+					</li>
+					<li>Fixed some issues with biographies in 'new races and subraces'.</li>
+					<li>'New races and subraces' now assigns correct saving throw and skill modifiers to joinable NPCs.</li>
+					<li>'New races and subraces' should now display the correct modifiers on a character's saving throws.</li>
+					<li>Duergar PCs now have race=dwarf rather than race=duergar, and deep gnome PCs now have race=gnome rather than race=svirfneblin - on balance the compatibility problems outweigh the advantages.</li>
+					<li>Planetouched PCs are no longer able to use weapons that are restricted to specific races (except their own!)</li>
+					<li>The HLA system now correctly tracks HLA legality when you take many levels at once (and my god, that was a complicated bit of coding).</li>
+					<li>An earlier update broke the in-game documentation of the prerequisites for many HLAs; it's now fixed.</li>
+					<li>Fixed a bug whereby characters taking many levels at once got the wrong number of HLAs.</li>
+					<li>The 'Wildstrike' HLA should now work properly.</li>
+					<li>The 'Hardiness' HLA can now be selected more than once.</li>
+					<li>Fixed some issues with summoning water elemental princes in the revised HLA component.</li>
+					<li>Force mages should now correctly get their +20% magic damage bonus.</li>
+					<li>HP table for barbarian multiclass is generated properly, for real this time.</li>
+					<li>Fixed cosmetic issue with Veil of Djalice.</li>
+					<li>Skald song is now correctly adjusted at levels 1 and 5.</li>
+					<li>Priests of Baervan Wildwanderer now get access to the earth sphere rather than the air sphere. This matches PnP material; it also gives Aerie access to Iron Skins, which partly makes up for her not having Stoneskin.</li>
+					<li>Following a frank and constructive conversation with Lolth, demon queen of spiders, the requirement for certain clerics to be female (or to have certain alignments and/or races) is no longer described as a 'disadvantage'.</li>
+					<li>Fixed an issue with elemental-spell-list generation that was causing compatibility issues with some spell-tweak mods.</li>
+					<li>If the new sphere system is installed, Cleric/Rangers can now use spells from the same spheres as clerics, plus Animal and Plant, minus Good and Evil. (Previously they had the same picks as druids, or the same picks as clerics if 'Multiclassed Druids' was installed.</li>
+					<li>Classes unable to use an item are now presented in a sensible order.</li>
+					<li>Multi-classed barbarians now have sensible item-use restrictions.</li>
+					<li>Improved Defensive Stance now correctly adjusts poison, magic fire, and magic cold resistance.</li>
+					<li>Fixed some issues with UI class-detection library that (among other possible problems) was confusing which spells mages could learn.</li>
+					<li>Fixed a library issue that was allowing certain kits to put 3 proficiencies in a slot at first level.</li>
+					<li>Bloodragers are now correctly blocked from using missile weapons.</li>
+					<li>Planetouched and other exotic races can no-longer dual-class (they can still multiclass).</li>
+					<li>Removed transitory Intelligence shifts that were occurring as a side effect of learning scrolls.</li>
+					<li>Items with a minimum Strength requirement now have that requirement adjusted down if you are using the revised ability score component.</li>
+					<li>Fixed a number of cosmetic problems with spell, class, and kit descriptions.</li>
+					<li>Vitriolic Sphere is now correctly detected as an Earth spell.</li>
+					<li>Spell Revisions (and other mods that put duplicate entries into spell.ids) should no longer confuse the scribe-scrolls component.</li>
+					<li>The changes made by 'rebalanced thief traps' weren't consistently being recorded in the kit/class descriptions.</li>
+					<li>Fixed a compatibility issue where some mod allocations of HLA files to kits could confuse ToF's HLA sytem.</li>
+					<li>Under-the-hood tweak - slight improvements to the system for assigning 3rd-party kits.</li>
+					<li>Improved compatibility management between SCS and ToF versions of shapeshift.</li>
+					<li>The auto-levelling system in 'NPC customization and management' now only affects NPCs, not the player (or other player-created characters).</li>
+					<li>NPC Customization and Management should correctly handle removing a dual class from an NPC.</li>
+					<li>If you use NPC Customization and Management to change a ranger to a different class, their two pips in two-weapon fighting are correctly removed.</li>
+					<li>NPC Customization and Management no longer removes all spells from Baeloth (who it's not supposed to edit).</li>
+					<li>If you use NPC Customization and Management to change a core-game NPC's class or kit, they should no longer be barred from using items that are supposed to be only usable by them.</li>
+					<li>At the start of Siege of Dragonspear, NPC Customization and Management no longer resets the hit points of NPCs who have previously been in the party.</li>
+					<li>Fixed an incompatibility between the Universal Spell Triggers spell tweak and the externalized spell system that was stopping some specialist mages from using spell triggers etc.</li>
+					<li>Scrolls of Shocking Grasp no longer target the caster if you have installed the 'Use IWD Shocking Grasp' tweak.</li>
+					<li>Scrolls of Turn Pebble to Boulder now work properly.</li>
+					<li>The tweak to Protection from Normal Missiles should now work properly.</li>
+					<li>The tweak to Mordenkainen's Sword THAC0 no longer fails if Spell-50 or similar is installed.</li>
+					<li>Wands of Spell Striking now penetrate SI: Abjuration.</li>
+					<li>The 'revised elementals' component is now correctly marked as incompatible with Spell Revisions.</li>
+					<li>For modders: included reasonably detailed SFO documentation in dw_talents/sfo/doc/index.html.</li>
+					<li>Fixed a library bug with SFO patching of EFF files.</li>
+					<li>SFO's 2DA and array functions now handle empty arrays more gracefully.</li>
+					<li>Other misc SFO fixes and tweaks prior to documentation release.</li>
+</ul>
+</p>
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 14 (9th September 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+	<ul>
+		<li>Fixed a couple of library bug sthat would sometimes cause the proficiency screen to resolve wrongly, or the ability screen to hang, when levelling.</li>
+		<li>Fixed an intermittent bug with the bit of code in 'Revised ability scores' that adjusts learned spells.</li>
+		<li>Party-joinable humans are no longer turned into Aasimars (!)</li>
+		<li>The 'use IWD Chromatic Orb' spell tweak no longer brings over Icewind Dale opposition schools (and so can now be scribed by conjurers).</li>
+		<li>Removed an erroneous check from Supernatural Fury.</li>
+		<li>Paladins can now only take Summon Deva once.</li>
+		<li>Fixed a typo that was corrupting the script for summoned fiends.</li>
+		<li>Fixed a bunch of issues with the aura effects for druid elemental forms.</li>
+		<li>Duration of Rune of Immunity now matches description.</li>
+		<li>Seven Eyes spell now works correctly.</li>
+		<li>Blood to Ice now grants appropriate saving throws.</li>
+		<li>Sorcerers with the Rimefrost bloodline can no longer learn Comet, Dragon's Breath, Elemental Immunity:Fire, or Spirit of Flame; they get Necromancy rather than Invocation as their free school at high levels, and can select Elemental Immunity: Cold without taking Arcane Knowledge: Abjuration.</li>
+		<li>Sorcerers with the Efreeti bloodline can no longer learn Blood to Ice, Thunderstorm, or Aegis of Rime; they can select Elemental Immunity:Fire without taking Arcane Knowledge: Abjuration; their default colors are more appropriate.</li>
+		<li>Sorcerers with the Deep Earth bloodline can no longer learn Thunderstorm or Scion of Storms; they can select Elemental Immunity:Acid without taking Arcane Knowledge: Abjuration.</li>
+		<li>Sorcerers with the Stormborn bloodline can no longer learn Gaze of the Medusa, Malavon's Fury, or Aqua Mortis; they can select Elemental Immunity:Electricity without taking Arcane Knowledge: Abjuration.</li>
+		<li>Sorcerers with the Fiendish bloodline can no longer learn Summon Planetar.</li>
+		<li>The 'enhanced bard song' HLA, and the Jester and Skald versions, should now correctly grant an ability to reuse them.</li>
+		<li>The new Blackguard kits should now be selectable even if you haven't installed another component that makes Blackguard a class.</li>
+		<li>Fixed a cosmetic issue with the descriptions of bard songs.</li>
+		<li>Favored Souls no longer try to detect traps when using the default AI.</li>
+		<li>On IWDEE, armor and scroll descriptions are no longer hidden.</li>
+		<li>Scorn Injury should now work properly.</li>
+		<li>"NPC Customization and Management" was failing to fully remove dual class flags from dual-class characters, leading to awkward consequences if they multiclassed.</li>
+		<li>Fixed an issue where, if you install 'New races and subraces' without 'IWD bard songs', specialist mages didn't their subrace allocated correctly. (How could I possibly have missed that?)</li>
+		<li>Fixed a compatibility issue with some mods that change the XP table, that caused first-level mages and bards to get far too many spells.</li>
+		<li>Added a readme warning about manually editing the game after installing ToF.</li>
+	</ul>
+</div>
+   <div class="ribbon_rectangle_h3"><h3>Version beta 15 (21st November 2024)</h3></div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+<div class="section"> 
+<p>
+	<ul>
+		<li>On IWDEE, subraces should no longer display 'Invalid String' on the character screen.</li>
+		<li>Fixed some issues with NPC auto-levelling that arose when games were saved and loaded.</li>
+		<li>Fixed some issues with the way subrace biographies are handled.</li>
+		<li>Fixed an occasional bug with specialist mages learning spells from scrolls.</li>
+		<li>Druid/mages, druid/thieves, and druid/rangers now have Turn Undead deactivated; Favored Souls now have Find Traps deactivated. (They are normally hidden entirely by the UI) but there are edge cases where it is visible).</li>
+		<li>Clerics and Favored Souls of Oghma no longer get Identify, and instead get 15 lore per level (up from 10).</li>
+		<li>Assassin poisons were not being blocked by Stoneskin or by targeting an elemental/undead/etc.</li>
+		<li>Deathkiss now inflicts poison damage correctly.</li>
+		<li>Fixed a library bug which meant that the 'poison aptitude' and 'poison expertise' HLAs were not working.</li>
+		<li>Fixed issues with Nerve Venom: no longer does damage, no longer grants a saving throw, affects priest as well as wizard spellcasting, does not grant +25 AC vs crushing(!)</li>
+		<li>Nightmare Paste and Carrion Ichor can now be applied once per round instead of once per several rounds.</li>
+		<li>Wyvern Venom is identified in-game when used.</li>
+		<li>Blackguards should now receive their extra uses of Absorb Health if you are using Revised Paladins and Blackguards.</li>
+		<li>Thrall of Orcus and Disciple of Asmodeus Find Familiar abilities no longer list specific stats for the familiar (since they vary between games).</li>
+		<li>Fixed several errors in the allocation of high level abilities to druid/elementalist multiclassed characters.</li>
+		<li>Druid/Elementalists should now get the right shapeshift elemental options (previously fire elementalists could shapeshift into water but not fire elementals, and vice versa).</li>
+		<li>Barbarian wizard-slayer component now requires barbarian-as-a-class component.</li>
+		<li>We now longer try (and fail) to install the Force Mage of Mystra cleric/mage kit if you haven't installed the Force Mages component.</li>
+		<li>Fixed an edge-case incompatibility between SCS and ToF that occurred if the Low-Level abilities from ToF were installed but the High-Level abilities weren't.</li>
+		<li>Blood to Ice was not properly granting a saving throw.</li>
+		<li>Elemental Prince summoning no longer requires you to choose an (irrelevant) target for the spell.</li>
+		<li>Humans (and other races/subraces that grant extra first-level proficiencies) no longer grant them again when you dual-class. (That wasn't exactly a bug, but the consensus seems to be that they shouldn't get them.)</li>
+		<li>Fixed a cosmetic issue with the way spell schools were displayed for multi-school spells.</li>
+		<li>The Perceptive low-level ability now correctly grants +15, not +10, to Detect Illusions.</li>
+		<li>Removed outdated description text saying that Favored Souls of Helm get Ironskins.</li>
+		<li>Shapeshift ability is now correctly removed from Totemic Shamans and Raging Shifters.</li>
+		<li>If 'Revised Class Alignment Rules' is installed, Fighter/Assassins can no longer be good-aligned.</li>
+		<li>The 'extra level 6', 'extra level 7', and 'extra level 8' spells have been moved from the HLA list to the low-level ability list, and no longer have ability prerequisites (as for other extra level X' spells, you need to be able to cast X+1-level spells to take them).</li>
+		<li>Nishruu have been slightly lowered in level so that Death Spell still affects them.</li>
+		<li>The Larloch's Minor Drain tweak no longer does an extra 4 hp of damage.</li>
+		<li>Stonefist now grants the listed +2 bonus to AC.</li>
+		<li>The IWD-style color spray component now installs properly.</li>
+		<li>The Ascension version of the innate Cure Light Wounds bhaalspawn ability is now affected by the Enhance Cure/Cause spell tweak.</li>
+		<li>Slight tweak to the SFO library to handle (unconfirmed) compatibility errors on level-zero creatures.</li>
+		<li>The IWD spells now overwrite previous versions of the spells installed by other mods (except Spell Revisions) - not doing so was leading to subsequent install failures when the other-mod version of an IWD spell was configured differently from our version.</li>
+		<li>Balance change: the extra damage from Deathkiss has been reduced so that it is no longer strictly superior to Wyvern Venom.</li>
+		<li>Balance change: Slightly increased the weight that can be carried at strength 11-15.</li>
+		
+	</ul>
 </div>
 </body>
 </html>
