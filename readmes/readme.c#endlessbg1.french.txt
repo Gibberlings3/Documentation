@@ -290,6 +290,7 @@ Roberciiik: Polish
 Gwendolyne, Machiavélique, and Shodead: French
 improb@bile: Italian
 Inueb and ElGamerViejuno: Spanish
+Lzw104522773: Simplified Chinese
 Sauro: Brazilian Portuguese
 
 Proofreading of English version & readme: Lauriel, Mike1072, Roberciiik
@@ -313,6 +314,16 @@ Spellhold Studios			http://www.shsforums.net/
 
 
 HISTORY
+
+Version 20.1:
+- If Imoen is not in party and moved into Palace top floor, she should give her according greeting dialogue to the PC.
+- Install order for PI in the .ini was changed to account for Jarl's Adventure Pack v1. Recommended install order is now EndlessBG1 before JAP.
+
+Version 20:
+- Simplified Chinese version added, by Lzw104522773.
+- Denkod should not loop on first meeting if only main component is installed.
+- (German version) typo corrections, by Ychap.
+- "Korlasz' Dungeon is in BG1": Fixed Imoen's line in EET.
 
 Version 19:
 - Brazilian Portuguese translation added, by Sauro
