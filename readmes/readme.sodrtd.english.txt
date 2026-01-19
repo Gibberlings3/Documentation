@@ -43,7 +43,7 @@ The following lists the information from the SoD campaign this mod is considerin
 -What was the attack in the palace with the weak poison for?
 
 
-DESCRIPTION OF COMPONENTS 
+DESCRIPTION OF COMPONENTS
 
 The mod consists of 8 components, most of them optional.
 
@@ -137,7 +137,7 @@ Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-pa
 
 INSTALLATION
 
-NOTE: If you've previously installed the mod, remove it before extracting a new version. To do this, uninstall all previously installed components and delete the mod folder and executables. 
+NOTE: If you've previously installed the mod, remove it before extracting a new version. To do this, uninstall all previously installed components and delete the mod folder and executables.
 
 When installing or uninstalling, do not close the DOS window by clicking on the X button! Instead, press the Enter key when instructed to do so.
 
@@ -151,7 +151,7 @@ https://forums.beamdog.com/discussion/50441/modmerge-merge-your-steam-gog-zip-ba
 
 General (Windows, Mac OS X, and Linux)
 
-Extract the contents of the mod archive to your game's main directory. 
+Extract the contents of the mod archive to your game's main directory.
 NOTE: For Enhanced Edition it is important that you istall the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
 
 Windows
@@ -163,9 +163,9 @@ The Tweak Pack is packaged and installed with WeiDU. To install, extract the mod
 
 Linux
 Extract the contents of the mod to the folder of the game you wish to modify. Download the latest version of WeiDU for Linux from https://github.com/WeiDUorg/weidu/releases and copy WeiDU and WeInstall to /usr/bin. Following that, open a terminal and cd to your BG2 installation directory, run 'tolower' and answer Y to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. If you're unsure, running tolower and choosing both options is the safe bet.
-Run WeInstall sodrtd in your game folder to install the mod. Then run wine BGMain.exe and start playing. 
+Run WeInstall sodrtd in your game folder to install the mod. Then run wine BGMain.exe and start playing.
 
-NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames. 
+NOTE: BG(II):EE are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update as even after reinstalling the mods, you might not be able to continue with your old savegames.
 
 If you have installation problems or encounter any bugs, please post your bug report in one of the forum threads.
 
@@ -193,7 +193,7 @@ PC's knowledge:
 2 - PC knows that Caelar claims to be blessed by "the pantheon" / all gods /several gods
 3 - PC knows that [Caelar claims to be blessed by "the pantheon" / all gods /several gods] is false
 
---Caelar trying to kidnap PC? ("C#RtD_CaelarKidnap"): 
+--Caelar trying to kidnap PC? ("C#RtD_CaelarKidnap"):
 0 - PC didn't discuss weak poison yet
 1 - PC discussed with someone/NPCs that Caelar's assassin probably wanted to kidnap PC in Palace (instead of killing)
 
@@ -211,9 +211,9 @@ PC's knowledge:
 1 - PC heard rumor about Caelar/divine forces through Caelar protecting the crusade
 2 - PC knows that her followers believe that the gods are protecting Caelar and them
 3 - PC watched Hormorn's "blessing" in Bridgefort camp
-4 - PC knows that [the gods are protecting Caelar and them] is a lie 
+4 - PC knows that [the gods are protecting Caelar and them] is a lie
 
---Caelar Wants PC ("C#RtD_CaelarWantsPC"): 
+--Caelar Wants PC ("C#RtD_CaelarWantsPC"):
 1 - PC assumes that Caelar wants to capture the PC [alive]
 2 - PC Knows that Caelar has plans for the PC / wants the PC for [something]
 
@@ -225,7 +225,7 @@ PC's knowledge:
 --Hephernaan's real Master ("C#RtD_HephernaanFiend"):
 0 - PC doesn't know that [a man being called] Hephernaan is working for a fiend to open the portal
 1 - PC knows that [a man being called] Hephernaan is working for a fiend to open the portal
-2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal 
+2 - PC knows that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal
 3 - PC knows that Hephernaan [who is Caelar's advisor] is working for Belhifet
 
 --Who is "Hephernaan"? ("C#RtD_HephernaanIdentity"):
@@ -242,7 +242,7 @@ PC's knowledge:
 2 - PC knows that Hephernaan [who is Caelar's advisor] is working with Umbral Accord
 
 --Aun's and Caelar's Story ("C#RtD_KnowsAunArgent"):
-0 - No knowledge that Caelar had an uncle named Aun and something happened 
+0 - No knowledge that Caelar had an uncle named Aun and something happened
 1 - PC knows that Caelar had an uncle named Aun and something happened
 2 - PC heard rumors about Caelar being disgraced from Aster Order at the same time as Aon vanished
 3 - PC knows that Caelar was in Avernus and came back at the same time Aun vanished
@@ -280,7 +280,7 @@ Knowledge of Dukes and coalition officers:
 
 Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 1 - Dukes and officers know that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose - PC told them
-2 - Dukes and officers know that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose - heard it elsewhere 
+2 - Dukes and officers know that Caelar is betrayed by someone in her crusade, that there is a deeper level to the crusade's purpose - heard it elsewhere
 
 --Caelar Bhaal Child? ("C#RtD_CoalCaelarBhaalChild"):
 1 - Dukes and officers heard rumors that Caelar is a child of Bhaal
@@ -301,7 +301,7 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 2 - Dukes and officers heard elsewhere/deducted themselves (e.g. after hearing of needed Bhaal Blood to open the portal or after "CaelarWantsPC" is "1")
 
 --Caelar's Plan ("C#RtD_CoalCaelarPlan"):
-1 - Dukes and officers acknowledged the existence of the crusade which is rampaging through the lands 
+1 - Dukes and officers acknowledged the existence of the crusade which is rampaging through the lands
 2 - Dukes and officers know that they want to free souls from Dragonspear War from Avernus - PC told them
 3 - Dukes and officers know that they want to free souls from Dragonspear War from Avernus - heard it elsewhere
 4 - Dukes and officers know that they are planning on marching into Avernus - PC told them
@@ -317,7 +317,7 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 1 - Dukes and officers heard rumor about Caelar protecting the crusade
 2 - Dukes and officersknow that her followers believe that the gods are protecting Caelar and them - PC told them
 3 -  Dukes and officersknow that her followers believe that the gods are protecting Caelar and them - heard it elsewhere
-4 -  Dukes and officersknow about Hormorn's "blessing" in Bridgefort camp - PC told them 
+4 -  Dukes and officersknow about Hormorn's "blessing" in Bridgefort camp - PC told them
 5 - Dukes and officers know "CaelarProtection" is a lie - PC told them
 6 - Dukes and officers know "CaelarProtection" is a lie - heard it elsewhere
 
@@ -333,21 +333,21 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 
 --Hephernaan's real Master ("C#RtD_CoalHephernaanFiend"):
 1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - PC told them
-2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - heard it elsewhere 
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for a fiend to open the portal - heard it elsewhere
 3 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - PC told them
-4 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - heard it elsewhere 
+4 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working for Belhifet - heard it elsewhere
 
 --Who is "Hephernaan"? ("C#RtD_CoalHephernaanIdentity"):
 1 - Dukes and officers know Hephernaan by name and face and that he is Caelar's advisor - heard it elsewhere
 
 --Hephernaan's Face working for Umbral Accord ("C#RtD_CoalHephernaanVisual"):
 1 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - PC told them
-2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - heard it elsewhere 
+2 - Dukes and officers know that Hephernaan [who is Caelar's advisor] is working with Umbral Accord - heard it elsewhere
 
 
 --Aun's and Caelar's Story ("C#RtD_CoalKnowsAunArgent"):
 1 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - PC told them
-2 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - heard it elsewhere 
+2 - Dukes and officers heard rumors about Caelar being disgraced from Aster Order at the same time as Aun vanished - heard it elsewhere
 3 - Dukes and officers know that Caelar was in Avernus and came back at the same time Aun vanished - PC told them
 4 - Dukes and officers know that Caelar was in Avernus and came back at the same time Aun vanished - heard it elsewhere
 5 - Dukes and officers know that Aun took place for Caelar in Avernus - PC told them
@@ -361,9 +361,9 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 
 --Portal beneath Dragonspear Castle and how to Open it ("C#RtD_CoalKnowsPortalBlood"):
 1 - Dukes and officers heard about a portal/rift in Dragonspear Castle - PC told them
-2 - Dukes and officers heard about a portal/rift in Dragonspear Castle - heard it elsewhere 
+2 - Dukes and officers heard about a portal/rift in Dragonspear Castle - heard it elsewhere
 3 - Dukes and officers know that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - PC told them
-4 - Dukes and officers know that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - heard it elsewhere 
+4 - Dukes and officers know that blood of Bhaal child is needed/sufficient to open portal to Avernus under DC - heard it elsewhere
 5 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 3]
 6 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want PC's blood for [open portal to Avernus] - heard it elsewhere -- also for [C#RtD_CoalWantBhaalBlood = 4]
 7 - Dukes and officers know that Caelar / Hephernaan are planning PC's blood for [open portal to Avernus] - PC told them -- also for [C#RtD_CoalWantBhaalBlood = 5]
@@ -377,11 +377,11 @@ Caelar being betrayed? ("C#RtD_CoalCaelarBetrayal"):
 
 --Caelar needs PC's Blood ("C#RtD_CoalWantBhaalBlood"):
 1 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood - PC told them
-2 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood - heard it elsewhere 
+2 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood - heard it elsewhere
 3 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 5]
 4 - Dukes and officers reason / conclude / speculate that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal- heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 6]
 5 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - PC told them -- also for [C#RtD_CoalKnowsPortalBlood = 7]
-6 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 8] 
+6 - Dukes and officers know that Caelar / Hephernaan want the PC's Bhaal child blood for opening the portal - heard it elsewhere -- also for [C#RtD_CoalKnowsPortalBlood = 8]
 
 --Poison of Palace Attack too Weak to Kill ("C#RtD_CoalWeakPoison"):
 1 - Dukes and officers know that poison was too weak to kill - heard it elsewhere
@@ -396,9 +396,9 @@ The first time the evaluation script is called, the variable Global("C#RtD_RoadT
 For TRACKING the knowledge the PC and the coalition forces have about the game events, use the variables *without* postfix "_SET" in your mod.
 
 For FEEDING variables from your mod in case your mod offers new ways to learn about game events, set the variables *with* the postfix "_SET" in your mod. Do not set the varibales without the postfix "_SET" in your mod, as it could screw up the overall variable and journal system.
-For every instance, the global variable which triggers the evaluation script "C#RtD_VariableEvaluation" has to be set to "1", as well. 
+For every instance, the global variable which triggers the evaluation script "C#RtD_VariableEvaluation" has to be set to "1", as well.
 Example:
-In Dynaheir's meeting dialogue, she says a line about hearing the rumor of Caelar being a child of Bhaal (bddynahe, state 20): "I know of this woman. There are those who believe her to be a daughter of the divine—perhaps even a child of Bhaal... She merits further investigation, and is the reason I still linger in the region. When dost thou leave?". 
+In Dynaheir's meeting dialogue, she says a line about hearing the rumor of Caelar being a child of Bhaal (bddynahe, state 20): "I know of this woman. There are those who believe her to be a daughter of the divineâ€”perhaps even a child of Bhaal... She merits further investigation, and is the reason I still linger in the region. When dost thou leave?".
 We want the variable "C#RtD_CaelarBhaalChild" to be evaluated to "1" if the PC didn't hear about this yet. So what we do is we add the action:
 DO ~SetGlobal("C#RtD_CaelarBhaalChild_SET","GLOBAL",1)
 SetGlobal("C#RtD_VariableEvaluation","GLOBAL",1)~.
@@ -414,8 +414,8 @@ Frenzgyn - Italian translation (new lines v1)
 improb@bile - Italian translation (v0.7 Beta)
 jastey - author, main mod head
 JohnBob - French translation (v1)
-Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta) 
-Machiavélique - proofreading French (v0.4 Beta)
+Lauriel - author of component 1, ideas, design help, proofreading English (v0.1 Beta)
+MachiavÃ©lique - proofreading French (v0.4 Beta)
 MephistoSatanDevil: setup.tra format corrections for Chinese (simplified) (v4.0)
 Shai Hulud - German translation (v0.2 Beta)
 yoshimo0417: Chinese (simplified) (v4.0)
@@ -512,7 +512,7 @@ Version 0.8 Beta
 - Optimized variable triggers for PC's conclusions regarding Caelar's plans.
 
 Version 0.7 Beta
-- added Italian version by improb@bile 
+- added Italian version by improb@bile
 - refined variable triggers for conclusion that Caelar is no child of Bhaal.
 
 Version 0.6 Beta
@@ -530,7 +530,7 @@ Version 0.5 Beta
 - Corrcted remnants to other mod names in readme.
 
 Version 0.4 Beta
-- added French version by JohnBob, proofreading by Machiavélique
+- added French version by JohnBob, proofreading by MachiavÃ©lique
 
 Version 0.3 Beta
 - new reply option of Jastey's SoD Tweakpack (v6) will be tagged accordingly.
@@ -554,6 +554,6 @@ There are two big ways to upset this harmony. One is to claim someone else's wor
 Be kind to your fellow players and modders. Don't do either.
 
 ================================================================================
-Road to Discovery mod for SoD is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+Road to Discovery mod for SoD is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. Â©Wizards of the Coast LLC.
 This mod is also not developed, supported, or endorsed by BioWare, Black Isle Studios, Interplay Entertainment Corp., Overhaul Games or Beamdog. All other trademarks and copyrights are property of their respective owners.
 ================================================================================
