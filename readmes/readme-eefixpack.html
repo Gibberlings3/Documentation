@@ -31,7 +31,7 @@
       <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a><br />
         Authors: </strong>Multiple<br />
         <strong>On the Web: </strong><a href="https://www.gibberlings3.net/mods/fixes/eefp/">Project Page</a>, <a href="https://www.gibberlings3.net/forums/forum/232-ee-fixpack/">Forum</a>, <a href="https://discord.gg/yTzjMTb">Discord</a>, and <a href="https://www.gibberlings3.net/gallery/album/41-enhanced-edition-fixpack/">preview gallery</a></p>
-      <p><strong>Version Alpha 3</strong><br />
+      <p><strong>Version Beta 1</strong><br />
         <strong> Languages:</strong> English, Chinese, French, Russian<br />
         <strong>Platforms: </strong>Windows, mac<acronym title="Operating System 10">OS</acronym>, and Linux<br />
         <strong>GitHub: </strong><a href="https://github.com/Gibberlings3/EE_Fixpack">Gibberlings3/EE_Fixpack</a></p>
@@ -148,8 +148,14 @@
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
-      <p>Big thanks to folks who submitted fixes: Angel, Argent77, CamDawg, DavidW, Graion Dilach, Jazira, jmerry, K4thos, kjeron, Luke, morpheus562, Parys, Sam., Selphira, and zenblack. If we've missed anyone, please let me know. </p>
+      <p>Big thanks to folks who submitted fixes: Angel, Argent77, CamDawg, DavidW, Graion Dilach, Jazira, jmerry, K4thos, Kaelyn, kjeron, Luke, morpheus562, Parys, Sam., Selphira, and zenblack. If we've missed anyone, please let me know. </p>
       <p>We've also had a ton of folks reporting bugs on the forums&mdash;the Fixpack runs on bug reports, so thank you!</p>
+      <p>Thanks to our translators: </p>
+      <ul>
+        <li>(Simplified) Chinese: MephistoSatanDevil </li>
+        <li>French: Selphira, Mera</li>
+        <li>Russian: Andrey Balabokhin</li>
+      </ul>
       <p><strong>Tools Used in Creation</strong></p>
       <ul>
         <li> <a href="http://www.weidu.org/"><abbr title="Weimer Dialogue Utility">WeiDU</abbr></a> by Wes Weimer, the bigg, and Wisp </li>
@@ -182,6 +188,74 @@
     <div class="ribbon_triangle_h2-l"></div>
     <div class="ribbon_triangle_h2-r"></div>
     <div class="section">
+      <p><strong>Version Beta 1 - May 2, 2026</strong></p>
+      <ul>
+        <li>Fixes/changes to the existing fixes:
+          <ul>
+            <li>The IWD soundset fixes were adding a female voice to Hrothgar's death line</li>
+            <li>The Fireshield infinite loop fix was listing the wrong resource in the protection for Globe of Blades</li>
+            <li>EEFP wouldn't install on PsTEE in French due to a missing translation, which has since been provided by Mera. Additionally, in future cases like this EEFP will fall back to English rather than failing the installation</li>
+            <li>The fixes to the Archer kit in IWDEE wasn't properly accounting for IWD-specific ranger abilities or progressions</li>
+          </ul>
+        </li>
+        <li>New fixes:
+          <ul>
+            <li>[All] More typos addressed by the Game Text Update</li>
+            <li>[All] Every item has three item charge fields when added to an area, store, or creature, even if the item doesn't use charges (items that stack use the first charge field as quantity). A comprehensive review was performed, and all items that had charges over their maximum (or didn't need any) have been adjusted; specifics in the <a href="https://www.gibberlings3.net/forums/topic/41152-all-overcharged-and-missing-items/">associated forum thread</a></li>
+            <li>[BG, BG2] Almost every joinable NPC, and a few other special NPCs in the master gam file, spawned facing the default direction of south. They now spawn facing more natural directions for where they spawn.</li>
+            <li>[BG,BG2] Certain projectiles (mainly lightning) coming from ground traps could cause crashes. </li>
+            <li>[BG, BG2] The special Watcher innate version of True Sight was not setting a special state that warned AI scripts not to try and turn invisible while it was active.</li>
+            <li>[BG] If you freed Branwen from petrification but didn't recruit her, she could revert back to petrification when you returned later </li>
+            <li>[BG] Multiple crusaders had references to custom Beamdog items which were never made, which are swapped for weapons in which they're proficient </li>
+            <li>[BG] One crusader lacked the standard crusader uniform due to a typo </li>
+            <li>[BG] A cutscene version of Caelar lacked her normal equipment due to typos </li>
+            <li>[BG] Two water elemental kin were copied from IWD and still referenced a (missing) item which provides IWD-style visual effects; these are removed </li>
+            <li>[BG] Ashirukuru used a special short sword that provided their translucency; unfortunately the weapon could break and turn them fully opaque. The breakage chance has been removed. Two random militia members were also using this item, and they have been updated to use regular short swords instead. </li>
+            <li>[BG] The mimic was missing its weapon </li>
+            <li>[BG, BG2] Additional bulk fixes to creature race and general characteristics</li>
+            <li>[BG] Hitting the escape key while a game is running brings up the game menu.   The center logo of the menu should show the active game campaign (<abbr title="Baldur's Gate">BG</abbr>, <abbr title="Siege of Dragonspear">SoD</abbr>, or BP), but it  showed only the <abbr title="Baldur's Gate">BG</abbr> logo in a <abbr title="Baldur's Gate: Enhanced Edition">BGEE</abbr>-without-<abbr title="Siege of Dragonspear">SoD</abbr> installation, or the <abbr title="Siege of Dragonspear">SoD</abbr> logo in a <abbr title="Baldur's Gate: Enhanced Edition">BGEE</abbr>-with-<abbr title="Siege of Dragonspear">SoD</abbr> installation</li>
+            <li>[BG, IWD] During kit selection in  character creation, the kits could be scrolled via mousewheel but there was no scroll bar to indicate the list was scrollable or allow for scrolling via other means </li>
+            <li>[BG] Hitting the escape key while a game is running brings up the game menu.   The center logo of the menu should show the active game campaign (<abbr title="Baldur's Gate">BG</abbr>, <abbr title="Siege of Dragonspear">SoD</abbr>, or BP), but it  showed only the <abbr title="Baldur's Gate">BG</abbr> logo in a <abbr title="Baldur's Gate: Enhanced Edition">BGEE</abbr>-without-<abbr title="Siege of Dragonspear">SoD</abbr> installation, or the <abbr title="Siege of Dragonspear">SoD</abbr> logo in a <abbr title="Baldur's Gate: Enhanced Edition">BGEE</abbr>-with-<abbr title="Siege of Dragonspear">SoD</abbr> installation </li>
+            <li>[BG, BG2] Version 2.6 disabled the ability to force-quit the game during a cutscene, which is restored </li>
+            <li>[BG, BG2] Some weapons which do no physical damage displayed a 'null' string on the UI on the inventory screen. </li>
+            <li>[BG] Several creatures had nulled or nonexistent item references, which are removed</li>
+            <li>[BG2] In the Watcher's Keep maze, the 'dead' or 'wild' magic effects from a room could remain active on the party when moving to a room that shouldn't have these effects for up to two rounds</li>
+            <li>[BG2] Keldorn and his zombie in the sewers can get stuck on top of each other if you enter and leave without meeting him </li>
+            <li>[BG2] In the staging area of the Black Pits II, several floor traps don't respond if you're wearing the Noser Uniform. Due to how the triggers were written, theses traps could go off substantially later when you removed the uniform.</li>
+            <li>[BG2] If you ignored Brannel, the door guard, when taking over  Mae'Var's guild, his hint about being betrayed won't play and you get his introduction dialogue instead.</li>
+            <li>[BG2] If Tagget cannot deliver his initial dialogue in the planar prison (e.g. he gets webbed), he should have more appropriate dialogue when he is able to speak again.</li>
+            <li>[BG2] Balduran's Plate wouldn't apply its charisma and hit point bonuses if equipped by a character below level six.</li>
+            <li>[BG2] Additional bulk fixes to item weapon speeds</li>
+            <li>[BG2, IWD] Ethereal Retribution has a guard in place to prevent death via strength drain, but the check was too low</li>
+            <li>[BG2] Fil had a corrupted inventory, which was copied into his fellow faerie dragons</li>
+            <li>[BG2] The creature trader in Ust Natha could be interrupted when transferring creatures out of the cages; this is now done in a cutscene</li>
+            <li>[BG2] Some script triggers in Athkatla were only checking if chapter=6 (instead of chapter &gt; 5), meaning they would break if you went to Sulanesselar, started chapter 7, and returned to the city. One of the bad triggers also spawned beholders in the sewers without checking if the Cult of the Eyeless was still active and is fixed as well.</li>
+            <li>[IWD] All versions of True Seeing and True Sight were not setting a special state that warned AI scripts not to try and turn invisible while it was active. Glitterdust was also missing a custom state for scripting checks as well.</li>
+            <li>[IWD] Spectral undead held an item that was supposed to prevent 'chunked' deaths, but it wasn't fully working.</li>
+            <li>[IWD] Three special creatures, used to clear fog of war during cutscenes, were using missing BG2 items to provide their invulnerability </li>
+            <li>[IWD] Several of the 'Easter egg' squirrels in the finale in Easthaven lacked the requisite scripting to turn hostile and attack.</li>
+            <li>[IWD] If you killed an Easthaven squirrel at the beginning of the game, the cyclops in the Easthaven finale is missing its trample corpse </li>
+            <li>[IWD] At high levels, Malavon is supposed to have an apprentice</li>
+            <li>[IWD] Several creatures had incorrect speeds when compared to their original IWD counterparts. </li>
+            <li>[IWD] The Voice used a poorly-blended visual effect when reviving</li>
+            <li>[IWD] The cursors being used were from BG2 and have been updated to use IWD cursors</li>
+            <li>[PsT] Cleared a reference to a nonexistent item in Marissa's dialogue</li>
+            <li>[PsT] Two creatures referred to a nonexistent item that (from its file name) should have prevented fear; this item is create</li>
+          </ul>
+        </li>
+        <li>Other fixes and changes:
+          <ul>
+            <li>Fixes to Chinese-language line breaks</li>
+            <li>[All] Script triggers NearSavedLocation() and CheckItemSlot() are defined with their object and  string parameters in the wrong order</li>
+            <li>[BG2] Additional racial changes to sync the race IDS files across games</li>
+            <li>[BG2] Map OH5000 (Radiant Heart building used by Dorn's Wedding quest) still   uses a tileset layout from an earlier game patch where the tiles were   placed in an awkward way. It was fixed for AR0903 (original Radiant   Heart building) but not for OH5000</li>
+            <li>[BG2] npclevel.2da is blanked so that joinables never update from their initial spawn. This caused an actual issue with Branwen in BGEE, but here it's entirely precautionary.</li>
+            <li>[BG2] One area and one creature had null item references, which are removed</li>
+            <li>[IWD] A call to a nonexistent ambient was removed</li>
+            <li>[IWD] Cleaned up a duplicate entry for (failing to) set a snare.</li>
+          </ul>
+        </li>
+      </ul>
       <p><strong>Version Alpha 3 - October 15, 2025</strong></p>
       <ul>
         <li>Changed how the Fixpack handles voice-over changes vs. text language changes, as this will account for non-English-language games which use the English VOs to get the English VO fixes</li>
