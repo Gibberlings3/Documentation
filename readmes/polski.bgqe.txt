@@ -1,3 +1,4 @@
+
 			   	Baldur's Gate Mini-Questy i Spotkania
 				   		Modyfikacja 
 	do oryginalnego BG1 (z lub bez OzWM), BG1Tutu v4, EasyTutu, BGT, BG:EE, lub EET 
@@ -12,7 +13,8 @@ Od wydania wersji 9 modu "Rozszerzenie spotkania z Bjorninem" zosta³o przeniesio
 
 Mod nale¿y instalowaæ przed BG1NPC Project. W przeciwnym razie pewne opcje odpowiedzi bêd¹ niewidoczne.
 
-Modyfikacja "Brage's Redemption" wprowadza takie samo zadanie jak komponent BGQE "Miecz Brage'a" jako wstêpny warunek przy³¹czenia Brage'a do dru¿yny. Zadanie to zostaje rozszerzone przez "Brage's Redemption" o dodatkowe wskazówki i wpisy do dziennika. Zaleca siê zainstalowanie "Brage's Redemption" dla zapoznania siê z now¹ zawartoœci¹, ale nie jest to wymagane do rozegrania zadania. Uwaga: w przypadku instalacji obu modów BGQE musi byæ zainstalowane przed "Brage's Redemption".
+Od wersji 30. modyfikacja BGQE zawiera tak¿e dodatkowe wskazówki i wpisy do dziennika, znajduj¹ce siê wczeœniej w modzie "Brage's Redemption".
+Modyfikacja "Brage's Redemption" (v10 i kolejne) wymaga komponentu BGQE "Miecz Brage'a" jako warunku wstêpnego przy³¹czenia Brage'a do dru¿yny, a zatem w przypadku instalacji obu modów BGQE musi byæ zainstalowane przed "Brage's Redemption".
  
 
 ZAWARTOŒÆ
@@ -93,13 +95,32 @@ Brage musi zostaæ dostarczony ¿ywy do Nashkel. Modyfikacja dodaje te¿ mo¿liwoœæ 
 
 Zadanie dotycz¹ce miecza Brage'a rozpoczyna siê od rozmowy z Oublekiem po doprowadzeniu Brage'a ¿ywego do Nashkel.
 
-Uwaga: Modyfikacja "Brage's Redemption" wprowadza takie samo zadanie jak komponent BGQE "Miecz Brage'a", jako wstêpny warunek przy³¹czenia Brage'a do dru¿yny. Zadanie to zostaje rozszerzone przez "Brage's Redemption" o dodatkowe wskazówki i wpisy do dziennika. Zaleca siê zainstalowanie "Brage's Redemption" dla zapoznania siê z now¹ zawartoœci¹, ale nie jest to wymagane do rozegrania zadania. BGQE musi byæ zainstalowane przed "Brage's Redemption". BGQE powinno byæ te¿ zainstalowane przed BG1NPC Project, inaczej niektóre z dodanych odpowiedzi Brage'a oraz Bordy siê nie wyœwietl¹.
+Uwaga: Od wersji 30. modyfikacja BGQE zawiera tak¿e dodatkowe wskazówki i wpisy do dziennika, znajduj¹ce siê wczeœniej w modzie "Brage's Redemption".
+Modyfikacja "Brage's Redemption" (v10 i kolejne) wymaga komponentu BGQE "Miecz Brage'a" jako warunku wstêpnego przy³¹czenia Brage'a do dru¿yny, a zatem w przypadku instalacji obu modów BGQE musi byæ zainstalowane przed "Brage's Redemption".
+BGQE powinno byæ te¿ zainstalowane przed BG1NPC Project, inaczej niektóre z dodanych odpowiedzi Brage'a oraz Bordy siê nie wyœwietl¹.
 
 ***** Spoiler *****
 - Kupiec Borda (postaæ z oryginalnej gry) odgrywa rolê w tym zadaniu. Normalnie mo¿na go spotkaæ w lokacji z wiosk¹ xvartów. W zale¿noœci od stadium zadania gracz mo¿e go spotkaæ w³aœnie tam. Je¿eli gracz spotka³ go ju¿ wczeœniej, dojdzie do drugiego spotkania. 
-- Miecz Brage'a równie¿ odgrywa wa¿n¹ rolê. W pewnym momencie nalezy go pokazaæ Nalinowi. Potem jest ju¿ zbêdny dla fabu³y modu (i mo¿e byæ np. u¿yty przez Thalantyr's Item Upgrade Mod). 
-- Zadanie mo¿e zostaæ ukoñczone przed oczyszczeniem Kopalñ Nashkel. W przypadku, gdy Laryssa, kuzynka Brage'a, zosta³a zabita przy pierwszym spotkaniu, ostatni¹ wskazówkê wymagan¹ do ukoñczenia zadania bêdzie mo¿na znaleŸæ nie wczeœniej ni¿ w namiocie Tazoka.
+- Miecz Brage'a równie¿ odgrywa wa¿n¹ rolê. W pewnym momencie nale¿y go pokazaæ Nalinowi. Potem jest ju¿ zbêdny dla fabu³y modu (i mo¿e byæ np. u¿yty przez Thalantyr's Item Upgrade Mod). 
+- Zadanie mo¿e zostaæ ukoñczone zarówno przed oczyszczeniem Kopalñ Nashkel, jak te¿ póŸniej. 
 
+***** Walkthrough *****
+Najszybszy sposób wykonania zadania (szczególnie przed pójœciem do Kopalñ Nashkel) jest nastêpuj¹cy:
+
+- Na mapie z wiosk¹ xvartów porozmawiaj z kupcem Bord¹. Najszybciej bêdzie, jeœli Borda zostanie wtedy zabity, by uzyskaæ potrzebn¹ notatkê oraz prawdziwy miecz Brage'a. Rozwi¹zanie zadania przed oczyszczenie Kopalñ Nashkel nie jest jednak konieczne.
+- Udaj siê do Brage'a. Je¿eli Borda nie zosta³ zabity, pozostaw przy ¿yciu Laryssê, ¿eby móc wykonaæ to zadanie przed oczyszczeniem Kopalñ Nashkel. SprowadŸ Brage'a ¿ywego do Nashkel (bez znaczenia, czy do œwi¹tyni, czy do Oubleka).
+- Porozmawiaj z Oublekiem, by otrzymaæ zadanie "Wina Kapitana Brage'a".
+- Poka¿ Nalinowi w œwi¹tyni w Nashkel przeklêty miecz oburêczny, by udowodniæ, ¿e by³ on ob³o¿ony kl¹tw¹.
+- Je¿eli Borda nie zosta³ dot¹d zabity, Laryssa spotkana przed œwi¹tyni¹ udzieli informacji o kupcu z Jarmarku Nashkel. Mo¿na go znaleŸæ w namiocie na po³udniu mapy.
+- Powiedz Oublekowi o przeklêtym mieczu.
+- Je¿eli Borda wci¹¿ ¿yje, idŸ do kupca sprzedaj¹cego mikstury na Jarmarku (po³udnie mapy) i oskar¿aj go, dopóki nie powie, gdzie mo¿na spotkaæ Bordê.
+- Odszukaj Bordê. Jeœli jeszcze go nie spotka³eœ/spotka³aœ, bêdzie w lokacji z wiosk¹ xvartów. Je¿eli natomiast ju¿ siê z nim widzia³eœ/widzia³aœ, idŸ do palarni lotosu na Jarmarku (zachodni skraj mapy). Po wyjœciu z namiotu nast¹pi spotkanie z Bord¹. Po jago pokonaniu weŸ z jego cia³a list oraz miecz.
+- Oddaj Oublekowi list, by dowieœæ niewinnoœci Brage'a.
+- Porozmawiaj ponownie z Oublekiem, by wywo³aæ scenkê procesu Brage'a.
+- Po oczyszczeniu z winy Brage bêdzie przebywa³ w œwi¹tyni w Nashkel. Przekonaj go, by przyj¹³ swój prawdziwy miecz.
+- Po tym, jak Brage weŸmie swój miecz, a gracz wyjdzie ze œwi¹tyni, a nastêpnie do niej wróci, Nalin poinformuje, ¿e Brage chce porozmawiaæ z protagonist¹. Brage poprosi o przyjêcie do dru¿yny i mo¿e zostaæ przy³¹czony (je¿eli mamy zainstalowany mod "Brage's Redemption").
+
+Uwaga: W przypadku, gdy kupiec Borda nie zosta³ zabity przy pierwszym spotkaniu, natomiast Laryssa, kuzynka Brage'a, zginê³a przy pierwszej konfrontacji, ostatni¹ wskazówkê wymagan¹ do ukoñczenia zadania bêdzie mo¿na znaleŸæ nie wczeœniej ni¿ w namiocie Tazoka.
 
 13. Legalne Pozyskanie Map Morskich (nie dla oryginalnego BG1) (bgqe_seacharts)
 -------
@@ -134,6 +155,13 @@ Ten komponent zmienia zadanie Cordyra na dwa sposoby:
 
 Komponent jest kompatybilny ze zmianami dotycz¹cymi Sil i jej sirin, które wprowadzaj¹ takie mody jak "BG1 Romantic Encounters" oraz "Lure of Sirine's Call".
 
+
+18. Ulepszony Borda (BGT, BG:EE, EET)
+------
+Ten komponent utrudnia walkê z Bord¹. Borda otrzymuje: ró¿d¿kê snu (5 ³adunków), miksturê niewidzialnoœci, miksturê mocy i oddzielny skrypt maga, by móg³ robiæ z tych rzeczy u¿ytek. Z drugiej strony, jego odpornoœæ na magiê zosta³a obni¿ona do 0%.
+
+Zmiany te stanowi³y wczeœniej czêœæ komponentu "Miecz Brage'a", ale obecnie mog¹ byæ instalowane niezale¿nie.
+Komponent jest kompatybilny z komponentem 12: "Miecz Brage'a".
 
 
 INSTALACJA
@@ -216,6 +244,7 @@ ZNANE PROBLEMY
 ++++++++++++++++ Bitte ab hier nicht übersetzen ++++++++++++++++++++++++++++++++
 
 
+
 DANKSAGUNGEN
 
 Ich danke allen, die mir bei der Erstellung dieses Mods geholfen haben.
@@ -249,7 +278,11 @@ cujo: Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen
 
 d0lphin: Russian translation
 
+davoker: Spanish translation
+
 Drogan Di'Umptu: Alpha- und Betatester
+
+ElGamerViejuno: Spanish translation
 
 Elisabeth: proofreading (French)
 
@@ -259,9 +292,13 @@ Gerri: Alpha- und Betatester
 
 grogerson: Alpha- und Betatester, Korrekturlesen der englischen Übersetzung
 
+hawkmoon: Russian translation
+
 Hedian: Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen
 
 hook71: Korrekturlesen der englischen Übersetzung
+
+Ilhan Bilaloglu: Turkish translation
 
 ilot: Italian translation
 
@@ -277,9 +314,19 @@ Lord Hagen (GIMT): Italian translation
 
 Lumorus: Autor, Alpha- und Betatester, Ideen für die Questentwicklung
 
+lzw104522773: Simplified Chinese translation
+
+Melmoth: Spanish translation
+
+Ilhan Bilaloglu: Turkish translation
+
 Miloch: Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen, Korrekturlesen der englischen Übersetzung
 
+Neoko5: Russian translation
+
 Pt: Korrekturlesen der deutschen Version
+
+Shai Hulud: proofreader (German)
 
 Shuv-Oohl: Autor
 
@@ -293,9 +340,11 @@ Twani: Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen
 
 White Agnus: Autor, Alpha- und Betatester
 
+yoshimo0417: Simplified Chinese translation
+
 yota13: Russian Translation
 
-Zed Nocear: Coden eines Spell Effektes, Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen, Polish translation
+Zed Nocear: Coden eines Spell Effektes, Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen
 
 zenblack: Alpha- und Betatester, Ideen für die Questentwicklung bzw. NPC-Reaktionen
 
@@ -309,6 +358,7 @@ v22 completed by Jazira (proof readings by Le Marquis and Elisabeth).
 v21 by Le Marquis (des d'Oghmatiques) and Jazira.
 
 Russische Übersetzung: v8 von hawkmoon & arcanecoast.ru team, Vervollständigung für v20 von d0lphin, v22 Überarbeitung und Korrektur von d0lphin. Neue Komponente v23 von yota13, Korrekturlesen von Austin.
+v31 von Neoko5.
 
 Italian translation: Heavy revision of Italian translation and translations of new component for v23 by Coland.
 Updates v12 - 22 completed by ilot, mapnotes by jojo678.
@@ -317,15 +367,25 @@ First translation of the slimequest by Jakkus & Lord Hagen (GIMT).
 
 Polnische Übersetzung: Aristo and Zed Nocear
 
--v8: Spanische Übersetzung: Excalibur (Schleimquest), Immortality (proofreading)
+Spanish translation:
+full revised by ElGamerViejuno (v31)
+by Melmoth, revised and fixed by davoker (v26)
+(v8) Excalibur (slime quest), Immortality (proofreading) 
+
+Simplified Chinese:
+updated by yoshimo0417 (v31)
+by lzw104522773 (v27)
+
+Turkish translation:
+by Ilhan Bilaloglu (v29)
+Baldur Geçidi 2 Çeviri ekibine selam olsun!
 
 
 -Hosten-
 
 CamDawg, cmorgan and G3 staff: Uploading to G3 site and actualisation of links
 
-CamDawg, Mike1072, theacefes (G3); Hedian, Fridtjof (Rosenrankenforum); Sir Darian, Tim, and Vernochan (Kerzenburgforum): Hosting of the Mod.
-
+CamDawg, Mike1072, theacefes (G3); Hedian, Fridtjof (Rosenrankenforum); Sir Darian, Tim und Vernochan (Kerzenburgforum): Hosten der Mod.
 
 
 
@@ -373,6 +433,47 @@ MAINTENANCE NOTE: This mod accepts bug fixes, compatibility fixes, and translati
 
 
 HISTORIE
+
+Version 31:
+-Spider hatch timer increased to 50 ingame days.
+-Brage's Sword: Cursed Berserking Sword +3 (sw2H03.itm) now tagged as critical item.
+-Brage's Sword: Letters and Brage's custom sword now tagged as critical items, too.
+-Brage's Sword: Laryssa should not appear in front of temple if she was killed.
+-Slime Quest: Removed reputation increase if Eltoth was rescued.
+-Spanish version completed and updated, by ElGamerViejuno.
+-Russian version completed and updated, by Neoko5.
+-Simplified Chinese version completed and updated, by yoshimo0417.
+
+Version 30:
+-improvements (extentions) of Brage's Sword quest is now integrated here.
+-new component: Improved Borda. Was part of "Brage's Sword" is now an own, optional component.
+-removed workaround, BG:EE AR4300 has area script now ("Babysitting" quest).
+-Brage's Sword quest: added XP to solved quest (after trial) and when giving him his sword.
+-Mrs. Kenn from quest "Orklover" should not have items from Tom & Sarah (Babysitting quest).
+-journal entry upon finding Brage's sword should not happen if Brage is dead.
+-"Nashkel Monster": Removed bug where the hatching timer wouldn't start if egg was shown to Halbazzer or Thalantyr before meeting the mage on the road: timer for egg starts when it is handed to the group. If egg is treated or destroyed or hatches, the mage can no longer be met on the road.
+-"Nashkel Monster": Reply option to destroy the egg added to Thalantyr's first dialogue so he doesn't have to be spoken to again.
+-"Legal Seacharts": revised flow of dialogues and journal entries.
+-(EE) "Legal Seacharts": door to Merchants' League should be unlocked if PC has signet ring.
+-"Unexpected Help": Talking to Sir Trun should not lead to a NVLOR with priest of Oghma/Fuller; question about Sir Trun should only show once for priest of Oghma.
+-German version: typo corrections, item description corrections.
+
+Version 29:
+-Turkish version added, by Ilhan Bilaloglu.
+-"Babysitting Quest": Ruffian fighters should only drop one axe +2.
+-Corrected charset_table entries for Fench, Italian, Polish, Spanish (fixed install error).
+-Quest doors will be unlocked in EE, too (Cordyr's, Farmer's).
+
+Version 28:
+-Turkish version prepared, by Ilhan Bilaloglu. Need files in ANSI to unlock.
+-updated Simplified Chinese version and adjust file construction, by yoshimo0417.
+-loot corrections. In BGT and EET: RNDTRE04 => RNDTRE08; In BGEE and EET: AX1H03 (Battle Axe of Mauletar +2) => AX1H11 (Generic axe +2)
+-typo corrections.
+-bgqe is no longer officially supported for Tutu and oBG1. The mod should be installable (not all components for oBG1). Install at own risk.
+
+Version 27:
+- simplified Chinese Version added, by lzw104522773.
+- full revised Spanish translaion, by ElGamerViejuno.
 
 Version 26.1:
 - "Brage's Sword": Laryssa should spawn after showing the sword to Nalin if Borda is not dead, too.
@@ -640,8 +741,5 @@ Version 1.2 - Polnische Übersetzung
 Version 1.1 - Englische Version korrekturgelesen, visuellen Effekt eingefügt,                    Bugfixing
 
 Version 1.0 - Wettbewerbsbeitrag September 2004, Black Wyrm Forums
-
-
-
 
 
